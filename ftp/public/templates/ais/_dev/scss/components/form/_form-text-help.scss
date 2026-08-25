@@ -1,0 +1,9 @@
+.form-text-help {
+  font-size: $font-size-small;
+  color: #919191;
+
+  label & {
+    @include font-face-normal;
+    padding-top: 7px;
+  }
+}

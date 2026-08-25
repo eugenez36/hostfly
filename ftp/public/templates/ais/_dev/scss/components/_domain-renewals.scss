@@ -1,0 +1,70 @@
+.domain-renewals {
+  margin-top: 0;
+  border: none;
+
+  .domain-renewal {
+    padding: 4px;
+    border-radius: 4px;
+    background: linear-gradient(-90deg,#eb276d 0,#e45c9a 25%,#ae65b6 50%,#6448b6 75%,#3b2c79 100%);
+    margin-bottom: $grid-gutter-width;
+
+    &__inner {
+      border-radius: 4px;
+      padding: 30px 35px 35px;
+      background: #fff;
+
+      @media (max-width: $screen-xs-max) {
+        padding: 25px 25px;
+      }
+    }
+
+    &:nth-child(even) {
+      .domain-renewal__inner {
+        background-color: #f4f4f4;
+      }
+    }
+
+    .label {
+      position: relative;
+      top: 5px;
+
+      @media (max-width: $screen-xs-max) {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+    }
+
+    .h3 {
+      @media (max-width: $screen-xs-max) {
+        clear: both;
+      }
+    }
+
+    &__header {
+      margin-bottom: 15px;
+
+      .pull-right {
+        @media (max-width: $screen-xs-max) {
+          float: none!important;
+        }
+      }
+    }
+
+    .form-control {
+      width: 100%;
+    }
+
+    .form-horizontal {
+      label {
+        text-align: left;
+        padding-top: 0;
+      }
+    }
+  }
+
+  .btn-add-renewal-to-cart {
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+  }
+}

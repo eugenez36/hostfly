@@ -1,0 +1,170 @@
+{
+  "name": "p112-config",
+  "path": "/cart.php?a=add&pid=112",
+  "note": "Конфигуратор продукта pid=112",
+  "url": "https://my.hostfly.by/cart.php?a=add&pid=112",
+  "status": 200,
+  "finalUrl": "https://my.hostfly.by/index.php?rp=/store/new-2025/cloud-mini-new",
+  "title": "Личный кабинет | Hostfly",
+  "h1": [
+    "Выберите домен..."
+  ],
+  "h2": [],
+  "packages": [
+    "Облачный хостинг",
+    "Избранное",
+    "Title"
+  ],
+  "prices": [
+    "Продолжить регистрацию домена - Перенести к нам и продлить* на 1 год",
+    "Перенести к нам и продлить* на 1 год",
+    "15.50руб.",
+    "53.00руб.",
+    "65.00руб.",
+    "54.99руб.",
+    "25.99руб.",
+    "98.50руб.",
+    "107.99руб.",
+    "215.00руб."
+  ],
+  "forms": [
+    {
+      "action": "/index.php",
+      "method": "get",
+      "fields": [
+        {
+          "tag": "select",
+          "name": "gid",
+          "type": "select",
+          "required": false,
+          "options": [
+            "Дополнительные услуги",
+            "Зарегистрировать домен",
+            "Перенос домена",
+            "Просмотр корзины"
+          ]
+        }
+      ],
+      "submitButtons": []
+    },
+    {
+      "action": "",
+      "method": "get",
+      "fields": [
+        {
+          "tag": "input",
+          "name": "domainoption",
+          "type": "radio",
+          "required": false
+        },
+        {
+          "tag": "input",
+          "name": "domainoption",
+          "type": "radio",
+          "required": false
+        },
+        {
+          "tag": "input",
+          "name": "domainoption",
+          "type": "radio",
+          "required": false
+        }
+      ],
+      "submitButtons": [
+        "Проверить",
+        "Перенести",
+        "Использовать"
+      ]
+    },
+    {
+      "action": "cart.php?a=add&pid=112&domainselect=1",
+      "method": "post",
+      "fields": [],
+      "submitButtons": [
+        "Недоступен",
+        "Недоступен",
+        "Добавить Добавлен Занят",
+        "Contact Support to Purchase",
+        "Недоступен",
+        "Недоступен",
+        "Добавить Добавлен Занят",
+        "Contact Support to Purchase",
+        "Недоступен",
+        "Недоступен",
+        "Добавить Добавлен Занят",
+        "Contact Support to Purchase",
+        "Недоступен",
+        "Недоступен",
+        "Добавить Добавлен Занят",
+        "Contact Support to Purchase",
+        "Недоступен",
+        "Недоступен",
+        "Добавить Добавлен Занят",
+        "Contact Support to Purchase",
+        "Недоступен",
+        "Недоступен",
+        "Добавить Добавлен Занят",
+        "Contact Support to Purchase",
+        "Недоступен",
+        "Недоступен",
+        "Добавить Добавлен Занят",
+        "Contact Support to Purchase",
+        "Недоступен",
+        "Недоступен",
+        "Добавить Добавлен Занят",
+        "Contact Support to Purchase",
+        "Добавить в корзину Добавлен Занят",
+        "Contact Support to Purchase",
+        "Далее"
+      ]
+    }
+  ],
+  "buttons": [
+    "Выход",
+    "Корзина",
+    "Toggle navigation",
+    "Проверить",
+    "Перенести",
+    "Использовать",
+    "Связь с нами",
+    "Недоступен",
+    "Недоступен",
+    "Добавить Добавлен Занят",
+    "Contact Support to Purchase",
+    "Недоступен",
+    "Недоступен",
+    "Добавить Добавлен Занят",
+    "Contact Support to Purchase",
+    "Недоступен",
+    "Недоступен",
+    "Добавить Добавлен Занят",
+    "Contact Support to Purchase",
+    "Недоступен",
+    "Недоступен",
+    "Добавить Добавлен Занят",
+    "Contact Support to Purchase",
+    "Недоступен",
+    "Недоступен",
+    "Добавить Добавлен Занят",
+    "Contact Support to Purchase",
+    "Недоступен",
+    "Недоступен",
+    "Добавить Добавлен Занят",
+    "Contact Support to Purchase",
+    "Недоступен",
+    "Недоступен",
+    "Добавить Добавлен Занят",
+    "Contact Support to Purchase",
+    "Недоступен",
+    "Недоступен",
+    "Добавить Добавлен Занят",
+    "Contact Support to Purchase",
+    "Добавить в корзину Добавлен Занят"
+  ],
+  "configOptions": [
+    "Зарегистрировать новый домен",
+    "Перенести (transfer) домен от другого регистратора",
+    "Я буду использовать свой домен и обновлю его DNS адреса"
+  ],
+  "bodyTextLen": 1412
+}

@@ -1,0 +1,63 @@
+.svg {
+  display: block;
+  line-height: 0;
+  font-size: 1em;
+
+  &::before {
+    content: '';
+  }
+
+  &_reload-pink {
+    font-size: 1.214em;
+
+    &::before {
+      @include sprite(reload-pink);
+    }
+  }
+  &_ok-blue {
+    font-size: 1.214em;
+
+    &::before {
+      @include sprite(ok-blue);
+    }
+  }
+  &_ok-green {
+    font-size: 1.214em;
+
+    &::before {
+      @include sprite(ok-green);
+    }
+  }
+  &_settings-orange {
+    font-size: 1.214em;
+
+    &::before {
+      @include sprite(settings-orange);
+    }
+  }
+  &_world {
+    &::before {
+      @include sprite(world);
+    }
+  }
+  &_setting {
+    &::before {
+      @include sprite(setting);
+    }
+  }
+  &_support {
+    &::before {
+      @include sprite(support);
+    }
+  }
+  &_document {
+    &::before {
+      @include sprite(document);
+    }
+  }
+  &_shopping-cart {
+    &::before {
+      @include sprite(shopping-cart);
+    }
+  }
+}

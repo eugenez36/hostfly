@@ -1,0 +1,77 @@
+{
+  "name": "s07-vps-secure",
+  "path": "/index.php?rp=/store/zashchishchennyi-virtualnyi-server",
+  "note": "Защищённый VPS",
+  "url": "https://my.hostfly.by/index.php?rp=/store/zashchishchennyi-virtualnyi-server",
+  "status": 200,
+  "finalUrl": "https://my.hostfly.by/index.php?rp=/store/zashchishchennyi-virtualnyi-server",
+  "title": "Личный кабинет | Hostfly",
+  "h1": [
+    "Защищенный виртуальный сервер для персональных данных"
+  ],
+  "h2": [],
+  "packages": [
+    "Облачный хостинг",
+    "Избранное",
+    "Title"
+  ],
+  "prices": [
+    "99.99руб.",
+    "154.99руб.",
+    "249.99руб.",
+    "359.99руб.",
+    "469.99руб.",
+    "739.99руб."
+  ],
+  "forms": [
+    {
+      "action": "/index.php",
+      "method": "get",
+      "fields": [
+        {
+          "tag": "select",
+          "name": "gid",
+          "type": "select",
+          "required": false,
+          "options": [
+            "CLOUD облачный хостинг",
+            "WordPress хостинг",
+            "Bitrix облачный хостинг",
+            "Bitrix VPS хостинг",
+            "Виртуальный сервер",
+            "Сервер 1C:Бухгалтерия",
+            "Администрируемый виртуальный сервер",
+            "Выделенный сервер",
+            "Почта для домена",
+            "SSL сертификаты",
+            "Регистрация сайта в БелГИЭ",
+            "Защищенный Виртуальный сервер",
+            "S3-объектное хранилище",
+            "Дополнительные услуги",
+            "Продление домена",
+            "Зарегистрировать домен",
+            "Перенос домена",
+            "Просмотр корзины"
+          ]
+        }
+      ],
+      "submitButtons": []
+    }
+  ],
+  "buttons": [
+    "Выход",
+    "Корзина",
+    "Toggle navigation",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "× Close",
+    "Close",
+    "Submit"
+  ],
+  "configOptions": [],
+  "bodyTextLen": 2238
+}

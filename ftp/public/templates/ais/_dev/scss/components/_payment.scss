@@ -1,0 +1,214 @@
+.payment {
+  &__title {
+    margin-bottom: 24px;
+    line-height: 24px;
+    font-size: 18px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -21px;
+
+    @media (max-width: $screen-sm-max) {
+      margin: 0 -10px;
+    }
+  }
+
+  &-el {
+    position: relative;
+    text-align: center;
+    padding: 0 21px;
+    margin-bottom: 42px;
+
+    @media (max-width: $screen-md-max) {
+      width: 25%;
+    }
+    @media (max-width: $screen-sm-max) {
+      width: 50%;
+      padding: 0 10px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 350px) {
+      width: 100%;
+    }
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 0;
+
+      &:checked {
+        + .payment-el__link {
+          background: $brand-primary;
+          text-decoration: none;
+
+          &::before,
+          &::after {
+            opacity: 1;
+          }
+
+          .payment-el__pic {
+            opacity: 1;
+          }
+          .payment-el__text {
+            opacity: 1;
+            color: $brand-base;
+          }
+        }
+      }
+    }
+
+    input[value="begateway"] {
+      + .payment-el__link {
+        .payment-el__pic {
+          background-image: url("../img/payment/erip.svg");
+        }
+      }
+
+      &:checked {
+        + .payment-el__link {
+          .payment-el__pic {
+            background-image: url("../img/payment/erip_active.svg");
+          }
+        }
+      }
+    }
+
+    input[value="mailin"] {
+      + .payment-el__link {
+        .payment-el__pic {
+          background-image: url("../img/payment/transfer.svg");
+        }
+      }
+
+      &:checked {
+        + .payment-el__link {
+          .payment-el__pic {
+            background-image: url("../img/payment/transfer_active.svg");
+          }
+        }
+      }
+    }
+
+    input[value="cash"] {
+      + .payment-el__link {
+        .payment-el__pic {
+          background-image: url("../img/payment/cash.svg");
+        }
+      }
+
+      &:checked {
+        + .payment-el__link {
+          .payment-el__pic {
+            background-image: url("../img/payment/cash_active.svg");
+          }
+        }
+      }
+    }
+
+    input[value="webmoney"] {
+      + .payment-el__link {
+        .payment-el__pic {
+          background-image: url("../img/payment/webmoney.svg");
+        }
+      }
+
+      &:checked {
+        + .payment-el__link {
+          .payment-el__pic {
+            background-image: url("../img/payment/webmoney_active.svg");
+          }
+        }
+      }
+    }
+
+    &__link {
+      position: relative;
+      display: block;
+      width: 177px;
+      height: 100%;
+      padding: 10px 18px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      background: transparent;
+      border: 1px solid $brand-primary;
+      transition: all .25s;
+      cursor: pointer;
+
+      @media (max-width: $screen-md-max) {
+        width: 100%;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        opacity: 0;
+        transition: opacity .25s;
+      }
+      &::before {
+        top: 15px;
+        left: 15px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #fff;
+      }
+      &::after {
+        top: 20px;
+        left: 24px;
+        width: 9px;
+        height: 14px;
+        border-left: 3px solid $brand-primary;
+        border-top: 3px solid $brand-primary;
+        transform: rotate(-135deg);
+      }
+
+      &:hover {
+        background: rgba(176, 236, 93, 0.1);
+        text-decoration: none;
+
+        .payment-el__pic {
+          opacity: 1;
+        }
+        .payment-el__text {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__pic {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 78px;
+      margin-bottom: 10px;
+      opacity: .6;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: opacity .25s;
+    }
+
+    &__icon {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    &__text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      @include font-face-sbold;
+      line-height: 24px;
+      font-size: 18px;
+      color: #000;
+      opacity: .8;
+      transition: opacity .25s;
+    }
+  }
+}

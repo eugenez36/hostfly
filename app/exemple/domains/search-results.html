@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Подбор домена — Hostfly</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/layout.css">
+</head>
+<body data-root="../" data-page="domain-search">
+
+<div data-layout="preview"></div>
+<header data-layout="header"></header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumbs">
+      <a href="../index.html">hostfly.by</a>
+      <span class="breadcrumbs__sep">›</span>
+      <a href="register.html">Регистрация доменов</a>
+      <span class="breadcrumbs__sep">›</span>
+      <span class="breadcrumbs__current">Подбор домена</span>
+    </nav>
+
+    <!-- ==================================================== HERO ======= -->
+    <section class="hero-plain">
+      <h1 style="font-size:64px;line-height:1.05">Быстрая регистрация<br>домена для вашего бизнеса</h1>
+      <div class="hero-plain__row">
+        <p class="hero-plain__lead body-m">Мы поможем выбрать и зарегистрировать доменное имя для вашего бизнеса, обеспечим надёжность и круглосуточную поддержку. Мгновенная регистрация и удобное управление DNS для каждого домена</p>
+        <a class="link-primary" href="transfer.html">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 6l8 8m0 0V7m0 7H7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Перенести домен на Hostfly
+        </a>
+      </div>
+    </section>
+
+    <!-- ================================================== ПОИСК ======== -->
+    <form class="search" onsubmit="return false">
+      <input class="search__input" type="text" value="whale.by" aria-label="Домен или ключевая фраза">
+      <button class="btn btn--soft" type="submit">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Проверить домен
+      </button>
+    </form>
+
+    <div class="tld-row">
+      <div class="tld"><div class="tld__head">
+        <label class="check"><input type="checkbox" checked><span class="check__box"></span></label>
+        <span class="tld__name">.бел</span><span class="badge badge--violet">хит</span></div>
+        <div class="tld__price">38,50 BYN</div></div>
+      <div class="tld"><div class="tld__head">
+        <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+        <span class="tld__name">.com</span><span class="badge badge--violet">хит</span></div>
+        <div class="tld__price">38,50 BYN</div></div>
+      <div class="tld"><div class="tld__head">
+        <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+        <span class="badge badge--blue">%</span><span class="tld__name">.net</span></div>
+        <div class="tld__price">38,50 BYN<s>38,50 BYN</s></div></div>
+      <div class="tld"><div class="tld__head">
+        <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+        <span class="tld__name">.org</span><span class="badge badge--violet">хит</span></div>
+        <div class="tld__price">38,50 BYN</div></div>
+      <div class="tld"><div class="tld__head">
+        <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+        <span class="tld__name">.biz</span></div>
+        <div class="tld__price">38,50 BYN</div></div>
+      <div class="tld"><div class="tld__head">
+        <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+        <span class="tld__name">.info</span></div>
+        <div class="tld__price">38,50 BYN</div></div>
+      <div class="tld"><div class="tld__head">
+        <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+        <span class="tld__name">.pro</span></div>
+        <div class="tld__price">38,50 BYN</div></div>
+      <div class="tld"><div class="tld__head">
+        <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+        <span class="tld__name">.ru</span></div>
+        <div class="tld__price">38,50 BYN</div></div>
+      <div class="tld"><div class="tld__head">
+        <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+        <span class="tld__name">.top</span></div>
+        <div class="tld__price">38,50 BYN</div></div>
+    </div>
+
+    <div class="row" style="margin:24px 0 56px">
+      <button class="btn btn--secondary" type="button">Доменные зоны
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M8 13l4-4M8 13L4 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <label class="check" style="height:var(--h-btn-m);padding:0 20px;border:1px solid var(--c-button);border-radius:var(--r-md)">
+        <input type="checkbox" checked><span class="check__box"></span>
+        <span class="check__text">Показывать занятые</span>
+      </label>
+    </div>
+
+    <!-- ============================== РЕЗУЛЬТАТЫ + КОРЗИНА ============= -->
+    <div class="grid" style="grid-template-columns:1fr 400px;gap:48px;align-items:start">
+      <div>
+        <h5 class="text-mute" style="font-weight:400;margin-bottom:20px">Рекомендуемые домены</h5>
+        <div class="grid grid-2" style="gap:16px">
+          <div class="domain-suggest">
+            <div class="domain-suggest__head"><span class="domain-suggest__name">вхале.бел</span><span class="badge badge--yellow">Мы рекомендуем</span></div>
+            <span class="domain-suggest__price"><b>16,00</b><span>BYN</span></span>
+            <button class="btn-cart" type="button" data-add-domain="вхале.бел" data-price="16" aria-label="Добавить в заказ">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h2l2 9h9l2-6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/><circle cx="15" cy="16" r="1.2" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div class="domain-suggest">
+            <div class="domain-suggest__head"><span class="domain-suggest__name">whale.info</span><span class="badge badge--yellow">Мы рекомендуем</span></div>
+            <span class="domain-suggest__price"><b>37,00</b><span>BYN</span></span>
+            <button class="btn-cart" type="button" data-add-domain="whale.info" data-price="37" aria-label="Добавить в заказ">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h2l2 9h9l2-6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/><circle cx="15" cy="16" r="1.2" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div class="domain-suggest">
+            <div class="domain-suggest__head"><span class="domain-suggest__name">вхале.рф</span><span class="badge badge--yellow">Мы рекомендуем</span></div>
+            <span class="domain-suggest__price"><b>37,00</b><span>BYN</span></span>
+            <button class="btn-cart" type="button" data-add-domain="вхале.рф" data-price="37" aria-label="Добавить в заказ">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h2l2 9h9l2-6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/><circle cx="15" cy="16" r="1.2" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div class="domain-suggest">
+            <div class="domain-suggest__head"><span class="domain-suggest__name">whale.trade</span><span class="badge badge--yellow">Мы рекомендуем</span></div>
+            <span class="domain-suggest__price"><b>199,00</b><span>BYN</span></span>
+            <button class="btn-cart" type="button" data-add-domain="whale.trade" data-price="199" aria-label="Добавить в заказ">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h2l2 9h9l2-6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/><circle cx="15" cy="16" r="1.2" fill="currentColor"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="row row--between" style="margin:56px 0 20px">
+          <h5 class="text-mute" style="font-weight:400">Возможные домены</h5>
+          <label class="switch" data-toggle-taken>
+            <input type="checkbox" checked><span class="switch__track"></span>
+            <span class="body-m">Показывать занятые</span>
+          </label>
+        </div>
+
+        <div class="domain-list" data-domain-list>
+          <div class="domain-row is-taken">
+            <span class="domain-row__name">whale.by</span>
+            <span><span class="badge badge--error">Домен занят</span></span>
+            <span class="domain-row__price"></span>
+            <a class="link-primary" href="#">WHOIS</a>
+          </div>
+          <div class="domain-row">
+            <span class="domain-row__name">whale.бел</span>
+            <span><span class="badge badge--ok">Домен свободен</span></span>
+            <span class="domain-row__price"><b>37,00</b><span>BYN</span></span>
+            <button class="btn-cart" type="button" data-add-domain="whale.бел" data-price="37" aria-label="Добавить в заказ">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h2l2 9h9l2-6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/><circle cx="15" cy="16" r="1.2" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div class="domain-row">
+            <span class="domain-row__name">whale2.by</span>
+            <span><span class="badge badge--ok">Домен свободен</span></span>
+            <span class="domain-row__price"><b>37,00</b><span>BYN</span></span>
+            <button class="btn-cart" type="button" data-add-domain="whale2.by" data-price="37" aria-label="Добавить в заказ">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h2l2 9h9l2-6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/><circle cx="15" cy="16" r="1.2" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div class="domain-row">
+            <span class="domain-row__name">whale3.by</span>
+            <span><span class="badge badge--ok">Домен свободен</span></span>
+            <span class="domain-row__price"><b>37,00</b><span>BYN</span></span>
+            <button class="btn-cart is-added" type="button" aria-label="Добавлено">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="domain-row" style="background:var(--c-bg)">
+            <span class="domain-row__name">whale4.бел</span>
+            <span><span class="badge badge--ok">Домен свободен</span></span>
+            <span class="domain-row__price"><b>37,00</b><span>BYN</span></span>
+            <button class="btn-cart" type="button" data-add-domain="whale4.бел" data-price="37"
+                    style="background:var(--c-primary);color:#fff" aria-label="Добавить в заказ">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h2l2 9h9l2-6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/><circle cx="15" cy="16" r="1.2" fill="currentColor"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="text-center" style="padding:32px 0">
+          <a class="link-primary" href="#">Показать еще 10 доменов
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h11m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Корзина -->
+      <aside class="order-box" data-order>
+        <h3>Ваш заказ</h3>
+        <div class="order-box__items" data-order-items></div>
+        <div class="order-box__total">
+          <span class="body-l">Итого</span>
+          <span><b data-order-total>0,00</b> <span class="body-m">BYN</span></span>
+        </div>
+        <a class="btn btn--block" href="#">Перейти в заказ
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h11m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ==================================================== ПАГИНАЦИЯ ==== -->
+  <section class="section--tight">
+    <div class="container">
+      <div class="pagination">
+        <span class="pagination__count">1-20 из 68</span>
+        <div class="pagination__pages">
+          <button class="pagination__nav" type="button" aria-label="Назад">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4l-5 5 5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <a class="pagination__item is-active" href="#">1</a>
+          <a class="pagination__item" href="#">2</a>
+          <a class="pagination__item" href="#">3</a>
+          <a class="pagination__item" href="#">4</a>
+          <span class="pagination__gap">...</span>
+          <a class="pagination__item" href="#">20</a>
+          <button class="pagination__nav" type="button" aria-label="Вперёд">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <label class="pagination__per">Показывать
+          <select><option>20</option><option>50</option><option>100</option></select>
+        </label>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer data-layout="footer"></footer>
+
+<script src="../js/layout.js"></script>
+<script src="../js/theme.js"></script>
+</body>
+</html>

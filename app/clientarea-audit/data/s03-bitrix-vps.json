@@ -1,0 +1,69 @@
+{
+  "name": "s03-bitrix-vps",
+  "path": "/index.php?rp=/store/bitriks-khosting",
+  "note": "Bitrix VPS хостинг",
+  "url": "https://my.hostfly.by/index.php?rp=/store/bitriks-khosting",
+  "status": 200,
+  "finalUrl": "https://my.hostfly.by/index.php?rp=/store/bitriks-khosting",
+  "title": "Личный кабинет | Hostfly",
+  "h1": [
+    "Хостинг для 1С-Битрикс сайтов"
+  ],
+  "h2": [],
+  "packages": [
+    "Облачный хостинг",
+    "Избранное",
+    "Title"
+  ],
+  "prices": [
+    "69.99руб.",
+    "135.99руб."
+  ],
+  "forms": [
+    {
+      "action": "/index.php",
+      "method": "get",
+      "fields": [
+        {
+          "tag": "select",
+          "name": "gid",
+          "type": "select",
+          "required": false,
+          "options": [
+            "CLOUD облачный хостинг",
+            "WordPress хостинг",
+            "Bitrix облачный хостинг",
+            "Bitrix VPS хостинг",
+            "Виртуальный сервер",
+            "Сервер 1C:Бухгалтерия",
+            "Администрируемый виртуальный сервер",
+            "Выделенный сервер",
+            "Почта для домена",
+            "SSL сертификаты",
+            "Регистрация сайта в БелГИЭ",
+            "Защищенный Виртуальный сервер",
+            "S3-объектное хранилище",
+            "Дополнительные услуги",
+            "Продление домена",
+            "Зарегистрировать домен",
+            "Перенос домена",
+            "Просмотр корзины"
+          ]
+        }
+      ],
+      "submitButtons": []
+    }
+  ],
+  "buttons": [
+    "Выход",
+    "Корзина",
+    "Toggle navigation",
+    "Заказать",
+    "Заказать",
+    "× Close",
+    "Close",
+    "Submit"
+  ],
+  "configOptions": [],
+  "bodyTextLen": 1633
+}

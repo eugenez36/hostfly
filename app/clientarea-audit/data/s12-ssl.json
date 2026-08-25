@@ -1,0 +1,68 @@
+{
+  "name": "s12-ssl",
+  "path": "/index.php?rp=/store/ssl",
+  "note": "SSL сертификаты",
+  "url": "https://my.hostfly.by/index.php?rp=/store/ssl",
+  "status": 200,
+  "finalUrl": "https://my.hostfly.by/index.php?rp=/store/ssl",
+  "title": "Личный кабинет | Hostfly",
+  "h1": [
+    "Коммерческие SSL сертификаты"
+  ],
+  "h2": [],
+  "packages": [
+    "Облачный хостинг",
+    "Избранное",
+    "Облачный хостинг",
+    "Избранное",
+    "Добавлено в корзину",
+    "Title"
+  ],
+  "prices": [
+    "55.00руб.",
+    "180.00руб.",
+    "915.00руб.",
+    "130.00руб.",
+    "485.00руб.",
+    "220.00руб.",
+    "540.00руб.",
+    "540.00руб.",
+    "1100.00руб."
+  ],
+  "forms": [
+    {
+      "action": "",
+      "method": "get",
+      "fields": [],
+      "submitButtons": []
+    },
+    {
+      "action": "",
+      "method": "get",
+      "fields": [],
+      "submitButtons": []
+    }
+  ],
+  "buttons": [
+    "Выход",
+    "Корзина",
+    "Toggle navigation",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "×",
+    "Далее",
+    "Добавить в корзину",
+    "× Close",
+    "Close",
+    "Submit"
+  ],
+  "configOptions": [],
+  "bodyTextLen": 3012
+}

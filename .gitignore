@@ -1,0 +1,38 @@
+# --- Секреты и локальные настройки ---
+creds.md
+.idea/
+*.env
+.env*
+*.pem
+*.key
+
+# --- Слепок FTP: версионируем только рабочую тему ЛК (templates/ais) ---
+/ftp/*
+!/ftp/public/
+/ftp/public/*
+!/ftp/public/templates/
+/ftp/public/templates/*
+!/ftp/public/templates/ais/
+
+# Внутри темы
+/ftp/public/templates/ais/_dev/temp/
+/ftp/public/templates/ais/**/node_modules/
+
+# --- Архивы и мусор ---
+*.zip
+*.sql
+*.log
+nexus_backup.zip
+
+# --- ОС / редакторы ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# --- Исключено перед публикацией репозитория ---
+# Исходник коммерческого модуля ModulesGarden DNS Manager (151 КБ инлайн-JS, не под редистрибуцию)
+app/clientarea-audit/html/29-dnsmanager.html
+# Коммерческие документы: оценка трудозатрат и КП
+app/ЭСТИМАЦИЯ-редизайн-ЛК.md
+app/ДЕМО-КП-hostfly-ЛК.html

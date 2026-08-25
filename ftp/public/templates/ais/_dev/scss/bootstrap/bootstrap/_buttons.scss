@@ -1,0 +1,310 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  @include font-face-normal;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 2px solid transparent;
+  //white-space: nowrap;
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-small, $line-height-base, $btn-border-radius-base);
+  @include user-select(none);
+  padding: 10px $padding-base-horizontal 9px;
+  text-decoration: none;
+  transition: .25s;
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $btn-default-color;
+    text-decoration: none;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 6px rgba(51, 51, 51, 0.25);
+  }
+
+  &:active,
+  &.active,
+  &:focus {
+    box-shadow: 0 1px 4px rgba(51, 51, 51, 0.25);
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    @include opacity(.65);
+    @include box-shadow(none);
+  }
+
+  i {
+    &:first-child {
+      margin-right: 6px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .svg_shopping-cart {
+    display: inline-block;
+    line-height: 1;
+    font-size: 1.143em;
+    vertical-align: middle;
+  }
+
+  // [converter] extracted a& to a.btn
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default,
+.btn-warning {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  &:hover,
+  &:active,
+  &.active,
+  &:focus {
+    border-color: $btn-default-border;
+    background: $btn-default-bg;
+  }
+
+  &.btn-invert {
+    background-color: transparent;
+    color: $btn-default-bg;
+
+    &:hover,
+    &:active,
+    &.active,
+    &:focus {
+      background: $btn-default-bg;
+      color: #fff;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    background: #ccc;
+    border-color: #ccc;
+  }
+}
+
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus {
+    border-color: $btn-primary-border;
+    background: $btn-primary-bg;
+  }
+
+  &.btn-invert {
+    background-color: transparent;
+    color: $btn-primary-bg;
+
+    &:hover,
+    &:active,
+    &.active,
+    &:focus {
+      background: $btn-primary-bg;
+      color: #fff;
+    }
+  }
+}
+
+// Success appears as green
+.btn-success {
+  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus {
+    border-color: $btn-success-border;
+    background: $btn-success-bg;
+  }
+
+  &.btn-invert {
+    background-color: transparent;
+    color: $btn-success-bg;
+
+    &:hover,
+    &:active,
+    &.active,
+    &:focus {
+      background: $btn-success-bg;
+      color: #fff;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    background: #ccc;
+    border-color: #ccc;
+  }
+}
+
+// Info appears as blue-green
+.btn-info {
+  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+// Warning appears as orange
+.btn-warning {
+  //@include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger {
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  color: $text-color;
+  font-weight: normal;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    background: none;
+    box-shadow: none;
+    border-color: transparent;
+    color: $link-hover-color;
+    text-decoration: none;
+
+    > span {
+      border-color: rgba(0,0,0,0);
+    }
+  }
+  &:hover,
+  &:focus {
+    background: $color-bg-block;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: $btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+
+  > span {
+    display: inline-block;
+    line-height: 1.2;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    transition: border .25s;
+  }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-base, $line-height-large, $btn-border-radius-large);
+  padding: 10px 24px 9px;
+
+  @media (max-width: $screen-md-max) {
+    font-size: $font-size-small;
+  }
+
+  .svg_shopping-cart {
+    font-size: 1.12em;
+  }
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+.btn-xs {
+  //@include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+  padding: 5px 16px 4px;
+  font-size: 12px;
+  line-height: 1;
+  @include font-face-medium;
+  border-radius: 12px;
+  border-width: 1px;
+
+  .fa-plus {
+    position: relative;
+    top: -1px;
+    font-size: 9px;
+  }
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

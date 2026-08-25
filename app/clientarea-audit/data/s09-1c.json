@@ -1,0 +1,71 @@
+{
+  "name": "s09-1c",
+  "path": "/index.php?rp=/store/server-1cbukhgalteriia",
+  "note": "Сервер 1С:Бухгалтерия",
+  "url": "https://my.hostfly.by/index.php?rp=/store/server-1cbukhgalteriia",
+  "status": 200,
+  "finalUrl": "https://my.hostfly.by/index.php?rp=/store/server-1cbukhgalteriia",
+  "title": "Личный кабинет | Hostfly",
+  "h1": [
+    "Специализированный хостинг для 1C:Бухгалтерии в виртуальном облаке"
+  ],
+  "h2": [],
+  "packages": [
+    "Облачный хостинг",
+    "Избранное",
+    "Title"
+  ],
+  "prices": [
+    "139.99руб.",
+    "204.99руб.",
+    "269.99руб."
+  ],
+  "forms": [
+    {
+      "action": "/index.php",
+      "method": "get",
+      "fields": [
+        {
+          "tag": "select",
+          "name": "gid",
+          "type": "select",
+          "required": false,
+          "options": [
+            "CLOUD облачный хостинг",
+            "WordPress хостинг",
+            "Bitrix облачный хостинг",
+            "Bitrix VPS хостинг",
+            "Виртуальный сервер",
+            "Сервер 1C:Бухгалтерия",
+            "Администрируемый виртуальный сервер",
+            "Выделенный сервер",
+            "Почта для домена",
+            "SSL сертификаты",
+            "Регистрация сайта в БелГИЭ",
+            "Защищенный Виртуальный сервер",
+            "S3-объектное хранилище",
+            "Дополнительные услуги",
+            "Продление домена",
+            "Зарегистрировать домен",
+            "Перенос домена",
+            "Просмотр корзины"
+          ]
+        }
+      ],
+      "submitButtons": []
+    }
+  ],
+  "buttons": [
+    "Выход",
+    "Корзина",
+    "Toggle navigation",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "× Close",
+    "Close",
+    "Submit"
+  ],
+  "configOptions": [],
+  "bodyTextLen": 1959
+}

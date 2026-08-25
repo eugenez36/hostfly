@@ -1,0 +1,520 @@
+{
+  "url": "https://my.hostfly.by/clientarea.php",
+  "links": [
+    {
+      "text": "",
+      "href": "http://www.hostfly.by/"
+    },
+    {
+      "text": "+375 17 336-73-73",
+      "href": "tel:+375171234567"
+    },
+    {
+      "text": "+375 17 336-73-73",
+      "href": "tel:+375173367373"
+    },
+    {
+      "text": "+375 17 336-73-73",
+      "href": "tel:+375173367373"
+    },
+    {
+      "text": "+375 29 336-73-73",
+      "href": "tel:+375293367373"
+    },
+    {
+      "text": "+375 29 865-73-73",
+      "href": "tel:+375298657373"
+    },
+    {
+      "text": "+375 25 730-73-73",
+      "href": "tel:+375257307373"
+    },
+    {
+      "text": "+375 17 336-73-73",
+      "href": "tel:+375173367373"
+    },
+    {
+      "text": "sales@hostfly.by",
+      "href": "mailto:sales@hostfly.by"
+    },
+    {
+      "text": "Выход",
+      "href": "/logout.php"
+    },
+    {
+      "text": "Корзина",
+      "href": "/cart.php?a=view"
+    },
+    {
+      "text": "Русский",
+      "href": "#"
+    },
+    {
+      "text": "العربية",
+      "href": "/clientarea.php?language=arabic"
+    },
+    {
+      "text": "Azerbaijani",
+      "href": "/clientarea.php?language=azerbaijani"
+    },
+    {
+      "text": "Català",
+      "href": "/clientarea.php?language=catalan"
+    },
+    {
+      "text": "中文",
+      "href": "/clientarea.php?language=chinese"
+    },
+    {
+      "text": "Hrvatski",
+      "href": "/clientarea.php?language=croatian"
+    },
+    {
+      "text": "Čeština",
+      "href": "/clientarea.php?language=czech"
+    },
+    {
+      "text": "Dansk",
+      "href": "/clientarea.php?language=danish"
+    },
+    {
+      "text": "Nederlands",
+      "href": "/clientarea.php?language=dutch"
+    },
+    {
+      "text": "English",
+      "href": "/clientarea.php?language=english"
+    },
+    {
+      "text": "Estonian",
+      "href": "/clientarea.php?language=estonian"
+    },
+    {
+      "text": "Persian",
+      "href": "/clientarea.php?language=farsi"
+    },
+    {
+      "text": "Français",
+      "href": "/clientarea.php?language=french"
+    },
+    {
+      "text": "Deutsch",
+      "href": "/clientarea.php?language=german"
+    },
+    {
+      "text": "עברית",
+      "href": "/clientarea.php?language=hebrew"
+    },
+    {
+      "text": "Magyar",
+      "href": "/clientarea.php?language=hungarian"
+    },
+    {
+      "text": "Italiano",
+      "href": "/clientarea.php?language=italian"
+    },
+    {
+      "text": "Macedonian",
+      "href": "/clientarea.php?language=macedonian"
+    },
+    {
+      "text": "Norwegian",
+      "href": "/clientarea.php?language=norwegian"
+    },
+    {
+      "text": "Português",
+      "href": "/clientarea.php?language=portuguese-br"
+    },
+    {
+      "text": "Português",
+      "href": "/clientarea.php?language=portuguese-pt"
+    },
+    {
+      "text": "Română",
+      "href": "/clientarea.php?language=romanian"
+    },
+    {
+      "text": "Русский",
+      "href": "/clientarea.php?language=russian"
+    },
+    {
+      "text": "Español",
+      "href": "/clientarea.php?language=spanish"
+    },
+    {
+      "text": "Svenska",
+      "href": "/clientarea.php?language=swedish"
+    },
+    {
+      "text": "Türkçe",
+      "href": "/clientarea.php?language=turkish"
+    },
+    {
+      "text": "Українська",
+      "href": "/clientarea.php?language=ukranian"
+    },
+    {
+      "text": "Уведомления",
+      "href": "#"
+    },
+    {
+      "text": "Евгений",
+      "href": "#"
+    },
+    {
+      "text": "Pin-код подтверждения входа",
+      "href": "/index.php?m=loginverifypin"
+    },
+    {
+      "text": "Личные данные",
+      "href": "/clientarea.php?action=details"
+    },
+    {
+      "text": "Контакты/Суб-аккаунты",
+      "href": "/index.php?rp=/account/contacts"
+    },
+    {
+      "text": "Безопасность",
+      "href": "/clientarea.php?action=security"
+    },
+    {
+      "text": "История уведомлений",
+      "href": "/clientarea.php?action=emails"
+    },
+    {
+      "text": "-----",
+      "href": ""
+    },
+    {
+      "text": "Ваш профиль",
+      "href": "/index.php?rp=/user/profile"
+    },
+    {
+      "text": "Изменить пароль",
+      "href": "/index.php?rp=/user/password"
+    },
+    {
+      "text": "Настройки безопасности",
+      "href": "/index.php?rp=/user/security"
+    },
+    {
+      "text": "-----",
+      "href": ""
+    },
+    {
+      "text": "Выход",
+      "href": "/logout.php"
+    },
+    {
+      "text": "Главная",
+      "href": "/clientarea.php"
+    },
+    {
+      "text": "Услуги",
+      "href": "#"
+    },
+    {
+      "text": "Продукты/услуги",
+      "href": "/clientarea.php?action=services"
+    },
+    {
+      "text": "-----",
+      "href": ""
+    },
+    {
+      "text": "Купить хостинг",
+      "href": "/cart.php"
+    },
+    {
+      "text": "Дополнительные услуги",
+      "href": "/cart.php?gid=addons"
+    },
+    {
+      "text": "Регистрация в БелГИЭ",
+      "href": "/index.php?rp=/store/administrativnye-protsedury"
+    },
+    {
+      "text": "Домены",
+      "href": "#"
+    },
+    {
+      "text": "Мои домены",
+      "href": "/clientarea.php?action=domains"
+    },
+    {
+      "text": "-----",
+      "href": ""
+    },
+    {
+      "text": "Расширенный DNS редактор",
+      "href": "/index.php?m=DNSManager3"
+    },
+    {
+      "text": "Продлить домены",
+      "href": "/index.php?rp=/cart/domain/renew"
+    },
+    {
+      "text": "Зарегистрировать домен",
+      "href": "/cart.php?a=add&domain=register"
+    },
+    {
+      "text": "Перенести домен к нам",
+      "href": "/cart.php?a=add&domain=transfer"
+    },
+    {
+      "text": "-----",
+      "href": ""
+    },
+    {
+      "text": "Поиск домена",
+      "href": "/domainchecker.php"
+    },
+    {
+      "text": "Финансы",
+      "href": "#"
+    },
+    {
+      "text": "Мои счета",
+      "href": "/clientarea.php?action=invoices"
+    },
+    {
+      "text": "Предложения/оценки",
+      "href": "/clientarea.php?action=quotes"
+    },
+    {
+      "text": "-----",
+      "href": ""
+    },
+    {
+      "text": "Пополнить",
+      "href": "/clientarea.php?action=addfunds"
+    },
+    {
+      "text": "Акты выполненных работ",
+      "href": "/clientacts.php"
+    },
+    {
+      "text": "Поддержка",
+      "href": "#"
+    },
+    {
+      "text": "Запросы",
+      "href": "/supporttickets.php"
+    },
+    {
+      "text": "Объявления",
+      "href": "/announcements.php"
+    },
+    {
+      "text": "База знаний",
+      "href": "/knowledgebase.php"
+    },
+    {
+      "text": "Загрузки",
+      "href": "/downloads.php"
+    },
+    {
+      "text": "Статус сети",
+      "href": "/serverstatus.php"
+    },
+    {
+      "text": "Создать запрос",
+      "href": "/submitticket.php"
+    },
+    {
+      "text": "Партнерство",
+      "href": "/affiliates.php"
+    },
+    {
+      "text": "Главная",
+      "href": "/index.php"
+    },
+    {
+      "text": "0.00 руб.",
+      "href": "/clientarea.php?action=addfunds"
+    },
+    {
+      "text": "Пополнить",
+      "href": "clientarea.php?action=addfunds"
+    },
+    {
+      "text": "Обновить",
+      "href": "clientarea.php?action=details"
+    },
+    {
+      "text": "0 Услуги",
+      "href": "clientarea.php?action=services"
+    },
+    {
+      "text": "0 Домены",
+      "href": "clientarea.php?action=domains"
+    },
+    {
+      "text": "0 Запросы",
+      "href": "supporttickets.php"
+    },
+    {
+      "text": "0 Счета",
+      "href": "clientarea.php?action=invoices"
+    },
+    {
+      "text": "Открыть новый запрос",
+      "href": "submitticket.php"
+    },
+    {
+      "text": "свяжитесь с нами",
+      "href": "submitticket.php"
+    },
+    {
+      "text": "Продукты/услуги",
+      "href": "clientarea.php?action=services"
+    },
+    {
+      "text": "Оформить заказ",
+      "href": "cart.php"
+    },
+    {
+      "text": "Показать больше...",
+      "href": "#"
+    },
+    {
+      "text": "Купить хостинг",
+      "href": "/cart.php"
+    },
+    {
+      "text": "Зарегистрировать домен",
+      "href": "/domainchecker.php"
+    },
+    {
+      "text": "Выход",
+      "href": "/logout.php"
+    },
+    {
+      "text": "Главная",
+      "href": "https://www.hostfly.by/"
+    },
+    {
+      "text": "Регистрация доменов",
+      "href": "https://www.hostfly.by/domains/"
+    },
+    {
+      "text": "Хостинг сайтов",
+      "href": "https://www.hostfly.by/tariffs/hosting/"
+    },
+    {
+      "text": "Виртуальные серверы",
+      "href": "https://www.hostfly.by/tariffs/virtual-server/"
+    },
+    {
+      "text": "Выделенные серверы",
+      "href": "https://www.hostfly.by/tariffs/dedicated-server/"
+    },
+    {
+      "text": "Конструктор сайтов",
+      "href": "https://www.hostfly.by/site-constructor/"
+    },
+    {
+      "text": "Новости",
+      "href": "https://www.hostfly.by/about/news/"
+    },
+    {
+      "text": "Вопросы и ответы",
+      "href": "https://www.hostfly.by/about/faq/"
+    },
+    {
+      "text": "Контакты",
+      "href": "https://www.hostfly.by/about/contacts/"
+    },
+    {
+      "text": "Кто мы",
+      "href": "https://www.hostfly.by/about/who-are-we/"
+    },
+    {
+      "text": "",
+      "href": "https://vk.com/hostfly_by"
+    },
+    {
+      "text": "",
+      "href": "https://www.facebook.com/hostfly.by"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/hostfly.by"
+    },
+    {
+      "text": "",
+      "href": "https://ok.ru/group/54715347370078"
+    },
+    {
+      "text": "",
+      "href": "https://twitter.com/hostfly_by"
+    },
+    {
+      "text": "",
+      "href": "https://ru.hostings.info/hostfly-by.html"
+    },
+    {
+      "text": "",
+      "href": ""
+    },
+    {
+      "text": "",
+      "href": ""
+    }
+  ],
+  "navText": {
+    "navbar": [
+      "Главная",
+      "Услуги",
+      "Продукты/услуги",
+      "-----",
+      "Купить хостинг",
+      "Дополнительные услуги",
+      "Регистрация в БелГИЭ",
+      "Домены",
+      "Мои домены",
+      "-----",
+      "Расширенный DNS редактор",
+      "Продлить домены",
+      "Зарегистрировать домен",
+      "Перенести домен к нам",
+      "-----",
+      "Поиск домена",
+      "Финансы",
+      "Мои счета",
+      "Предложения/оценки",
+      "-----",
+      "Пополнить",
+      "Акты выполненных работ",
+      "Поддержка",
+      "Запросы",
+      "Объявления",
+      "База знаний",
+      "Загрузки",
+      "Статус сети",
+      "Создать запрос",
+      "Партнерство"
+    ],
+    "headings": [
+      "Здравствуйте, Евгений Тест",
+      "Доступный баланс",
+      "Ваша информация",
+      "Панель управления",
+      "Мои домены: 0",
+      "Последние запросы Открыть новый запрос",
+      "Активные продукты/услуги Продукты/услуги",
+      "Регистрация домена с аукциона .by/.бел",
+      "Заказ услуги"
+    ],
+    "panels": [
+      "Доступный баланс",
+      "Ваша информация",
+      "Мои домены: 0",
+      "Последние запросы Открыть новый запрос",
+      "Активные продукты/услуги Продукты/услуги",
+      "Регистрация домена с аукциона .by/.бел",
+      "Заказ услуги",
+      "× Close Title"
+    ]
+  }
+}

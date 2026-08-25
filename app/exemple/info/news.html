@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Новости и акции — Hostfly</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/layout.css">
+</head>
+<body data-root="../" data-page="news">
+
+<div data-layout="preview"></div>
+<header data-layout="header"></header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumbs">
+      <a href="../index.html">hostfly.by</a>
+      <span class="breadcrumbs__sep">›</span>
+      <span class="breadcrumbs__current">Новости и акции</span>
+    </nav>
+
+    <section class="hero-plain">
+      <h1 style="font-size:56px;line-height:1.08">Новости и акции</h1>
+      <div class="hero-plain__row">
+        <p class="hero-plain__lead body-m">Обновления сервисов, технические работы, скидки и конференции — всё, что происходит в Hostfly.</p>
+        <form class="search search--sm" style="max-width:420px" onsubmit="return false">
+          <input class="search__input" type="text" placeholder="Введите вопрос и найдите решение" aria-label="Поиск по новостям">
+          <button class="btn btn--soft btn--s" type="submit">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.8"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Искать
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <div class="row" style="margin-bottom:var(--block-gap)">
+      <span class="chip">Все <button type="button" aria-label="Убрать">✕</button></span>
+      <span class="chip">Новости <button type="button" aria-label="Убрать">✕</button></span>
+      <span class="chip">Акции <button type="button" aria-label="Убрать">✕</button></span>
+      <span class="chip">Конференции <button type="button" aria-label="Убрать">✕</button></span>
+      <a class="link-primary" href="#">Еще (5) ›</a>
+    </div>
+  </div>
+
+  <!-- ==================================================== СЕТКА ======== -->
+  <section>
+    <div class="container">
+      <div class="grid grid-3" style="row-gap:56px">
+        <a class="news-card" href="#">
+          <div class="news-card__cover" style="background:var(--c-highlighter)">
+            <svg width="45%" viewBox="0 0 120 120" aria-hidden="true"><rect x="24" y="16" width="62" height="86" rx="6" fill="#fff" stroke="#333" stroke-width="2"/><path d="M38 40h34M38 54h34M38 68h22" stroke="#333" stroke-width="2" stroke-linecap="round"/><path d="M78 76l16-16 8 8-16 16-10 2 2-10z" fill="#fff" stroke="#333" stroke-width="2"/></svg>
+          </div>
+          <div class="news-card__meta"><span>4 марта 2025</span><span class="news-card__cat news-card__cat--news">Новости</span></div>
+          <h4 class="news-card__title">VK, Text.ru и Craftum на масштабной онлайн-конференции AiHUB STUDY 2025</h4>
+        </a>
+        <a class="news-card" href="#">
+          <div class="news-card__cover" style="background:var(--c-orange-light)">
+            <svg width="45%" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 14l34 14v32c0 24-15 38-34 44-19-6-34-20-34-44V28l34-14z" fill="#fff" stroke="#333" stroke-width="2"/><circle cx="60" cy="60" r="20" fill="none" stroke="#333" stroke-width="2"/><path d="M60 46v14l10 7" stroke="#333" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="news-card__meta"><span>28 февраля 2025</span><span class="news-card__cat news-card__cat--conf">Конференции</span></div>
+          <h4 class="news-card__title">Технические работы в дата-центре: плановое обновление сетевого ядра</h4>
+        </a>
+        <a class="news-card" href="#">
+          <div class="news-card__cover" style="background:var(--c-red-light)">
+            <span class="badge badge--error">Акция завершена</span>
+            <svg width="50%" viewBox="0 0 120 120" aria-hidden="true"><path d="M36 82a18 18 0 013-35 24 24 0 0146 8 16 16 0 01-3 27H36z" fill="#fff" stroke="#333" stroke-width="2"/><path d="M50 64l8 8 15-16" stroke="#333" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="news-card__meta"><span>20 ноября 2024</span><span class="news-card__cat news-card__cat--promo">Акции</span></div>
+          <h4 class="news-card__title">Чёрная пятница 2024 в HostFly.by: скидки до 50% на хостинг и почту</h4>
+        </a>
+        <a class="news-card" href="#">
+          <div class="news-card__cover" style="background:var(--c-violet-light)">
+            <svg width="45%" viewBox="0 0 120 120" aria-hidden="true"><rect x="20" y="34" width="80" height="52" rx="8" fill="#fff" stroke="#333" stroke-width="2"/><path d="M32 52h26M32 66h40" stroke="#333" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="news-card__meta"><span>12 ноября 2024</span><span class="news-card__cat news-card__cat--news">Новости</span></div>
+          <h4 class="news-card__title">Новая панель управления доменами: массовые операции и история изменений</h4>
+        </a>
+        <a class="news-card" href="#">
+          <div class="news-card__cover" style="background:var(--c-mint-light)">
+            <svg width="45%" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="34" fill="#fff" stroke="#333" stroke-width="2"/><path d="M46 62l10 10 20-22" stroke="#333" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="news-card__meta"><span>3 октября 2024</span><span class="news-card__cat news-card__cat--promo">Акции</span></div>
+          <h4 class="news-card__title">Бонус 300$ на рекламу в Google Ads для новых клиентов облака</h4>
+        </a>
+        <a class="news-card" href="#">
+          <div class="news-card__cover" style="background:var(--c-blue-light)">
+            <svg width="45%" viewBox="0 0 120 120" aria-hidden="true"><g fill="#fff" stroke="#333" stroke-width="2"><rect x="34" y="28" width="52" height="18" rx="5"/><rect x="34" y="52" width="52" height="18" rx="5"/><rect x="34" y="76" width="52" height="18" rx="5"/></g></svg>
+          </div>
+          <div class="news-card__meta"><span>15 сентября 2024</span><span class="news-card__cat news-card__cat--news">Новости</span></div>
+          <h4 class="news-card__title">NVMe-хранилище во всех тарифах Cloud-хостинга без доплаты</h4>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="container">
+      <div class="pagination">
+        <span class="pagination__count">1-20 из 68</span>
+        <div class="pagination__pages">
+          <button class="pagination__nav" type="button" aria-label="Назад"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4l-5 5 5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <a class="pagination__item is-active" href="#">1</a>
+          <a class="pagination__item" href="#">2</a>
+          <a class="pagination__item" href="#">3</a>
+          <a class="pagination__item" href="#">4</a>
+          <span class="pagination__gap">...</span>
+          <a class="pagination__item" href="#">20</a>
+          <button class="pagination__nav" type="button" aria-label="Вперёд"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+        <label class="pagination__per">Показывать <select><option>20</option><option>50</option></select></label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== БЛОГ ======= -->
+  <section class="section section--divided">
+    <div class="container">
+      <h2 style="margin-bottom:var(--block-gap)">Блог hostfly</h2>
+      <div class="stack" style="gap:56px">
+        <article class="post">
+          <div class="post__cover post__cover--round" style="background:linear-gradient(140deg,#2b6cb0,#63b3ed)"></div>
+          <div class="stack" style="gap:16px">
+            <div class="body-m text-mute">4 марта 2025</div>
+            <h5>Чёрная пятница 2024 в HostFly.by: Скидки до 50% на хостинг и почту</h5>
+            <p class="body-m text-body">С 20 по 29 ноября 2024 года HostFly.by предлагает ещё более выгодные условия для всех, кто хочет разместить свой сайт в интернете.</p>
+            <div class="post__tags">
+              <a class="link-primary is-underline" href="#">#hostfly0</a>
+              <a class="link-primary is-underline" href="#">#hostfly1</a>
+              <a class="link-primary is-underline" href="#">#hostfly2</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <hr class="hr" style="margin-top:56px">
+      <div class="text-center" style="padding:28px 0">
+        <a class="link-add" href="#">Читать другие статьи
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style="display:inline;vertical-align:-3px"><path d="M3 9h11m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <hr class="hr">
+    </div>
+  </section>
+</main>
+
+<footer data-layout="footer"></footer>
+
+<script src="../js/layout.js"></script>
+<script src="../js/theme.js"></script>
+</body>
+</html>

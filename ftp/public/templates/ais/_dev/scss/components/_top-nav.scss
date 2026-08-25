@@ -1,0 +1,102 @@
+ul.top-nav {
+  float: right;
+  margin-bottom: -7px;
+  padding-left: 0;
+  list-style: none;
+  white-space: nowrap;
+
+  @media (max-width: $screen-sm-max) {
+    display: none;
+  }
+
+  > li,
+  > li > a {
+    display: inline-block;
+    position: relative;
+  }
+
+  > li {
+    &:last-child {
+      .dropdown-menu {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    > a {
+      font-size: $font-size-base;
+      @include font-face-medium;
+      text-transform: uppercase;
+      padding: 7px 14px;
+      color: #fff;
+      line-height: 1;
+      text-decoration: none;
+
+      .caret {
+        margin-left: 4px;
+        top: -1px;
+      }
+
+      .label {
+        position: relative;
+        margin-left: 6px;
+        top: -1px;
+      }
+    }
+  }
+}
+
+ul.top-nav > li:active > a,
+ul.top-nav > li:focus > a,
+ul.top-nav > li:hover > a,
+ul.top-nav > li > a:focus {
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  background: transparent;
+}
+ul.top-nav > li.primary-action {
+  margin-left: 20px;
+}
+ul.top-nav > li.primary-action > a.btn {
+  min-width: 120px;
+  padding: 11px 24px 10px;
+  @include font-face-normal;
+  font-size: $font-size-small;
+  border-width: 1px;
+}
+ul.top-nav > li > a.btn-logged-in-admin {
+  margin-left: 5px;
+  font-size: 1.5em;
+}
+ul.top-nav .tooltip-inner {
+  margin-left: -200px;
+  min-width: 250px;
+  width: 250px;
+}
+
+@media (max-width: 991px) {
+  ul.top-nav {
+    font-size: 0.9em;
+  }
+  ul.top-nav > li.primary-action > a.btn {
+    padding: 4px 12px;
+    font-size: 1em;
+  }
+  ul.top-nav > li > a.btn-logged-in-admin {
+    margin-top: -2px;
+  }
+}
+
+@media (max-width: 767px) {
+  ul.top-nav {
+    margin: 0;
+    font-size: 0.8em;
+  }
+  ul.top-nav > li > a {
+    padding: 6px;
+  }
+  ul.top-nav > li.primary-action > a.btn {
+    padding: 3px 12px;
+    font-size: 1em;
+  }
+}

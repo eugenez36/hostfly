@@ -1,0 +1,44 @@
+section#home-banner {
+  margin: 0;
+  padding: 50px 0 60px;
+  background-color: #043d5f;
+  color: #fff;
+}
+
+section#home-banner h2 {
+  margin: 0;
+  padding: 0 25px 10px 25px;
+}
+
+section#home-banner .form-control {
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  font-weight: 300;
+}
+
+section#home-banner .btn {
+  border-radius: 0;
+  border: 0;
+  font-weight: 300;
+  color: #fff;
+}
+
+section#home-banner .btn.search {
+  background-color: #4ab98b;
+}
+section#home-banner .btn.transfer {
+  background-color: #bbb;
+}
+
+@media (max-width: 992px) {
+  section#home-banner h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  section#home-banner h2 {
+    font-size: 22px;
+  }
+}

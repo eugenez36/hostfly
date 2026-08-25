@@ -1,0 +1,352 @@
+{
+  "name": "21-affiliates",
+  "path": "/affiliates.php",
+  "note": "Партнёрская программа",
+  "url": "https://my.hostfly.by/affiliates.php",
+  "status": 200,
+  "finalUrl": "https://my.hostfly.by/affiliates.php",
+  "title": "Личный кабинет | Hostfly",
+  "h1": [],
+  "h2": [
+    "Получайте выплаты по партнерской программе, ссылаясь на нас"
+  ],
+  "h3": [],
+  "panels": [
+    "× Close Title"
+  ],
+  "tabs": [],
+  "forms": [
+    {
+      "action": "affiliates.php",
+      "method": "post",
+      "fields": [],
+      "submitButtons": [
+        "Активировать партнерство"
+      ]
+    }
+  ],
+  "tables": [],
+  "alerts": [
+    "Получайте выплаты по партнерской программе, ссылаясь на нас Активируйте партнерский аккаунт и начните зарабатывать прямо сейчас..."
+  ],
+  "buttons": [
+    "Выход",
+    "Корзина",
+    "Toggle navigation",
+    "× Close",
+    "Close",
+    "Submit"
+  ],
+  "linkCount": 77,
+  "links": [
+    {
+      "text": "",
+      "href": "http://www.hostfly.by/"
+    },
+    {
+      "text": "Выход",
+      "href": "/logout.php"
+    },
+    {
+      "text": "Корзина",
+      "href": "/cart.php?a=view"
+    },
+    {
+      "text": "العربية",
+      "href": "/affiliates.php?language=arabic"
+    },
+    {
+      "text": "Azerbaijani",
+      "href": "/affiliates.php?language=azerbaijani"
+    },
+    {
+      "text": "Català",
+      "href": "/affiliates.php?language=catalan"
+    },
+    {
+      "text": "中文",
+      "href": "/affiliates.php?language=chinese"
+    },
+    {
+      "text": "Hrvatski",
+      "href": "/affiliates.php?language=croatian"
+    },
+    {
+      "text": "Čeština",
+      "href": "/affiliates.php?language=czech"
+    },
+    {
+      "text": "Dansk",
+      "href": "/affiliates.php?language=danish"
+    },
+    {
+      "text": "Nederlands",
+      "href": "/affiliates.php?language=dutch"
+    },
+    {
+      "text": "English",
+      "href": "/affiliates.php?language=english"
+    },
+    {
+      "text": "Estonian",
+      "href": "/affiliates.php?language=estonian"
+    },
+    {
+      "text": "Persian",
+      "href": "/affiliates.php?language=farsi"
+    },
+    {
+      "text": "Français",
+      "href": "/affiliates.php?language=french"
+    },
+    {
+      "text": "Deutsch",
+      "href": "/affiliates.php?language=german"
+    },
+    {
+      "text": "עברית",
+      "href": "/affiliates.php?language=hebrew"
+    },
+    {
+      "text": "Magyar",
+      "href": "/affiliates.php?language=hungarian"
+    },
+    {
+      "text": "Italiano",
+      "href": "/affiliates.php?language=italian"
+    },
+    {
+      "text": "Macedonian",
+      "href": "/affiliates.php?language=macedonian"
+    },
+    {
+      "text": "Norwegian",
+      "href": "/affiliates.php?language=norwegian"
+    },
+    {
+      "text": "Português",
+      "href": "/affiliates.php?language=portuguese-br"
+    },
+    {
+      "text": "Português",
+      "href": "/affiliates.php?language=portuguese-pt"
+    },
+    {
+      "text": "Română",
+      "href": "/affiliates.php?language=romanian"
+    },
+    {
+      "text": "Русский",
+      "href": "/affiliates.php?language=russian"
+    },
+    {
+      "text": "Español",
+      "href": "/affiliates.php?language=spanish"
+    },
+    {
+      "text": "Svenska",
+      "href": "/affiliates.php?language=swedish"
+    },
+    {
+      "text": "Türkçe",
+      "href": "/affiliates.php?language=turkish"
+    },
+    {
+      "text": "Українська",
+      "href": "/affiliates.php?language=ukranian"
+    },
+    {
+      "text": "Pin-код подтверждения входа",
+      "href": "/index.php?m=loginverifypin"
+    },
+    {
+      "text": "Личные данные",
+      "href": "/clientarea.php?action=details"
+    },
+    {
+      "text": "Контакты/Суб-аккаунты",
+      "href": "/index.php?rp=/account/contacts"
+    },
+    {
+      "text": "Безопасность",
+      "href": "/clientarea.php?action=security"
+    },
+    {
+      "text": "История уведомлений",
+      "href": "/clientarea.php?action=emails"
+    },
+    {
+      "text": "Ваш профиль",
+      "href": "/index.php?rp=/user/profile"
+    },
+    {
+      "text": "Изменить пароль",
+      "href": "/index.php?rp=/user/password"
+    },
+    {
+      "text": "Настройки безопасности",
+      "href": "/index.php?rp=/user/security"
+    },
+    {
+      "text": "Выход",
+      "href": "/logout.php"
+    },
+    {
+      "text": "Главная",
+      "href": "/clientarea.php"
+    },
+    {
+      "text": "Продукты/услуги",
+      "href": "/clientarea.php?action=services"
+    },
+    {
+      "text": "Купить хостинг",
+      "href": "/cart.php"
+    },
+    {
+      "text": "Дополнительные услуги",
+      "href": "/cart.php?gid=addons"
+    },
+    {
+      "text": "Регистрация в БелГИЭ",
+      "href": "/index.php?rp=/store/administrativnye-protsedury"
+    },
+    {
+      "text": "Мои домены",
+      "href": "/clientarea.php?action=domains"
+    },
+    {
+      "text": "Расширенный DNS редактор",
+      "href": "/index.php?m=DNSManager3"
+    },
+    {
+      "text": "Продлить домены",
+      "href": "/index.php?rp=/cart/domain/renew"
+    },
+    {
+      "text": "Зарегистрировать домен",
+      "href": "/cart.php?a=add&domain=register"
+    },
+    {
+      "text": "Перенести домен к нам",
+      "href": "/cart.php?a=add&domain=transfer"
+    },
+    {
+      "text": "Поиск домена",
+      "href": "/domainchecker.php"
+    },
+    {
+      "text": "Мои счета",
+      "href": "/clientarea.php?action=invoices"
+    },
+    {
+      "text": "Предложения/оценки",
+      "href": "/clientarea.php?action=quotes"
+    },
+    {
+      "text": "Пополнить",
+      "href": "/clientarea.php?action=addfunds"
+    },
+    {
+      "text": "Акты выполненных работ",
+      "href": "/clientacts.php"
+    },
+    {
+      "text": "Запросы",
+      "href": "/supporttickets.php"
+    },
+    {
+      "text": "Объявления",
+      "href": "/announcements.php"
+    },
+    {
+      "text": "База знаний",
+      "href": "/knowledgebase.php"
+    },
+    {
+      "text": "Загрузки",
+      "href": "/downloads.php"
+    },
+    {
+      "text": "Статус сети",
+      "href": "/serverstatus.php"
+    },
+    {
+      "text": "Создать запрос",
+      "href": "/submitticket.php"
+    },
+    {
+      "text": "Партнерство",
+      "href": "/affiliates.php"
+    },
+    {
+      "text": "Главная",
+      "href": "/index.php"
+    },
+    {
+      "text": "Главная",
+      "href": "https://www.hostfly.by/"
+    },
+    {
+      "text": "Регистрация доменов",
+      "href": "https://www.hostfly.by/domains/"
+    },
+    {
+      "text": "Хостинг сайтов",
+      "href": "https://www.hostfly.by/tariffs/hosting/"
+    },
+    {
+      "text": "Виртуальные серверы",
+      "href": "https://www.hostfly.by/tariffs/virtual-server/"
+    },
+    {
+      "text": "Выделенные серверы",
+      "href": "https://www.hostfly.by/tariffs/dedicated-server/"
+    },
+    {
+      "text": "Конструктор сайтов",
+      "href": "https://www.hostfly.by/site-constructor/"
+    },
+    {
+      "text": "Новости",
+      "href": "https://www.hostfly.by/about/news/"
+    },
+    {
+      "text": "Вопросы и ответы",
+      "href": "https://www.hostfly.by/about/faq/"
+    },
+    {
+      "text": "Контакты",
+      "href": "https://www.hostfly.by/about/contacts/"
+    },
+    {
+      "text": "Кто мы",
+      "href": "https://www.hostfly.by/about/who-are-we/"
+    },
+    {
+      "text": "",
+      "href": "https://vk.com/hostfly_by"
+    },
+    {
+      "text": "",
+      "href": "https://www.facebook.com/hostfly.by"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/hostfly.by"
+    },
+    {
+      "text": "",
+      "href": "https://ok.ru/group/54715347370078"
+    },
+    {
+      "text": "",
+      "href": "https://twitter.com/hostfly_by"
+    },
+    {
+      "text": "",
+      "href": "https://ru.hostings.info/hostfly-by.html"
+    }
+  ],
+  "bodyTextLen": 890
+}

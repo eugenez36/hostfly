@@ -1,0 +1,390 @@
+{
+  "name": "20-serverstatus",
+  "path": "/serverstatus.php",
+  "note": "Статус сети",
+  "url": "https://my.hostfly.by/serverstatus.php",
+  "status": 200,
+  "finalUrl": "https://my.hostfly.by/serverstatus.php",
+  "title": "Личный кабинет | Hostfly",
+  "h1": [
+    "Новости и информация"
+  ],
+  "h2": [],
+  "h3": [
+    "Просмотр",
+    "Поддержка"
+  ],
+  "panels": [
+    "Просмотр",
+    "Поддержка",
+    "× Close Title"
+  ],
+  "tabs": [],
+  "forms": [],
+  "tables": [],
+  "alerts": [
+    "Сейчас нет проблем с сетью"
+  ],
+  "buttons": [
+    "Выход",
+    "Корзина",
+    "Toggle navigation",
+    "< Назад",
+    "Вперед >",
+    "× Close",
+    "Close",
+    "Submit"
+  ],
+  "linkCount": 87,
+  "links": [
+    {
+      "text": "",
+      "href": "http://www.hostfly.by/"
+    },
+    {
+      "text": "Выход",
+      "href": "/logout.php"
+    },
+    {
+      "text": "Корзина",
+      "href": "/cart.php?a=view"
+    },
+    {
+      "text": "العربية",
+      "href": "/serverstatus.php?language=arabic"
+    },
+    {
+      "text": "Azerbaijani",
+      "href": "/serverstatus.php?language=azerbaijani"
+    },
+    {
+      "text": "Català",
+      "href": "/serverstatus.php?language=catalan"
+    },
+    {
+      "text": "中文",
+      "href": "/serverstatus.php?language=chinese"
+    },
+    {
+      "text": "Hrvatski",
+      "href": "/serverstatus.php?language=croatian"
+    },
+    {
+      "text": "Čeština",
+      "href": "/serverstatus.php?language=czech"
+    },
+    {
+      "text": "Dansk",
+      "href": "/serverstatus.php?language=danish"
+    },
+    {
+      "text": "Nederlands",
+      "href": "/serverstatus.php?language=dutch"
+    },
+    {
+      "text": "English",
+      "href": "/serverstatus.php?language=english"
+    },
+    {
+      "text": "Estonian",
+      "href": "/serverstatus.php?language=estonian"
+    },
+    {
+      "text": "Persian",
+      "href": "/serverstatus.php?language=farsi"
+    },
+    {
+      "text": "Français",
+      "href": "/serverstatus.php?language=french"
+    },
+    {
+      "text": "Deutsch",
+      "href": "/serverstatus.php?language=german"
+    },
+    {
+      "text": "עברית",
+      "href": "/serverstatus.php?language=hebrew"
+    },
+    {
+      "text": "Magyar",
+      "href": "/serverstatus.php?language=hungarian"
+    },
+    {
+      "text": "Italiano",
+      "href": "/serverstatus.php?language=italian"
+    },
+    {
+      "text": "Macedonian",
+      "href": "/serverstatus.php?language=macedonian"
+    },
+    {
+      "text": "Norwegian",
+      "href": "/serverstatus.php?language=norwegian"
+    },
+    {
+      "text": "Português",
+      "href": "/serverstatus.php?language=portuguese-br"
+    },
+    {
+      "text": "Português",
+      "href": "/serverstatus.php?language=portuguese-pt"
+    },
+    {
+      "text": "Română",
+      "href": "/serverstatus.php?language=romanian"
+    },
+    {
+      "text": "Русский",
+      "href": "/serverstatus.php?language=russian"
+    },
+    {
+      "text": "Español",
+      "href": "/serverstatus.php?language=spanish"
+    },
+    {
+      "text": "Svenska",
+      "href": "/serverstatus.php?language=swedish"
+    },
+    {
+      "text": "Türkçe",
+      "href": "/serverstatus.php?language=turkish"
+    },
+    {
+      "text": "Українська",
+      "href": "/serverstatus.php?language=ukranian"
+    },
+    {
+      "text": "Pin-код подтверждения входа",
+      "href": "/index.php?m=loginverifypin"
+    },
+    {
+      "text": "Личные данные",
+      "href": "/clientarea.php?action=details"
+    },
+    {
+      "text": "Контакты/Суб-аккаунты",
+      "href": "/index.php?rp=/account/contacts"
+    },
+    {
+      "text": "Безопасность",
+      "href": "/clientarea.php?action=security"
+    },
+    {
+      "text": "История уведомлений",
+      "href": "/clientarea.php?action=emails"
+    },
+    {
+      "text": "Ваш профиль",
+      "href": "/index.php?rp=/user/profile"
+    },
+    {
+      "text": "Изменить пароль",
+      "href": "/index.php?rp=/user/password"
+    },
+    {
+      "text": "Настройки безопасности",
+      "href": "/index.php?rp=/user/security"
+    },
+    {
+      "text": "Выход",
+      "href": "/logout.php"
+    },
+    {
+      "text": "Главная",
+      "href": "/clientarea.php"
+    },
+    {
+      "text": "Продукты/услуги",
+      "href": "/clientarea.php?action=services"
+    },
+    {
+      "text": "Купить хостинг",
+      "href": "/cart.php"
+    },
+    {
+      "text": "Дополнительные услуги",
+      "href": "/cart.php?gid=addons"
+    },
+    {
+      "text": "Регистрация в БелГИЭ",
+      "href": "/index.php?rp=/store/administrativnye-protsedury"
+    },
+    {
+      "text": "Мои домены",
+      "href": "/clientarea.php?action=domains"
+    },
+    {
+      "text": "Расширенный DNS редактор",
+      "href": "/index.php?m=DNSManager3"
+    },
+    {
+      "text": "Продлить домены",
+      "href": "/index.php?rp=/cart/domain/renew"
+    },
+    {
+      "text": "Зарегистрировать домен",
+      "href": "/cart.php?a=add&domain=register"
+    },
+    {
+      "text": "Перенести домен к нам",
+      "href": "/cart.php?a=add&domain=transfer"
+    },
+    {
+      "text": "Поиск домена",
+      "href": "/domainchecker.php"
+    },
+    {
+      "text": "Мои счета",
+      "href": "/clientarea.php?action=invoices"
+    },
+    {
+      "text": "Предложения/оценки",
+      "href": "/clientarea.php?action=quotes"
+    },
+    {
+      "text": "Пополнить",
+      "href": "/clientarea.php?action=addfunds"
+    },
+    {
+      "text": "Акты выполненных работ",
+      "href": "/clientacts.php"
+    },
+    {
+      "text": "Запросы",
+      "href": "/supporttickets.php"
+    },
+    {
+      "text": "Объявления",
+      "href": "/announcements.php"
+    },
+    {
+      "text": "База знаний",
+      "href": "/knowledgebase.php"
+    },
+    {
+      "text": "Загрузки",
+      "href": "/downloads.php"
+    },
+    {
+      "text": "Статус сети",
+      "href": "/serverstatus.php"
+    },
+    {
+      "text": "Создать запрос",
+      "href": "/submitticket.php"
+    },
+    {
+      "text": "Партнерство",
+      "href": "/affiliates.php"
+    },
+    {
+      "text": "Главная",
+      "href": "index.php"
+    },
+    {
+      "text": "0 открыто",
+      "href": "/serverstatus.php?view=open"
+    },
+    {
+      "text": "0 запланировано",
+      "href": "/serverstatus.php?view=scheduled"
+    },
+    {
+      "text": "0 решено",
+      "href": "/serverstatus.php?view=resolved"
+    },
+    {
+      "text": "Просмотр RSS",
+      "href": "/networkissuesrss.php"
+    },
+    {
+      "text": "Мои запросы",
+      "href": "/supporttickets.php"
+    },
+    {
+      "text": "Объявления",
+      "href": "/announcements.php"
+    },
+    {
+      "text": "База знаний",
+      "href": "/knowledgebase.php"
+    },
+    {
+      "text": "Загрузки",
+      "href": "/downloads.php"
+    },
+    {
+      "text": "Статус сети",
+      "href": "/serverstatus.php"
+    },
+    {
+      "text": "Создать запрос",
+      "href": "/submitticket.php"
+    },
+    {
+      "text": "Главная",
+      "href": "https://www.hostfly.by/"
+    },
+    {
+      "text": "Регистрация доменов",
+      "href": "https://www.hostfly.by/domains/"
+    },
+    {
+      "text": "Хостинг сайтов",
+      "href": "https://www.hostfly.by/tariffs/hosting/"
+    },
+    {
+      "text": "Виртуальные серверы",
+      "href": "https://www.hostfly.by/tariffs/virtual-server/"
+    },
+    {
+      "text": "Выделенные серверы",
+      "href": "https://www.hostfly.by/tariffs/dedicated-server/"
+    },
+    {
+      "text": "Конструктор сайтов",
+      "href": "https://www.hostfly.by/site-constructor/"
+    },
+    {
+      "text": "Новости",
+      "href": "https://www.hostfly.by/about/news/"
+    },
+    {
+      "text": "Вопросы и ответы",
+      "href": "https://www.hostfly.by/about/faq/"
+    },
+    {
+      "text": "Контакты",
+      "href": "https://www.hostfly.by/about/contacts/"
+    },
+    {
+      "text": "Кто мы",
+      "href": "https://www.hostfly.by/about/who-are-we/"
+    },
+    {
+      "text": "",
+      "href": "https://vk.com/hostfly_by"
+    },
+    {
+      "text": "",
+      "href": "https://www.facebook.com/hostfly.by"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/hostfly.by"
+    },
+    {
+      "text": "",
+      "href": "https://ok.ru/group/54715347370078"
+    },
+    {
+      "text": "",
+      "href": "https://twitter.com/hostfly_by"
+    },
+    {
+      "text": "",
+      "href": "https://ru.hostings.info/hostfly-by.html"
+    }
+  ],
+  "bodyTextLen": 619
+}

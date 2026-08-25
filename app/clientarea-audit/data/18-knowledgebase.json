@@ -1,0 +1,533 @@
+{
+  "name": "18-knowledgebase",
+  "path": "/knowledgebase.php",
+  "note": "База знаний",
+  "url": "https://my.hostfly.by/knowledgebase.php",
+  "status": 200,
+  "finalUrl": "https://www.hostfly.by/about/faq/",
+  "title": "Ответы на часто задаваемые вопросы | Hostfly.by",
+  "h1": [
+    "Вопросы и ответы"
+  ],
+  "h2": [
+    "Наши Клиенты"
+  ],
+  "h3": [],
+  "panels": [],
+  "tabs": [],
+  "forms": [
+    {
+      "action": "/about/faq/search/",
+      "method": "get",
+      "fields": [
+        {
+          "tag": "input",
+          "name": "q",
+          "type": "text",
+          "required": false,
+          "placeholder": "Ваш вопрос..."
+        }
+      ],
+      "submitButtons": [
+        "Искать"
+      ]
+    }
+  ],
+  "tables": [],
+  "alerts": [],
+  "buttons": [
+    "Настройки",
+    "Отклонить",
+    "Принимаю",
+    "Сохранить настройки",
+    "Принимаю",
+    "Отклонить",
+    "Искать",
+    "Previous",
+    "Next"
+  ],
+  "linkCount": 164,
+  "links": [
+    {
+      "text": "Политикой обработки файлов cookie",
+      "href": "https://hostfly.by/upload/cookie_hfby.pdf"
+    },
+    {
+      "text": "",
+      "href": "/"
+    },
+    {
+      "text": "Регистрация",
+      "href": "https://my.hostfly.by/register.php"
+    },
+    {
+      "text": "Вход",
+      "href": "https://my.hostfly.by/clientarea.php"
+    },
+    {
+      "text": "Личный кабинет",
+      "href": "https://my.hostfly.by/clientarea.php"
+    },
+    {
+      "text": "Хостинг сайтов",
+      "href": "/tariffs/hosting/"
+    },
+    {
+      "text": "WordPress-хостинг",
+      "href": "/tariffs/hosting-dlya-wordpress/"
+    },
+    {
+      "text": "Виртуальные серверы",
+      "href": "/tariffs/virtual-server/"
+    },
+    {
+      "text": "Битрикс-хостинг",
+      "href": "/tariffs/bitrix-hosting/"
+    },
+    {
+      "text": "Почта для домена",
+      "href": "/email/"
+    },
+    {
+      "text": "1С:Бухгалтерия",
+      "href": "/tariffs/1c-cloud/"
+    },
+    {
+      "text": "Выделенные серверы",
+      "href": "/tariffs/dedicated-server/"
+    },
+    {
+      "text": "Защищённый хостинг",
+      "href": "/securecloud/"
+    },
+    {
+      "text": "Защищённый хостинг",
+      "href": "/securecloud/"
+    },
+    {
+      "text": "Регистрация доменов",
+      "href": "/domains/"
+    },
+    {
+      "text": "Аукцион доменов .BY",
+      "href": "/domains/auction-by/"
+    },
+    {
+      "text": "SSL-сертификаты",
+      "href": "/ssl/"
+    },
+    {
+      "text": "Конструктор сайтов",
+      "href": "/site-constructor/"
+    },
+    {
+      "text": "Кто мы",
+      "href": "/about/who-are-we/"
+    },
+    {
+      "text": "Новости и акции",
+      "href": "/about/news/"
+    },
+    {
+      "text": "Блог",
+      "href": "/blog/"
+    },
+    {
+      "text": "Вопросы и ответы",
+      "href": "/about/faq/"
+    },
+    {
+      "text": "Контакты",
+      "href": "/about/contacts/"
+    },
+    {
+      "text": "Документы",
+      "href": "/contracts/"
+    },
+    {
+      "text": "Владельцам хостинг-компаний",
+      "href": "/buy-sell-hosting-company/"
+    },
+    {
+      "text": "Главная",
+      "href": "/"
+    },
+    {
+      "text": "О компании",
+      "href": "/about/who-are-we/"
+    },
+    {
+      "text": "Где находится ваш дата-центр?",
+      "href": "/about/faq/gde_nakhoditsya_vash_data-tsentr/"
+    },
+    {
+      "text": "Какие у вас DNS?",
+      "href": "/about/faq/kakie_u_vas_dns/"
+    },
+    {
+      "text": "Как заказать хостинг?",
+      "href": "/about/faq/kak_zakazat_khosting/"
+    },
+    {
+      "text": "Как понять, какой хостинг подойдёт для моего сайта?",
+      "href": "/about/faq/kak_ponyat-_kakoy_khosting_podoydyet_dlya_moego_sayta/"
+    },
+    {
+      "text": "Сроки начала предоставление услуги",
+      "href": "/about/faq/sroki_nachala_predostavlenie_uslugi/"
+    },
+    {
+      "text": "Что такое публичный договор и почему он не подписывается?",
+      "href": "/about/faq/chto_takoe_publichnyy_dogovor_i_pochemu_on_ne_podpisyvaetsya/"
+    },
+    {
+      "text": "Как перенести сайт на CMS WordPress при помощи утилиты “Host",
+      "href": "/about/faq/kak_perenesti_sayt_na_cms_wordpress_pri_pomoshchi_utility_-hostfly-prilozheniya/"
+    },
+    {
+      "text": "Как перенести сайт на хостинг HostFly.by?",
+      "href": "/about/faq/kak_perenesti_sayt_na_khosting_hostfly-by/"
+    },
+    {
+      "text": "Сколько времени займёт перенос сайта?",
+      "href": "/about/faq/skolko_vremeni_zaymyet_perenos_sayta/"
+    },
+    {
+      "text": "Могу ли я перенести сайт, созданный на стороннем конструктор",
+      "href": "/about/faq/mogu_li_ya_perenesti_sayt-_sozdannyy_na_storonnem_konstruktore/"
+    },
+    {
+      "text": "Переносите ли вы почту вместе с сайтом?",
+      "href": "/about/faq/perenosite_li_vy_pochtu_vmeste_s_saytom/"
+    },
+    {
+      "text": "Как перейти с одного тарифа на другой?",
+      "href": "/about/faq/kak_pereyti_s_odnogo_tarifa_na_drugoy/"
+    },
+    {
+      "text": "Можно ли с VPS с администрированием перейти на VPS без админ",
+      "href": "/about/faq/mozhno_li_s_vps_s_administrirovaniem_pereyti_na_vps_bez_administrirovaniya/"
+    },
+    {
+      "text": "Как часто можно менять тарифные планы?",
+      "href": "/about/faq/kak_chasto_mozhno_menyat_tarifnye_plany/"
+    },
+    {
+      "text": "Как изменить владельца хостинга с физ. лица на ИП?",
+      "href": "/about/faq/kak_izmenit_vladeltsa_khostinga_s_fiz-_litsa_na_ip/"
+    },
+    {
+      "text": "Как изменить владельца хостинга с физ. лица на юр.лицо?",
+      "href": "/about/faq/kak_izmenit_vladeltsa_khostinga_s_fiz-_litsa_na_yur-litso/"
+    },
+    {
+      "text": "Как переоформить хостинг на другое лицо?",
+      "href": "/about/faq/mozhno_li_perenesti_khosting_ot_odnogo_polzovatelya_k_drugomu/"
+    },
+    {
+      "text": "Как получить доступ к FTP сайта?",
+      "href": "/about/faq/kak_poluchit_dostup_k_ftp_sayta/"
+    },
+    {
+      "text": "На почту не пришёл доступ к FTP. Что делать?",
+      "href": "/about/faq/v_pisme_s_dostupami_k_khostingu_ne_prikhodil_-_ne_podkhodit_dostup_k_ftp-_chto_delat/"
+    },
+    {
+      "text": "Сколько стоит разовая техническая поддержка?",
+      "href": "/about/faq/skolko_stoit_razovaya_tekhnicheskaya_podderzhka/"
+    },
+    {
+      "text": "Как понять, нужен ли мне выделенный IP?",
+      "href": "/about/faq/kak_ponyat-_nuzhen_li_mne_vydelennyy_ip/"
+    },
+    {
+      "text": "Как подключить ежедневное бэкапирование?",
+      "href": "/about/faq/kak_podklyuchit_ezhednevnoe_bekapirovanie/"
+    },
+    {
+      "text": "Как получить прямой доступ к базе данных?",
+      "href": "/about/faq/kak_poluchit_pryamoy_dostup_k_baze_dannykh-_/"
+    },
+    {
+      "text": "Как получить удаленный доступ к БД?",
+      "href": "/about/faq/kak_poluchit_udalennyy_dostup_k_bd/"
+    },
+    {
+      "text": "Как восстановить пароли доступа к хостингу?",
+      "href": "/about/faq/kak_vosstanovit_paroli_dostupa_k_khostingu/"
+    },
+    {
+      "text": "Можно ли загрузить сайт на хостинг с флешки или другого носи",
+      "href": "/about/faq/mozhno_li_zagruzit_sayt_na_khosting_s_fleshki_ili_drugogo_nositelya/"
+    },
+    {
+      "text": "Как получить доступ по SSH?",
+      "href": "/about/faq/kak_poluchit_dostup_po_ssh/"
+    },
+    {
+      "text": "Как установить CMS на виртуальный хостинг",
+      "href": "/about/faq/kak_ustanovit_cms_na_virtualnyy_khosting/"
+    },
+    {
+      "text": "Сколько длится тестовый период?",
+      "href": "/about/faq/skolko_dlitsya_testovyy_period/"
+    },
+    {
+      "text": "Даётся ли тестовый домен?",
+      "href": "/about/faq/dayetsya_li_testovyy_domen/"
+    },
+    {
+      "text": "Возможно ли получить тестовый период без заполнения личных д",
+      "href": "/about/faq/vozmozhno_li_poluchit_testovyy_period_bez_zapolneniya_lichnykh_dannykh/"
+    },
+    {
+      "text": "Как установить на WordPress-хостинг кэширующие плагины LiteS",
+      "href": "/about/faq/kak_ustanovit_na_wordpress-khosting_keshiruyushchie_plaginy_litespeed_cache-_redis_i_memcached/"
+    },
+    {
+      "text": "Как установить WordPress на хостинг через WordPress Toolkit",
+      "href": "/about/faq/kak_ustanovit_wordpress_na_khosting_cherez_wordpress_toolkit/"
+    },
+    {
+      "text": "Как подключить конструктор Brizy на WordPress-хостинге",
+      "href": "/about/faq/kak_podklyuchit_konstruktor_brizy_na_wordpress-khostinge/"
+    },
+    {
+      "text": "Как подключить домен к сайту на Tilda?",
+      "href": "/about/faq/kak_podklyuchit_domen_k_saytu_na_tilda/"
+    },
+    {
+      "text": "Как создать поддомен?",
+      "href": "/about/faq/kak_sozdat_poddomen/"
+    },
+    {
+      "text": "Как заказать домен?",
+      "href": "/about/faq/kak_zakazat_domen/"
+    },
+    {
+      "text": "Как привязать домен к виртуальному хостингу?",
+      "href": "/about/faq/kak_privyazat_domen_k_khostingu/"
+    },
+    {
+      "text": "Как добавить ещё один домен на хостинг?",
+      "href": "/about/faq/kak_dobavit_eshchye_odin_domen_na_khosting/"
+    },
+    {
+      "text": "Приобрёл домен на аукционе, что дальше?",
+      "href": "/about/faq/priobryel_domen_na_auktsione-_chto_dalshe/"
+    },
+    {
+      "text": "Как изменить А-запись домена в расширенном DNS-редакторе?",
+      "href": "/about/faq/kak_izmenit_a-zapis_domena/"
+    },
+    {
+      "text": "Как добавить TXT-запись домена в расширенном DNS-редакторе?",
+      "href": "/about/faq/kak_dobavit_txt-zapis_domena_v_rasshirennom_dns-redaktore/"
+    },
+    {
+      "text": "Как внести CNAME-запись в расширенном DNS-редакторе",
+      "href": "/about/faq/kak_vnesti_cname-zapis_v_rasshirennom_dns-redaktore/"
+    },
+    {
+      "text": "Как добавить MX-запись в расширенном DNS-редакторе",
+      "href": "/about/faq/kak_dobavit_mx-zapis_v_rasshirennom_dns-redaktore/"
+    },
+    {
+      "text": "Как сделать редирект с домена на другой домен?",
+      "href": "/about/faq/kak_sdelat_redirekt_s_domena_na_drugoy_domen/"
+    },
+    {
+      "text": "Как изменить А-запись домена в cPanel?",
+      "href": "/about/faq/kak_izmenit_a-zapis_domena_v_cpanel/"
+    },
+    {
+      "text": "Как добавить TXT-запись в панели управления cPanel",
+      "href": "/about/faq/kak_dobavit_txt-zapis_v_paneli_upravleniya_cpanel/"
+    },
+    {
+      "text": "Как добавить запись CNAME в панели управления cPanel?",
+      "href": "/about/faq/kak_dobavit_zapis_cname_v_paneli_upravleniya_cpanel/"
+    },
+    {
+      "text": "Как настроить MX-запись домена в cPanel?",
+      "href": "/about/faq/kak_nastroit_mx-zapis_domena_v_cpanel/"
+    },
+    {
+      "text": "Как припарковать домен?",
+      "href": "/about/faq/kak_priparkovat_domen/"
+    },
+    {
+      "text": "Как перенести международный домен на обслуживание в HostFly.",
+      "href": "/about/faq/kak_perenesti_mezhdunarodnyy_domen_na_obsluzhivanie_v_hostfly-by/"
+    },
+    {
+      "text": "Как перенести домен .BY/.БЕЛ на HostFly.by от другого регист",
+      "href": "/about/faq/kak_perenesti_domen_by-bel_na_hostfly-by_ot_drugogo_registratora/"
+    },
+    {
+      "text": "Как изменить владельца домена BY/БЕЛ?",
+      "href": "/about/faq/kak_izmenit_vladeltsa_domena_by-bel/"
+    },
+    {
+      "text": "Как изменить владельца международного домена?",
+      "href": "/about/faq/kak_izmenit_vladeltsa_mezhdunarodnogo_domena/"
+    },
+    {
+      "text": "Как поменять основное доменное имя на веб-хостинге?",
+      "href": "/about/faq/kak_pomenyat_osnovnoe_domennoe_imya_na_veb-khostinge/"
+    },
+    {
+      "text": "Как узнать, нужно ли мне регистрировать мой сайт в БелГИЭ?",
+      "href": "/about/faq/nado-li-registrirovat-sait-v-belgie/"
+    },
+    {
+      "text": "Что необходимо для регистрации сайта в БелГИЭ?",
+      "href": "/about/faq/chto_neobkhodimo_dlya_registratsii_sayta_v_belgie/"
+    },
+    {
+      "text": "Как проверить регистрацию сайта в БелГИЭ?",
+      "href": "/about/faq/kak_proverit_registratsiyu_sayta_v_belgie/"
+    },
+    {
+      "text": "Кто должен зарегистрировать сайт: я или хостинг-провайдер?",
+      "href": "/about/faq/kto_dolzhen_zaregistrirovat_sayt-_ya_ili_khosting-provayder/"
+    },
+    {
+      "text": "Я заказал услугу регистрации неделю назад, но до сих пор жду",
+      "href": "/about/faq/ya_zakazal_uslugu_registratsii_nedelyu_nazad-_no_do_sikh_por_zhdu_otveta_ot_belgie-_chto_delat/"
+    },
+    {
+      "text": "Как зарегистрировать сайт на Tilda в БелГИЭ",
+      "href": "/about/faq/kak_zaregistrirovat_sayt_na_tilda_v_belgie/"
+    },
+    {
+      "text": "Сколько стоит регистрация сайта в БелГИЭ?",
+      "href": "/about/faq/skolko_stoit_registratsiya_sayta_v_belgie-_/"
+    },
+    {
+      "text": "Почему цены на сайте БелГИЭ и у вас отличаются?",
+      "href": "/about/faq/pochemu_tseny_na_sayte_belgie_i_u_vas_otlichayutsya/"
+    },
+    {
+      "text": "Нужно ли заново регистрировать сайт после переезда к другому",
+      "href": "/about/faq/nuzhno_li_zanovo_registrirovat_sayt_posle_pereezda_k_drugomu_khosting-provayderu/"
+    },
+    {
+      "text": "Нужно ли заново регистрировать сайт после переоформления его",
+      "href": "/about/faq/nuzhno_li_zanovo_registrirovat_sayt_posle_pereoformleniya_ego_s_fizicheskogo_litsa_na_yuridicheskoe/"
+    },
+    {
+      "text": "Нужно ли заново регистрировать сайт после смены пакета услуг",
+      "href": "/about/faq/nuzhno_li_zanovo_registrirovat_sayt_posle_smeny_paketa_uslug/"
+    },
+    {
+      "text": "Нужно ли заново регистрировать сайт после передачи аккаунта ",
+      "href": "/about/faq/nuzhno_li_zanovo_registrirovat_sayt_posle_peredachi_akkaunta_drugomu_litsu/"
+    },
+    {
+      "text": "Нужно ли заново регистрировать сайт после заказа выделенного",
+      "href": "/about/faq/nuzhno_li_zanovo_registrirovat_sayt_posle_zakaza_vydelennogo_ip/"
+    },
+    {
+      "text": "Оплата через ЕРИП: интернет-банк, платежные терминалы, инфок",
+      "href": "/about/faq/oplata_cherez_erip-_internet-bank-_platezhnye_terminaly-_infokioski/"
+    },
+    {
+      "text": "Оплата платёжными картами",
+      "href": "/about/faq/oplata_platyezhnymi_kartami/"
+    },
+    {
+      "text": "Какие способы оплаты вы принимаете?",
+      "href": "/about/faq/kakie_sposoby_oplaty_vy_prinimaete/"
+    },
+    {
+      "text": "Как я могу получить акт выполненных работ?",
+      "href": "/about/faq/kak_ya_mogu_poluchit_akt_vypolnennykh_rabot/"
+    },
+    {
+      "text": "Документ, подтверждающий факт оплаты",
+      "href": "/about/faq/dokument-_podtverzhdayushchiy_fakt_oplaty/"
+    },
+    {
+      "text": "Процесс заказа",
+      "href": "/about/faq/protsess_zakaza/"
+    },
+    {
+      "text": "Возврат денежных средств",
+      "href": "/about/faq/vozvrat_denezhnykh_sredstv/"
+    },
+    {
+      "text": "Как создать почту на собственном домене?",
+      "href": "/about/faq/kak_sozdat_pochtu_na_sobstvennom_domene/"
+    },
+    {
+      "text": "Сколько почтовых ящиков и с каким объёмом я могу создать?",
+      "href": "/about/faq/skolko_pochtovykh_yashchikov_i_s_kakim_obyemom_ya_mogu_sozdat/"
+    },
+    {
+      "text": "Что входит в услугу “Корпоративная почта HostFly.by”?",
+      "href": "/about/faq/chto_vkhodit_v_uslugu_-korporativnaya_pochta_hostfly-by/"
+    },
+    {
+      "text": "Как быстро происходит перенос почты с другого почтового серв",
+      "href": "/about/faq/kak_bystro_proiskhodit_perenos_pochty_s_drugogo_pochtovogo_servisa/"
+    },
+    {
+      "text": "Какой интерфейс можно подключить к корпоративной почте HostF",
+      "href": "/about/faq/kakoy_interfeys_mozhno_podklyuchit_k_korporativnoy_pochte_hostfly-by/"
+    },
+    {
+      "text": "Можно ли в почту на вашем сервере заходить через браузер или",
+      "href": "/about/faq/mozhno_li_v_pochtu_na_vashem_servere_zakhodit_cherez_brauzer_ili_nuzhen_imenno_pochtovyy_klient/"
+    },
+    {
+      "text": "Можно ли синхронизировать контакты при смене почтового серве",
+      "href": "/about/faq/mozhno_li_sinkhronizirovat_kontakty_pri_smene_pochtovogo_servera/"
+    },
+    {
+      "text": "Можно ли провести предварительное тестирование вашего почтов",
+      "href": "/about/faq/mozhno_li_provesti_predvaritelnoe_testirovanie_vashego_pochtovogo_akkaunta/"
+    },
+    {
+      "text": "Функция адаптивных экранов в нашем конструкторе",
+      "href": "/about/faq/funktsiya_adaptivnykh_ekranov_v_nashem_konstruktore/"
+    },
+    {
+      "text": "Как добавить форму обратной связи в конструкторе сайтов?",
+      "href": "/about/faq/kak_dobavit_formu_obratnoy_svyazi_v_konstruktore_saytov/"
+    },
+    {
+      "text": "Как добавить Яндекс-карты на сайт?",
+      "href": "/about/faq/kak_dobavit_yandeks_kartu_na_sayt/"
+    },
+    {
+      "text": "Как редактировать хедер и футер сайта?",
+      "href": "/about/faq/kak_redaktirovat_kheder_i_futer_sayta/"
+    },
+    {
+      "text": "Как на основании шаблона создать одностраничный сайт?",
+      "href": "/about/faq/kak_na_osnovanii_shablona_sozdat_odnostranichnyy_sayt/"
+    },
+    {
+      "text": "Какие существуют плагины и основные настройки сайта в констр",
+      "href": "/about/faq/kakie_sushchestvuyut_plaginy_i_osnovnye_nastroyki_sayta_v_konstruktore/"
+    },
+    {
+      "text": "Как редактировать меню в конструкторе?",
+      "href": "/about/faq/kak_redaktirovat_menyu_v_konstruktore/"
+    },
+    {
+      "text": "Добавление файлов (.pdf, .docx, .xlsx, .mp3, .gif и т.д.) на",
+      "href": "/about/faq/dobavlenie_faylov_-pdf-_-docx-_-xlsx-_-mp3-_-gif_i_t-d-_na_sayt/"
+    },
+    {
+      "text": "Как я могу начать пользоваться конструктором сайтов?",
+      "href": "/about/faq/kak_ya_mogu_nachat_polzovatsya_konstruktorom_saytov/"
+    },
+    {
+      "text": "Какие опции для интернет-магазина есть в конструкторе сайтов",
+      "href": "/about/faq/optsii_internet_magazina_v_nashem_konstruktore_saytov/"
+    }
+  ],
+  "bodyTextLen": 2640
+}

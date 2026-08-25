@@ -1,0 +1,73 @@
+{
+  "name": "s10-mail",
+  "path": "/index.php?rp=/store/pochta-dlia-domena",
+  "note": "Почта для домена",
+  "url": "https://my.hostfly.by/index.php?rp=/store/pochta-dlia-domena",
+  "status": 200,
+  "finalUrl": "https://my.hostfly.by/index.php?rp=/store/pochta-dlia-domena",
+  "title": "Личный кабинет | Hostfly",
+  "h1": [
+    "Почта для домена"
+  ],
+  "h2": [],
+  "packages": [
+    "Облачный хостинг",
+    "Избранное",
+    "Title"
+  ],
+  "prices": [
+    "5.99руб.",
+    "11.99руб.",
+    "23.99руб.",
+    "47.99руб."
+  ],
+  "forms": [
+    {
+      "action": "/index.php",
+      "method": "get",
+      "fields": [
+        {
+          "tag": "select",
+          "name": "gid",
+          "type": "select",
+          "required": false,
+          "options": [
+            "CLOUD облачный хостинг",
+            "WordPress хостинг",
+            "Bitrix облачный хостинг",
+            "Bitrix VPS хостинг",
+            "Виртуальный сервер",
+            "Сервер 1C:Бухгалтерия",
+            "Администрируемый виртуальный сервер",
+            "Выделенный сервер",
+            "Почта для домена",
+            "SSL сертификаты",
+            "Регистрация сайта в БелГИЭ",
+            "Защищенный Виртуальный сервер",
+            "S3-объектное хранилище",
+            "Дополнительные услуги",
+            "Продление домена",
+            "Зарегистрировать домен",
+            "Перенос домена",
+            "Просмотр корзины"
+          ]
+        }
+      ],
+      "submitButtons": []
+    }
+  ],
+  "buttons": [
+    "Выход",
+    "Корзина",
+    "Toggle navigation",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "Заказать",
+    "× Close",
+    "Close",
+    "Submit"
+  ],
+  "configOptions": [],
+  "bodyTextLen": 1647
+}

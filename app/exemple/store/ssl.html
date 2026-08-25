@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSL-сертификаты — Hostfly</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/layout.css">
+</head>
+<body data-root="../" data-page="ssl">
+
+<div data-layout="preview"></div>
+<header data-layout="header"></header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumbs">
+      <a href="../index.html">hostfly.by</a>
+      <span class="breadcrumbs__sep">›</span>
+      <span class="breadcrumbs__current">SSL-сертификаты</span>
+    </nav>
+
+    <section class="hero-page">
+      <div class="hero-page__body">
+        <h2>SSL-сертификаты<br>для сайта и почты</h2>
+        <p class="hero-page__lead body-m">Защищённое соединение https://, доверие пользователей и плюс к позициям в поиске. Выпуск и установка — на нашей стороне.</p>
+        <div class="hero-page__actions">
+          <a class="btn" href="#plans">Выбрать сертификат</a>
+          <a class="btn btn--secondary" href="#faq">Получить консультацию</a>
+        </div>
+      </div>
+      <div class="hero-page__art">
+        <svg viewBox="0 0 320 240" width="100%" aria-hidden="true">
+          <circle cx="160" cy="120" r="94" fill="#DEEAFB" opacity=".6"/>
+          <path d="M160 40l52 22v46c0 36-22 58-52 68-30-10-52-32-52-68V62l52-22z" fill="#fff" stroke="#333" stroke-width="2"/>
+          <rect x="136" y="112" width="48" height="38" rx="6" fill="#fff" stroke="#333" stroke-width="2"/>
+          <path d="M146 112v-10a14 14 0 0128 0v10" stroke="#333" stroke-width="2" fill="none"/>
+          <circle cx="160" cy="130" r="4" fill="#333"/>
+        </svg>
+      </div>
+    </section>
+  </div>
+
+  <section class="section" id="plans">
+    <div class="container">
+      <div class="section__head">
+        <h2>Тарифы на SSL</h2>
+        <div class="row" data-price-tabs>
+          <span class="body-m text-body">Цена при оплате за</span>
+          <div class="tabs">
+            <button class="tabs__item is-active" type="button" data-factor="1">1 год</button>
+            <button class="tabs__item" type="button" data-factor="0.92">2 года</button>
+            <button class="tabs__item" type="button" data-factor="0.85">3 года</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="plan">
+          <h4 class="plan__title">Let's Encrypt</h4>
+          <div class="plan__for">Подходит для: личный сайт, блог</div>
+          <dl class="plan__specs">
+            <div class="plan__spec"><dt>Тип проверки</dt><dd>DV</dd></div>
+            <div class="plan__spec"><dt>Количество доменов</dt><dd>1</dd></div>
+            <div class="plan__spec"><dt>Поддомены (wildcard)</dt><dd>нет</dd></div>
+            <div class="plan__spec"><dt>Срок выпуска</dt><dd>минуты</dd></div>
+            <div class="plan__spec"><dt>Автопродление</dt><dd>да</dd></div>
+            <div class="plan__spec"><dt>Установка на сервер</dt><dd>автоматически</dd></div>
+          </dl>
+          <div class="plan__price"><b data-base-price="0">0,00</b><span>BYN / ГОД</span><span class="badge badge--green">Бесплатно</span></div>
+          <div class="plan__price-sub"><span>входит в тарифы хостинга</span></div>
+          <div class="plan__foot">
+            <a class="btn btn--accent" href="hosting.html">Подключить</a>
+            <a class="link" href="#faq">Как это работает</a>
+          </div>
+        </article>
+
+        <article class="plan is-recommended">
+          <span class="badge badge--yellow plan__badge">Рекомендуем</span>
+          <h4 class="plan__title">Sectigo PositiveSSL</h4>
+          <div class="plan__for">Подходит для: интернет-магазин, корпоративный сайт</div>
+          <dl class="plan__specs">
+            <div class="plan__spec"><dt>Тип проверки</dt><dd>DV</dd></div>
+            <div class="plan__spec"><dt>Количество доменов</dt><dd>1</dd></div>
+            <div class="plan__spec"><dt>Поддомены (wildcard)</dt><dd>опция</dd></div>
+            <div class="plan__spec"><dt>Гарантия</dt><dd>10 000 $</dd></div>
+            <div class="plan__spec"><dt>Печать доверия</dt><dd>да</dd></div>
+            <div class="plan__spec"><dt>Установка на сервер</dt><dd>входит в цену</dd></div>
+          </dl>
+          <div class="plan__price"><b data-base-price="79.00">79,00</b><span>BYN / ГОД</span><span class="badge">Выгода 10%</span></div>
+          <div class="plan__price-sub"><span>79,00 BYN / ГОД</span><s class="strike">98,00 BYN / ГОД</s></div>
+          <div class="plan__foot">
+            <a class="btn btn--accent" href="#">Заказать</a>
+            <a class="link" href="#faq">Сравнить сертификаты</a>
+          </div>
+        </article>
+
+        <article class="plan">
+          <h4 class="plan__title">Sectigo EV</h4>
+          <div class="plan__for">Подходит для: банки, финтех, крупный бизнес</div>
+          <dl class="plan__specs">
+            <div class="plan__spec"><dt>Тип проверки</dt><dd>EV</dd></div>
+            <div class="plan__spec"><dt>Проверка организации</dt><dd>да</dd></div>
+            <div class="plan__spec"><dt>Поддомены (wildcard)</dt><dd>опция</dd></div>
+            <div class="plan__spec"><dt>Гарантия</dt><dd>1 750 000 $</dd></div>
+            <div class="plan__spec"><dt>Печать доверия</dt><dd>расширенная</dd></div>
+            <div class="plan__spec"><dt>Установка на сервер</dt><dd>входит в цену</dd></div>
+          </dl>
+          <div class="plan__price"><b data-base-price="590.00">590,00</b><span>BYN / ГОД</span><span class="badge">Выгода 10%</span></div>
+          <div class="plan__price-sub"><span>590,00 BYN / ГОД</span><s class="strike">690,00 BYN / ГОД</s></div>
+          <div class="plan__foot">
+            <a class="btn btn--accent" href="#">Заказать</a>
+            <a class="link" href="#faq">Нужна помощь с выбором</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="container">
+      <div class="grid grid-2">
+        <article class="promo promo--blue">
+          <h4>Не знаете, какой сертификат нужен?</h4>
+          <p class="body-m text-body">Оставьте номер — подберём тип проверки под ваш проект и посчитаем стоимость с установкой.</p>
+          <div class="field" style="max-width:340px">
+            <span class="field__label">Ваш номер телефона</span>
+            <div class="input-phone">
+              <span class="input-phone__country"><span class="input-phone__flag"></span>+375
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <input type="tel" placeholder="(00) 000-00-00" aria-label="Номер телефона">
+            </div>
+          </div>
+          <div class="promo__foot"><a class="btn" href="#">Перезвонить мне</a></div>
+        </article>
+        <article class="promo promo--soft">
+          <span class="badge badge--blue" style="align-self:flex-start">PCI DSS</span>
+          <h4>Дата-центр уровня Tier 3</h4>
+          <p class="body-m text-body">Соответствие стандарту PCI DSS подтверждает возможность дата-центра предоставлять услуги торгово-сервисным предприятиям, банкам-эквайерам и эмитентам.
+            <span class="tip"><button class="tip__trigger" type="button">?</button><span class="tip__body body-m">Соответствие стандарту PCI DSS подтверждает возможность дата-центра предоставлять услуги торгово-сервисным предприятиям, банкам-эквайерам и эмитентам, обеспечивающие выполнение требований по защите данных платежных карт.</span></span>
+          </p>
+          <div class="promo__foot"><a class="btn btn--secondary" href="../info/contacts.html">О дата-центре</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 style="margin-bottom:var(--block-gap)">Частые вопросы о SSL</h2>
+      <div class="accordion">
+        <div class="acc is-open">
+          <button class="acc__btn" type="button" aria-expanded="true">Предоставляется ли бесплатный SSL-сертификат для VPS?
+            <svg class="acc__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14m0 0l6-6m-6 6l-6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="acc__body">
+            <p class="body-m">При аренде виртуальных серверов (VPS) вы можете получить бесплатный SSL-сертификат в двух случаях: если на сервере установлена панель cPanel или ISPmanager, либо если вы пользуетесь тарифом с услугой администрирования — тогда сертификат установят специалисты поддержки.</p>
+            <div class="acc__also">
+              <div class="acc__also-title">Смотрите так же</div>
+              <a class="link-primary is-underline" href="hosting.html"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8m0 0V6m0 7H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Продление хостинга</a>
+              <a class="link-primary is-underline" href="hosting.html"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8m0 0V6m0 7H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Перенос сайта</a>
+            </div>
+          </div>
+        </div>
+        <div class="acc">
+          <button class="acc__btn" type="button" aria-expanded="false">Чем DV отличается от EV?
+            <svg class="acc__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14m0 0l6-6m-6 6l-6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="acc__body"><p class="body-m">DV проверяет только владение доменом, EV — ещё и юридическое существование организации. Для магазинов и финансовых сервисов рекомендуем EV.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer data-layout="footer"></footer>
+
+<script src="../js/layout.js"></script>
+<script src="../js/theme.js"></script>
+</body>
+</html>

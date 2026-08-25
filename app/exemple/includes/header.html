@@ -1,0 +1,89 @@
+<!--
+  header.html — шапка сайта: логотип, два уровня навигации, контакты, кнопки входа
+
+  Сгенерировано из js/layout.js: node js/build-includes.js
+  Правьте layout.js, а не этот файл.
+
+  Ссылки собраны относительно корня превью (data-root=""). При переносе
+  в WHMCS-шаблон замените их на {$WEB_ROOT}/… и routePath().
+-->
+<header class="header">
+<div class="container-wide">
+  <div class="header__top">
+    <a class="logo" href="index.html">hostfl<span class="logo__accent">y.</span>
+    </a>
+    <nav class="header__nav-secondary">
+      <a href="info/news.html">Новости и акции</a>
+      <a href="info/news.html">Вопросы и ответы</a>
+      <a href="info/contacts.html">Документы</a>
+      <a href="info/contacts.html">Контакты</a>
+    </nav>
+    <div class="header__contacts">
+      <span class="label">Круглосуточная техподдержка:</span>
+      <a href="tel:+375173367373">+375 17 336 73 73</a>
+      <a href="mailto:support@hostfly.by">support@hostfly.by</a>
+    </div>
+    <button class="header__burger" type="button" aria-label="Меню">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+    </button>
+  </div>
+  <div class="header__bottom">
+    <nav class="nav">
+      <div class="nav__item">
+        <a class="nav__link" href="store/hosting.html">Хостинг<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M8 3v10M8 13l4-4M8 13L4 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </a>
+        <div class="nav__drop">
+          <a href="store/hosting.html">Хостинг сайтов</a>
+          <a href="store/hosting.html">WordPress-хостинг</a>
+          <a href="store/hosting.html">Битрикс-хостинг</a>
+          <a href="store/hosting.html">Unix/Linux хостинг</a>
+          <a href="store/hosting.html">Drupal хостинг</a>
+          <a href="store/hosting.html">Хостинг для Opencart</a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" href="store/hosting.html">Защищенный хостинг</a>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" href="domains/register.html">Домены<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M8 3v10M8 13l4-4M8 13L4 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </a>
+        <div class="nav__drop">
+          <a href="domains/register.html">Регистрация доменов</a>
+          <a href="domains/search-results.html">Результаты поиска</a>
+          <a href="domains/transfer.html">Перенос домена</a>
+          <a href="domains/transfer.html">Продление домена</a>
+          <a href="domains/transfer.html">Аукцион доменов .BY</a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" href="store/ssl.html">SSL-сертификаты</a>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" href="store/ssl.html">Конструктор сайтов</a>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" href="info/contacts.html">О компании<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M8 3v10M8 13l4-4M8 13L4 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </a>
+        <div class="nav__drop">
+          <a href="info/contacts.html">Кто мы</a>
+          <a href="info/contacts.html">Контакты</a>
+          <a href="info/contacts.html">Документы</a>
+          <a href="affiliates/index.html">Партнерская программа</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header__actions">
+      <a class="btn btn--secondary btn--xs" href="#">Стать клиентом</a>
+      <a class="btn btn--xs" href="#">Войти</a>
+    </div>
+  </div>
+</div>
+</header>

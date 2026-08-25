@@ -1,0 +1,26 @@
+.field-icon {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 20px;
+  height: $input-height-base;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  .form-group_sm & {
+    height: $input-height-small;
+  }
+
+  > i {
+    line-height: 1;
+    font-size: .7em;
+    color: #bbb;
+  }
+
+  + .form-control {
+    padding-left: 42px;
+  }
+}

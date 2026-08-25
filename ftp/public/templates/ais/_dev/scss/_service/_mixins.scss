@@ -1,0 +1,9 @@
+@mixin font-face-normal() {
+  font-weight: normal;
+}
+@mixin font-face-medium() {
+  font-weight: 500;
+}
+@mixin font-face-sbold() {
+  font-weight: 600;
+}

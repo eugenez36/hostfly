@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Перенос доменных имён — Hostfly</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/layout.css">
+</head>
+<body data-root="../" data-page="transfer">
+
+<div data-layout="preview"></div>
+<header data-layout="header"></header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumbs">
+      <a href="../index.html">hostfly.by</a>
+      <span class="breadcrumbs__sep">›</span>
+      <a href="register.html">Домены</a>
+      <span class="breadcrumbs__sep">›</span>
+      <span class="breadcrumbs__current">Перенос домена</span>
+    </nav>
+
+    <section class="hero-page">
+      <div class="hero-page__body">
+        <h2>Перенос доменных имён<br><span class="fw-400">.by</span> и <span class="fw-400">.бел</span> — быстро и просто</h2>
+        <p class="hero-page__lead body-m">Перенесём домен от другого регистратора без простоя сайта и почты. Продление на год включено в стоимость переноса.</p>
+        <div class="hero-page__actions">
+          <a class="btn" href="#form">Перенести домен</a>
+          <a class="btn btn--secondary" href="#steps">Как это работает</a>
+        </div>
+      </div>
+      <div class="hero-page__art">
+        <svg viewBox="0 0 320 220" width="100%" aria-hidden="true">
+          <circle cx="160" cy="110" r="92" fill="#DEEAFB" opacity=".6"/>
+          <rect x="42" y="76" width="88" height="68" rx="10" fill="#fff" stroke="#333" stroke-width="2"/>
+          <rect x="190" y="76" width="88" height="68" rx="10" fill="#fff" stroke="#333" stroke-width="2"/>
+          <path d="M136 100h48m0 0l-10-9m10 9l-10 9M184 122h-48m0 0l10-9m-10 9l10 9" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================================================== ШАГИ ======== -->
+  <section class="section" id="steps">
+    <div class="container">
+      <h2 style="margin-bottom:var(--block-gap)">Как перенести домен на Hostfly</h2>
+      <div class="feature-grid">
+        <div class="feature"><div class="feature__head"><span class="badge badge--blue">Шаг 1</span></div><h5>Снимите блокировку</h5><p class="body-m text-body">В панели текущего регистратора отключите Registrar Lock и запросите EPP-код.</p></div>
+        <div class="feature"><div class="feature__head"><span class="badge badge--blue">Шаг 2</span></div><h5>Оформите заявку</h5><p class="body-m text-body">Укажите домен и EPP-код в форме ниже. Проверим данные и выставим счёт.</p></div>
+        <div class="feature"><div class="feature__head"><span class="badge badge--blue">Шаг 3</span></div><h5>Подтвердите перенос</h5><p class="body-m text-body">На административный e-mail придёт письмо — подтвердите передачу по ссылке.</p></div>
+        <div class="feature"><div class="feature__head"><span class="badge badge--green">Готово</span></div><h5>Домен у нас</h5><p class="body-m text-body">DNS-записи сохраняются, сайт и почта продолжают работать без перерыва.</p></div>
+        <div class="feature"><div class="feature__head"><span class="badge">Бонус</span></div><h5>+1 год к сроку</h5><p class="body-m text-body">Стоимость переноса включает продление регистрации на год.</p></div>
+        <div class="feature"><div class="feature__head"><span class="badge">Помощь</span></div><h5>Сделаем за вас</h5><p class="body-m text-body">Если что-то не получается — напишите в поддержку, проведём перенос вместе.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================== ФОРМА ======== -->
+  <section class="section section--divided" id="form">
+    <div class="container">
+      <div class="grid grid-2" style="gap:56px;align-items:start">
+        <div>
+          <h2 style="margin-bottom:24px">Заявка на перенос</h2>
+          <p class="body-m text-body" style="margin-bottom:32px">Заполните форму — специалист свяжется с вами и проверит готовность домена к переносу.</p>
+          <form class="stack" style="gap:20px" onsubmit="return false">
+            <div class="field">
+              <label class="field__label" for="t-domain">Доменное имя</label>
+              <input class="input" id="t-domain" type="text" placeholder="example.by">
+            </div>
+            <div class="field">
+              <label class="field__label" for="t-epp">EPP-код</label>
+              <input class="input" id="t-epp" type="text" placeholder="Код авторизации от текущего регистратора">
+            </div>
+            <div class="field">
+              <span class="field__label"><span class="req">*</span> Ваш номер телефона</span>
+              <div class="input-phone">
+                <span class="input-phone__country"><span class="input-phone__flag"></span>+375
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <input type="tel" placeholder="(00) 000-00-00" aria-label="Номер телефона">
+              </div>
+            </div>
+            <div class="field is-error">
+              <label class="field__label" for="t-mail"><span class="req">*</span> E-mail</label>
+              <input class="input" id="t-mail" type="email" value="email@email.com">
+              <span class="field__error">Ошибка валидации</span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="t-note">Комментарий</label>
+              <textarea class="textarea" id="t-note" placeholder="Что будем обсуждать?"></textarea>
+            </div>
+            <label class="check">
+              <input type="checkbox"><span class="check__box"></span>
+              <span class="check__text body-m">Согласен с <a class="link" href="#">условиями обработки персональных данных</a></span>
+            </label>
+            <button class="btn" type="submit" style="align-self:flex-start">Отправить заявку</button>
+          </form>
+        </div>
+
+        <aside class="promo promo--violet">
+          <span class="badge badge--white">Бесплатная миграция</span>
+          <h3>Перенесите ваши проекты<br>в Hostfly бесплатно</h3>
+          <p class="body-m text-body">Начислим до 1 000 000 бонусов на переезд и поможем мигрировать — подготовим план и поддержим на всех этапах</p>
+          <div class="promo__foot"><a class="btn" href="../store/hosting.html">Узнать детали
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h11m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 style="margin-bottom:var(--block-gap)">Частые вопросы о переносе</h2>
+      <div class="accordion">
+        <div class="acc is-open">
+          <button class="acc__btn" type="button" aria-expanded="true">Сайт будет недоступен во время переноса?
+            <svg class="acc__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14m0 0l6-6m-6 6l-6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="acc__body"><p class="body-m">Нет. DNS-записи копируются до передачи, поэтому сайт и почта работают всё время переноса.</p></div>
+        </div>
+        <div class="acc">
+          <button class="acc__btn" type="button" aria-expanded="false">Сколько стоит перенос?
+            <svg class="acc__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14m0 0l6-6m-6 6l-6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="acc__body"><p class="body-m">Стоимость равна годовому продлению домена — 38,50 BYN для .by и .бел. Год добавляется к текущему сроку.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer data-layout="footer"></footer>
+
+<script src="../js/layout.js"></script>
+<script src="../js/theme.js"></script>
+</body>
+</html>

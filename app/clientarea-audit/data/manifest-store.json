@@ -1,0 +1,1569 @@
+[
+  {
+    "name": "s01-cloud",
+    "path": "/index.php?rp=/store/new-2025",
+    "note": "CLOUD облачный хостинг",
+    "url": "https://my.hostfly.by/index.php?rp=/store/new-2025",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/new-2025",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "CLOUD облачный хостинг"
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "6.99руб.",
+      "14.09руб.",
+      "6.99руб.",
+      "22.49руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "CLOUD облачный хостинг",
+              "WordPress хостинг",
+              "Bitrix облачный хостинг",
+              "Bitrix VPS хостинг",
+              "Виртуальный сервер",
+              "Сервер 1C:Бухгалтерия",
+              "Администрируемый виртуальный сервер",
+              "Выделенный сервер",
+              "Почта для домена",
+              "SSL сертификаты",
+              "Регистрация сайта в БелГИЭ",
+              "Защищенный Виртуальный сервер",
+              "S3-объектное хранилище",
+              "Дополнительные услуги",
+              "Продление домена",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "× Close",
+      "Close",
+      "Submit"
+    ],
+    "configOptions": [],
+    "bodyTextLen": 2740
+  },
+  {
+    "name": "s02-bitrix-cloud",
+    "path": "/index.php?rp=/store/bitrix-2025",
+    "note": "Bitrix облачный хостинг",
+    "url": "https://my.hostfly.by/index.php?rp=/store/bitrix-2025",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/bitrix-2025",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Bitrix облачный хостинг"
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "15.99руб.",
+      "29.99руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "CLOUD облачный хостинг",
+              "WordPress хостинг",
+              "Bitrix облачный хостинг",
+              "Bitrix VPS хостинг",
+              "Виртуальный сервер",
+              "Сервер 1C:Бухгалтерия",
+              "Администрируемый виртуальный сервер",
+              "Выделенный сервер",
+              "Почта для домена",
+              "SSL сертификаты",
+              "Регистрация сайта в БелГИЭ",
+              "Защищенный Виртуальный сервер",
+              "S3-объектное хранилище",
+              "Дополнительные услуги",
+              "Продление домена",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Заказать",
+      "Заказать",
+      "× Close",
+      "Close",
+      "Submit"
+    ],
+    "configOptions": [],
+    "bodyTextLen": 1890
+  },
+  {
+    "name": "s03-bitrix-vps",
+    "path": "/index.php?rp=/store/bitriks-khosting",
+    "note": "Bitrix VPS хостинг",
+    "url": "https://my.hostfly.by/index.php?rp=/store/bitriks-khosting",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/bitriks-khosting",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Хостинг для 1С-Битрикс сайтов"
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "69.99руб.",
+      "135.99руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "CLOUD облачный хостинг",
+              "WordPress хостинг",
+              "Bitrix облачный хостинг",
+              "Bitrix VPS хостинг",
+              "Виртуальный сервер",
+              "Сервер 1C:Бухгалтерия",
+              "Администрируемый виртуальный сервер",
+              "Выделенный сервер",
+              "Почта для домена",
+              "SSL сертификаты",
+              "Регистрация сайта в БелГИЭ",
+              "Защищенный Виртуальный сервер",
+              "S3-объектное хранилище",
+              "Дополнительные услуги",
+              "Продление домена",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Заказать",
+      "Заказать",
+      "× Close",
+      "Close",
+      "Submit"
+    ],
+    "configOptions": [],
+    "bodyTextLen": 1633
+  },
+  {
+    "name": "s04-wordpress",
+    "path": "/index.php?rp=/store/wordpress-202",
+    "note": "WordPress хостинг",
+    "url": "https://my.hostfly.by/index.php?rp=/store/wordpress-202",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/wordpress-202",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "WordPress хостинг"
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "9.99руб.",
+      "16.99руб.",
+      "24.74руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "CLOUD облачный хостинг",
+              "WordPress хостинг",
+              "Bitrix облачный хостинг",
+              "Bitrix VPS хостинг",
+              "Виртуальный сервер",
+              "Сервер 1C:Бухгалтерия",
+              "Администрируемый виртуальный сервер",
+              "Выделенный сервер",
+              "Почта для домена",
+              "SSL сертификаты",
+              "Регистрация сайта в БелГИЭ",
+              "Защищенный Виртуальный сервер",
+              "S3-объектное хранилище",
+              "Дополнительные услуги",
+              "Продление домена",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "× Close",
+      "Close",
+      "Submit"
+    ],
+    "configOptions": [],
+    "bodyTextLen": 2361
+  },
+  {
+    "name": "s05-vps",
+    "path": "/index.php?rp=/store/virtualnyi-server",
+    "note": "Виртуальный сервер (VPS)",
+    "url": "https://my.hostfly.by/index.php?rp=/store/virtualnyi-server",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/virtualnyi-server",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Выберите подходящий вам виртуальный сервер"
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "32.99руб.",
+      "64.99руб.",
+      "129.99руб.",
+      "194.99руб.",
+      "319.99руб.",
+      "514.99руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "CLOUD облачный хостинг",
+              "WordPress хостинг",
+              "Bitrix облачный хостинг",
+              "Bitrix VPS хостинг",
+              "Виртуальный сервер",
+              "Сервер 1C:Бухгалтерия",
+              "Администрируемый виртуальный сервер",
+              "Выделенный сервер",
+              "Почта для домена",
+              "SSL сертификаты",
+              "Регистрация сайта в БелГИЭ",
+              "Защищенный Виртуальный сервер",
+              "S3-объектное хранилище",
+              "Дополнительные услуги",
+              "Продление домена",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "× Close",
+      "Close",
+      "Submit"
+    ],
+    "configOptions": [],
+    "bodyTextLen": 1927
+  },
+  {
+    "name": "s06-vps-managed",
+    "path": "/index.php?rp=/store/administriruemyi-virtualnyi-server",
+    "note": "Администрируемый VPS",
+    "url": "https://my.hostfly.by/index.php?rp=/store/administriruemyi-virtualnyi-server",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/administriruemyi-virtualnyi-server",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Выберите подходящий вам виртуальный сервер c администрированием"
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "107.99руб.",
+      "139.99руб.",
+      "204.99руб.",
+      "269.99руб.",
+      "394.99руб.",
+      "589.99руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "CLOUD облачный хостинг",
+              "WordPress хостинг",
+              "Bitrix облачный хостинг",
+              "Bitrix VPS хостинг",
+              "Виртуальный сервер",
+              "Сервер 1C:Бухгалтерия",
+              "Администрируемый виртуальный сервер",
+              "Выделенный сервер",
+              "Почта для домена",
+              "SSL сертификаты",
+              "Регистрация сайта в БелГИЭ",
+              "Защищенный Виртуальный сервер",
+              "S3-объектное хранилище",
+              "Дополнительные услуги",
+              "Продление домена",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "× Close",
+      "Close",
+      "Submit"
+    ],
+    "configOptions": [],
+    "bodyTextLen": 2063
+  },
+  {
+    "name": "s07-vps-secure",
+    "path": "/index.php?rp=/store/zashchishchennyi-virtualnyi-server",
+    "note": "Защищённый VPS",
+    "url": "https://my.hostfly.by/index.php?rp=/store/zashchishchennyi-virtualnyi-server",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/zashchishchennyi-virtualnyi-server",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Защищенный виртуальный сервер для персональных данных"
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "99.99руб.",
+      "154.99руб.",
+      "249.99руб.",
+      "359.99руб.",
+      "469.99руб.",
+      "739.99руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "CLOUD облачный хостинг",
+              "WordPress хостинг",
+              "Bitrix облачный хостинг",
+              "Bitrix VPS хостинг",
+              "Виртуальный сервер",
+              "Сервер 1C:Бухгалтерия",
+              "Администрируемый виртуальный сервер",
+              "Выделенный сервер",
+              "Почта для домена",
+              "SSL сертификаты",
+              "Регистрация сайта в БелГИЭ",
+              "Защищенный Виртуальный сервер",
+              "S3-объектное хранилище",
+              "Дополнительные услуги",
+              "Продление домена",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "× Close",
+      "Close",
+      "Submit"
+    ],
+    "configOptions": [],
+    "bodyTextLen": 2238
+  },
+  {
+    "name": "s08-dedicated",
+    "path": "/index.php?rp=/store/vydelennyi-server",
+    "note": "Выделенный сервер",
+    "url": "https://my.hostfly.by/index.php?rp=/store/vydelennyi-server",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/vydelennyi-server",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Выделенный сервер"
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "399.99руб.",
+      "329.99руб.",
+      "472.99руб.",
+      "588.99руб.",
+      "750.00руб.",
+      "850.00руб.",
+      "980.00руб.",
+      "700.00руб.",
+      "1400.00руб.",
+      "2100.00руб.",
+      "1400.00руб.",
+      "1150.00руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "CLOUD облачный хостинг",
+              "WordPress хостинг",
+              "Bitrix облачный хостинг",
+              "Bitrix VPS хостинг",
+              "Виртуальный сервер",
+              "Сервер 1C:Бухгалтерия",
+              "Администрируемый виртуальный сервер",
+              "Выделенный сервер",
+              "Почта для домена",
+              "SSL сертификаты",
+              "Регистрация сайта в БелГИЭ",
+              "Защищенный Виртуальный сервер",
+              "S3-объектное хранилище",
+              "Дополнительные услуги",
+              "Продление домена",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "× Close",
+      "Close",
+      "Submit"
+    ],
+    "configOptions": [],
+    "bodyTextLen": 3407
+  },
+  {
+    "name": "s09-1c",
+    "path": "/index.php?rp=/store/server-1cbukhgalteriia",
+    "note": "Сервер 1С:Бухгалтерия",
+    "url": "https://my.hostfly.by/index.php?rp=/store/server-1cbukhgalteriia",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/server-1cbukhgalteriia",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Специализированный хостинг для 1C:Бухгалтерии в виртуальном облаке"
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "139.99руб.",
+      "204.99руб.",
+      "269.99руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "CLOUD облачный хостинг",
+              "WordPress хостинг",
+              "Bitrix облачный хостинг",
+              "Bitrix VPS хостинг",
+              "Виртуальный сервер",
+              "Сервер 1C:Бухгалтерия",
+              "Администрируемый виртуальный сервер",
+              "Выделенный сервер",
+              "Почта для домена",
+              "SSL сертификаты",
+              "Регистрация сайта в БелГИЭ",
+              "Защищенный Виртуальный сервер",
+              "S3-объектное хранилище",
+              "Дополнительные услуги",
+              "Продление домена",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "× Close",
+      "Close",
+      "Submit"
+    ],
+    "configOptions": [],
+    "bodyTextLen": 1959
+  },
+  {
+    "name": "s10-mail",
+    "path": "/index.php?rp=/store/pochta-dlia-domena",
+    "note": "Почта для домена",
+    "url": "https://my.hostfly.by/index.php?rp=/store/pochta-dlia-domena",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/pochta-dlia-domena",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Почта для домена"
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "5.99руб.",
+      "11.99руб.",
+      "23.99руб.",
+      "47.99руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "CLOUD облачный хостинг",
+              "WordPress хостинг",
+              "Bitrix облачный хостинг",
+              "Bitrix VPS хостинг",
+              "Виртуальный сервер",
+              "Сервер 1C:Бухгалтерия",
+              "Администрируемый виртуальный сервер",
+              "Выделенный сервер",
+              "Почта для домена",
+              "SSL сертификаты",
+              "Регистрация сайта в БелГИЭ",
+              "Защищенный Виртуальный сервер",
+              "S3-объектное хранилище",
+              "Дополнительные услуги",
+              "Продление домена",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "× Close",
+      "Close",
+      "Submit"
+    ],
+    "configOptions": [],
+    "bodyTextLen": 1647
+  },
+  {
+    "name": "s11-s3",
+    "path": "/index.php?rp=/store/s3",
+    "note": "S3 объектное хранилище",
+    "url": "https://my.hostfly.by/index.php?rp=/store/s3",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/s3",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Объектное хранилище S3"
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "6.00руб.",
+      "15.00руб.",
+      "30.00руб.",
+      "60.00руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "CLOUD облачный хостинг",
+              "WordPress хостинг",
+              "Bitrix облачный хостинг",
+              "Bitrix VPS хостинг",
+              "Виртуальный сервер",
+              "Сервер 1C:Бухгалтерия",
+              "Администрируемый виртуальный сервер",
+              "Выделенный сервер",
+              "Почта для домена",
+              "SSL сертификаты",
+              "Регистрация сайта в БелГИЭ",
+              "Защищенный Виртуальный сервер",
+              "S3-объектное хранилище",
+              "Дополнительные услуги",
+              "Продление домена",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "× Close",
+      "Close",
+      "Submit"
+    ],
+    "configOptions": [],
+    "bodyTextLen": 1910
+  },
+  {
+    "name": "s12-ssl",
+    "path": "/index.php?rp=/store/ssl",
+    "note": "SSL сертификаты",
+    "url": "https://my.hostfly.by/index.php?rp=/store/ssl",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/ssl",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Коммерческие SSL сертификаты"
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Облачный хостинг",
+      "Избранное",
+      "Добавлено в корзину",
+      "Title"
+    ],
+    "prices": [
+      "55.00руб.",
+      "180.00руб.",
+      "915.00руб.",
+      "130.00руб.",
+      "485.00руб.",
+      "220.00руб.",
+      "540.00руб.",
+      "540.00руб.",
+      "1100.00руб."
+    ],
+    "forms": [
+      {
+        "action": "",
+        "method": "get",
+        "fields": [],
+        "submitButtons": []
+      },
+      {
+        "action": "",
+        "method": "get",
+        "fields": [],
+        "submitButtons": []
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "Заказать",
+      "×",
+      "Далее",
+      "Добавить в корзину",
+      "× Close",
+      "Close",
+      "Submit"
+    ],
+    "configOptions": [],
+    "bodyTextLen": 3012
+  },
+  {
+    "name": "p112-config",
+    "path": "/cart.php?a=add&pid=112",
+    "note": "Конфигуратор продукта pid=112",
+    "url": "https://my.hostfly.by/cart.php?a=add&pid=112",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/new-2025/cloud-mini-new",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Выберите домен..."
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "Продолжить регистрацию домена - Перенести к нам и продлить* на 1 год",
+      "Перенести к нам и продлить* на 1 год",
+      "15.50руб.",
+      "53.00руб.",
+      "65.00руб.",
+      "54.99руб.",
+      "25.99руб.",
+      "98.50руб.",
+      "107.99руб.",
+      "215.00руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Дополнительные услуги",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      },
+      {
+        "action": "",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "input",
+            "name": "domainoption",
+            "type": "radio",
+            "required": false
+          },
+          {
+            "tag": "input",
+            "name": "domainoption",
+            "type": "radio",
+            "required": false
+          },
+          {
+            "tag": "input",
+            "name": "domainoption",
+            "type": "radio",
+            "required": false
+          }
+        ],
+        "submitButtons": [
+          "Проверить",
+          "Перенести",
+          "Использовать"
+        ]
+      },
+      {
+        "action": "cart.php?a=add&pid=112&domainselect=1",
+        "method": "post",
+        "fields": [],
+        "submitButtons": [
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Добавить в корзину Добавлен Занят",
+          "Contact Support to Purchase",
+          "Далее"
+        ]
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Проверить",
+      "Перенести",
+      "Использовать",
+      "Связь с нами",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Добавить в корзину Добавлен Занят"
+    ],
+    "configOptions": [
+      "Зарегистрировать новый домен",
+      "Перенести (transfer) домен от другого регистратора",
+      "Я буду использовать свой домен и обновлю его DNS адреса"
+    ],
+    "bodyTextLen": 1412
+  },
+  {
+    "name": "p113-config",
+    "path": "/cart.php?a=add&pid=113",
+    "note": "Конфигуратор продукта pid=113",
+    "url": "https://my.hostfly.by/cart.php?a=add&pid=113",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/new-2025/sloud-start-promo",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Выберите домен..."
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "Продолжить регистрацию домена - Перенести к нам и продлить* на 1 год",
+      "Перенести к нам и продлить* на 1 год",
+      "15.50руб.",
+      "53.00руб.",
+      "65.00руб.",
+      "54.99руб.",
+      "25.99руб.",
+      "98.50руб.",
+      "107.99руб.",
+      "215.00руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Дополнительные услуги",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      },
+      {
+        "action": "",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "input",
+            "name": "domainoption",
+            "type": "radio",
+            "required": false
+          },
+          {
+            "tag": "input",
+            "name": "domainoption",
+            "type": "radio",
+            "required": false
+          },
+          {
+            "tag": "input",
+            "name": "domainoption",
+            "type": "radio",
+            "required": false
+          }
+        ],
+        "submitButtons": [
+          "Проверить",
+          "Перенести",
+          "Использовать"
+        ]
+      },
+      {
+        "action": "cart.php?a=add&pid=113&domainselect=1",
+        "method": "post",
+        "fields": [],
+        "submitButtons": [
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Добавить в корзину Добавлен Занят",
+          "Contact Support to Purchase",
+          "Далее"
+        ]
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Проверить",
+      "Перенести",
+      "Использовать",
+      "Связь с нами",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Добавить в корзину Добавлен Занят"
+    ],
+    "configOptions": [
+      "Зарегистрировать новый домен",
+      "Перенести (transfer) домен от другого регистратора",
+      "Я буду использовать свой домен и обновлю его DNS адреса"
+    ],
+    "bodyTextLen": 1412
+  },
+  {
+    "name": "p114-config",
+    "path": "/cart.php?a=add&pid=114",
+    "note": "Конфигуратор продукта pid=114",
+    "url": "https://my.hostfly.by/cart.php?a=add&pid=114",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/new-2025/cloud-biznes-promo",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Выберите домен..."
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "Продолжить регистрацию домена - Перенести к нам и продлить* на 1 год",
+      "Перенести к нам и продлить* на 1 год",
+      "15.50руб.",
+      "53.00руб.",
+      "65.00руб.",
+      "54.99руб.",
+      "25.99руб.",
+      "98.50руб.",
+      "107.99руб.",
+      "215.00руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Дополнительные услуги",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      },
+      {
+        "action": "",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "input",
+            "name": "domainoption",
+            "type": "radio",
+            "required": false
+          },
+          {
+            "tag": "input",
+            "name": "domainoption",
+            "type": "radio",
+            "required": false
+          },
+          {
+            "tag": "input",
+            "name": "domainoption",
+            "type": "radio",
+            "required": false
+          }
+        ],
+        "submitButtons": [
+          "Проверить",
+          "Перенести",
+          "Использовать"
+        ]
+      },
+      {
+        "action": "cart.php?a=add&pid=114&domainselect=1",
+        "method": "post",
+        "fields": [],
+        "submitButtons": [
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Добавить в корзину Добавлен Занят",
+          "Contact Support to Purchase",
+          "Далее"
+        ]
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Проверить",
+      "Перенести",
+      "Использовать",
+      "Связь с нами",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Добавить в корзину Добавлен Занят"
+    ],
+    "configOptions": [
+      "Зарегистрировать новый домен",
+      "Перенести (transfer) домен от другого регистратора",
+      "Я буду использовать свой домен и обновлю его DNS адреса"
+    ],
+    "bodyTextLen": 1412
+  },
+  {
+    "name": "p145-config",
+    "path": "/cart.php?a=add&pid=145",
+    "note": "Конфигуратор продукта pid=145",
+    "url": "https://my.hostfly.by/cart.php?a=add&pid=145",
+    "status": 200,
+    "finalUrl": "https://my.hostfly.by/index.php?rp=/store/new-2025/virtualnyi-khosting-saitov-fly-mini",
+    "title": "Личный кабинет | Hostfly",
+    "h1": [
+      "Выберите домен..."
+    ],
+    "h2": [],
+    "packages": [
+      "Облачный хостинг",
+      "Избранное",
+      "Title"
+    ],
+    "prices": [
+      "Продолжить регистрацию домена - Перенести к нам и продлить* на 1 год",
+      "Перенести к нам и продлить* на 1 год",
+      "15.50руб.",
+      "53.00руб.",
+      "65.00руб.",
+      "54.99руб.",
+      "25.99руб.",
+      "98.50руб.",
+      "107.99руб.",
+      "215.00руб."
+    ],
+    "forms": [
+      {
+        "action": "/index.php",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "select",
+            "name": "gid",
+            "type": "select",
+            "required": false,
+            "options": [
+              "Дополнительные услуги",
+              "Зарегистрировать домен",
+              "Перенос домена",
+              "Просмотр корзины"
+            ]
+          }
+        ],
+        "submitButtons": []
+      },
+      {
+        "action": "",
+        "method": "get",
+        "fields": [
+          {
+            "tag": "input",
+            "name": "domainoption",
+            "type": "radio",
+            "required": false
+          },
+          {
+            "tag": "input",
+            "name": "domainoption",
+            "type": "radio",
+            "required": false
+          },
+          {
+            "tag": "input",
+            "name": "domainoption",
+            "type": "radio",
+            "required": false
+          }
+        ],
+        "submitButtons": [
+          "Проверить",
+          "Перенести",
+          "Использовать"
+        ]
+      },
+      {
+        "action": "cart.php?a=add&pid=145&domainselect=1",
+        "method": "post",
+        "fields": [],
+        "submitButtons": [
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Недоступен",
+          "Недоступен",
+          "Добавить Добавлен Занят",
+          "Contact Support to Purchase",
+          "Добавить в корзину Добавлен Занят",
+          "Contact Support to Purchase",
+          "Далее"
+        ]
+      }
+    ],
+    "buttons": [
+      "Выход",
+      "Корзина",
+      "Toggle navigation",
+      "Проверить",
+      "Перенести",
+      "Использовать",
+      "Связь с нами",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Недоступен",
+      "Недоступен",
+      "Добавить Добавлен Занят",
+      "Contact Support to Purchase",
+      "Добавить в корзину Добавлен Занят"
+    ],
+    "configOptions": [
+      "Зарегистрировать новый домен",
+      "Перенести (transfer) домен от другого регистратора",
+      "Я буду использовать свой домен и обновлю его DNS адреса"
+    ],
+    "bodyTextLen": 1412
+  }
+]

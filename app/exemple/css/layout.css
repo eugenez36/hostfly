@@ -1,0 +1,305 @@
+/* ==========================================================================
+   Hostfly — каркас страницы: шапка, футер, хлебные крошки, hero-блоки
+   ========================================================================== */
+
+/* ==========================================================================
+   Логотип
+   ========================================================================== */
+.logo {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--c-logo);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+.logo__accent {
+  background: linear-gradient(180deg, var(--c-logo-accent-1), var(--c-logo-accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ==========================================================================
+   Шапка
+   ========================================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--c-white);
+  border-bottom: 1px solid var(--c-highlighter);
+}
+.header__top {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 18px 0 14px;
+}
+.header__nav-secondary { display: flex; gap: 28px; }
+.header__nav-secondary a {
+  color: var(--c-element);
+  font-size: var(--fs-m);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.header__nav-secondary a:hover { color: var(--c-text); }
+.header__contacts {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: var(--fs-m);
+}
+.header__contacts .label { color: var(--c-body); }
+.header__contacts a { font-weight: 700; text-decoration: none; }
+.header__contacts a:hover { color: var(--c-primary); }
+
+.header__bottom {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-bottom: 16px;
+}
+.header__actions { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+
+/* Главное меню с выпадающими списками */
+.nav { display: flex; align-items: center; gap: 32px; }
+.nav__item { position: relative; }
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  font-size: var(--fs-h6);
+  font-weight: 500;
+  color: var(--c-text);
+  text-decoration: none;
+  background: 0;
+  border: 0;
+  transition: color var(--transition);
+}
+.nav__link:hover { color: var(--c-primary); }
+.nav__link svg { transition: transform var(--transition); }
+.nav__item.is-open .nav__link svg { transform: rotate(180deg); }
+
+.nav__drop {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -20px;
+  min-width: 280px;
+  padding: 12px;
+  border: 1px solid var(--c-highlighter);
+  border-radius: var(--r-lg);
+  background: var(--c-white);
+  box-shadow: var(--shadow-card);
+  display: none;
+  z-index: 60;
+}
+.nav__item.is-open .nav__drop { display: block; }
+.nav__drop a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+  font-size: var(--fs-l);
+  text-decoration: none;
+  color: var(--c-text);
+  transition: background var(--transition), color var(--transition);
+}
+.nav__drop a:hover { background: var(--c-secondary); color: var(--c-primary); }
+
+/* Мобильное меню */
+.header__burger { display: none; }
+@media (max-width: 1100px) {
+  .header__top { gap: 20px; padding: 12px 0; }
+  .header__nav-secondary, .header__contacts { display: none; }
+  .header__bottom { display: none; padding-bottom: 12px; }
+  .header.is-open .header__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding-bottom: 20px;
+  }
+  .header.is-open .nav { flex-direction: column; align-items: stretch; gap: 0; }
+  .header.is-open .nav__link { padding: 14px 0; border-bottom: 1px solid var(--c-highlighter); }
+  .header.is-open .nav__drop {
+    position: static; box-shadow: none; border: 0; padding: 4px 0 12px 12px; min-width: 0;
+  }
+  .header.is-open .header__actions { margin: 16px 0 0; }
+  .header__burger {
+    display: inline-flex;
+    margin-left: auto;
+    width: 40px; height: 40px;
+    align-items: center; justify-content: center;
+    border: 0; background: transparent; color: var(--c-text);
+  }
+}
+
+/* ==========================================================================
+   Хлебные крошки
+   ========================================================================== */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 0;
+  font-size: var(--fs-m);
+  color: var(--c-element);
+  flex-wrap: wrap;
+}
+.breadcrumbs a { color: var(--c-element); text-decoration: none; }
+.breadcrumbs a:hover { color: var(--c-text); }
+.breadcrumbs__sep { color: var(--c-bg-dark); }
+.breadcrumbs__current { color: var(--c-body); }
+
+/* ==========================================================================
+   Hero-блоки
+   ========================================================================== */
+
+/* Главная: слева слайдер-подпись с иллюстрацией, справа крупный H1 */
+.hero-home {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 120px;
+  padding: 80px 0 100px;
+  align-items: start;
+}
+.hero-home__aside { display: flex; flex-direction: column; gap: 24px; }
+.hero-home__note { color: var(--c-body); font-size: var(--fs-m); line-height: var(--lh-m); }
+.hero-home__art {
+  border-radius: var(--r-lg);
+  background: var(--c-secondary);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.hero-home__main { display: flex; flex-direction: column; gap: 48px; align-items: flex-start; }
+@media (max-width: 1100px) {
+  .hero-home { grid-template-columns: minmax(0, 1fr); gap: 40px; padding: 32px 0 48px; }
+  .hero-home__aside { order: 2; max-width: 380px; }
+  .hero-home__main { gap: 28px; }
+}
+
+/* Внутренние страницы: тонированная плашка с текстом и иллюстрацией */
+.hero-page {
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  gap: 48px;
+  align-items: center;
+  padding: 56px;
+  border-radius: var(--r-2xl);
+  background: var(--c-secondary);
+}
+.hero-page__body { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+.hero-page__lead { color: var(--c-body); max-width: 560px; }
+.hero-page__actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-page__art { display: grid; place-items: center; }
+@media (max-width: 900px) {
+  .hero-page { grid-template-columns: minmax(0, 1fr); padding: 28px; gap: 24px; }
+  .hero-page__art { display: none; }
+}
+
+/* Простой текстовый hero (регистрация доменов, инфо-страницы) */
+.hero-plain { padding: 40px 0 56px; display: flex; flex-direction: column; gap: 24px; }
+.hero-plain__row {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 40px; flex-wrap: wrap;
+}
+.hero-plain__lead { color: var(--c-body); max-width: 680px; }
+
+/* ==========================================================================
+   Секция «статистика + логотипы клиентов»
+   ========================================================================== */
+.clients__head {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: var(--gutter); padding-bottom: 32px; flex-wrap: wrap;
+}
+.clients__note { color: var(--c-element); font-size: var(--fs-m); text-align: right; }
+
+/* ==========================================================================
+   Футер
+   ========================================================================== */
+.footer { border-top: 1px solid var(--c-highlighter); padding-top: 56px; }
+.footer__cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, 1.2fr);
+  gap: 40px var(--gutter);
+  padding-bottom: 56px;
+}
+.footer__col-title {
+  color: var(--c-element);
+  font-size: var(--fs-m);
+  margin-bottom: 20px;
+}
+.footer__links { display: flex; flex-direction: column; gap: 14px; }
+.footer__links a {
+  color: var(--c-text);
+  font-size: var(--fs-l);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.footer__links a:hover { color: var(--c-primary); }
+
+.footer__phones { display: flex; flex-direction: column; gap: 8px; }
+.footer__phone {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  line-height: 1.3;
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.footer__phone span { color: var(--c-element); }
+.footer__phone:hover { color: var(--c-primary); }
+
+.footer__pay { padding: 32px 0; border-top: 1px solid var(--c-highlighter); }
+.footer__legal {
+  display: flex; gap: 40px; flex-wrap: wrap;
+  padding: 24px 0;
+  border-top: 1px solid var(--c-highlighter);
+}
+.footer__legal a { font-size: var(--fs-m); color: var(--c-text); text-decoration: none; }
+.footer__legal a:hover { color: var(--c-primary); }
+.footer__bottom {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: var(--gutter); flex-wrap: wrap;
+  padding: 28px 0 40px;
+  border-top: 1px solid var(--c-highlighter);
+  color: var(--c-body);
+  font-size: var(--fs-m);
+  line-height: var(--lh-m);
+}
+.footer__bottom a { text-decoration: underline; text-underline-offset: 3px; color: var(--c-text); }
+
+@media (max-width: 1100px) {
+  .footer__cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer__phone { font-size: var(--fs-h4); }
+}
+@media (max-width: 600px) {
+  .footer__cols { grid-template-columns: minmax(0, 1fr); }
+  .footer__legal { gap: 14px; flex-direction: column; }
+}
+
+/* ==========================================================================
+   Служебное: превью-бар для навигации по страницам макета
+   ========================================================================== */
+.preview-bar {
+  background: var(--c-button);
+  color: var(--c-white);
+  font-size: var(--fs-m);
+}
+.preview-bar__inner {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  padding: 10px var(--gutter);
+  max-width: var(--container-wide);
+  margin: 0 auto;
+}
+.preview-bar__label { color: var(--c-element); text-transform: uppercase; font-size: var(--fs-s); letter-spacing: .04em; }
+.preview-bar a { color: var(--c-white); text-decoration: none; opacity: .75; }
+.preview-bar a:hover { opacity: 1; text-decoration: underline; }
+.preview-bar a.is-current { opacity: 1; font-weight: 700; }

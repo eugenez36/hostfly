@@ -1,0 +1,37 @@
+.validation-text,
+.js-validation-text {
+  position: absolute;
+  top: 100%;
+  margin-top: 1px;
+  line-height: 1.1;
+  left: 0;
+  right: 0;
+  font-size: 11px;
+  color: #eb276d
+}
+
+.validation-text {
+  display: none;
+  z-index: 2;
+  background: #fff;
+}
+
+.validation-submit__wrap {
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+}
+
+.validation-submit_click {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 2;
+
+  &.inactive {
+    display: none;
+  }
+}

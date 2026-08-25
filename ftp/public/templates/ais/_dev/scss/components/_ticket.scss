@@ -1,0 +1,157 @@
+/**
+ * -------------------------
+ * @section Support Tickets
+ * -------------------------
+ */
+
+.ticket-number {
+  display: block;
+  font-size: 1.2em;
+  font-style: italic;
+  color: #2a9fbb;
+}
+.ticket-subject.unread {
+  font-weight: bold;
+}
+
+.ticket-attachments-message {
+  padding-top: 4px;
+  font-size: 0.8em;
+}
+
+.ticket-reply {
+  margin: 10px 0;
+  padding: 0;
+  border: 1px solid #efefef;
+  background-color: #fff;
+}
+
+.ticket-reply.staff {
+  border: 1px solid #CCE4FC;
+}
+
+.ticket-reply .date {
+  float: right;
+  padding: 8px 10px;
+  font-size: 0.8em;
+}
+
+.ticket-reply .user {
+  padding: 5px 0;
+  background-color: #f8f8f8;
+}
+
+.ticket-reply.staff .user {
+  background-color: #F2F9FF;
+}
+
+.ticket-reply .user i {
+  float: left;
+  font-size: 2.2em;
+  padding: 2px 15px;
+}
+
+.ticket-reply .user .name {
+  display: block;
+  font-size: 0.9em;
+}
+
+.ticket-reply .user .type {
+  display: block;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.ticket-reply .message {
+  padding: 12px 15px;
+}
+
+.ticket-reply .rating,
+.ticket-reply .rating-done {
+  float: right;
+  padding: 5px 10px;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 24px;
+}
+.ticket-reply .rating span.star,
+.ticket-reply .rating-done span.star {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+}
+.ticket-reply .rating-done .rated {
+  display: inline-block;
+  font-size: 12px;
+  font-family: Tahoma;
+}
+.ticket-reply .rating span.star:hover {
+  cursor: pointer;
+}
+.ticket-reply .rating span.star:before,
+.ticket-reply .rating-done span.star:before {
+  content: "\f005";
+  padding-right: 0;
+  color: #999;
+}
+.ticket-reply .rating span.star:hover:before,
+.ticket-reply .rating span.star:hover ~ span.star:before,
+.ticket-reply .rating-done span.star.active:before  {
+  content: "\f005";
+  color: #F2DE88;
+}
+
+.ticket-reply .attachments {
+  margin: 0;
+  padding: 10px 20px;
+  border-top: 1px dashed #efefef;
+  background-color: #f8f8f8;
+  font-size: 0.8em;
+}
+
+.ticket-reply .attachments ul {
+  margin: 0;
+  padding: 0 0 0 15px;
+  list-style: none;
+}
+
+.ticket-reply .clear {
+  clear: both;
+}
+
+.panel > .list-group .ticket-details-children {
+  line-height: 20px;
+}
+.panel > .list-group .ticket-details-children .title {
+  font-size: 0.9em;
+  color: #999;
+}
+
+/**
+ * -------------------------
+ * @section Support Ticket Feedback
+ * -------------------------
+ */
+
+.ticketfeedbackstaffcont {
+  margin: 10px auto;
+  padding: 15px;
+  width: 90%;
+  background-color: #efefef;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.ticketfeedbackrating {
+  padding: 0 100px;
+}
+
+.ticketfeedbackrating .rate {
+  float: left;
+  padding: 0 10px;
+  min-width: 30px;
+  text-align: center;
+}

@@ -1,0 +1,79 @@
+.menu-drop {
+  min-width: 260px;
+  left: -20px;
+  padding: 5px 0 8px;
+  margin-top: 8px;
+  color: $text-color;
+  border: none;
+
+  @media (max-width: 480px) {
+    position: fixed;
+    top: 106px;
+    left: 25px;
+    right: 25px;
+    min-width: initial;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: $brand-success;
+    }
+  }
+
+  &__el {
+    padding: 18px 22px;
+
+    + .menu-drop__el {
+      border-top: 1px solid $color-border;
+    }
+  }
+
+  &__title {
+    @include font-face-sbold();
+    font-size: 22px;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 2px;
+    @include font-face-medium();
+    color: $text-light;
+  }
+
+  &-list {
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: $text-light;
+
+      &[href^=mailto] {
+        text-decoration: underline;
+        color: $brand-success;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .subtext {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 13px;
+    color: #aaa;
+  }
+}

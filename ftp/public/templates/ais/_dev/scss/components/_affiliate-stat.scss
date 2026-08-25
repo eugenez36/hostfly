@@ -1,0 +1,61 @@
+/**
+ * -------------------------
+ * @section Affiliates Page
+ * -------------------------
+ */
+
+.affiliate-stat {
+  margin: 0;
+  padding: 15px;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.affiliate-stat span {
+  display: block;
+  font-size: 2.4em;
+}
+
+.affiliate-stat i {
+  float: left;
+  padding: 10px;
+  font-size: 4em;
+}
+
+.affiliate-referral-link {
+  margin: 40px 0;
+}
+
+.affiliate-referral-link span {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.4em;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .affiliate-stat {
+    font-size: 1.2em;
+  }
+  .affiliate-stat span {
+    font-size: 2.1em;
+  }
+  .affiliate-stat i {
+    font-size: 3.6em;
+  }
+}
+
+@media (max-width: 992px) {
+  .affiliate-stat {
+    font-size: 1.0em;
+  }
+  .affiliate-stat span {
+    font-size: 1.6em;
+  }
+  .affiliate-stat i {
+    font-size: 3em;
+  }
+}

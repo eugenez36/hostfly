@@ -1,0 +1,43 @@
+section#header {
+  margin: 0;
+  padding: 17px 0;
+  background-color: $brand-base;
+
+  @media (max-width: $screen-md-max) {
+    padding: 20px 0;
+  }
+  @media (max-width: 480px) {
+    text-align: center;
+  }
+}
+
+section#header .search {
+  margin: 20px 0;
+}
+section#header .search .form-control {
+  border-color: #eee;
+  box-shadow: none;
+}
+section#header .search .btn {
+  background-color: #eee;
+  border-color: #eee;
+  color: #888;
+}
+
+.header {
+  &__row {
+    @media (min-width: $screen-sm-min) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      align-items: flex-end;
+    }
+  }
+
+  &__col {
+    flex-shrink: 0;
+  }
+}

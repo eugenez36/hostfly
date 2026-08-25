@@ -1,0 +1,136 @@
+.registrant {
+  &_type {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 2px;
+    margin: 0;
+    border-radius: 6px;
+    background: linear-gradient(-90deg,#eb276d 0,#e45c9a 25%,#ae65b6 50%,#6448b6 75%,#3b2c79 100%);
+
+    @media (max-width: $screen-xs-max) {
+      margin: 0 0 20px;
+    }
+    @media (max-width: 480px) {
+      display: block;
+    }
+  }
+
+  &_btn {
+    width: 100%;
+    margin: 0!important;
+    padding: 0 2px;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none!important;
+
+    @media (max-width: 480px) {
+      float: none!important;
+      display: block;
+    }
+
+    &.focus,
+    &:focus {
+      outline: none!important;
+    }
+  }
+
+  &_btn-wrap {
+    display: block;
+    padding: 17px 5px;
+    width: 100%;
+    text-transform: none;
+    background: transparent;
+    color: #fff;
+    @include font-face-normal;
+    font-size: $font-size-large;
+    border-radius: $border-radius-base;
+    transition: .25s ease-out;
+
+    .registrant_btn.active & {
+      color: $brand-base;
+      background: #fff;
+    }
+    &:hover {
+      color: $brand-base;
+      background: rgba(255,255,255,.95);
+    }
+    &:focus {
+      outline: none!important;
+    }
+  }
+}
+
+#registration {
+  margin: 0;
+  padding: 0 0 40px 0;
+}
+
+#registration .field-container {
+  margin: 0 0 30px 0;
+}
+
+#registration label {
+  color: #666;
+
+  @media (max-width: 480px) {
+    + label {
+      padding-top: 4px;
+    }
+  }
+}
+
+#registration .info-text-sm {
+  font-size: 0.85em;
+  text-align: center;
+}
+
+#registration .prepend-icon {
+  top: 0;
+  left: 0;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 100%;
+  font-weight: normal;
+}
+
+#registration .input-group-lg > .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px 0 0 6px;
+}
+#registration .form-control-qty {
+  width: 70px;
+  text-align: center;
+}
+#registration .form-control-static-inline {
+  display: inline-block;
+}
+#registration textarea.field {
+  height: auto;
+}
+#registration .prepend-icon .field {
+  -webkit-appearance: none;
+}
+#registration .field-icon i {
+  color: #bbb;
+}
+
+#registration .field[disabled],
+#registration .field[readonly],
+#registration .form-control[disabled],
+#registration .form-control[readonly] {
+  background-color: #f8f8f8;
+  opacity: 1;
+}
+
+#registration .field-help-text {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #888;
+  font-size: 12px;
+}

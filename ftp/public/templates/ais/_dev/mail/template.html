@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+<center>
+   <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="background:#DAD9EE;font-family:Arial,Helvetica,sans-serif">
+      <tr>
+         <td align="center" style="max-width:560px;margin:50px auto;padding:20px;display:block;clear: both;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+               <tr>
+                  <td align="center" valign="top" style="width:100%;padding:0;display:block;clear: both;background:#ffffff url('https://my.hostfly.by/templates/ais/img/mail/header-bg2.png') right 0 no-repeat;" id="bodyCell">
+                     <table border="0" cellpadding="0" cellspacing="0" id="templateContainer" style="background-color:transparent;">
+                        <tr>
+                           <td align="center" valign="top">
+                              <table id="templateHeader" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin:0;padding:0;background-color:transparent;">
+                                 <tbody>
+                                 <tr>
+                                    <td style="padding:37px 35px 26px 35px;">
+                                       <table>
+                                          <tbody>
+                                          <tr>
+                                             <td>
+                                                <a href="http://hostfly.by" target="_blank"><img alt="{$company_name}" src="https://my.hostfly.by/templates/ais/img/mail/logo.png" style="width: 163px; height: 35px;" /></a>
+                                             </td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" valign="top">
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody" style="background-color:transparent;">
+                                 <tr>
+                                    <td valign="top" class="bodyContent" style="font-size:16px;line-height:1.45;color:#292929;padding:0 35px 50px 35px;">
+
+                                       <!--START-content-->
+                                       <p class="emailSubject" style="display: table-cell;vertical-align: bottom;color: #ffffff; font-size: 24px; line-height: 1.1; font-weight: bold; height: 105px; margin: 0; padding: 0 0 58px;">Финальное напоминание о неоплаченном платеже</p>
+                                       <p style="padding: 0; margin: 0 0 12px 0; color: #292929;">Уважаемый (-ая) {$client_name},</p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;">Это письмо является подтверждением, что счет был создан<br />{$invoice_date_created}</p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;"><strong>Ваш способ оплаты:</strong><br />{$invoice_payment_method}</p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;"><strong>Счет #{$invoice_num}</strong><br />Дата оплаты: {$invoice_date_due}<br />Сумма к оплате: {$invoice_total}</p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;"><strong>Услуги к оплате</strong></p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;">{$invoice_html_contents}</p>
+                                       <p style="height: 1px; width: 100%; background: #E5E5E5; margin: 21px 0 25px; padding: 0;"> </p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; text-align: center;">
+                                          Вы можете авторизоваться в Вашей клиентской части и оплатить счет<br />
+                                          <span class="invoiceLink" style="display: inline-block; margin-top: 10px; width: 191px; height: 40px; color: transparent; vertical-align: top; background: url('https://my.hostfly.by/templates/ais/img/mail/btn.png'); background-size: contain; overflow: hidden;">
+                                    <span style="opacity:0;line-height: 20px">{$invoice_link}</span>
+                                 </span>
+                                       </p>
+                                       <p style="height: 1px; width: 100%; background: #E5E5E5; margin: 25px 0 25px; padding: 0;"> </p>
+                                       <p>Реквизиты для оплаты с помощью банковского перевода<br />ООО «Суппорт чейн», УНП 190625072 <br /> р/с BY53ALFA30122226780060270000 в ЗАО «Альфа-Банк» МФО ALFABY2X , ул. Сурганова, 43</p>
+                                       <p style="height: 1px; width: 100%; background: #E5E5E5; margin: 21px 0; padding: 0;"> </p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;">Для оплаты в системе ЕРИП</p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;">1. Система Расчет (ЕРИП)</p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;">• Интернет, телевидение, телефония<br />• Хостинги и домены<br />• Суппорт Чейн - hostfly.by<br />• Хостинг</p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;">2. Для оплаты ввести номер счета</p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;">3. Проверить корректность информации</p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;">4. Совершить платеж.</p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;">Если Вы осуществляете платеж в кассе банка, пожалуйста, сообщите кассиру о необходимости<br />проведения платежа через систему Расчет (ЕРИП).</p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;">Вы также можете оплатить услугу по коду услуги в ЕРИП:</p>
+                                       <p style="padding: 0; margin: 0 0 10px 0; color: #292929;">• Пункт Система Расчет (ЕРИП)<br />• Оплата в ЕРИП по коду услуги<br />• Вводите код: 4657311</p>
+                                       <!--END-content-->
+                                    </td>
+                                 </tr>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" valign="top">
+                              <table id="templateFooter" border="0" cellpadding="0" cellspacing="0" style="background:#F7F7F7; margin:0; padding:0" width="100%">
+                                 <tbody>
+                                 <tr>
+                                    <td class="footerContent" style="padding: 26px 35px 21px 35px;text-align: left;color:#292929;font-size:16px;">
+                                       <table border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0" width="100%">
+                                          <tbody>
+                                          <tr>
+                                             <td>
+                                                <table align="left" cellpadding="0" cellspacing="0" style="width:62%;margin:0; padding:0">
+                                                   <tbody>
+                                                   <tr>
+                                                      <td>
+                                                         <table border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0;width: 100%;">
+                                                            <tbody>
+                                                            <tr>
+                                                               <td style="padding:0;line-height:1.4">
+                                                                  <p style="padding: 0;margin: 0 0 5px;">Круглосуточная поддержка клиентов</p>
+                                                                  <p style="padding: 0;margin: 0 0 17px;">
+                                                                     <a style="white-space:nowrap;color:#3F21D3;text-decoration:none;font-weight:bold;font-size: 18px;" href="tel:+375173367373" target="_blank">+375 17 336-73-73</a>
+                                                                  </p>
+                                                                  <table align="left" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0;width: 50%;">
+                                                                     <tbody>
+                                                                     <tr>
+                                                                        <td style="padding-right: 20px">
+                                                                           <p style="padding: 0;margin: 0 0 5px;">Отдел продаж</p>
+                                                                           <p style="padding: 0;margin: 0 0 24px;">
+                                                                              <a style="color:#3F21D3;text-decoration:none;font-weight:bold;font-size: 17px;" href="mailto:sales@hostfly.by">sales@hostfly.by</a>
+                                                                           </p>
+                                                                        </td>
+                                                                     </tr>
+                                                                     </tbody>
+                                                                  </table>
+                                                                  <table align="left" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0;width: 50%;">
+                                                                     <tbody>
+                                                                     <tr>
+                                                                        <td>
+                                                                           <p style="padding: 0;margin: 0 0 5px;">Общие вопросы</p>
+                                                                           <p style="padding: 0;margin: 0 0 24px;">
+                                                                              <a style="color:#3F21D3;text-decoration:none;font-weight:bold;font-size: 17px;" href="mailto:info@hostfly.by">info@hostfly.by</a>
+                                                                           </p>
+                                                                        </td>
+                                                                     </tr>
+                                                                     </tbody>
+                                                                  </table>
+                                                               </td>
+                                                            </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </td>
+                                                   </tr>
+                                                   </tbody>
+                                                </table>
+
+                                                <table align="left" cellpadding="0" cellspacing="0" style="width:38%;margin:0; padding:0">
+                                                   <tbody>
+                                                   <tr>
+                                                      <td style="padding-bottom:24px;">
+                                                         <table border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0" width="100%">
+                                                            <tbody>
+                                                            <tr>
+                                                               <td style="width: 100%"></td>
+                                                               <td style="min-width: 150px;width:150px;">
+                                                                  <table border="0" cellpadding="0" cellspacing="0" style="margin:0;padding:0">
+                                                                     <tbody>
+                                                                     <tr>
+                                                                        <td width="30" align="center"><a href="https://vk.com/hostfly_by" target="_blank"><img src="https://my.hostfly.by/templates/ais/img/mail/vk.png" alt="vk"></a></td>
+                                                                        <td width="30" align="center"><a href="https://www.facebook.com/hostfly.by" target="_blank"><img src="https://my.hostfly.by/templates/ais/img/mail/fb.png" alt="Facebook"></a></td>
+                                                                        <td width="30" align="center"><a href="https://www.instagram.com/hostfly.by" target="_blank"><img src="https://my.hostfly.by/templates/ais/img/mail/in.png" alt="Instagram"></a></td>
+                                                                        <td width="30" align="center"><a href="https://ok.ru/group/54715347370078" target="_blank"><img src="https://my.hostfly.by/templates/ais/img/mail/od.png" alt="Odnoklassniki"></a></td>
+                                                                        <td width="30" align="center"><a href="https://twitter.com/hostfly_by" target="_blank"><img src="https://my.hostfly.by/templates/ais/img/mail/tw.png" alt="Twitter"></a></td>
+                                                                     </tr>
+                                                                     </tbody>
+                                                                  </table>
+                                                               </td>
+                                                            </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </td>
+                                                   </tr>
+                                                   </tbody>
+                                                </table>
+                                             </td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+
+                                       <table border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0" width="100%">
+                                          <tbody>
+                                          <tr>
+                                             <td style="text-align: center;">
+                                                <span style="color:#939393;font-size:14px;line-height:1.4;">ООО «Суппорт чейн». Провайдер облачного хостинга и регистратор доменных имен в Беларуси.</span>
+                                             </td>
+                                          </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                     </table>
+                  </td>
+               </tr>
+            </table>
+         </td>
+      </tr>
+   </table>
+</center>
+</body>
+</html>

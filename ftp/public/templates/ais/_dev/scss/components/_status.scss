@@ -1,0 +1,92 @@
+.status {
+  display: block;
+  border: 1px solid currentColor;
+  color: $text-color;
+
+  + .status {
+    margin-top: 5px;
+  }
+}
+
+.status-custom {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 1px;
+}
+
+.status-pending {
+  color: #D9534F;
+}
+.status-success {
+  color: #fff;
+  background: $brand-success;
+}
+.status-pending.transfer {
+  color: #A68500;
+}
+.status-active,
+.status-open,
+.status-completed {
+  color: #3fad46;
+}
+.status-suspended {
+  color: #F0AD4E;
+}
+.status-customer-reply {
+  color: #ff6600;
+}
+.status-fraud,
+.status-answered {
+  color: #000000;
+}
+.status-expired,
+.status-transferred.away{
+  color: #004258;
+}
+.status-cancelled {
+  color: #9FA29A;
+}
+.status-terminated {
+  color: #666;
+}
+.status-onhold {
+  color: #224488;
+}
+.status-inprogress {
+  color: #cc0000;
+}
+.status-closed {
+  color: #888;
+}
+
+.status-paid {
+  color: darken($brand-primary, 10%);
+}
+.status-unpaid {
+  color: #ED3E48;
+}
+.status-cancelled {
+  color: #87939F;
+}
+.status-collections {
+  color: #9A141E;
+}
+.status-refunded {
+  color: #319FC3;
+}
+
+.status-customer-reply {
+  color: #ff6600;
+}
+
+.status-delivered {
+  color: #224488;
+}
+
+.status-accepted {
+  color: #498302;
+}
+.status-lost, .status-dead {
+  color: #000;
+}

@@ -1,0 +1,30 @@
+.domain-promo-box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 25px 25px 30px;
+  background-color: $color-bg-block;
+  border: 1px solid $color-border;
+  color: $text-color;
+  border-radius: $border-radius-base;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: .35em;
+    font-weight: 400
+  }
+
+  i {
+    float: right;
+    margin-left: 20px;
+    opacity: .6;
+  }
+
+  p {
+    margin: 0 0 10px 0;
+  }
+
+  .small {
+    margin: 10px 0 0 0;
+    color: #999
+  }
+}

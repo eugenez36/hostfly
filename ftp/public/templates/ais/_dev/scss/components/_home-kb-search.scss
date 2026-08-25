@@ -1,0 +1,18 @@
+.home-kb-search {
+  .form-control {
+    padding-left: 50px;
+    font-weight: 300;
+  }
+
+  i {
+    position: absolute;
+    top: 11px;
+    left: 28px;
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .input-lg + i {
+    top: 19px;
+  }
+}

@@ -1,0 +1,100 @@
+.featured-tlds-container {
+  margin: 35px 0 15px;
+}
+
+.featured-tld {
+  margin: 0 0 20px 0;
+  border-radius: 4px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.1);
+}
+.featured-tld .img-container {
+  padding: 20px 0;
+  height: 115px;
+  line-height: 75px;
+  overflow: hidden;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .featured-tld .img-container {
+    height: 80px;
+    line-height: 40px;
+  }
+}
+.featured-tld .img-container img {
+  max-width: 70%;
+  max-height: 100%;
+}
+.featured-tld .price {
+  padding: 5px;
+  background-color: #f9f9f9;
+  color: #555;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 0 0 4px 4px;
+}
+
+.featured-tld .price.blog {
+  background-color: #a0d5cb;
+  color: #fff;
+}
+.featured-tld .price.club {
+  background-color: #053796;
+  color: #fff;
+}
+.featured-tld .price.com {
+  background-color: #3aa4da;
+  color: #fff;
+}
+.featured-tld .price.couk {
+  background-color: #1d3774;
+  color: #fff;
+}
+.featured-tld .price.host {
+  background-color: #ed4d42;
+  color: #fff;
+}
+.featured-tld .price.live {
+  background-color: #ff9e19;
+  color: #fff;
+}
+.featured-tld .price.name {
+  background-color: #44b03e;
+  color: #fff;
+}
+.featured-tld .price.net {
+  background-color: #efc00e;
+  color: #fff;
+}
+.featured-tld .price.online {
+  background-color: #38ce6a;
+  color: #fff;
+}
+.featured-tld .price.rocks {
+  background-color: #fd563c;
+  color: #fff;
+}
+.featured-tld .price.shop {
+  background-color: #ff5900;
+  color: #fff;
+}
+.featured-tld .price.social {
+  background-color: #ff9a00;
+  color: #fff;
+}
+.featured-tld .price.store {
+  background-color: #0eadb3;
+  color: #fff;
+}
+.featured-tld .price.tech {
+  background-color: #0db04b;
+  color: #fff;
+}
+.featured-tld .price.tv {
+  background-color: #ea3438;
+  color: #fff;
+}
+.featured-tld .price.website {
+  background-color: #2db9ea;
+  color: #fff;
+}

@@ -1,0 +1,101 @@
+#order-standard_cart {
+  .domain-selection-options {
+    .option {
+      margin-bottom: 4px;
+      padding: 25px 40px;
+      border-radius: 6px;
+      background-color: $color-bg-block;
+
+      @media (max-width: $screen-xs-max) {
+        padding: 25px;
+      }
+    }
+
+    label {
+      margin-bottom: 0;
+      cursor: pointer;
+
+      @media (max-width: $screen-xs-max) {
+        font-size: $font-size-base;
+      }
+    }
+
+    .form-control {
+      height: $input-height-small;
+    }
+  }
+
+  .domain-input-group {
+    display: none;
+    margin: 16px 0 0;
+
+    &__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (max-width: $screen-xs-max) {
+        display: block;
+      }
+
+      .btn {
+        width: auto;
+        flex-shrink: 0;
+        margin-left: 20px;
+
+        @media (max-width: $screen-xs-max) {
+          margin: 10px auto 0;
+        }
+      }
+    }
+  }
+
+  .domains-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .input-group {
+      width: 100%;
+      display: flex;
+
+      .form-control {
+        margin: 0;
+      }
+
+      .input-group-addon{
+        width: 92px;
+        flex-shrink: 0;
+      }
+    }
+
+    select {
+      position: relative;
+      z-index: 2;
+
+      * {
+        background-color: #fff!important;
+      }
+    }
+
+    > .form-control {
+      width: 100px;
+      flex-shrink: 0;
+      margin-left: 5px;
+
+      @media (max-width: $screen-xs-max) {
+        width: 80px;
+      }
+    }
+
+    .input-group-addon,
+    > .form-control {
+      @media (max-width: $screen-xs-max) {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+

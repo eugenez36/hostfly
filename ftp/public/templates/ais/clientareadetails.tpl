@@ -135,7 +135,9 @@ $(document).ready(function () {
     }
 
     function _sameasabove(stField, bField, aField, zField, cField, sField, coField, addressField) {
-        var st = '{$LANG.orderForm.mailingAddressSt} ' + stField.val();
+        var st = stField.val();
+        st ? st = st : '';
+
         var b = bField.val();
         b ? b = ', ' + b : '';
 
@@ -146,12 +148,12 @@ $(document).ready(function () {
         z ? z = ', ' + z : '';
 
         var c = cField.val();
-        c ? c = ', {$LANG.orderForm.mailingAddressCity} ' + c : '';
+        c ? c = ', ' + c : '';
 
-        var s = $('#stateinput').val();
+        var s = sField.val();
         s ? s = ', ' + s : '';
 
-        var co = coField.val();
+        var co = coField.find('option:selected').text().trim();
         co ? co = ', ' + co : '';
 
         addressField.val(st + b + a + z + c + s + co);

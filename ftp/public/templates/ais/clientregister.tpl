@@ -1,3 +1,13 @@
+<style>
+.registrant_type {
+    display: flex;
+    justify-content: space-between;
+}
+.registrant_type > label {
+    width: 100%;
+}
+</style>
+
 {if in_array('state', $optionalFields)}
     <script>
         var statesTab = 10;
@@ -5,6 +15,7 @@
     </script>
 {/if}
 
+<script type="text/javascript" src="{$BASE_PATH_JS}/egr.js"></script>
 <script type="text/javascript" src="{$BASE_PATH_JS}/StatesDropdownHF.js"></script>
 <script type="text/javascript" src="{$BASE_PATH_JS}/PasswordStrength.js"></script>
 <script>
@@ -106,6 +117,24 @@
                 </div>
             {/if}
 
+            {*УНП*}
+
+            <div class="sub-heading" data-type="org,ip">
+                <span>{$LANG.orderForm.unp}</span>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6" data-type="org,ip">
+                    <div class="form-group prepend-icon">
+                        <label for="customfield40" class="field-icon">
+                            <i class="fas fa-pencil"></i>
+                        </label>
+                        <input type="text" name="customfield[40]" id="customfield40" class="form-control" data-valid="numbers" maxlength="9" placeholder="{$LANG.orderForm.unp}" value="{$cf.r_unp.value}" data-req="type21">
+                        <span class="validation-text">{$LANG.orderForm.validationUNP}</span>
+                    </div>
+                </div>
+            </div>
+
             {*Company name*}
 
             <div class="sub-heading" data-type="org">
@@ -122,6 +151,58 @@
                         <span class="validation-text">{$LANG.orderForm.validationCompany}</span>
                     </div>
                 </div>
+            </div>
+
+            {*Certificate of registration jur. persons (USR)*}
+
+            <div class="sub-heading" data-type="org,ip" data-res="type2">
+                <span>{$LANG.xrrp.egr.egr}</span>
+            </div>
+
+            <div class="row" data-type="org,ip" data-res="type2">
+                {if $cf.egr_num}
+                    <div class="col-sm-6">
+                        <div class="form-group prepend-icon">
+                            <label for="customfield[11]" class="field-icon">
+                                <i class="fas fa-pencil"></i>
+                            </label>
+                            <input type="text" name="customfield[11]" id="customfield11" class="form-control" data-valid="numbers" placeholder="{$LANG.xrrp.egr.num}" value="{$cf.egr_num.value}" data-req="type21">
+                            <span class="validation-text">{$LANG.orderForm.validationNumbers}</span>
+                        </div>
+                    </div>
+                {/if}
+                {if $cf.egr_org}
+                    <div class="col-sm-6">
+                        <div class="form-group prepend-icon">
+                            <label for="customfield[12]" class="field-icon">
+                                <i class="fas fa-pencil"></i>
+                            </label>
+                            <input type="text" name="customfield[12]" id="customfield12" class="form-control" data-valid="text" placeholder="{$LANG.xrrp.egr.org}" value="{$cf.egr_org.value}" data-req="type21">
+                            <span class="validation-text">{$LANG.orderForm.validationOrg}</span>
+                        </div>
+                    </div>
+                {/if}
+                {*if $cf.egr_resh}
+                    <div class="col-sm-6">
+                        <div class="form-group prepend-icon">
+                            <label for="customfield[10]" class="field-icon">
+                                <i class="fas fa-pencil"></i>
+                            </label>
+                            <input type="text" name="customfield[10]" id="customfield10" class="form-control" placeholder="{$LANG.xrrp.egr.resh}" value="{$cf.egr_resh.value}">
+                        </div>
+                    </div>
+                {/if*}
+                {if $cf.egr_date}
+                    <div class="col-sm-6">
+                        <div class="form-group prepend-icon">
+                            <label for="customfield[13]" class="field-icon">
+                                <i class="fas fa-pencil"></i>
+                            </label>
+                            <input type="text" name="customfield[13]" id="customfield13" class="form-control" data-valid="date" placeholder="{$LANG.xrrp.egr.date}" value="{$cf.egr_date.value}" data-req="type21">
+                            <span class="validation-text">{$LANG.orderForm.validationDate}</span>
+                        </div>
+                    </div>
+                {/if}
             </div>
 
             {*Pesonal/Registration information*}
@@ -214,12 +295,12 @@
 
             {*Registration address/Legal address*}
 
-            <div class="sub-heading">
+            <div class="sub-heading" data-person-address>
                 <span data-type="person">{$LANG.orderForm.regAddress}</span>
                 <span data-type="org,ip">{$LANG.orderForm.legalAddress}</span>
             </div>
 
-            <div class="row">
+            <div class="row" data-person-address>
                 <div class="col-sm-5">
                     <div class="form-group prepend-icon js-inputCountry">
                         <label for="inputCountry" class="field-icon" id="inputCountryIcon">
@@ -323,11 +404,11 @@
 
             {*Mailling address*}
 
-            <div class="sub-heading">
+            <div class="sub-heading" data-person-address>
                 <span>{$LANG.orderForm.mailingAddress}</span>
             </div>
 
-            <div class="row">
+            <div class="row" data-person-address>
                 <div class="col-sm-12">
                     <div class="form-group">
                         <div class="onoffswitch">
@@ -341,7 +422,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" data-person-address>
                 {if $cf.mail_address}
                     <div class="col-sm-12">
                         <div class="form-group prepend-icon">
@@ -395,71 +476,8 @@
                 {/if}
             </div>*}
 
-            {*Certificate of registration jur. persons (USR)*}
-
-            <div class="sub-heading" data-type="org,ip" data-res="type2">
-                <span>{$LANG.xrrp.egr.egr}</span>
-            </div>
-
-            <div class="row" data-type="org,ip" data-res="type2">
-                {if $cf.r_unp}
-                    <div class="col-sm-6">
-                        <div class="form-group prepend-icon">
-                            <label for="customfield[40]" class="field-icon">
-                                <i class="fas fa-pencil"></i>
-                            </label>
-                            <input type="text" name="customfield[40]" id="customfield40" class="form-control" data-valid="numbers" maxlength="9" placeholder="{$LANG.orderForm.unp}" value="{$cf.r_unp.value}" data-req="type21">
-                            <span class="validation-text">{$LANG.orderForm.validationUNP}</span>
-                        </div>
-                    </div>
-                {/if}
-                {if $cf.egr_num}
-                    <div class="col-sm-6">
-                        <div class="form-group prepend-icon">
-                            <label for="customfield[11]" class="field-icon">
-                                <i class="fas fa-pencil"></i>
-                            </label>
-                            <input type="text" name="customfield[11]" id="customfield11" class="form-control" data-valid="numbers" placeholder="{$LANG.xrrp.egr.num}" value="{$cf.egr_num.value}" data-req="type21">
-                            <span class="validation-text">{$LANG.orderForm.validationNumbers}</span>
-                        </div>
-                    </div>
-                {/if}
-                {if $cf.egr_org}
-                    <div class="col-sm-6">
-                        <div class="form-group prepend-icon">
-                            <label for="customfield[12]" class="field-icon">
-                                <i class="fas fa-pencil"></i>
-                            </label>
-                            <input type="text" name="customfield[12]" id="customfield12" class="form-control" data-valid="text" placeholder="{$LANG.xrrp.egr.org}" value="{$cf.egr_org.value}" data-req="type21">
-                            <span class="validation-text">{$LANG.orderForm.validationOrg}</span>
-                        </div>
-                    </div>
-                {/if}
-                {*if $cf.egr_resh}
-                    <div class="col-sm-6">
-                        <div class="form-group prepend-icon">
-                            <label for="customfield[10]" class="field-icon">
-                                <i class="fas fa-pencil"></i>
-                            </label>
-                            <input type="text" name="customfield[10]" id="customfield10" class="form-control" placeholder="{$LANG.xrrp.egr.resh}" value="{$cf.egr_resh.value}">
-                        </div>
-                    </div>
-                {/if*}
-                {if $cf.egr_date}
-                    <div class="col-sm-6">
-                        <div class="form-group prepend-icon">
-                            <label for="customfield[13]" class="field-icon">
-                                <i class="fas fa-pencil"></i>
-                            </label>
-                            <input type="text" name="customfield[13]" id="customfield13" class="form-control" data-valid="date" placeholder="{$LANG.xrrp.egr.date}" value="{$cf.egr_date.value}" data-req="type21">
-                            <span class="validation-text">{$LANG.orderForm.validationDate}</span>
-                        </div>
-                    </div>
-                {/if}
-            </div>
-
             {*Banking information*}
-
+            {*
             <div class="sub-heading" data-type="org,ip">
                 <span>{$LANG.orderForm.bank.header}</span>
             </div>
@@ -515,14 +533,15 @@
                 {/if}
 
             </div>
+            *}
 
             {*Passport details*}
 
-            <div class="sub-heading" data-type="person,ip">
+            <div class="sub-heading" data-type="person,ip" data-passport>
                 <span>{$LANG.xrrp.passport.passport}</span>
             </div>
 
-            <div class="row" data-type="person,ip">
+            <div class="row" data-type="person,ip" data-passport>
                 {if $cf.passport_ser}
                     <div class="col-sm-6">
                         <div class="form-group prepend-icon">

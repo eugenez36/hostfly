@@ -37,49 +37,88 @@ $(document).ready(function () {
     var hBankBtn = $("#have-ba");
     var hBank = $('.js-bank');
     
+    // Функция очистки полей в скрытых секциях
+    function clearHiddenFields(selector) {
+        $(selector).find('input').not('[type=radio], [type=checkbox], [type=hidden]').val('');
+        $(selector).find('select').each(function() {
+            // Сбрасываем select на первый option
+            $(this).prop('selectedIndex', 0);
+        });
+    }
+
+    // Функция снятия обязательности и очистки ошибок валидации
+    function clearFieldsValidation(selector) {
+        $(selector).find('input, select, textarea').each(function() {
+            var $field = $(this);
+            // Снимаем required
+            $field.attr('required', false).removeClass('required');
+            // Убираем классы ошибок
+            $field.removeClass('error is-invalid has-error');
+            // Удаляем сообщения об ошибках
+            var $formGroup = $field.closest('.form-group');
+            if ($formGroup.length > 0) {
+                $formGroup.find('.validation-text, .field-error-msg, .invalid-feedback, .text-danger').hide();
+                $formGroup.removeClass('has-error');
+            }
+        });
+    }
 
     switcher.on('change', function () {
         $('[data-type]').hide();
         $("[data-req*='type']").attr('required', false).removeClass('required');
         var ch = $(this).prop('checked') ? $(this).val() : null;
         switch (ch) {
-        case 'person':
-            type = 'person';
-            $("[data-type*='person']").show();
-            resident ? req('type20', true) : req('type20', false);
-            req('type22', true);// always required for 'person' type
-            // resident ? req('#customfield31', true) : req('#customfield31', false);
-            break;
-        case 'organization':
-            type = 'organization';
-            $("[data-type*='org']").show();
-            // $("#have-ba").attr('checked', true).change();
-            resident ? req('type3', true) : req('type3', false);
-            req('type5', true);// always required for 'organization' type
-            req('#customfield31', false);
-            resident ? req('type21', true) : req('type21', false);
-            break;
-        case 'ip':
-            type = 'ip';
-            $("[data-type*='ip']").show();
-            resident ? req('type20', true) : req('type20', false);
-            req('type22', true);// always required for 'person' type
-            resident ? req('type21', true) : req('type21', false);
-            resident ? req('type6', true) : req('type6', false);
-            break;
+            case 'person':
+                type = 'person';
+                $("[data-type*='person']").show();
+                // Скрываем паспортные данные и адрес для регистрации без заказа
+                $('[data-passport]').hide();
+                $('[data-person-address]').hide();
+                // Снимаем обязательность со всех полей в скрытых секциях
+                clearFieldsValidation('[data-passport]');
+                clearFieldsValidation('[data-person-address]');
+                // Очищаем скрытые поля
+                clearHiddenFields('[data-passport]');
+                clearHiddenFields('[data-person-address]');
+                break;
+            case 'organization':
+                type = 'organization';
+                $("[data-type*='org']").show();
+                $('[data-person-address]').show();
+                resident ? req('type3', true) : req('type3', false);
+                req('type5', true);
+                req('#customfield31', false);
+                resident ? req('type21', true) : req('type21', false);
+                break;
+            case 'ip':
+                type = 'ip';
+                $("[data-type*='ip']").show();
+                $('[data-person-address]').show();
+                // Скрываем паспортные данные для регистрации без заказа
+                $('[data-passport]').hide();
+                // Снимаем обязательность со всех полей паспорта
+                clearFieldsValidation('[data-passport]');
+                // Очищаем скрытые поля паспорта
+                clearHiddenFields('[data-passport]');
+                resident ? req('type21', true) : req('type21', false);
+                break;
         }
+        
         nonResident(resident, type, 'person', 'organization', 'ip');
 
         var $field = $('.form-control');
         $field.each(function () {
-            var self = $(this);
-            _validationNotEmpty(self);
+            _validationNotEmpty($(this));
         });
 
         hBankBtn.trigger('change');
     });
 
     setTimeout(function(){
+        var checkedRadio = $("input[name='customfield[33]']:radio:checked");
+        if (checkedRadio.length > 0) {
+            type = checkedRadio.val();
+        }
         $("input[name='customfield[33]']:radio#" + type).change();
     }, 1);
     
@@ -92,7 +131,9 @@ $(document).ready(function () {
 
 
     function _sameasabove(stField, bField, aField, zField, cField, sField, coField, addressField) {
-        var st = '{$LANG.orderForm.mailingAddressSt} ' + stField.val();
+        var st = stField.val();
+        st ? st = st : '';
+
         var b = bField.val();
         b ? b = ', ' + b : '';
 
@@ -103,12 +144,12 @@ $(document).ready(function () {
         z ? z = ', ' + z : '';
 
         var c = cField.val();
-        c ? c = ', {$LANG.orderForm.mailingAddressCity} ' + c : '';
+        c ? c = ', ' + c : '';
 
         var s = sField.val();
         s ? s = ', ' + s : '';
 
-        var co = coField.val();
+        var co = coField.find('option:selected').text().trim();
         co ? co = ', ' + co : '';
 
         addressField.val(st + b + a + z + c + s + co);

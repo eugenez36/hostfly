@@ -15,6 +15,16 @@
     <link href="{$WEB_ROOT}/assets/fonts/css/fontawesome-brands.min.css" rel="stylesheet">
     <link href="{$WEB_ROOT}/assets/fonts/css/fontawesome-duotone.min.css" rel="stylesheet">
     <link href="{assetPath file='invoice.min.css'}?v={$versionHash}" rel="stylesheet">
+
+    {* Брендовый слой: у шаблона свой <head>, includes/head.tpl он не проходит.
+       custom.css сюда сток не подключает вовсе, поэтому берём и палитру. *}
+    {assetExists file="custom.css"}
+        <link href="{$__assetPath__}" rel="stylesheet">
+    {/assetExists}
+    {assetExists file="hf-theme.css"}
+        <link href="{$__assetPath__}?v={$versionHash}" rel="stylesheet">
+    {/assetExists}
+    <script src="{assetPath file='hf-kit.js'}?v={$versionHash}" defer></script>
     <script src="{assetPath file='scripts.min.js'}?v={$versionHash}"></script>
 </head>
 <body>

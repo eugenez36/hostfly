@@ -18,6 +18,14 @@
     {assetExists file="custom.css"}
         <link href="{$__assetPath__}" rel="stylesheet">
     {/assetExists}
+
+    {* Брендовый слой. У этого шаблона собственный <head>, он не проходит через
+       includes/head.tpl, поэтому подключаем тот же слой отдельно — иначе
+       документ остаётся стоковым, а остальной кабинет уже по киту. *}
+    {assetExists file="hf-theme.css"}
+        <link href="{$__assetPath__}?v={$versionHash}" rel="stylesheet">
+    {/assetExists}
+    <script src="{assetPath file='hf-kit.js'}?v={$versionHash}" defer></script>
     <script>var whmcsBaseUrl = "{$WEB_ROOT}";</script>
     <script src="{assetPath file='scripts.min.js'}?v={$versionHash}"></script>
 

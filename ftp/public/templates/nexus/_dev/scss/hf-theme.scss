@@ -802,3 +802,79 @@ header.header .topbar .btn:focus-visible {
 .master-breadcrumb .breadcrumb a { color: var(--text-accented); }
 .master-breadcrumb .breadcrumb a:hover { color: var(--text); }
 .master-breadcrumb .breadcrumb-item.active { color: var(--text-muted); }
+
+/* ==========================================================================
+   Этап B · Остаток: аддоны полей, легаси-панели, контролы, крестики
+   ========================================================================== */
+
+/* Приставки и суффиксы поля (.input-group) — 28 мест по кабинету.
+   В ките такого элемента нет; берём его логику из поля телефона:
+   служебная часть отделена от ввода линией и набрана приглушённым тоном.   */
+.input-group-text {
+  background-color: var(--bg-muted);
+  border-color: var(--bg-lifted);
+  color: var(--text-accented);
+  border-radius: var(--rounding-md);
+}
+.input-group > .form-control:not(:last-child),
+.input-group > .custom-select:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group > .form-control:not(:first-child),
+.input-group > .custom-select:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Панели Bootstrap 3, оставшиеся в сайдбаре и модулях: приводим к карточке кита */
+.panel,
+.panel-default {
+  border: 1px solid var(--bg-lifted);
+  border-radius: var(--hf-r-xl);
+  background-color: var(--bg);
+  box-shadow: none;
+}
+.panel-heading {
+  background-color: transparent;
+  border-bottom-color: var(--bg-lifted);
+  color: var(--text);
+}
+.panel-title { color: var(--text); font-weight: 700; }
+
+/* Нативные чекбоксы и радио: перерисовать их нельзя, но можно задать
+   цвет отметки — берём брендовый, как у контролов кита.                     */
+.form-check-input,
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--primary);
+}
+
+/* Кастомные контролы Bootstrap — здесь уже можно повторить кит целиком */
+.custom-control-label::before {
+  border: 2px solid var(--border);
+  background-color: var(--bg);
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none;
+  border-color: var(--primary);
+}
+.custom-control-input:disabled ~ .custom-control-label::before {
+  background-color: var(--border-muted);
+  border-color: var(--border-muted);
+}
+
+/* Крестики закрытия: сток даёт чёрный с тенью и полупрозрачностью */
+.close {
+  color: var(--text-muted);
+  text-shadow: none;
+  opacity: 1;
+}
+.close:hover, .close:focus {
+  color: var(--neutral-950);
+  opacity: 1;
+}

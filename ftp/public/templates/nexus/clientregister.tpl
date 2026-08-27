@@ -15,6 +15,11 @@
    Грузим после StatesDropdown.js: тот на ready переименовывает input[name=state]
    в #stateinput, и автозаполнение области опирается на этот id. *}
 <script src="{assetPath file='egr.js'}?v={$versionHash}" defer></script>
+
+{* Переключатель типа регистрации табами и показ полей по типу (HOS-14).
+   Грузится после egr.js: тот вешает делегированный обработчик на
+   customfield[33], и порядок подписки не важен, но так очевиднее. *}
+<script src="{assetPath file='hf-register.js'}?v={$versionHash}" defer></script>
 <script>
     window.langPasswordStrength = "{lang key='pwstrength'}";
     window.langPasswordWeak = "{lang key='pwstrengthweak'}";
@@ -49,6 +54,9 @@
 {* Подписи. Тексты сняты с эталонной формы прода my.hostfly.by/register.php. *}
 {assign var=LBL value=[
     'registrant_type'       => 'Тип регистрации',
+    'type_person'           => 'Физ. лицо',
+    'type_organization'     => 'Юр. лицо',
+    'type_ip'               => 'ИП',
     'rb_resident'           => 'Резидент Республики Беларусь',
     'companyname'           => 'Название организации',
     'r_chief'               => 'ФИО руководителя',
@@ -143,7 +151,33 @@
                     <div class="card-body p-4" id="registrantType">
                         <h3 class="card-title">{$LBL.registrant_type}</h3>
                         <div class="row">
-                            {hfField f=$cf.registrant_type label=$LBL.registrant_type}
+                            {* HOS-14. Табы вместо дропдауна.
+
+                               Селект ядра остаётся в форме и отправляется как раньше —
+                               табы только переключают его значение. Поэтому набор полей
+                               и серверная обработка не меняются, а HOS-13 продолжает
+                               получать контрол из {$f.input}, а не из нашей разметки.
+
+                               Разметка табов — из UI-кита (лист Tabs, «Additional 74»),
+                               поэтому обёрнута в .hf-kit: кит изолирован под этим классом.
+
+                               Без JS показывается сам селект, а табы скрыты: их раскрывает
+                               js/hf-register.js, он же прячет селект. *}
+                            {if $cf.registrant_type}
+                                <div class="col-12">
+                                    <div class="form-group hf-field">
+                                        <label class="hf-field__label" id="registrantTypeLabel" for="customfield{$cf.registrant_type.id}">{$LBL.registrant_type}{if $cf.registrant_type.required}<span class="hf-req">*</span>{/if}</label>
+                                        <div class="hf-kit hf-registrant hf-hidden" data-registrant-switch>
+                                            <div class="tabs tabs--solid" role="tablist" aria-labelledby="registrantTypeLabel">
+                                                <button type="button" class="tabs__item" role="tab" data-registrant="person">{$LBL.type_person}</button>
+                                                <button type="button" class="tabs__item" role="tab" data-registrant="organization">{$LBL.type_organization}</button>
+                                                <button type="button" class="tabs__item" role="tab" data-registrant="ip">{$LBL.type_ip}</button>
+                                            </div>
+                                        </div>
+                                        {$cf.registrant_type.input}
+                                    </div>
+                                </div>
+                            {/if}
                             {hfField f=$cf.rb_resident label=$LBL.rb_resident}
                             {if $currencies}
                                 <div class="col-12 col-md-6">

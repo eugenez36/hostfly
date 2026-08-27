@@ -1,0 +1,116 @@
+div.product-details div.product-icon {
+  margin: 0;
+  background-color: #efefef;
+  border-radius: var(--rounding-md);
+  padding: 30px;
+  line-height: 1em;
+  font-size: 60px;
+  @include media-breakpoint-down(sm) {
+    font-size: 30px;
+  }
+}
+
+.product-status {
+  padding: 0;
+  border-radius: var(--rounding-md);
+}
+.product-status-pending {
+  background-color: #F89406;
+}
+.product-status-active {
+  background-color: #46A546;
+}
+.product-status-suspended {
+  background-color: #0768B8;
+}
+.product-status-terminated,
+.product-status-cancelled {
+  background-color: #666;
+}
+.product-status-fraud {
+  background-color: #000;
+}
+.product-status-text {
+  padding: 5px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.product-actions-wrapper > div:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+div.product-details-tab-container {
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-top: 0;
+  background-color: #fff;
+}
+
+.module-client-area {
+  padding: 15px 15px 0 15px;
+}
+
+.ssl-inactive {
+  cursor: pointer;
+}
+
+#mc-promo-widgets {
+  margin: 10px 0;
+  @include media-breakpoint-up(xl) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1%;
+  }
+}
+
+.mc-promo-manage, .mc-promo-login {
+  @extend .card;
+  position: relative;
+  .content {
+    @extend .card-body;
+  }
+  .logo {
+    width: 130px;
+    height: 130px;
+    @include media-breakpoint-down(sm) {
+      width: 65px;
+      height: 65px;
+    }
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 1em;
+    img {
+      max-width: 130px;
+      max-height: 130px;
+      display: block;
+      margin: 0 -50% 0 auto;
+      border-radius: var(--rounding-sm);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include media-breakpoint-down(sm) {
+        max-width: 65px;
+        max-height: 65px;
+      }
+    }
+  }
+  .logo + div {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .panel-heading {
+    h3 {
+      @extend .card-title;
+      @include media-breakpoint-down(sm) {
+        margin: 0 0 8px 0 !important;
+        font-size: 18px !important;
+      }
+    }
+  }
+}

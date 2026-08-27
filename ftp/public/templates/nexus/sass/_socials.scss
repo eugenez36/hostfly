@@ -1,0 +1,89 @@
+.social-signin-btns {
+  text-align: center;
+}
+.social-signin-btns .btn {
+  margin-bottom: 5px;
+}
+
+.btn-social {
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-social i.fas,
+.btn-social i.far {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding-right: 2px;
+  width: 32px;
+  line-height: 34px;
+  font-size: 1.6em;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.btn-facebook {
+  color: #fff;
+  background-color: #4267b2;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+.btn-facebook:hover, .btn-facebook:focus, .btn-facebook:active, .btn-facebook.active, .open .dropdown-toggle.btn-facebook {
+  color: #fff;
+  background-color: #30487b;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+.btn-facebook:active, .btn-facebook.active, .open .dropdown-toggle.btn-facebook {
+  background-image: none
+}
+.btn-facebook.disabled, .btn-facebook[disabled], fieldset[disabled] .btn-facebook, .btn-facebook.disabled:hover, .btn-facebook[disabled]:hover, fieldset[disabled] .btn-facebook:hover, .btn-facebook.disabled:focus, .btn-facebook[disabled]:focus, fieldset[disabled] .btn-facebook:focus, .btn-facebook.disabled:active, .btn-facebook[disabled]:active, fieldset[disabled] .btn-facebook:active, .btn-facebook.disabled.active, .btn-facebook[disabled].active, fieldset[disabled] .btn-facebook.active {
+  background-color: #4267b2;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+.btn-twitter {
+  color: #fff;
+  background-color: #2ba9e1;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+.btn-twitter:hover, .btn-twitter:focus, .btn-twitter:active, .btn-twitter.active, .open .dropdown-toggle.btn-twitter {
+  color: #fff;
+  background-color: #1c92c7;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+.btn-twitter:active, .btn-twitter.active, .open .dropdown-toggle.btn-twitter {
+  background-image: none
+}
+.btn-twitter.disabled, .btn-twitter[disabled], fieldset[disabled] .btn-twitter, .btn-twitter.disabled:hover, .btn-twitter[disabled]:hover, fieldset[disabled] .btn-twitter:hover, .btn-twitter.disabled:focus, .btn-twitter[disabled]:focus, fieldset[disabled] .btn-twitter:focus, .btn-twitter.disabled:active, .btn-twitter[disabled]:active, fieldset[disabled] .btn-twitter:active, .btn-twitter.disabled.active, .btn-twitter[disabled].active, fieldset[disabled] .btn-twitter.active {
+  background-color: #2ba9e1;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.providerPreLinking {
+  min-height: 52px;
+}
+.providerLinkingFeedback {
+  display: none;
+}
+
+/**
+ * -------------------------
+ * @section Twitter Feed
+ * -------------------------
+ */
+
+div.home-twitter {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+div.tweet > i {
+  color: #2BABCF;
+  float: left;
+  margin-right: 15px;
+}
+div.tweet span {
+  font-size: 12px;
+  color: #ccc;
+}

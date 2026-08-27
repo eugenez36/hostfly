@@ -13,16 +13,20 @@ creds.md
 # Слепок dev-сервера: версионируем только рабочую тему кабинета
 #
 # ftp/ — зеркало mydev.hostfly.by (~655 МБ), синкается по FTP. Из него в git
-# входит только templates/ais. Подробно: CLAUDE.md
+# входят две темы: nexus (рабочая на dev) и ais (тема прода, референс).
+# Подробно: CLAUDE.md
 # ============================================================================
 /ftp/*
 !/ftp/public/
 /ftp/public/*
 !/ftp/public/templates/
 /ftp/public/templates/*
+!/ftp/public/templates/nexus/
 !/ftp/public/templates/ais/
 
-# Внутри темы
+# Внутри тем
+/ftp/public/templates/nexus/_dev/temp/
+/ftp/public/templates/nexus/**/node_modules/
 /ftp/public/templates/ais/_dev/temp/
 /ftp/public/templates/ais/**/node_modules/
 

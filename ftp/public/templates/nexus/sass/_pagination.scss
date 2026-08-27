@@ -1,0 +1,21 @@
+.pagination {
+  font-size: 0.8em;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  color: white;
+  //background-color: #006687;
+  //border-color: #006687;
+}
+
+//
+// Pagination
+//
+body .pagination {
+  .page-item:first-child .page-link {
+    border-radius: var(--rounding-md) 0 0 var(--rounding-md);
+  }
+  .page-item:last-child .page-link {
+    border-radius: 0 var(--rounding-md) var(--rounding-md) 0;
+  }
+}

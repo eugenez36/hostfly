@@ -1,0 +1,131 @@
+#registration {
+  margin: 0;
+  padding: 0 0 40px 0;
+}
+
+#registration .field-container {
+  margin: 0 0 30px 0;
+}
+
+#registration label {
+  font-weight: 300;
+  color: #666;
+  font-size: 13px;
+}
+
+#registration .info-text-sm {
+  font-size: 0.85em;
+  text-align: center;
+}
+
+#registration .sub-heading {
+  height: 0;
+  border-top: 1px solid #DDD;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#registration .sub-heading span {
+  display: inline-block;
+  position: relative;
+  padding: 0 17px;
+  top: -11px;
+  font-size: 16px;
+  color: #058;
+  background-color: #fff;
+}
+
+/**
+ * Form fields
+ */
+
+#registration .prepend-icon {
+  top: 0;
+  left: 0;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 100%;
+  font-weight: normal;
+}
+#registration .field,
+#registration .form-control {
+  position: relative;
+  vertical-align: top;
+  border: 1px solid #DDD;
+  display: -moz-inline-stack;
+  display: inline-block;
+  color: #626262;
+  outline: none;
+  background: #fff;
+  height: 36px;
+  width: 100%;
+  border-radius: var(--rounding-sm);
+  font-size: 13px;
+}
+#registration .input-group-lg > .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: var(--rounding-sm) 0 0 var(--rounding-sm);
+}
+#registration .form-control-qty {
+  width: 70px;
+  text-align: center;
+}
+#registration .form-control-static-inline {
+  display: inline-block;
+}
+#registration .form-control:focus {
+  border-color: #ddd;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#registration textarea.field {
+  height: auto;
+}
+#registration .prepend-icon .field {
+  -webkit-appearance: none;
+  padding-left: 36px;
+}
+#registration .prepend-icon .field-icon i {
+  position: relative;
+  font-size: 14px;
+}
+#registration .prepend-icon .field-icon {
+  top: 0;
+  z-index: 4;
+  width: 42px;
+  height: 36px;
+  color: inherit;
+  line-height: 36px;
+  position: absolute;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  pointer-events: none;
+}
+#registration .field-icon i {
+  color: #bbb;
+}
+
+#registration .field[disabled],
+#registration .field[readonly],
+#registration .form-control[disabled],
+#registration .form-control[readonly] {
+  background-color: #f8f8f8;
+  opacity: 1;
+}
+
+#registration .field-help-text {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #888;
+  font-size: 12px;
+}

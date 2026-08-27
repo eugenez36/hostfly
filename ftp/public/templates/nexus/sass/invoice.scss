@@ -1,0 +1,14 @@
+/*!
+ * WHMCS Twenty-One Theme
+ * Invoice Stylesheet
+ * Copyright (c) 2020 WHMCS Limited
+ * https://www.whmcs.com/license/
+ */
+
+@import "../../../node_modules/bootstrap-four/scss/bootstrap";
+@import "buttons";
+@import "view-invoice";
+
+html, body {
+  background: var(--bg-muted);
+}

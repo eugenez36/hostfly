@@ -1,0 +1,70 @@
+#google-recaptcha-domainchecker {
+  width: 304px;
+  height: 78px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#default-captcha-domainchecker {
+  margin-top: 15px;
+}
+
+#default-captcha-domainchecker #inputCaptcha {
+  width: 100px;
+  border-radius: var(--rounding-sm);
+}
+
+.domainchecker-homepage-captcha #google-recaptcha-domainchecker {
+  margin-bottom: -46px;
+}
+
+@media (max-width: 991px) {
+  #google-recaptcha-domainchecker {
+    padding-left: 2.5%;
+  }
+
+  #default-captcha-domainchecker {
+    margin-bottom: -25px;
+  }
+}
+
+@media (max-width: 736px) {
+  #google-recaptcha-domainchecker {
+    transform: scale(0.935);
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.935);
+    -webkit-transform-origin: 0 0;
+  }
+}
+
+@media (max-width: 384px) {
+  #google-recaptcha-domainchecker {
+    transform: scale(0.96);
+    transform-origin: 0 0;
+  }
+}
+
+@media (max-width: 360px) {
+  #google-recaptcha-domainchecker {
+    transform: scale(0.89);
+    transform-origin: 0 0;
+  }
+}
+
+@media (max-width: 320px) {
+  #google-recaptcha-domainchecker {
+    padding-left: 13.5%;
+    transform: scale(0.83);
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.785);
+    -webkit-transform-origin: 0 0;
+  }
+}
+
+.captchaimage {
+  margin: 0;
+  padding: 3px 0 4px;
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  text-align: right;
+}

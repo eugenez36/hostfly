@@ -1,0 +1,35 @@
+/*!
+ * WHMCS Twenty-One Theme
+ * Global Stylesheet
+ * Copyright (c) 2020 WHMCS Limited
+ * https://www.whmcs.com/license/
+ */
+
+@import "../../../node_modules/bootstrap-four/scss/bootstrap";
+@import "global";
+@import "forms";
+@import "layout";
+@import "buttons";
+@import "colors";
+@import "tabs";
+@import "pagination";
+@import "sidebar";
+@import "home";
+@import "client-home";
+@import "two-factor";
+@import "popover";
+@import "captcha";
+@import "email-verification";
+@import "markdown";
+@import "marketconnect";
+@import "socials";
+@import "upgrades";
+@import "affiliate";
+@import "support";
+@import "registration";
+@import "payments";
+@import "product-details";
+@import "tlds";
+@import "tables";
+@import "products";
+@import "cart";

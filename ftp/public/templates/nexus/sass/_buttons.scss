@@ -1,0 +1,182 @@
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  border-radius: var(--rounding-md);
+}
+.btn-default:focus,
+.btn-default.focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.btn-default:hover {
+  color: white;
+  background-color: var(--grayscale-lifted);
+  border-color: var(--grayscale-lifted);
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #e6e6e6;
+  background-image: none;
+  border-color: #adadad;
+}
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.btn-default.disabled {
+  border-color: #ccc;
+}
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus {
+  background-color: #fff !important;
+  border-color: #ccc !important;
+}
+.btn-group-xs > .btn, .btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: var(--rounding-sm);
+}
+.modal-header > .close {
+  color: inherit;
+}
+
+.btn-primary {
+  background: var(--bg-inverted);
+  border-color: var(--grayscale);
+  border-radius: var(--rounding-md);
+  padding: 0.375rem 0.75rem;
+}
+
+.btn-danger {
+  border-radius: var(--rounding-md);
+}
+
+
+.btn-primary.disabled, .btn-primary:disabled {
+}
+
+#btnCompleteProductConfig {
+  width: 100%;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background: var(--grayscale-lifted);
+  border-color: var(--grayscale-lifted);
+}
+
+.btn-link {
+  color: var(--text);
+}
+
+.btn-link:hover {
+  color: var(--text-inverted);
+  text-decoration: underline;
+}
+.btn-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.btn-reveal-pw {
+  border-radius: 0 var(--rounding-md) var(--rounding-md) 0;
+}
+
+#btnDomainContinue {
+  background: black;
+}
+
+// Switch yes/no
+.bootstrap-switch.bootstrap-switch-small  {
+  border-radius: var(--rounding-md);
+
+  &.bootstrap-switch-focused {
+    box-shadow: 0 0 0 0.2rem rgba(51, 102, 153, 0.25);
+  }
+
+  .bootstrap-switch-handle-on {
+    border-radius: 0;
+  }
+  .bootstrap-switch-handle-off {
+    border-radius: 0;
+    background-color: var(--bg-lifted);
+
+    &:hover {
+      background-color: var(--bg-accented);
+    }
+  }
+
+}
+
+
+// security settings > click here to enable btn
+.btn.btn-success.open-modal.twofa-config-link.enable {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  border-radius: var(--rounding-md);
+
+  &:hover {
+    color: white;
+    background-color: var(--bg-inverted);
+    border-color: var(--bg-inverted);
+  }
+
+  &:focus{
+    box-shadow: 0 0 0 0.2rem rgba(51, 102, 153, 0.25);
+  }
+}
+
+// your profile > buttons
+body .primary-content {
+  #btnSaveNameChanges, #btnSaveEmailChanges {
+    margin-right: 10px;
+  }
+}
+
+// my domains > buttons at the top
+body .primary-content #domainForm {
+  >.btn-group {
+    button:first-child:not(.dropdown-toggle)  {
+      border-radius: var(--rounding-md) 0 0 var(--rounding-md);
+    }
+    .dropdown-toggle {
+      border-radius: 0 var(--rounding-md) var(--rounding-md) 0;
+    }
+
+  }
+}
+
+// Change password > Save changes btn
+body form.using-password-strength .btn-primary:disabled {
+  background-color: var(--grayscale-accented);
+  border-color: var(--grayscale-lifted);
+}
+
+
+// Button success
+
+.btn.btn-success.btn-lg {
+  border-radius: var(--rounding-md);
+}

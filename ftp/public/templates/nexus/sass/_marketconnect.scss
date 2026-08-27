@@ -1,0 +1,440 @@
+.store-order-container {
+  margin: 0;
+  padding: 0;
+}
+.store-order-container h2 {
+  margin-top: 0;
+}
+.store-order-container .btn {
+  padding: 10px 30px;
+  font-size: 1.15em;
+  font-weight: 300;
+}
+
+.store-order-container .store-domain-tabs {
+  margin-top: 20px;
+}
+.store-order-container .store-domain-tabs li a {
+  margin-right: 10px;
+  padding: 7px 15px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+.store-order-container .store-domain-tabs li.active a {
+  background-color: #fff;
+  border-bottom: 1px solid transparent;
+}
+.store-order-container .store-domain-tab-content {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-top: 0;
+}
+.store-order-container .store-domain-tab-content a {
+  text-decoration: underline;
+}
+.store-order-container .store-domain-tab-content a:hover {
+  text-decoration: none;
+}
+
+.store-order-container .payment-term h4 {
+  margin-top: 25px;
+}
+@media (min-width: 768px) {
+  .store-order-container .payment-term {
+    float: right;
+  }
+  .store-order-container .payment-term h4 {
+    margin-top: 0;
+  }
+}
+
+.store-order-container .domain-validation {
+  display: block;
+  padding-top: 5px;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #888;
+}
+.store-order-container .domain-validation.ok {
+  color: #53a22d;
+}
+
+.store-promoted-product .icon {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  overflow: hidden;
+}
+.store-promoted-product .icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.store-promoted-product ul.features {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+.store-promoted-product ul.features li {
+  float: left;
+  width: 50%;
+  margin-bottom: 5px;
+}
+.store-promoted-product ul.features li .fa:not(.fa-spinner) {
+  font-size: 1.2em;
+  color: #91c590;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.store-promoted-product .btn {
+  margin-top: 10px;
+  padding: 10px 30px;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+/**
+ * -------------------------
+ * Promotional Content Formatting
+ * -------------------------
+ */
+
+.promo-container {
+  // pseudo .card
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: var(--rounding-sm);
+  margin-bottom: 10px;
+  background-color: var(--bg);
+  .header {
+    padding: 20px;
+    h3 {
+      @extend .card-title;
+      padding: 0;
+      margin: 0 !important;
+    }
+  }
+}
+
+.promo-banner {
+  margin: 0;
+  padding: 15px 10px 20px 10px;
+  background-color: #fff;
+  font-size: 1em;
+  overflow: auto;
+  .content {
+    margin-left: 185px;
+    @include media-breakpoint-down(sm) {
+      margin: 10px 0 0 0;
+    }
+  }
+  .icon-left {
+    text-align: center;
+    width: 155px;
+    float: left;
+    @include media-breakpoint-down(sm) {
+      width: 90px;
+      float: none;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  form {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+}
+
+.promo-banner .icon {
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+.promo-banner h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 300;
+}
+.promo-banner h4 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.promo-banner p {
+  margin: 5px 0;
+}
+
+.promo-banner ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.92em;
+}
+.promo-banner ul li {
+  margin-bottom: 4px;
+}
+@media (min-width: 1200px) {
+  .promo-banner ul li {
+    width: 50%;
+    &.left {
+      float: left;
+    }
+    &.right {
+      float: right;
+    }
+  }
+}
+
+.promo-banner .fa:not(.fa-spinner) {
+  font-size: 1.2em;
+  color: #91c590;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.promo-banner a {
+  color: #ff6600;
+  text-decoration: underline;
+}
+.promo-banner .btn {
+  margin: 6px 0 0 0;
+  padding: 8px 30px;
+  background-color: #ff6600;
+  border: 0;
+  color: #fff;
+}
+
+@media (max-width: 650px) {
+  .promo-banner .icon {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.promo-banner-rounded {
+  border-radius: var(--rounding-sm);
+}
+
+.promo-banner-slim {
+  padding: 10px;
+}
+.promo-banner-slim .icon-left {
+  width: 85px;
+}
+.promo-banner-slim .content {
+  margin-left: 110px;
+}
+.promo-banner-slim h3 {
+  font-size: 18px;
+}
+.promo-banner-slim h4 {
+  font-size: 14px;
+}
+.promo-banner-slim .btn {
+  margin: 0 20px 0 0;
+  padding: 6px 20px;
+}
+
+.promo-banner.symantec {
+  border-top: 3px solid #4da24c;
+}
+.promo-banner.symantec .btn {
+  background-color: #4da24c;
+}
+
+.promo-banner.weebly {
+  border-top: 3px solid #2990ea;
+}
+.promo-banner.weebly .btn {
+  background-color: #2990ea;
+}
+
+.promo-banner.spamexperts {
+  border-top: 3px solid #589ed7;
+}
+.promo-banner.spamexperts .btn {
+  background-color: #589ed7;
+}
+
+.promo-banner-slim.weebly .icon-left {
+  width: 160px;
+}
+.promo-banner-slim.weebly .content {
+  margin-left: 185px;
+}
+
+.promo-banner.sitelock {
+  border-top: 3px solid #f2952d;
+}
+.promo-banner.sitelock .btn {
+  background-color: #f2952d;
+}
+
+.promo-banner.codeguard {
+  border-top: 3px solid #a9cc5f;
+}
+.promo-banner.codeguard a {
+  color: #a9cc5f;
+}
+.promo-banner.codeguard .btn {
+  background-color: #a9cc5f;
+}
+
+.promo-banner.sitelockvpn {
+  border-top: 3px solid #555;
+}
+.promo-banner.sitelockvpn .btn {
+  background-color: #555;
+}
+
+.promo-banner.nordvpn {
+    border-top: 3px solid #4687FF;
+}
+.promo-banner.nordvpn .btn {
+    background-color: #4687FF;
+}
+
+.promo-banner.marketgoo {
+  border-top: 3px solid #3090e0;
+}
+.promo-banner.marketgoo .btn {
+  background-color: #3090e0;
+}
+
+.promo-banner.ox {
+  border-top: 3px solid #666;
+}
+.promo-banner.ox a {
+  color: #666;
+}
+.promo-banner.ox .btn {
+  background-color: #666;
+}
+
+.promo-banner.sitebuilder {
+  border-top: 3px solid #ff3377;
+}
+.promo-banner.sitebuilder a {
+  color: #ff3377;
+}
+.promo-banner.sitebuilder .btn {
+  background-color: #ff3377;
+}
+
+.promo-banner.xovinow {
+  border-top: 3px solid var(--info-accented);
+
+  a {
+    color: var(--info-accented);
+  }
+
+  .btn {
+    background-color: var(--info-accented);
+  }
+}
+
+.promo-banner.threesixtymonitoring {
+    border-top: 3px solid #ce3b56;
+}
+.promo-banner.threesixtymonitoring .btn {
+    background-color: #ce3b56;
+}
+.promo-banner.threesixtymonitoring a {
+    color: #ce3b56;
+}
+
+.mc-panel-promo {
+  font-size: 0.95em;
+}
+.mc-panel-promo img {
+  display: block;
+  margin: 0 auto 6px;
+  max-width: 90%;
+  max-height: 87px;
+}
+
+/**
+ * -------------------------
+ * MarketConnect Service SSO
+ * -------------------------
+ */
+
+.panel-mc-sso {
+  padding: 0 10px 10px 10px;
+}
+.panel-mc-sso img {
+  max-width: 100%;
+  max-height: 120px;
+}
+.panel-mc-sso .row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.panel-mc-sso .col-sm-6 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.panel-mc-sso .form-control,
+.panel-mc-sso .btn,
+.panel-mc-sso small {
+  margin-top: 5px;
+}
+.panel-mc-sso small {
+  display: block;
+}
+.client-home-cards div[menuitemname="ThreesixtymonitoringLogin"] {
+    border-top: solid 3px #ce3b56;
+
+    .card-body {
+        max-height: initial;
+    }
+    .threesixtymonitoring-metrics-row > div:not(:last-child) {
+        border-right: 1px solid #ccc;
+    }
+    .threesixtymonitoring-metric {
+        margin-top: 20px;
+        font-size: 40px;
+        line-height: 1;
+        color: #902a6d;
+    }
+    .threesixtymonitoring-title {
+        font-weight: bold;
+        color: #888;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    .threesixtymonitoring-highlight {
+        margin-top: 4px;
+        height: 2px;
+        border-radius: var(--rounding-sm);
+        background-color: #902a6d;
+    }
+    .threesixtymonitoring-highlight-servers,
+    .threesixtymonitoring-highlight-monitors,
+    .threesixtymonitoring-highlight-alerts {
+        margin-top: 4px;
+        height: 2px;
+        border-radius: var(--rounding-sm);
+    }
+    .threesixtymonitoring-highlight-servers {
+        background-color: #902a6d;
+    }
+    .threesixtymonitoring-highlight-monitors {
+        background-color: #af3362;
+    }
+    .threesixtymonitoring-highlight-alerts {
+        background-color: #ce3b56;
+    }
+    form,
+    small {
+        text-align: center;
+    }
+    .btn {
+        width: 100%;
+    }
+}

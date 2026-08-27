@@ -7,9 +7,9 @@
     align-items: center;
     height: var(--h-badge);
     padding: 0 8px;
-    border-radius: var(--r-sm);
+    border-radius: var(--r-xs);
     background: var(--c-highlighter);
-    color: var(--c-text);
+    color: var(--c-button);
     font-size: var(--fs-s);
     font-weight: 700;
     line-height: 1;
@@ -27,15 +27,25 @@
   .badge--error  { background: var(--c-red-light); color: var(--c-error); }
   .badge--ok     { background: var(--c-green-light); color: var(--c-green); }
 
+  /* Список чипов: на листе Chips они идут сеткой с переносом.
+     Замер дал зазор 7px; ставим 8 — шаг системы, разница в пиксель
+     не стоит внесистемного значения.                                        */
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
   .chip {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     height: var(--h-badge);
     padding: 0 8px;
-    border-radius: var(--r-sm);
+    border-radius: var(--r-xs);
     background: var(--c-blue-light);
-    font-size: var(--fs-m);
+    color: var(--c-button);
+    font-size: var(--fs-s);
+    font-weight: 600;
     line-height: 1;
     white-space: nowrap;
   }
@@ -44,6 +54,22 @@
     color: var(--c-body);
   }
   .chip button:hover { color: var(--c-text); }
+  .chip button svg { width: 12px; height: 12px; }
+
+  /* Свёртка длинного списка: «Скрыть ‹» и «Еще (5) ›» с листа Chips */
+  .chips__toggle {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--c-button);
+    font-size: var(--fs-s);
+    font-weight: 600;
+    line-height: 1;
+  }
+  .chips__toggle svg { width: 12px; height: 12px; color: var(--c-body); }
 
   /* Пилюля-характеристика внутри карточек тарифов на главной */
   .pill {

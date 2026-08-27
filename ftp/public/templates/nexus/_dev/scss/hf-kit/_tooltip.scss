@@ -3,32 +3,35 @@
    ========================================================================== */
 .hf-kit {
   .tip { position: relative; display: inline-flex; vertical-align: middle; }
+  /* На листе триггер — контурная окружность без заливки: серая в покое,
+     чёрная на наведении. Прежний перенос делал залитый серый кружок.        */
   .tip__trigger {
     width: 20px; height: 20px;
-    border: 0;
+    border: 1.5px solid currentColor;
     border-radius: 50%;
-    background: var(--c-highlighter);
-    color: var(--c-body);
+    background: transparent;
+    color: var(--c-element);
     font-size: 11px;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 17px;
     padding: 0;
     text-align: center;
+    transition: color var(--transition);
   }
-  .tip__trigger:hover { background: var(--c-bg-dark); color: var(--c-text); }
+  .tip__trigger:hover { color: var(--c-button); }
   .tip__body {
     position: absolute;
-    bottom: calc(100% + 10px);
+    bottom: calc(100% + 12px);
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
-    max-width: 340px;
-    padding: 16px 20px;
-    border-radius: var(--r-lg);
+    max-width: 360px;
+    padding: 8px 12px;
+    border-radius: var(--r-md);
     background: var(--c-button);
     color: var(--c-white);
-    font-size: var(--fs-l);
-    line-height: var(--lh-l);
+    font-size: var(--fs-m);
+    line-height: var(--lh-m);
     opacity: 0;
     visibility: hidden;
     transition: opacity var(--transition), visibility var(--transition);
@@ -39,7 +42,7 @@
     position: absolute;
     top: 100%; left: 50%;
     transform: translateX(-50%);
-    border: 7px solid transparent;
+    border: 6px solid transparent;
     border-top-color: var(--c-button);
   }
   .tip:hover .tip__body, .tip:focus-within .tip__body { opacity: 1; visibility: visible; }

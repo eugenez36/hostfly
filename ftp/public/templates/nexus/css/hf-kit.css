@@ -118,6 +118,8 @@
   --h-search-sm: 52px;
   --h-tabs: 42px;
   --h-tabs-mobile: 36px;
+  --h-tabs-l: 74px; /* лист Tabs, вариант Additional */
+  --h-tabs-pill: 40px; /* лист Tabs, вариант Blog */
   --h-badge: 24px;
   --h-check: 24px;
   /* --- Прочее ----------------------------------------------------------- */
@@ -235,6 +237,7 @@
 .hf-kit .body-l {
   font-size: var(--fs-l);
   line-height: var(--lh-l);
+  letter-spacing: 0;
 }
 .hf-kit .body-m {
   font-size: var(--fs-m);
@@ -270,6 +273,9 @@
   text-decoration: line-through;
   color: var(--c-element);
 }
+.hf-kit .fw-300 {
+  font-weight: 300;
+}
 .hf-kit .fw-400 {
   font-weight: 400;
 }
@@ -288,15 +294,17 @@
 }
 .hf-kit {
   /* --- Ссылки -------------------------------------------------------------
-     Main: подчёркнутая, серая → чёрная на hover.
+     Значения сверены с листом ui-kit/materials/Links.png.
+     Main: подчёркнутая, светло-серая → тёмная на hover.
      Additional: жирная без подчёркивания, чёрная → серая на hover.
-     Primary: синяя, для «Все новости», «Показать ещё», WHOIS и т.п.        */
+     Primary: синяя с иконкой; на hover меняет ОТТЕНОК на фиолетовый,
+     а не гасится прозрачностью — это заметная разница с прежним переносом. */
 }
 .hf-kit a {
   color: inherit;
 }
 .hf-kit .link {
-  color: var(--c-body);
+  color: var(--c-element);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
@@ -306,7 +314,7 @@
   color: var(--c-text);
 }
 .hf-kit .link:active {
-  color: var(--c-button);
+  color: var(--c-text);
 }
 .hf-kit .link.is-disabled {
   color: var(--c-divider);
@@ -315,27 +323,42 @@
 .hf-kit .link-add {
   font-weight: 700;
   text-decoration: none;
-  color: var(--c-text);
+  color: var(--c-button);
   transition: color var(--transition);
 }
 .hf-kit .link-add:hover {
   color: var(--c-body);
 }
+.hf-kit .link-add.is-disabled {
+  color: var(--c-divider);
+  pointer-events: none;
+}
 .hf-kit .link-primary {
   color: var(--c-primary);
   text-decoration: none;
-  font-weight: 500;
+  font-size: var(--fs-m);
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  transition: opacity var(--transition);
+  gap: 12px;
+  transition: color var(--transition);
 }
 .hf-kit .link-primary:hover {
-  opacity: 0.7;
+  color: var(--c-violet);
+}
+.hf-kit .link-primary.is-disabled {
+  color: var(--c-divider);
+  pointer-events: none;
+}
+.hf-kit {
+  /* Подчёркнутый вариант на листе набран обычным весом и кеглем Body L */
 }
 .hf-kit .link-primary.is-underline {
   text-decoration: underline;
   text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  font-size: var(--fs-l);
+  font-weight: 400;
 }
 .hf-kit {
   /* --- Сетка --------------------------------------------------------------- */
@@ -474,7 +497,7 @@
 .hf-kit .btn--secondary {
   background: var(--c-white);
   border-color: var(--c-button);
-  color: var(--c-text);
+  color: var(--c-button);
 }
 .hf-kit .btn--secondary:hover {
   background: var(--c-button);
@@ -482,6 +505,7 @@
 }
 .hf-kit .btn--secondary:active {
   background: var(--c-body);
+  border-color: var(--c-body);
   color: var(--c-white);
 }
 .hf-kit .btn--secondary[disabled], .hf-kit .btn--secondary.is-disabled {
@@ -516,7 +540,7 @@
 }
 .hf-kit .btn--soft {
   background: var(--c-blue-light);
-  color: var(--c-text);
+  color: var(--c-button);
 }
 .hf-kit .btn--soft:hover {
   background: var(--c-button);
@@ -524,7 +548,7 @@
 }
 .hf-kit .btn--soft:active {
   background: var(--c-blue-light);
-  color: var(--c-text);
+  color: var(--c-button);
 }
 .hf-kit {
   /* Размеры */
@@ -537,6 +561,8 @@
   height: var(--h-btn-s);
   padding: 0 16px;
   font-size: var(--fs-s);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 .hf-kit .btn--xs {
   height: var(--h-btn-xs);
@@ -562,12 +588,12 @@
   border: 1px solid transparent;
   border-radius: var(--r-pill);
   background: var(--c-highlighter);
-  color: var(--c-text);
+  color: var(--c-button);
   transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 .hf-kit .btn-icon:hover {
-  background: var(--c-element);
-  color: var(--c-white);
+  background: var(--c-divider);
+  color: var(--c-button);
 }
 .hf-kit .btn-icon--outline {
   background: var(--c-white);
@@ -577,9 +603,19 @@
   background: var(--c-button);
   color: var(--c-white);
 }
+.hf-kit {
+  /* Icon S на листе — иконка без подложки: вокруг неё чистый фон, рамки нет.
+     Поэтому не просто уменьшенный .btn-icon, а сброс заливки.               */
+}
 .hf-kit .btn-icon--s {
   width: var(--h-icon-s);
   height: var(--h-icon-s);
+  background: transparent;
+  border-color: transparent;
+}
+.hf-kit .btn-icon--s:hover {
+  background: transparent;
+  color: var(--c-element);
 }
 .hf-kit {
   /* Квадратная кнопка «в корзину» из списка доменов */
@@ -617,7 +653,7 @@
 .hf-kit .field__label {
   font-size: var(--fs-m);
   line-height: var(--lh-m);
-  color: var(--c-body);
+  color: var(--c-element);
 }
 .hf-kit .field__label .req {
   color: var(--c-error);
@@ -627,11 +663,11 @@
 .hf-kit .select {
   width: 100%;
   height: var(--h-input);
-  padding: 0 18px;
-  border: 1px solid var(--c-bg-dark);
-  border-radius: var(--r-lg);
+  padding: 0 16px;
+  border: 1px solid var(--c-highlighter);
+  border-radius: var(--r-md);
   background: var(--c-white);
-  color: var(--c-text);
+  color: var(--c-button);
   font-size: var(--fs-l);
   transition: border-color var(--transition), background var(--transition);
 }
@@ -643,17 +679,17 @@
 }
 .hf-kit .input:focus, .hf-kit .textarea:focus, .hf-kit .select:focus {
   outline: none;
-  border-color: var(--c-text);
+  border-color: var(--c-divider);
 }
 .hf-kit .input[disabled], .hf-kit .textarea[disabled] {
   background: var(--c-white);
   border-color: var(--c-highlighter);
-  color: var(--c-divider);
+  color: var(--c-bg-dark);
 }
 .hf-kit .textarea {
   height: auto;
-  min-height: 132px;
-  padding: 16px 18px;
+  min-height: 120px;
+  padding: 16px;
   resize: vertical;
 }
 .hf-kit .field.is-error .input,
@@ -674,23 +710,23 @@
   display: flex;
   align-items: center;
   height: var(--h-input);
-  border: 1px solid var(--c-bg-dark);
-  border-radius: var(--r-lg);
+  border: 1px solid var(--c-highlighter);
+  border-radius: var(--r-md);
   background: var(--c-white);
   overflow: hidden;
 }
 .hf-kit .input-phone:focus-within {
-  border-color: var(--c-text);
+  border-color: var(--c-divider);
 }
 .hf-kit .input-phone__country {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 14px 0 16px;
+  gap: 12px;
+  padding: 0 14px 0 20px;
   border-right: 1px solid var(--c-bg-dark);
   height: 24px;
   font-weight: 700;
-  font-size: var(--fs-m);
+  font-size: var(--fs-l);
 }
 .hf-kit .input-phone__flag {
   width: 20px;
@@ -703,8 +739,12 @@
   flex: 1;
   border: 0;
   outline: none;
-  padding: 0 18px;
+  padding: 0 12px;
   height: 100%;
+  color: var(--c-button);
+}
+.hf-kit .input-phone input::placeholder {
+  color: var(--c-divider);
 }
 .hf-kit {
   /* Крупный поиск домена (desktop 82 / mobile — кнопка под полем) */
@@ -713,14 +753,17 @@
   display: flex;
   align-items: center;
   height: var(--h-search);
-  padding: 6px;
-  border: 1px solid var(--c-bg-dark);
-  border-radius: var(--r-lg);
+  padding: 8px;
+  border: 1px solid var(--c-highlighter);
+  border-radius: var(--r-md);
   background: var(--c-white);
   gap: 6px;
 }
+.hf-kit .search:hover {
+  border-color: var(--c-divider);
+}
 .hf-kit .search:focus-within {
-  border-color: var(--c-text);
+  border-color: var(--c-divider);
 }
 .hf-kit .search__input {
   flex: 1;
@@ -728,7 +771,7 @@
   height: 100%;
   border: 0;
   outline: none;
-  padding: 0 20px;
+  padding: 0 24px;
   font-size: var(--fs-h5);
   font-weight: 400;
 }
@@ -737,7 +780,7 @@
 }
 .hf-kit .search .btn {
   height: 100%;
-  border-radius: var(--r-md);
+  border-radius: var(--r-sm);
   padding: 0 32px;
 }
 .hf-kit .search--sm {
@@ -745,22 +788,30 @@
 }
 .hf-kit .search--sm .search__input {
   font-size: var(--fs-l);
+  padding: 0 12px;
+}
+.hf-kit {
+  /* Открытый список подсказок подсвечивает рамку брендовым цветом */
+}
+.hf-kit .search.is-open {
+  border-color: var(--c-primary);
 }
 @media (max-width: 720px) {
   .hf-kit .search {
     flex-direction: column;
     height: auto;
     align-items: stretch;
-    padding: 12px;
+    padding: 16px;
+    gap: 16px;
   }
   .hf-kit .search__input {
-    border-bottom: 1px solid var(--c-bg-dark);
-    height: 44px;
-    padding: 0 8px;
+    border-bottom: 1px solid var(--c-divider);
+    height: 50px;
+    padding: 0;
   }
   .hf-kit .search .btn {
     width: 100%;
-    height: 48px;
+    height: 52px;
   }
 }
 
@@ -772,6 +823,7 @@
   align-items: center;
   gap: 12px;
   cursor: pointer;
+  color: var(--c-button);
   font-size: var(--fs-l);
   line-height: var(--lh-l);
 }
@@ -785,7 +837,7 @@
   width: var(--h-check);
   height: var(--h-check);
   flex: 0 0 var(--h-check);
-  border: 1.5px solid var(--c-divider);
+  border: 2px solid var(--c-divider);
   border-radius: var(--r-sm);
   background: var(--c-white);
   display: inline-flex;
@@ -821,19 +873,30 @@
   background: var(--c-bg-dark);
   border-color: var(--c-bg-dark);
 }
+.hf-kit .check input:disabled + .check__box::after {
+  border-color: var(--c-element);
+}
 .hf-kit .check input:disabled ~ .check__text {
   color: var(--c-element);
 }
 .hf-kit .radio .check__box {
   border-radius: 50%;
 }
+.hf-kit .radio input:disabled + .check__box {
+  background: var(--c-divider);
+  border-color: var(--c-divider);
+}
 .hf-kit .radio .check__box::after {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border: 0;
   border-radius: 50%;
   background: var(--c-white);
   transform: none;
+}
+.hf-kit {
+  /* Тумблера на листе Radio • Checkbox нет — сверить не с чем.
+     Оставлен как есть, значения из первичного переноса.                    */
 }
 .hf-kit .switch {
   display: inline-flex;
@@ -904,8 +967,7 @@
   transition: background var(--transition), color var(--transition);
 }
 .hf-kit .tabs__item:hover {
-  background: rgba(255, 255, 255, 0.6);
-  color: var(--c-body);
+  color: var(--c-primary);
 }
 .hf-kit .tabs__item.is-active {
   background: var(--c-white);
@@ -916,6 +978,91 @@
 .hf-kit .tabs__item[disabled] {
   color: var(--c-divider);
   pointer-events: none;
+}
+.hf-kit .tabs__item[disabled].is-active {
+  background: var(--c-bg-dark);
+  color: var(--c-element);
+  box-shadow: none;
+}
+.hf-kit {
+  /* --- Additional: крупный сегментный переключатель (лист Tabs, 74) --------
+     Отличается от базового не только размером: активный сегмент здесь
+     сплошной чёрный с белым текстом, а не белая пилюля с синим.             */
+}
+.hf-kit .tabs--solid {
+  height: var(--h-tabs-l);
+  padding: 0;
+  gap: 0;
+  background: transparent;
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.hf-kit .tabs--solid .tabs__item {
+  height: 100%;
+  padding: 0 28px;
+  border-radius: 0;
+  background: var(--c-highlighter);
+  color: var(--c-text);
+  font-size: var(--fs-h6);
+  font-weight: 700;
+}
+.hf-kit .tabs--solid .tabs__item:hover {
+  background: var(--c-bg-dark);
+  color: var(--c-text);
+}
+.hf-kit .tabs--solid .tabs__item.is-active {
+  background: var(--c-button);
+  color: var(--c-white);
+  box-shadow: none;
+}
+.hf-kit .tabs--solid .tabs__item[disabled] {
+  background: var(--c-bg);
+  color: var(--c-divider);
+}
+.hf-kit .tabs--solid .tabs__item[disabled].is-active {
+  background: var(--c-bg-dark);
+  color: var(--c-element);
+}
+.hf-kit {
+  /* --- Blog: отдельные пилюли (лист Tabs, 40) -----------------------------
+     Не сегментный контрол: элементы стоят порознь, у неактивных своя рамка. */
+}
+.hf-kit .tabs--pill {
+  height: auto;
+  padding: 0;
+  gap: 8px;
+  background: transparent;
+  flex-wrap: wrap;
+}
+.hf-kit .tabs--pill .tabs__item {
+  height: var(--h-tabs-pill);
+  padding: 0 18px;
+  border: 1px solid var(--c-divider);
+  border-radius: var(--r-md);
+  background: var(--c-white);
+  color: var(--c-text);
+  font-weight: 500;
+}
+.hf-kit .tabs--pill .tabs__item:hover {
+  background: var(--c-highlighter);
+  border-color: var(--c-highlighter);
+  color: var(--c-text);
+}
+.hf-kit .tabs--pill .tabs__item.is-active {
+  background: var(--c-button);
+  border-color: var(--c-button);
+  color: var(--c-white);
+  box-shadow: none;
+}
+.hf-kit .tabs--pill .tabs__item[disabled] {
+  background: var(--c-white);
+  border-color: var(--c-highlighter);
+  color: var(--c-divider);
+}
+.hf-kit .tabs--pill .tabs__item[disabled].is-active {
+  background: var(--c-bg-dark);
+  border-color: var(--c-bg-dark);
+  color: var(--c-element);
 }
 .hf-kit .tabs-line {
   display: flex;
@@ -952,9 +1099,9 @@
   align-items: center;
   height: var(--h-badge);
   padding: 0 8px;
-  border-radius: var(--r-sm);
+  border-radius: var(--r-xs);
   background: var(--c-highlighter);
-  color: var(--c-text);
+  color: var(--c-button);
   font-size: var(--fs-s);
   font-weight: 700;
   line-height: 1;
@@ -991,15 +1138,27 @@
   background: var(--c-green-light);
   color: var(--c-green);
 }
+.hf-kit {
+  /* Список чипов: на листе Chips они идут сеткой с переносом.
+     Замер дал зазор 7px; ставим 8 — шаг системы, разница в пиксель
+     не стоит внесистемного значения.                                        */
+}
+.hf-kit .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 .hf-kit .chip {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   height: var(--h-badge);
   padding: 0 8px;
-  border-radius: var(--r-sm);
+  border-radius: var(--r-xs);
   background: var(--c-blue-light);
-  font-size: var(--fs-m);
+  color: var(--c-button);
+  font-size: var(--fs-s);
+  font-weight: 600;
   line-height: 1;
   white-space: nowrap;
 }
@@ -1012,6 +1171,30 @@
 }
 .hf-kit .chip button:hover {
   color: var(--c-text);
+}
+.hf-kit .chip button svg {
+  width: 12px;
+  height: 12px;
+}
+.hf-kit {
+  /* Свёртка длинного списка: «Скрыть ‹» и «Еще (5) ›» с листа Chips */
+}
+.hf-kit .chips__toggle {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--c-button);
+  font-size: var(--fs-s);
+  font-weight: 600;
+  line-height: 1;
+}
+.hf-kit .chips__toggle svg {
+  width: 12px;
+  height: 12px;
+  color: var(--c-body);
 }
 .hf-kit {
   /* Пилюля-характеристика внутри карточек тарифов на главной */
@@ -1036,36 +1219,40 @@
   display: inline-flex;
   vertical-align: middle;
 }
+.hf-kit {
+  /* На листе триггер — контурная окружность без заливки: серая в покое,
+     чёрная на наведении. Прежний перенос делал залитый серый кружок.        */
+}
 .hf-kit .tip__trigger {
   width: 20px;
   height: 20px;
-  border: 0;
+  border: 1.5px solid currentColor;
   border-radius: 50%;
-  background: var(--c-highlighter);
-  color: var(--c-body);
+  background: transparent;
+  color: var(--c-element);
   font-size: 11px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 17px;
   padding: 0;
   text-align: center;
+  transition: color var(--transition);
 }
 .hf-kit .tip__trigger:hover {
-  background: var(--c-bg-dark);
-  color: var(--c-text);
+  color: var(--c-button);
 }
 .hf-kit .tip__body {
   position: absolute;
-  bottom: calc(100% + 10px);
+  bottom: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%);
   width: max-content;
-  max-width: 340px;
-  padding: 16px 20px;
-  border-radius: var(--r-lg);
+  max-width: 360px;
+  padding: 8px 12px;
+  border-radius: var(--r-md);
   background: var(--c-button);
   color: var(--c-white);
-  font-size: var(--fs-l);
-  line-height: var(--lh-l);
+  font-size: var(--fs-m);
+  line-height: var(--lh-m);
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--transition), visibility var(--transition);
@@ -1077,7 +1264,7 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  border: 7px solid transparent;
+  border: 6px solid transparent;
   border-top-color: var(--c-button);
 }
 .hf-kit .tip:hover .tip__body, .hf-kit .tip:focus-within .tip__body {
@@ -1087,6 +1274,11 @@
 
 /* ==========================================================================
    Пагинация
+   --------------------------------------------------------------------------
+   Значения сверены с листом ui-kit/materials/Pagination.png.
+   Три системные поправки против прежнего переноса: скругление 4, а не 6;
+   рамки и серые оттенки на ступень темнее (--c-divider вместо --c-bg-dark,
+   --c-body вместо --c-element); подписи и счётчик — 12px чёрным.
    ========================================================================== */
 .hf-kit .pagination {
   display: flex;
@@ -1096,22 +1288,22 @@
   flex-wrap: wrap;
 }
 .hf-kit .pagination__count {
-  color: var(--c-body);
-  font-size: var(--fs-m);
+  color: var(--c-button);
+  font-size: var(--fs-s);
 }
 .hf-kit .pagination__pages {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
 }
 .hf-kit .pagination__item {
   min-width: 32px;
   height: 32px;
   padding: 0 6px;
-  border: 1px solid var(--c-bg-dark);
-  border-radius: var(--r-sm);
-  background: var(--c-white);
-  color: var(--c-text);
+  border: 1px solid var(--c-divider);
+  border-radius: var(--r-xs);
+  background: transparent;
+  color: var(--c-body);
   font-size: var(--fs-m);
   line-height: 1;
   display: inline-flex;
@@ -1127,39 +1319,65 @@
   background: var(--c-button);
   border-color: var(--c-button);
   color: var(--c-white);
-  font-weight: 700;
+  font-weight: 500;
 }
 .hf-kit .pagination__gap {
-  color: var(--c-element);
+  color: var(--c-body);
   padding: 0 2px;
 }
 .hf-kit .pagination__nav {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   border: 0;
   background: transparent;
-  color: var(--c-element);
+  color: var(--c-body);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 .hf-kit .pagination__nav:hover {
-  color: var(--c-text);
+  color: var(--c-button);
 }
 .hf-kit .pagination__per {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--c-body);
-  font-size: var(--fs-m);
+  color: var(--c-button);
+  font-size: var(--fs-s);
 }
 .hf-kit .pagination__per select {
   height: 32px;
   padding: 0 8px;
-  border: 1px solid var(--c-bg-dark);
-  border-radius: var(--r-sm);
-  background: var(--c-white);
-  font-size: var(--fs-m);
+  border: 1px solid var(--c-divider);
+  border-radius: var(--r-xs);
+  background: transparent;
+  color: var(--c-button);
+  font-size: var(--fs-s);
+}
+.hf-kit {
+  /* Мобильный вариант с листа: ни рамок, ни подложек — только цифры.
+     Текущая страница чёрная, остальные серые.                              */
+}
+@media (max-width: 720px) {
+  .hf-kit .pagination__pages {
+    gap: 0;
+  }
+  .hf-kit .pagination__item {
+    min-width: 25px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--c-body);
+  }
+  .hf-kit .pagination__item:hover {
+    background: transparent;
+    color: var(--c-button);
+  }
+  .hf-kit .pagination__item.is-active {
+    background: transparent;
+    color: var(--c-button);
+    font-weight: 500;
+  }
 }
 
 /* Составные блоки с листов final-theme */

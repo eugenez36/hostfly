@@ -7,6 +7,7 @@
     align-items: center;
     gap: 12px;
     cursor: pointer;
+    color: var(--c-button);
     font-size: var(--fs-l);
     line-height: var(--lh-l);
   }
@@ -15,7 +16,7 @@
     width: var(--h-check);
     height: var(--h-check);
     flex: 0 0 var(--h-check);
-    border: 1.5px solid var(--c-divider);
+    border: 2px solid var(--c-divider);
     border-radius: var(--r-sm);
     background: var(--c-white);
     display: inline-flex;
@@ -44,17 +45,21 @@
     background: var(--c-bg-dark);
     border-color: var(--c-bg-dark);
   }
+  .check input:disabled + .check__box::after { border-color: var(--c-element); }
   .check input:disabled ~ .check__text { color: var(--c-element); }
 
   .radio .check__box { border-radius: 50%; }
+  .radio input:disabled + .check__box { background: var(--c-divider); border-color: var(--c-divider); }
   .radio .check__box::after {
-    width: 8px; height: 8px;
+    width: 10px; height: 10px;
     border: 0;
     border-radius: 50%;
     background: var(--c-white);
     transform: none;
   }
 
+  /* Тумблера на листе Radio • Checkbox нет — сверить не с чем.
+     Оставлен как есть, значения из первичного переноса.                    */
   .switch { display: inline-flex; align-items: center; gap: 12px; cursor: pointer; }
   .switch input { position: absolute; opacity: 0; }
   .switch__track {

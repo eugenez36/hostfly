@@ -29,7 +29,7 @@
     white-space: nowrap;
     transition: background var(--transition), color var(--transition);
   }
-  .tabs__item:hover { background: rgba(255, 255, 255, .6); color: var(--c-body); }
+  .tabs__item:hover { color: var(--c-primary); }
   .tabs__item.is-active {
     background: var(--c-white);
     color: var(--c-primary);
@@ -37,6 +37,80 @@
     box-shadow: var(--shadow-tab);
   }
   .tabs__item[disabled] { color: var(--c-divider); pointer-events: none; }
+  .tabs__item[disabled].is-active {
+    background: var(--c-bg-dark);
+    color: var(--c-element);
+    box-shadow: none;
+  }
+
+  /* --- Additional: крупный сегментный переключатель (лист Tabs, 74) --------
+     Отличается от базового не только размером: активный сегмент здесь
+     сплошной чёрный с белым текстом, а не белая пилюля с синим.             */
+  .tabs--solid {
+    height: var(--h-tabs-l);
+    padding: 0;
+    gap: 0;
+    background: transparent;
+    border-radius: var(--r-md);
+    overflow: hidden;
+  }
+  .tabs--solid .tabs__item {
+    height: 100%;
+    padding: 0 28px;
+    border-radius: 0;
+    background: var(--c-highlighter);
+    color: var(--c-text);
+    font-size: var(--fs-h6);
+    font-weight: 700;
+  }
+  .tabs--solid .tabs__item:hover { background: var(--c-bg-dark); color: var(--c-text); }
+  .tabs--solid .tabs__item.is-active {
+    background: var(--c-button);
+    color: var(--c-white);
+    box-shadow: none;
+  }
+  .tabs--solid .tabs__item[disabled] { background: var(--c-bg); color: var(--c-divider); }
+  .tabs--solid .tabs__item[disabled].is-active { background: var(--c-bg-dark); color: var(--c-element); }
+
+  /* --- Blog: отдельные пилюли (лист Tabs, 40) -----------------------------
+     Не сегментный контрол: элементы стоят порознь, у неактивных своя рамка. */
+  .tabs--pill {
+    height: auto;
+    padding: 0;
+    gap: 8px;
+    background: transparent;
+    flex-wrap: wrap;
+  }
+  .tabs--pill .tabs__item {
+    height: var(--h-tabs-pill);
+    padding: 0 18px;
+    border: 1px solid var(--c-divider);
+    border-radius: var(--r-md);
+    background: var(--c-white);
+    color: var(--c-text);
+    font-weight: 500;
+  }
+  .tabs--pill .tabs__item:hover {
+    background: var(--c-highlighter);
+    border-color: var(--c-highlighter);
+    color: var(--c-text);
+  }
+  .tabs--pill .tabs__item.is-active {
+    background: var(--c-button);
+    border-color: var(--c-button);
+    color: var(--c-white);
+    box-shadow: none;
+  }
+  .tabs--pill .tabs__item[disabled] {
+    background: var(--c-white);
+    border-color: var(--c-highlighter);
+    color: var(--c-divider);
+  }
+  .tabs--pill .tabs__item[disabled].is-active {
+    background: var(--c-bg-dark);
+    border-color: var(--c-bg-dark);
+    color: var(--c-element);
+  }
 
   .tabs-line {
     display: flex;

@@ -653,7 +653,7 @@
 .hf-kit .field__label {
   font-size: var(--fs-m);
   line-height: var(--lh-m);
-  color: var(--c-body);
+  color: var(--c-element);
 }
 .hf-kit .field__label .req {
   color: var(--c-error);
@@ -663,11 +663,11 @@
 .hf-kit .select {
   width: 100%;
   height: var(--h-input);
-  padding: 0 18px;
-  border: 1px solid var(--c-bg-dark);
-  border-radius: var(--r-lg);
+  padding: 0 16px;
+  border: 1px solid var(--c-highlighter);
+  border-radius: var(--r-md);
   background: var(--c-white);
-  color: var(--c-text);
+  color: var(--c-button);
   font-size: var(--fs-l);
   transition: border-color var(--transition), background var(--transition);
 }
@@ -679,17 +679,17 @@
 }
 .hf-kit .input:focus, .hf-kit .textarea:focus, .hf-kit .select:focus {
   outline: none;
-  border-color: var(--c-text);
+  border-color: var(--c-divider);
 }
 .hf-kit .input[disabled], .hf-kit .textarea[disabled] {
   background: var(--c-white);
   border-color: var(--c-highlighter);
-  color: var(--c-divider);
+  color: var(--c-bg-dark);
 }
 .hf-kit .textarea {
   height: auto;
-  min-height: 132px;
-  padding: 16px 18px;
+  min-height: 120px;
+  padding: 16px;
   resize: vertical;
 }
 .hf-kit .field.is-error .input,
@@ -710,23 +710,23 @@
   display: flex;
   align-items: center;
   height: var(--h-input);
-  border: 1px solid var(--c-bg-dark);
-  border-radius: var(--r-lg);
+  border: 1px solid var(--c-highlighter);
+  border-radius: var(--r-md);
   background: var(--c-white);
   overflow: hidden;
 }
 .hf-kit .input-phone:focus-within {
-  border-color: var(--c-text);
+  border-color: var(--c-divider);
 }
 .hf-kit .input-phone__country {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 14px 0 16px;
+  gap: 12px;
+  padding: 0 14px 0 20px;
   border-right: 1px solid var(--c-bg-dark);
   height: 24px;
   font-weight: 700;
-  font-size: var(--fs-m);
+  font-size: var(--fs-l);
 }
 .hf-kit .input-phone__flag {
   width: 20px;
@@ -739,8 +739,12 @@
   flex: 1;
   border: 0;
   outline: none;
-  padding: 0 18px;
+  padding: 0 12px;
   height: 100%;
+  color: var(--c-button);
+}
+.hf-kit .input-phone input::placeholder {
+  color: var(--c-divider);
 }
 .hf-kit {
   /* Крупный поиск домена (desktop 82 / mobile — кнопка под полем) */
@@ -749,14 +753,17 @@
   display: flex;
   align-items: center;
   height: var(--h-search);
-  padding: 6px;
-  border: 1px solid var(--c-bg-dark);
-  border-radius: var(--r-lg);
+  padding: 8px;
+  border: 1px solid var(--c-highlighter);
+  border-radius: var(--r-md);
   background: var(--c-white);
   gap: 6px;
 }
+.hf-kit .search:hover {
+  border-color: var(--c-divider);
+}
 .hf-kit .search:focus-within {
-  border-color: var(--c-text);
+  border-color: var(--c-divider);
 }
 .hf-kit .search__input {
   flex: 1;
@@ -764,7 +771,7 @@
   height: 100%;
   border: 0;
   outline: none;
-  padding: 0 20px;
+  padding: 0 24px;
   font-size: var(--fs-h5);
   font-weight: 400;
 }
@@ -773,7 +780,7 @@
 }
 .hf-kit .search .btn {
   height: 100%;
-  border-radius: var(--r-md);
+  border-radius: var(--r-sm);
   padding: 0 32px;
 }
 .hf-kit .search--sm {
@@ -781,22 +788,30 @@
 }
 .hf-kit .search--sm .search__input {
   font-size: var(--fs-l);
+  padding: 0 12px;
+}
+.hf-kit {
+  /* Открытый список подсказок подсвечивает рамку брендовым цветом */
+}
+.hf-kit .search.is-open {
+  border-color: var(--c-primary);
 }
 @media (max-width: 720px) {
   .hf-kit .search {
     flex-direction: column;
     height: auto;
     align-items: stretch;
-    padding: 12px;
+    padding: 16px;
+    gap: 16px;
   }
   .hf-kit .search__input {
-    border-bottom: 1px solid var(--c-bg-dark);
-    height: 44px;
-    padding: 0 8px;
+    border-bottom: 1px solid var(--c-divider);
+    height: 50px;
+    padding: 0;
   }
   .hf-kit .search .btn {
     width: 100%;
-    height: 48px;
+    height: 52px;
   }
 }
 
@@ -808,6 +823,7 @@
   align-items: center;
   gap: 12px;
   cursor: pointer;
+  color: var(--c-button);
   font-size: var(--fs-l);
   line-height: var(--lh-l);
 }
@@ -821,7 +837,7 @@
   width: var(--h-check);
   height: var(--h-check);
   flex: 0 0 var(--h-check);
-  border: 1.5px solid var(--c-divider);
+  border: 2px solid var(--c-divider);
   border-radius: var(--r-sm);
   background: var(--c-white);
   display: inline-flex;
@@ -857,19 +873,30 @@
   background: var(--c-bg-dark);
   border-color: var(--c-bg-dark);
 }
+.hf-kit .check input:disabled + .check__box::after {
+  border-color: var(--c-element);
+}
 .hf-kit .check input:disabled ~ .check__text {
   color: var(--c-element);
 }
 .hf-kit .radio .check__box {
   border-radius: 50%;
 }
+.hf-kit .radio input:disabled + .check__box {
+  background: var(--c-divider);
+  border-color: var(--c-divider);
+}
 .hf-kit .radio .check__box::after {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border: 0;
   border-radius: 50%;
   background: var(--c-white);
   transform: none;
+}
+.hf-kit {
+  /* Тумблера на листе Radio • Checkbox нет — сверить не с чем.
+     Оставлен как есть, значения из первичного переноса.                    */
 }
 .hf-kit .switch {
   display: inline-flex;

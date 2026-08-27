@@ -970,3 +970,247 @@ input[type=radio] {
   color: var(--neutral-950);
   opacity: 1;
 }
+
+/* ==========================================================================
+   HOS-13 · Страница регистрации
+   --------------------------------------------------------------------------
+   Единственная страница кабинета, где брендовый слой не работал. Сток бьёт
+   id-селектором — css/theme.css:12600, sass/_registration.scss:51:
+
+       #registration .field,
+       #registration .form-control { border: 1px solid #DDD; color: #626262;
+                                     height: 36px; font-size: 13px; }
+
+   Специфичность (1,1,0) против наших (0,1,0), поэтому правила выше по файлу
+   до этой страницы не доходили. Здесь они продублированы с тем же префиксом
+   #registration: специфичность равная, hf-theme.css грузится последним.
+   Порядок селекторов зеркалит сток — так видно, что именно перекрывается.
+
+   Эталон поля — лист Input из UI-кита (_dev/scss/hf-kit/_forms.scss).
+   ========================================================================== */
+#registration {
+  padding-bottom: 0;
+}
+
+/* Поле. Сток: height 36px, font-size 13px, рамка #DDD, текст #626262.
+   Телефон исключён из горизонтального отступа: его оборачивает intl-tel-input
+   и отводит слева место под код страны (all.min.css, padding-left 92px для
+   iti-sdc-4). Наш padding это перебивал — «+375» наезжал на текст, а ширина
+   отступа зависит от длины кода, поэтому её нельзя зашить числом. */
+#registration .field,
+#registration .form-control,
+#registration .custom-select {
+  height: var(--hf-h-input);
+  border: 1px solid var(--bg-lifted);
+  border-radius: var(--rounding-md);
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--hf-font-text);
+  font-size: var(--text-lg);
+  transition: border-color var(--hf-transition), background-color var(--hf-transition);
+}
+
+#registration .field:not([type=tel]),
+#registration .form-control:not([type=tel]),
+#registration .custom-select {
+  padding: 0 16px;
+}
+
+#registration input[type=tel].form-control {
+  padding-right: 16px;
+}
+
+/* Селектор страны выравниваем по новой высоте поля */
+#registration .intl-tel-input,
+#registration .intl-tel-input .flag-container,
+#registration .intl-tel-input .selected-flag {
+  height: var(--hf-h-input);
+}
+
+#registration .intl-tel-input {
+  width: 100%;
+  display: block;
+}
+
+#registration textarea.field,
+#registration textarea.form-control {
+  height: auto;
+  min-height: 120px;
+  padding: 16px;
+  resize: vertical;
+}
+
+#registration .field:hover,
+#registration .form-control:hover,
+#registration .custom-select:hover {
+  border-color: var(--border);
+}
+
+/* Фокус. Сток возвращал рамке #ddd, то есть не показывал фокус вовсе
+   (css/theme.css:12633). Кит меняет рамку #ededed -> #d3d3d3, но это
+   разница 1,28:1 — на форме из тридцати полей фокус так не найти, а DoD
+   задачи требует различимого состояния. Берём брендовую рамку и мягкое
+   кольцо: заметно и не спорит с палитрой кита. */
+#registration .field:focus,
+#registration .form-control:focus,
+#registration .custom-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-100);
+  outline: none;
+  color: var(--text);
+}
+
+#registration .field::placeholder,
+#registration .form-control::placeholder {
+  color: var(--text-muted);
+}
+
+/* Сток: фон #f8f8f8 без правки цвета текста — css/theme.css:12670 */
+#registration .field[disabled],
+#registration .field[readonly],
+#registration .form-control[disabled],
+#registration .form-control[readonly] {
+  background-color: var(--bg-muted);
+  border-color: var(--bg-lifted);
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+#registration .field.is-invalid,
+#registration .form-control.is-invalid {
+  border-color: var(--error);
+  background-color: var(--hf-tint-red);
+  color: var(--error-lifted);
+}
+
+/* Подпись над полем. Сток: вес 300, 13px, #666 — css/theme.css:12558.
+   Кит рисует подпись цветом --c-element (#999), но на белом это 2,85:1 и
+   для формы из тридцати полей нечитаемо. Берём --text-accented (#666),
+   как уже сделано для выключенных полей: кит остаётся эталоном, кабинет —
+   читаемым. */
+#registration label,
+#registration .hf-field__label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-accented);
+  font-family: var(--hf-font-text);
+  font-size: var(--text-md);
+  font-weight: 500;
+  line-height: 1.57;
+}
+
+#registration .hf-req {
+  margin-left: 2px;
+  color: var(--error);
+}
+
+/* Подсказка формата под полем. Сток: .field-help-text #888/12px — :12678 */
+#registration .hf-field__hint,
+#registration .field-help-text {
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 0;
+  color: var(--text-accented);
+  font-size: var(--text-sm);
+  line-height: 1.33;
+}
+
+/* Сообщение автозаполнения по УНП: js/egr.js вставляет этот блок сам.
+   Часть свойств скрипт задаёт инлайном и перебивает CSS — здесь то,
+   что он не трогает. */
+#registration .egr-error-message {
+  display: block;
+  color: var(--error);
+  line-height: 1.33;
+}
+
+#registration .form-group {
+  margin-bottom: 20px;
+}
+
+#registration .card-title {
+  margin-bottom: 24px;
+}
+
+/* Чекбоксы: кастомные поля типа tickbox ядро отдаёт вообще без класса */
+#registration input[type=checkbox],
+#registration input[type=radio] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--primary);
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* Согласие с договором и подписка на рассылку */
+#registration .hf-check {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  color: var(--text);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
+}
+
+#registration .hf-check input[type=checkbox] {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+/* Bootstrap позиционирует .form-check-input абсолютно и отводит место
+   паддингом — с flex-раскладкой чекбокс налезал бы на текст. */
+#registration .hf-check.form-check {
+  padding-left: 0;
+}
+
+#registration .hf-check .form-check-input {
+  position: static;
+  margin-left: 0;
+}
+
+#registration .hf-check a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Разделитель из linkedaccounts.tpl. Сток красит span в #058 —
+   захардкоженный синий, которого нет в палитре (css/theme.css:12569) */
+#registration .sub-heading {
+  border-top-color: var(--bg-lifted);
+}
+
+#registration .sub-heading span {
+  background-color: var(--bg);
+  color: var(--text-accented);
+  font-family: var(--hf-font-text);
+}
+
+/* Индикатор надёжности пароля */
+#registration .password-strength-meter .progress {
+  height: 6px;
+  margin-bottom: 8px;
+  border-radius: var(--hf-r-pill);
+  background-color: var(--bg-lifted);
+  overflow: hidden;
+}
+
+#registration .password-strength-meter .progress-bar {
+  border-radius: var(--hf-r-pill);
+}
+
+/* Кнопка отправки: btn-lg подгоняем под высоту кнопки M из кита */
+#registration .btn-lg {
+  height: var(--hf-h-btn-m);
+  padding: 0 32px;
+  font-size: var(--text-lg);
+}
+
+#registration input[type=submit].btn-lg {
+  min-width: 240px;
+}

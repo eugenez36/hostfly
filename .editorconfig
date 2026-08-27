@@ -1,0 +1,50 @@
+# https://editorconfig.org
+#
+# ВАЖНО: правила намеренно не применяются к теме `ais`. Она хранится побайтово
+# (`.gitattributes` = `* -text`) и должна совпадать с dev-сервером — на нём переводы
+# строк смешанные (108 .tpl в CRLF против 29 в LF). Любая нормализация переводов строк
+# или обрезка пробелов редактором сломает это соответствие и зашумит диффы.
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[*.{md,markdown}]
+trim_trailing_whitespace = false
+
+[*.{json,yml,yaml,scss,css,js,html,tpl}]
+indent_size = 2
+
+[Makefile]
+indent_style = tab
+
+# --- Зеркало dev-сервера: ничего не трогаем ---------------------------------
+[ftp/**]
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = false
+indent_style = unset
+indent_size = unset
+charset = unset
+
+# --- Выгрузки и снятые с них артефакты: тоже как есть -----------------------
+[app/new-design/**]
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = false
+
+[app/clientarea-audit/**]
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = false
+
+[app/reference-current-lk/**]
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = false

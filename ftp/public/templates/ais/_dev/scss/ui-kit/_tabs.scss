@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Табы (сегментированный контрол) и подчёркнутые табы
+   ========================================================================== */
+.hf-kit {
+  .tabs {
+    display: inline-flex;
+    align-items: center;
+    height: var(--h-tabs);
+    padding: 4px;
+    border-radius: var(--r-md);
+    background: var(--c-bg);
+    gap: 2px;
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tabs__item {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 16px;
+    border: 0;
+    border-radius: var(--r-sm);
+    background: transparent;
+    color: var(--c-element);
+    font-size: var(--fs-m);
+    line-height: 1;
+    white-space: nowrap;
+    transition: background var(--transition), color var(--transition);
+  }
+  .tabs__item:hover { background: rgba(255, 255, 255, .6); color: var(--c-body); }
+  .tabs__item.is-active {
+    background: var(--c-white);
+    color: var(--c-primary);
+    font-weight: 700;
+    box-shadow: var(--shadow-tab);
+  }
+  .tabs__item[disabled] { color: var(--c-divider); pointer-events: none; }
+
+  .tabs-line {
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid var(--c-highlighter);
+    overflow-x: auto;
+  }
+  .tabs-line__item {
+    border: 0;
+    background: transparent;
+    padding: 0 0 14px;
+    margin-bottom: -1px;
+    border-bottom: 2px solid transparent;
+    color: var(--c-element);
+    font-size: var(--fs-h6);
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color var(--transition), border-color var(--transition);
+  }
+  .tabs-line__item:hover { color: var(--c-body); }
+  .tabs-line__item.is-active { color: var(--c-text); border-bottom-color: var(--c-button); font-weight: 700; }
+}

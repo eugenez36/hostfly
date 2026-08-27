@@ -701,3 +701,134 @@ header.header .topbar .btn:focus-visible {
 .badge.status > span {
   color: inherit;
 }
+
+/* ==========================================================================
+   Этап B · Таблицы, алерты, формы, полоса крошек
+   --------------------------------------------------------------------------
+   Таблиц и алертов в ките нет отдельными листами, поэтому берём его принципы:
+   разделение тонкими линиями --c-highlighter, текст --c-text, подсветка строки
+   на --c-bg. Алерты строим по форме бейджа: светлая подложка своего семейства
+   плюс тёмный текст, без сплошных заливок.
+   ========================================================================== */
+/* --- Таблицы -------------------------------------------------------------- */
+.table {
+  color: var(--text);
+}
+
+.table th,
+.table td {
+  border-top-color: var(--bg-lifted);
+}
+
+.table thead th {
+  border-bottom: 1px solid var(--border);
+  color: var(--text-accented);
+  font-weight: 700;
+}
+
+.table-list > tbody > tr:hover > td {
+  background-color: var(--bg-muted) !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: var(--bg-muted);
+}
+
+/* --- Алерты ---------------------------------------------------------------
+   Сток даёт бутстраповские пастельные заливки с рамкой того же тона и тёмным
+   текстом собственного подбора. Переводим на пары кита.                      */
+.alert {
+  border: 0;
+  border-radius: var(--rounding-md);
+  color: var(--text);
+}
+
+.alert-success {
+  background-color: var(--hf-tint-mint);
+  color: var(--success);
+}
+
+.alert-danger, .alert-error {
+  background-color: var(--hf-tint-red);
+  color: var(--error-lifted);
+}
+
+.alert-warning {
+  background-color: var(--hf-tint-yellow);
+  color: var(--warning-lifted);
+}
+
+.alert-info {
+  background-color: var(--hf-tint-blue);
+  color: var(--primary);
+}
+
+.alert a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* --- Поля ввода -----------------------------------------------------------
+   Значения из листа Input: рамка в покое --c-highlighter, на наведении и
+   в фокусе --c-divider, значение чёрное, плейсхолдер --c-element.
+   Высоты стоковые: кит-поле 56px переложило бы инлайновые формы кабинета.   */
+.form-control,
+.custom-select {
+  border-color: var(--bg-lifted);
+  border-radius: var(--rounding-md);
+  color: var(--neutral-950);
+}
+
+.form-control:hover,
+.custom-select:hover {
+  border-color: var(--border);
+}
+
+.form-control:focus,
+.custom-select:focus {
+  border-color: var(--border);
+  box-shadow: none;
+  color: var(--neutral-950);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: var(--bg);
+  color: var(--border-muted);
+}
+
+.form-control.is-invalid,
+.is-error .form-control {
+  border-color: var(--error);
+  background-color: var(--hf-tint-red);
+  color: var(--error-lifted);
+}
+
+.col-form-label, label {
+  color: var(--text-accented);
+}
+
+/* --- Полоса хлебных крошек ------------------------------------------------
+   Сток заливает её --bg-accented #dedede — в ките это цвет ГРАНИЦ, а фоном
+   секции служит --c-bg #f7f7f7.                                             */
+.master-breadcrumb,
+.master-breadcrumb .breadcrumb {
+  background-color: var(--bg-muted);
+}
+
+.master-breadcrumb .breadcrumb a {
+  color: var(--text-accented);
+}
+
+.master-breadcrumb .breadcrumb a:hover {
+  color: var(--text);
+}
+
+.master-breadcrumb .breadcrumb-item.active {
+  color: var(--text-muted);
+}

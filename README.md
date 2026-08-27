@@ -20,22 +20,24 @@
 
 ## Структура
 
+В репозитории хранятся только тема, документация, описание и источник UI-кита.
+Тяжёлые артефакты — выгрузки Figma, скриншоты аудита, превью и эталонные выгрузки —
+остаются в Figma и локально, вне git (см. [`.gitignore`](.gitignore)).
+
 ```
-app/
-  new-design/             выгрузка Figma: final-theme (7 листов) + ui-kit (14 листов)
-  figma-main/             разбор главной страницы из Figma
-  preview-new-site/       статическое превью нового дизайна публичного сайта,
-                          собранное по выгрузке: страницы, css/tokens.css, ui-kit.html
-  clientarea-audit/       аудит текущего кабинета: скриншоты, HTML, структурные дампы
-  clientarea-concept/     концепт и прототип нового кабинета
-  reference-current-lk/   выгрузка текущего кабинета как есть (эталон для сверки)
-  АУДИТ-ЛК-hostfly.md     аудит личного кабинета
+ftp/public/templates/ais/   рабочая тема WHMCS (.tpl, scss, js, ассеты)
+
+ui-kit/                     источник UI-кита, снятый с Figma-выгрузки
+  tokens.css                цвета, типографика, сетка, радиусы, высоты контролов
+  base.css                  типографика, ссылки, сетка, утилиты
+  components.css            все компоненты кита и их состояния
+  theme.js                  поведение: аккордеон, табы, слайдер
 
 docs/
+  АУДИТ-ЛК-hostfly.md                   аудит личного кабинета
+  РАЗБОР-ГЛАВНОЙ-figma.md               разбор главной страницы из Figma
   gap-analysis-new-design-vs-nexus.md   что не покрыто новым дизайном
   discrepancies.md                      реестр расхождений дизайн ↔ шаблон
-
-ftp/public/templates/ais/   рабочая тема WHMCS (.tpl, scss, js, ассеты)
 ```
 
 ## UI-кит нового дизайна
@@ -44,7 +46,7 @@ ftp/public/templates/ais/   рабочая тема WHMCS (.tpl, scss, js, ас�
 
 | Где | Что |
 |---|---|
-| `app/preview-new-site/css/` | Первичное снятие: `tokens.css`, `base.css`, `components.css` + демо `ui-kit.html` |
+| `ui-kit/` | Источник: `tokens.css`, `base.css`, `components.css`, `theme.js` |
 | `ftp/public/templates/ais/_dev/scss/ui-kit/` | Перенос в сборку темы: 15 партиалов |
 | `ftp/public/templates/ais/js/ui-kit.js` | Поведение: аккордеон, табы, слайдер |
 | `ftp/public/templates/ais/_dev/ui-kit-preview.html` | Демо всех компонентов внутри темы |
@@ -91,16 +93,11 @@ ftp/public/templates/ais/   рабочая тема WHMCS (.tpl, scss, js, ас�
 
 ## Клонирование
 
-Крупные выгрузки Figma (121 PNG, 130 МБ) хранятся в **Git LFS**, поэтому нужен `git lfs` —
-без него вместо макетов окажутся текстовые pointer-файлы:
-
 ```bash
-git lfs install
 git clone git@github.com:eugenez36/hostfly.git
 ```
 
-Тема в LFS сознательно не участвует — она источник деплоя по FTP, и pointer-файлы
-уехали бы на сервер.
+Ничего дополнительного не нужно: крупные бинарные выгрузки в репозитории не хранятся.
 
 ## Работа с темой
 

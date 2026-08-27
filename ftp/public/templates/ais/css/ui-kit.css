@@ -4,7 +4,7 @@
  * Hostfly — UI-кит нового дизайна
  * ==========================================================================
  *
- * Источник: app/new-design/ui-kit/ (14 листов Figma) → app/preview-new-site/css/
+ * Источник: app/new-design/ui-kit/ (14 листов Figma) → ui-kit/
  * Собирается существующей задачей gulp `styles` в ../css/ui-kit.css,
  * отдельным файлом от all.min.css — стили кабинета не затрагиваются.
  *
@@ -26,7 +26,7 @@
  */
 /* ==========================================================================
    Hostfly — дизайн-токены UI-кита
-   Перенесено из app/preview-new-site/css/tokens.css без изменений значений.
+   Перенесено из ui-kit/tokens.css без изменений значений.
    Источник: app/new-design/ui-kit/ (Colors, Typography, Buttons, Input,
    Tabs, Links, Bages, Chips, Radio • Checkbox, Pagination, Tooltip, Icons, Logo)
    ========================================================================== */
@@ -149,7 +149,7 @@
 }
 /* ==========================================================================
    Hostfly — база UI-кита: типографика, ссылки, сетка, утилиты
-   Перенесено из app/preview-new-site/css/base.css.
+   Перенесено из ui-kit/base.css.
 
    ОТЛИЧИЕ ОТ ИСТОЧНИКА: в превью здесь стоял глобальный сброс
    (`*`, `html`, `body`, `img, svg`, `button, input, select, textarea`).

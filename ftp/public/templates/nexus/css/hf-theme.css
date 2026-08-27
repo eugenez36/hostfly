@@ -796,10 +796,15 @@ header.header .topbar .btn:focus-visible {
   color: var(--text-muted);
 }
 
+/* Выключенное поле. В ките текст disabled — #DEDEDE, но там это поле ввода,
+   а в кабинете выключенный селект несёт информацию: на форме запроса им
+   показан выбранный отдел. #DEDEDE на белом даёт 1,4:1 — прочитать нельзя.
+   Берём --c-element: заметно приглушено, но читаемо.                        */
 .form-control:disabled,
-.form-control[readonly] {
-  background-color: var(--bg);
-  color: var(--border-muted);
+.form-control[readonly],
+.custom-select:disabled {
+  background-color: var(--bg-muted);
+  color: var(--text-muted);
 }
 
 .form-control.is-invalid,

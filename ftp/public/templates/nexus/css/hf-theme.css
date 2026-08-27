@@ -411,3 +411,293 @@ header.header .topbar .btn:focus-visible {
   color: var(--text-muted);
   font-weight: 400;
 }
+
+/* ==========================================================================
+   Этап B · Кнопки кабинета по киту
+   --------------------------------------------------------------------------
+   Кабинет рисует кнопки стоковыми классами Bootstrap, а в ките их четыре вида:
+   основная чёрная, контурная, акцентная синяя и мягкая голубая. Раскладка
+   соответствий (её стоит держать в голове при чтении правил ниже):
+
+     .btn-primary          → кит «основная»    чёрная заливка
+     .btn-default          → кит «контурная»   белая с чёрной рамкой (159 мест)
+     .btn-outline-primary  → кит «акцентная»   синяя рамка и текст
+     .btn-link             → кит .link-primary синий текст без подчёркивания
+     .btn-success/-danger  → в ките таких кнопок нет: оставляем семантику,
+                             но перекрашиваем в статусные цвета кита
+
+   ГЕОМЕТРИЮ НЕ ТРОГАЕМ. В ките высота основной кнопки 56px, в кабинете
+   стоковые ~38px, и вокруг них построены таблицы, тулбары и инлайновые формы.
+   Подъём высоты переложил бы половину кабинета, поэтому берём цвет, скругление,
+   начертание и переходы, а размеры оставляем стоковыми. То же с капсом:
+   в ките размеры S и XS набраны заглавными, но в кабинете это меняло бы
+   сами подписи, а не оформление.
+   ========================================================================== */
+.btn {
+  border-radius: var(--rounding-md);
+  font-weight: 700;
+  transition: background-color var(--hf-transition), border-color var(--hf-transition), color var(--hf-transition);
+}
+
+/* Основная — чёрная, на наведении светлеет до --c-body кита */
+.btn-primary {
+  background-color: var(--neutral-950);
+  border-color: var(--neutral-950);
+  color: var(--white);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--text-accented);
+  border-color: var(--text-accented);
+  color: var(--white);
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  background-color: var(--neutral-950);
+  border-color: var(--neutral-950);
+  color: var(--white);
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled {
+  background-color: var(--bg-lifted);
+  border-color: var(--bg-lifted);
+  color: var(--border);
+  opacity: 1;
+}
+
+/* Контурная. Стоковая .btn-default — наследие Bootstrap 3 с прибитыми
+   #333/#ccc/#e6e6e6; переводим её на пару кита «чёрная рамка → чёрная заливка». */
+.btn-default {
+  background-color: var(--white);
+  border-color: var(--neutral-950);
+  color: var(--neutral-950);
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus {
+  background-color: var(--neutral-950);
+  border-color: var(--neutral-950);
+  color: var(--white);
+}
+
+.btn-default:active,
+.btn-default.active {
+  background-color: var(--text-accented);
+  border-color: var(--text-accented);
+  color: var(--white);
+}
+
+.btn-default.disabled,
+.btn-default[disabled] {
+  background-color: var(--white) !important;
+  border-color: var(--bg-lifted) !important;
+  color: var(--border) !important;
+}
+
+/* Акцентная — синий контур, на наведении заливается брендовым */
+.btn-outline-primary {
+  background-color: var(--white);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-outline-primary:active {
+  background-color: var(--neutral-950);
+  border-color: var(--neutral-950);
+  color: var(--white);
+}
+
+/* Статусные кнопки: в ките их нет, но семантика кабинету нужна.
+   Берём статусные цвета кита, поведение — как у основной. */
+.btn-success {
+  background-color: var(--success);
+  border-color: var(--success);
+  color: var(--white);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: var(--success-lifted);
+  border-color: var(--success-lifted);
+  color: var(--white);
+}
+
+.btn-danger {
+  background-color: var(--error);
+  border-color: var(--error);
+  color: var(--white);
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+  background-color: var(--error-lifted);
+  border-color: var(--error-lifted);
+  color: var(--white);
+}
+
+/* Текстовая кнопка = ссылка кита: синяя, без подчёркивания, фиолетовая на hover */
+.btn-link {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  color: var(--notice);
+  text-decoration: none;
+}
+
+/* Мелкие размеры: у кита скругление меньше, у стока оно наследуется от .btn */
+.btn-sm, .btn-group-sm > .btn {
+  border-radius: var(--rounding-sm);
+}
+
+.btn-xs, .btn-group-xs > .btn {
+  border-radius: var(--rounding-sm);
+}
+
+/* ==========================================================================
+   Этап B · Карточки и панели по киту
+   --------------------------------------------------------------------------
+   Кит-карточка: белый фон, рамка 1px --c-highlighter, скругление 16.
+   Стоковая .card приходит из Bootstrap с рамкой rgba(0,0,0,.125) и радиусом
+   .25rem, а шапка и подвал залиты серым rgba(0,0,0,.03). В ките заливок нет:
+   разделение — тонкой линией, поэтому шапку и подвал делаем прозрачными.
+   Внутренние отступы стоковые: кит-падинг 32px рассчитан на широкие блоки
+   лендинга, в узком сайдбаре кабинета он съел бы содержимое.
+   ========================================================================== */
+.card {
+  border: 1px solid var(--bg-lifted);
+  border-radius: var(--hf-r-xl);
+  background-color: var(--bg);
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom-color: var(--bg-lifted);
+}
+
+.card-footer {
+  background-color: transparent;
+  border-top-color: var(--bg-lifted);
+}
+
+.card-title {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Панели сайдбара: у них своё скругление в стоке, приводим к тому же радиусу */
+.sidebar .card-sidebar,
+.sidebar .card-footer {
+  border-radius: var(--hf-r-xl);
+}
+
+.sidebar .card-footer {
+  border-radius: 0 0 var(--hf-r-xl) var(--hf-r-xl);
+  background-color: transparent;
+}
+
+/* Списки внутри панелей — те же линии-разделители, что и в ките */
+.list-group-item {
+  border-color: var(--bg-lifted);
+  color: var(--text);
+}
+
+.list-group-item-action:hover,
+.list-group-item-action:focus {
+  background-color: var(--bg-muted);
+  color: var(--neutral-950);
+}
+
+/* ==========================================================================
+   Этап B · Статусы и лейблы по киту
+   --------------------------------------------------------------------------
+   Сток рисует статус сплошной заливкой с белым текстом (.label { color: #fff }),
+   а в ките бейдж — светлая подложка и ТЁМНЫЙ текст того же семейства.
+   Кроме соответствия киту это чинит реальную ошибку: статусы, сидящие
+   на --yellow-300 (#fff1a1) — «Приостановлен», «Ожидает переноса», «Возвращён»
+   и .label-warning — показывали белый текст на светло-жёлтом, контраст ~1,2:1.
+
+   Семантику не переизобретаем: каждый статус переезжает в подложку СВОЕГО
+   семейства, как он покрашен в стоке. Геометрию не трогаем — кит-бейдж 24px
+   с капсом изменил бы высоту строк таблиц и сами подписи.
+
+   ОТКЛОНЕНИЕ ОТ КИТА, СДЕЛАННОЕ СОЗНАТЕЛЬНО. Кит для пары «красная подложка +
+   красный текст» берёт основной оттенок, и это даёт 4,28:1 — ниже нормы для
+   мелкого текста. То же у жёлтой (3,84:1) и фиолетовой (3,29:1) пар. Поэтому
+   в тексте статусов используются затемнённые ступени той же палитры: контраст
+   поднимается до 5,2–6,0:1, а оттенок остаётся узнаваемым.
+   ========================================================================== */
+.label,
+.badge.status {
+  border-radius: var(--hf-r-xs);
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Успех: активные услуги, оплаченные счета, открытые тикеты */
+.label-success,
+.status-active, .status-open, .status-completed,
+.status-paid, .status-accepted {
+  background-color: var(--hf-tint-mint);
+  color: var(--success);
+}
+
+/* Ошибка: неоплаченные счета, мошенничество */
+.label-danger,
+.status-unpaid, .status-fraud {
+  background-color: var(--hf-tint-red);
+  color: var(--error-lifted);
+}
+
+/* Ожидание: всё, что в стоке было жёлтым или янтарным */
+.label-warning,
+.status-pending, .status-pending-transfer, .status-customer-reply,
+.status-pending-registration, .status-redemption, .status-grace,
+.status-inprogress, .status-suspended, .status-refunded,
+.status-payment-pending {
+  background-color: var(--hf-tint-yellow);
+  color: var(--warning-lifted);
+}
+
+/* Информация */
+.label-info,
+.status-onhold, .status-delivered {
+  background-color: var(--hf-tint-blue);
+  color: var(--primary);
+}
+
+/* Ответ поддержки */
+.status-answered {
+  background-color: var(--hf-tint-violet);
+  color: var(--notice-accented);
+}
+
+/* Нейтральные: завершённые, отменённые, истёкшие */
+.label-default,
+.status-terminated, .status-closed, .status-cancelled,
+.status-collections, .status-expired, .status-transferred-away,
+.status-lost, .status-dead {
+  background-color: var(--bg-lifted);
+  color: var(--text);
+}
+
+/* Вложенные подписи внутри статуса наследуют цвет группы, иначе сток
+   красит их своим (.textred и подобные) поверх нашей пары. */
+.label > span,
+.badge.status > span {
+  color: inherit;
+}

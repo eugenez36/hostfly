@@ -1,12 +1,49 @@
 /**
  * Автоматическое заполнение названия компании и данных регистрации из ЕГР по УНП
- * version 1.2.0
- * - Добавлено автоматическое заполнение юридического адреса для организаций
- * - Исправлена очистка ошибок валидации WHMCS (класс 'error' и .js-validation-text)
- * - Централизовано управление состоянием загрузки полей
+ * version 2.0.0 — адаптация под тему nexus (HOS-15)
+ *
+ * Что изменилось против 1.2.0, написанной под тему ais:
+ * - поля ищутся по ИМЕНИ (customfield[NN]), а не по id и не по обёрткам. В ais у
+ *   чекбокса резидентства id был буквально "customfield[39]", в nexus — "customfield39";
+ *   привязка по имени работает в обеих темах и переживёт перевёрстку формы в HOS-12;
+ * - тип регистранта в ais выбирался радио-кнопками в .registrant_type, в nexus это
+ *   обычный select — читаем оба варианта;
+ * - поле области: ядро WHMCS (assets/js/StatesDropdown.js) переименовывает
+ *   input[name=state] в #stateinput уже после загрузки. Для Беларуси списка областей
+ *   в ядре нет, поэтому поле остаётся текстовым и селект #stateselect не создаётся —
+ *   пишем в #stateinput с фолбэком на #state;
+ * - #sameasabove в nexus отсутствует: ветка сборки почтового адреса просто не сработает,
+ *   проверка по length уже была в коде;
+ * - ИСПРАВЛЕН дефект: в обработчике blur использовались переменные, объявленные через
+ *   const внутри fetchEGRData, из-за чего на каждом blur по заполненному УНП вылетал
+ *   ReferenceError и проверка «уже заполнено» не работала;
+ * - ИСПРАВЛЕН фолбэк региона: город Минск подставлялся как «Минская область», хотя
+ *   город республиканского подчинения в неё не входит.
+ *
+ * Серверная часть — /egr-proxy.php (в репозитории ftp/public/egr-proxy.php).
  */
 (function($) {
     'use strict';
+
+    /**
+     * Поиск поля кастомного поля WHMCS по НОМЕРУ.
+     * Сначала по имени (одинаково во всех темах и не зависит от вёрстки),
+     * затем фолбэк на id — на случай, если разметку соберут иначе.
+     * @param {number|string} n - номер кастомного поля
+     */
+    function cf(n) {
+        var $byName = $('[name="customfield[' + n + ']"]');
+        return $byName.length ? $byName : $('#customfield' + n);
+    }
+
+    /**
+     * Поле области. Ядро переименовывает input[name=state] в #stateinput на ready,
+     * поэтому проверяем оба варианта.
+     */
+    function stateField() {
+        var $s = $('#stateinput');
+        return $s.length ? $s : $('#state');
+    }
 
     /**
      * Получение данных из API ЕГР по УНП
@@ -63,7 +100,7 @@
      * @param {string} message - Текст сообщения
      */
     function showUNPError(message) {
-        const $unpInput = $('#customfield40');
+        const $unpInput = cf(40);
         
         // Удаляем предыдущее сообщение, если есть
         $unpInput.siblings('.egr-error-message').remove();
@@ -79,7 +116,7 @@
      * Убрать сообщение об ошибке под полем УНП
      */
     function hideUNPError() {
-        const $unpInput = $('#customfield40');
+        const $unpInput = cf(40);
         
         // Удаляем сообщение
         $unpInput.siblings('.egr-error-message').remove();
@@ -144,9 +181,20 @@
      * @returns {string} 'person', 'org' или 'ip'
      */
     function getCurrentRegistrantType() {
+        // ais: радио-кнопки в .registrant_type
         const $activeBtn = $('.registrant_type .btn.active input[type="radio"]');
         if ($activeBtn.length > 0) {
             return $activeBtn.val();
+        }
+        // nexus: обычный select с теми же значениями person / organization / ip
+        const $typeField = cf(33);
+        if ($typeField.length > 0) {
+            const value = ($typeField.filter(':checked').length
+                ? $typeField.filter(':checked').val()
+                : $typeField.val()) || '';
+            if (value) {
+                return value;
+            }
         }
         return 'person'; // По умолчанию
     }
@@ -155,7 +203,7 @@
      * Автозаполнение полей при вводе УНП
      */
     function initUNPAutoFill() {
-        const $unpInput = $('#customfield40');
+        const $unpInput = cf(40);
         
         if ($unpInput.length === 0) {
             return;
@@ -177,7 +225,7 @@
             }
 
             // Проверяем, включен ли чекбокс "Резидент РБ" (customfield[39])
-            const $residentCheckbox = $('#customfield\\[39\\]');
+            const $residentCheckbox = cf(39);
             if ($residentCheckbox.length === 0 || !$residentCheckbox.is(':checked')) {
                 // Чекбокс не включен - не делаем автозагрузку из ЕГР
                 return;
@@ -193,21 +241,21 @@
             // (они могут быть скрыты при инициализации и появляться динамически)
             const $companyNameInput = $('#inputCompanyName');
             const $firstNameInput = $('#inputFirstName');
-            const $middleNameInput = $('#customfield42');
+            const $middleNameInput = cf(42);
             const $lastNameInput = $('#inputLastName');
             
             // Поля регистрационных данных (ЕГР)
-            const $egrNumInput = $('#customfield11');      // Номер в ЕГР
-            const $egrOrgInput = $('#customfield12');      // Орган регистрации
-            const $egrDateInput = $('#customfield13');     // Дата регистрации
+            const $egrNumInput = cf(11);                   // Номер в ЕГР
+            const $egrOrgInput = cf(12);                   // Орган регистрации
+            const $egrDateInput = cf(13);                  // Дата регистрации
             
             // Поля юридического адреса
             const $countryInput = $('#inputCountry');      // Страна
-            const $stateInput = $('#stateinput');          // Область/район
+            const $stateInput = stateField();              // Область/район
             const $cityInput = $('#inputCity');            // Город
             const $address1Input = $('#inputAddress1');    // Улица
-            const $houseInput = $('#customfield36');       // Дом
-            const $roomInput = $('#customfield37');        // Помещение
+            const $houseInput = cf(36);                    // Дом
+            const $roomInput = cf(37);                     // Помещение
 
             // Собираем все поля, которые будут блокироваться
             const fieldsToBlock = [];
@@ -272,14 +320,19 @@
                                 if (!regionName && response.data.vnp) {
                                     const cityName = response.data.vnp;
                                     const cityToRegion = {
-                                        'Минск': 'Минская',
                                         'Брест': 'Брестская',
                                         'Витебск': 'Витебская',
                                         'Могилёв': 'Могилёвская',
                                         'Гомель': 'Гомельская',
                                         'Гродно': 'Гродненская'
                                     };
-                                    regionName = cityToRegion[cityName] || '';
+                                    // Минск — город республиканского подчинения и
+                                    // в Минскую область не входит, поэтому отдельно.
+                                    if (cityName === 'Минск') {
+                                        stateValue = 'г. Минск';
+                                    } else {
+                                        regionName = cityToRegion[cityName] || '';
+                                    }
                                 }
                                 
                                 if (regionName) {
@@ -457,26 +510,28 @@
             }
 
             const registrantType = getCurrentRegistrantType();
-            
-            // Проверяем, не заполнены ли уже целевые поля компании/ФИО и ЕГР данные
-            const egrFieldsFilled = $egrNumInput.length > 0 && 
-                                   $egrNumInput.val().trim() !== '' && 
-                                   $egrNumInput.val() !== 'Загрузка...';
-            
-            if (registrantType === 'organization' && 
-                $companyNameInput.length > 0 && 
-                $companyNameInput.val().trim() !== '' && 
-                $companyNameInput.val() !== 'Загрузка...' &&
-                egrFieldsFilled) {
+
+            // Поля резолвим здесь же. В версии 1.2.0 тут использовались переменные
+            // из области видимости fetchEGRData — на каждом blur был ReferenceError,
+            // и проверка «уже заполнено» никогда не срабатывала.
+            const $egrNum = cf(11);
+            const $companyName = $('#inputCompanyName');
+            const $lastName = $('#inputLastName');
+
+            function filled($f) {
+                return $f.length > 0 &&
+                       $f.val().trim() !== '' &&
+                       $f.val().indexOf('Загрузка') !== 0;
+            }
+
+            const egrFieldsFilled = filled($egrNum);
+
+            if (registrantType === 'organization' && filled($companyName) && egrFieldsFilled) {
                 // Все поля уже заполнены
                 return;
             }
-            
-            if (registrantType === 'ip' && 
-                $lastNameInput.length > 0 && 
-                $lastNameInput.val().trim() !== '' && 
-                $lastNameInput.val() !== 'Загрузка...' &&
-                egrFieldsFilled) {
+
+            if (registrantType === 'ip' && filled($lastName) && egrFieldsFilled) {
                 // Все поля уже заполнены
                 return;
             }
@@ -490,10 +545,19 @@
             fetchEGRData(unp);
         });
 
-        // Обработчик смены типа регистранта - делаем запрос, если УНП уже введен
-        $('.registrant_type .btn').on('click', function() {
+        // Смена типа регистранта: в ais это клик по радио-кнопке в .registrant_type,
+        // в nexus — change на select. Делегируем на document, чтобы пережить
+        // перерисовку формы.
+        $(document).on('click', '.registrant_type .btn', function() {
+            retryAfterChange();
+        });
+        $(document).on('change', '[name="customfield[33]"]', function() {
+            retryAfterChange();
+        });
+
+        function retryAfterChange() {
             const unp = $unpInput.val().trim();
-            
+
             if (!/^\d{9}$/.test(unp)) {
                 return;
             }
@@ -502,10 +566,10 @@
             setTimeout(function() {
                 fetchEGRData(unp);
             }, 100);
-        });
+        }
 
         // Обработчик изменения чекбокса "Резидент РБ" (customfield[39])
-        $(document).on('change', '#customfield\\[39\\]', function() {
+        $(document).on('change', '[name="customfield[39]"]', function() {
             const unp = $unpInput.val().trim();
             
             if (!/^\d{9}$/.test(unp)) {

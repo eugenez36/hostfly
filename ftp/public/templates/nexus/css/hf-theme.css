@@ -16,12 +16,58 @@
  * Сейчас здесь только фундамент. Компоненты кабинета (кнопки, таблицы,
  * плитки, сайдбар, табы, алерты, формы) идут следующими заходами по HOS-17.
  * ========================================================================== */
+/* ==========================================================================
+   Inter — текстовая гарнитура кита, самохостинг
+   --------------------------------------------------------------------------
+   Источник: @fontsource-variable/inter (SIL OFL 1.1, лицензия в fonts/).
+   Варьируемые файлы по субсетам: браузер скачает только те, чьи символы
+   реально встретились на странице. Кабинет русскоязычный, поэтому кириллица
+   обязательна; latin-ext держим ради ₽ (U+20BD) и валютных знаков.
+   Один файл на субсет закрывает все веса 100–900 — статикой это было бы
+   три файла на каждый субсет.
+   Пути относительны собранному css/hf-theme.css, dart-sass url() не переписывает.
+   font-display: swap плюс preload в includes/head.tpl: без preload подмена
+   шрифта приходит после document.ready, а autoCollapse('#nav', 30) из стокового
+   js/whmcs.js меряет меню ровно на ready и пересчёта уже не делает.
+   ========================================================================== */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-latin-wght-normal.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-latin-ext-wght-normal.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-cyrillic-wght-normal.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-cyrillic-ext-wght-normal.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
 :root {
   /* --- Шрифты ------------------------------------------------------------
-     В макете NT Somic (заголовки) и Inter (текст). Веб-файлов ни того, ни
-     другого в проекте пока нет, поэтому Open Sans из стока оставлен в стеке
-     следующим: сегодня кабинет выглядит как раньше, а как только появятся
-     .woff2, шрифты подхватятся без правок кода.                             */
+     Inter подключён выше и лежит в теме (fonts/), это гарнитура текста в ките.
+     NT Somic из макета платный, файлов нет — заголовки откатываются на Inter.
+     Стоковый Open Sans остаётся в стеке следующим как фолбэк на глифы;
+     из head.tpl его не выпиливаем, он подключается ядром WHMCS.             */
   --hf-font-display: "NT Somic", "Inter", "Open Sans", "Helvetica Neue", Arial, sans-serif;
   --hf-font-text: "Inter", "Open Sans", "Helvetica Neue", Arial, sans-serif;
   /* --- Высоты контролов из кита ------------------------------------------ */
@@ -75,4 +121,293 @@ body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--hf-font-display);
+}
+
+/* ==========================================================================
+   HOS-6 · Шапка кабинета
+   --------------------------------------------------------------------------
+   Только оформление: цвета, шрифт, состояния. Структура, геометрия и разметка
+   не меняются — те же три ряда, те же кнопки, тот же состав пунктов, .tpl
+   не трогаем. Поэтому здесь нет ни height, ни padding, ни display у элементов
+   шапки: смена формы (например, круглая корзина из кит-примитива .btn-icon)
+   в этой задаче была бы выходом за скоуп.
+
+   Компонента «шапка» в UI-ките нет — это зафиксировано в docs/discrepancies.md
+   как A-04. Значения собраны из примитивов кита, у каждого блока указан источник.
+
+   Специфичность: hf-theme.css подключается после theme.min.css и custom.css,
+   поэтому достаточно повторить стоковый селектор один-в-один — при равной
+   специфичности выигрывает тот, кто позже. !important не понадобился нигде.
+
+   Токены палитры (custom.css) намеренно НЕ трогаем: --grayscale-accented
+   кормит ещё disabled-кнопку форм со строметром пароля, --text-lifted —
+   футер, сайдбар, корзину и хлебные крошки. Перекрасить их значило бы
+   перекрасить полкабинета под видом задачи про шапку.
+   ========================================================================== */
+/* --- Ряд 1: топбар --------------------------------------------------------
+   Чёрный фон — --c-button кита (решение заказчика). На тёмном лестница
+   нейтралей инвертируется: #ededed основной текст (17,9:1), #999 подписи
+   и иконки (7,4:1), белый — hover. Было rgba(255,255,255,.65) на #4d4d4d,
+   то есть 4,7:1 — впритык к норме.
+   Перебивает: header.header .topbar (sass/_layout.scss:16-20).              */
+header.header .topbar {
+  background-color: var(--neutral-950);
+  color: var(--bg-lifted);
+}
+
+header.header .topbar .btn {
+  color: var(--bg-lifted);
+  transition: color var(--hf-transition);
+}
+
+/* Ховера у кнопок топбара в стоке нет вообще: header.header .topbar .btn
+   перебивает и .btn:hover, и глобальный a:hover.                            */
+header.header .topbar .btn:hover,
+header.header .topbar .btn:focus {
+  color: var(--white);
+}
+
+/* Подпись «Вы вошли как:» — вторичный тон, кит --c-element.                 */
+header.header .topbar .active-client .input-group-text {
+  color: var(--text-muted);
+}
+
+header.header .topbar .active-client .btn {
+  color: var(--bg-lifted);
+}
+
+header.header .topbar .active-client .btn:hover,
+header.header .topbar .active-client .btn:focus {
+  color: var(--white);
+}
+
+/* Пунктир под именем клиента: меняем только цвет, стиль и толщину оставляем
+   стоковые. Лонгхенд поверх шортката border-bottom той же специфичности.    */
+header.header .topbar .active-client .btn.btn-active-client span {
+  border-bottom-color: var(--text-accented);
+}
+
+header.header .topbar .active-client .btn.btn-active-client:hover span {
+  border-bottom-color: var(--white);
+}
+
+/* --- Ряд 2: логотип, поиск, тулбар ----------------------------------------
+   Фон шапки остаётся белым (сток #fff, в ките --c-white) — правило не нужно.
+   Радиусы уже китовые: var(--rounding-sm) = 6px = --r-sm.                   */
+/* Корзина и бургер. Рамка #dedede (--c-bg-dark кита) вместо #e5e5e5,
+   иконка #333 (--c-text, цвет иконки в кит-примитиве .btn-icon) вместо
+   серого #7f7f7f. Hover — подложка --c-highlighter, как у .btn-icon.
+   Перебивает: header.header .toolbar .nav-link (sass/_layout.scss:70-77).
+   Геометрию (padding, размер) не трогаем.                                   */
+header.header .toolbar .nav-link {
+  border-color: var(--border-muted);
+  color: var(--text);
+  transition: color var(--hf-transition), border-color var(--hf-transition), background-color var(--hf-transition);
+}
+
+header.header .toolbar .nav-link:hover,
+header.header .toolbar .nav-link:focus {
+  background-color: var(--bg-lifted);
+  border-color: var(--border);
+  color: var(--neutral-950);
+}
+
+/* Счётчик корзины. Приходит бутстраповским .badge-dark: #fff на #343a40 —
+   мимо палитры. Чёрный — это --c-button кита, и сток тоже задумывал тёмный
+   счётчик. Геометрию (10px, position, padding) сохраняем: китовые 24px —
+   спека статусного бейджа, а не счётчика поверх кнопки.                     */
+header.header .toolbar .nav-link .badge {
+  background-color: var(--neutral-950);
+  color: var(--white);
+}
+
+/* Поиск по базе знаний. Рамку в покое не трогаем — var(--border) = #d3d3d3
+   это ровно кит --c-divider. Меняем состояния и вспомогательные цвета:
+   лупа #999 (--c-element), фокус рамки #333 — в ките .input:focus красится
+   именно в --c-text, а не в бренд-синий.
+   Перебивает: header.header .search .btn и .search:focus-within.            */
+header.header .search .btn {
+  color: var(--text-muted);
+  transition: color var(--hf-transition);
+}
+
+header.header .search .btn:hover {
+  color: var(--text);
+}
+
+header.header .search:focus-within {
+  border-color: var(--text);
+}
+
+header.header .search .form-control {
+  color: var(--text);
+}
+
+header.header .search .form-control::placeholder {
+  color: var(--text-muted);
+}
+
+/* --- Ряд 3: главное меню и меню аккаунта ----------------------------------
+   ЛОВУШКА. js/whmcs.js зовёт autoCollapse('#nav', 30): пока innerHeight
+   у #nav не меньше 30px, последние пункты уезжают в выпадашку «Ещё».
+   Сейчас там 24px (16px x line-height 1.5), запас 6px. Поэтому здесь нельзя
+   line-height, padding, height и border на #nav, его li и a. Меняем только
+   цвет, вес и переход — высоту они не двигают.
+
+   Цветовая лестница взята у .link-add кита (#333 в покое, #666 на hover),
+   а не у .tabs-line__item (#999): у .tabs-line всегда есть активный пункт,
+   а WHMCS класс active на текущий раздел не ставит, и всё меню выглядело бы
+   выключенным. Размер 16px и так совпадает с китовым --fs-h6.
+   Перебивает: header.header .navbar a (sass/_layout.scss:132) — селектор
+   повторён один-в-один, радиус поражения тот же.                            */
+header.header .navbar a {
+  color: var(--text);
+  transition: color var(--hf-transition);
+}
+
+/* Ховера у пунктов меню сейчас физически нет: стоковый header.header .navbar a
+   глушит глобальный a:hover по специфичности. Возвращаем.                    */
+header.header .navbar a:hover,
+header.header .navbar a:focus {
+  color: var(--text-accented);
+}
+
+/* Открытая выпадашка — самый тёмный тон лестницы, кит .link:active.         */
+header.header .navbar .show > a,
+header.header .navbar a[aria-expanded=true] {
+  color: var(--neutral-950);
+}
+
+/* Вес пунктов верхнего уровня: 500, как у .tabs-line__item кита.
+   Скоуп .main-navbar-wrapper, чтобы не задеть .toolbar — он тоже .navbar-nav.
+   Вес на hover не меняем: это сдвинет ширину строки, а autoCollapse
+   пересчитывается только на resize.                                          */
+header.header .main-navbar-wrapper .navbar-nav > li > a {
+  font-weight: 500;
+}
+
+/* --- Выпадающие меню ------------------------------------------------------
+   Идёт после правил ссылок: у header.header .navbar .dropdown-menu a та же
+   специфичность, и решает порядок — внутри выпадашки на hover меняется
+   подложка, а не цвет текста.
+   Радиус 8px тема уже задала и он совпадает с --r-md кита.                  */
+header.header .navbar .dropdown-menu {
+  border-color: var(--border-muted);
+  box-shadow: var(--hf-shadow-card);
+}
+
+header.header .navbar .dropdown-menu a {
+  color: var(--text-accented);
+}
+
+header.header .navbar .dropdown-item:hover,
+header.header .navbar .dropdown-item:focus {
+  background-color: var(--bg-muted);
+  color: var(--text);
+}
+
+/* Чиним сломанный контраст. Сейчас сток даёт фон #ccc, а Bootstrap поверх —
+   белый текст: 1,6:1, текст практически не читается. Ставим кит-пару
+   --c-highlighter + --c-text, это 10,4:1.                                    */
+header.header .dropdown-item.active,
+header.header .dropdown-item:active {
+  background-color: var(--bg-lifted);
+  color: var(--text);
+}
+
+header.header .navbar .dropdown-divider {
+  border-top-color: var(--border-muted);
+}
+
+/* --- Фокус с клавиатуры ---------------------------------------------------
+   Сток гасит бутстраповское кольцо целиком (header.header .btn:focus
+   { box-shadow: none }), а в ките состояния focus нет ни у одного примитива —
+   это дыра кита, отмечена в докуметации. Даём минимальное корректное кольцо:
+   бренд-синее на белом, белое на чёрном топбаре. outline сток не использует,
+   конфликта нет.                                                             */
+header.header .btn:focus-visible,
+header.header .navbar a:focus-visible,
+header.header .form-control:focus-visible {
+  outline: var(--outline-md) solid var(--primary);
+  outline-offset: 2px;
+}
+
+header.header .topbar .btn:focus-visible {
+  outline-color: var(--white);
+}
+
+/* ==========================================================================
+   Поповер уведомлений
+   --------------------------------------------------------------------------
+   Bootstrap рендерит его в конец <body> (container: 'body', js/whmcs.js),
+   то есть ВНЕ header.header — селекторы с этим префиксом на него не подействуют.
+   Повторяем плоские стоковые селекторы из sass/_popover.scss.
+   ========================================================================== */
+/* font-family обязателен: Bootstrap жёстко ставит .popover системный стек,
+   поэтому сток и прописывал 'Open Sans'. Без этой строки поповер остался бы
+   единственным местом шапки без Inter.                                       */
+.popover-user-notifications {
+  border-color: var(--border-muted);
+  border-radius: var(--rounding-md);
+  box-shadow: var(--hf-shadow-card);
+  font-family: var(--hf-font-text);
+}
+
+/* Тултипы шапки («Switch Account», «Вернуться в админку») — тот же случай
+   с системным стеком от Bootstrap. Меняем только гарнитуру: перекраска
+   тултипов глобальна и относится к другой задаче.                            */
+.tooltip {
+  font-family: var(--hf-font-text);
+}
+
+/* Хвостик поповера. placement жёстко 'bottom', но покрываем оба направления. */
+.popover-user-notifications > .arrow::before {
+  border-top-color: var(--border-muted);
+  border-bottom-color: var(--border-muted);
+}
+
+.popover-user-notifications ul li {
+  border-bottom-color: var(--border-muted);
+}
+
+.popover-user-notifications ul li a {
+  color: var(--text-accented);
+  transition: background-color var(--hf-transition), color var(--hf-transition);
+}
+
+.popover-user-notifications ul li a:hover {
+  background-color: var(--bg-muted);
+  color: var(--text);
+}
+
+/* Статусные иконки. Сток красит check-circle, exclamation-circle и fa-warning —
+   последнее это имя из FontAwesome 4, а header.tpl выводит fa-exclamation-triangle,
+   поэтому предупреждения сейчас просто серые. fa-info-circle не покрыта совсем.
+   Покрываем реальные классы FA5 и приводим цвета к палитре кита.             */
+.popover-user-notifications ul li i.fas.fa-check-circle,
+.popover-user-notifications ul li i.far.fa-check-circle {
+  color: var(--success);
+}
+
+.popover-user-notifications ul li i.fas.fa-warning,
+.popover-user-notifications ul li i.far.fa-warning,
+.popover-user-notifications ul li i.fas.fa-exclamation-triangle,
+.popover-user-notifications ul li i.far.fa-exclamation-triangle {
+  color: var(--warning);
+}
+
+.popover-user-notifications ul li i.fas.fa-exclamation-circle,
+.popover-user-notifications ul li i.far.fa-exclamation-circle {
+  color: var(--error);
+}
+
+.popover-user-notifications ul li i.fas.fa-info-circle,
+.popover-user-notifications ul li i.far.fa-info-circle {
+  color: var(--primary);
+}
+
+/* Пустое состояние: в ките приглушённый текст, а не жирный.                  */
+.popover-user-notifications ul li.none {
+  color: var(--text-muted);
+  font-weight: 400;
 }

@@ -12,6 +12,18 @@
 <link href="{$__assetPath__}" rel="stylesheet">
 {/assetExists}
 
+{* Брендовый слой Hostfly. Подключается после стока и custom.css.
+   hf-kit.css  — UI-кит нового дизайна, изолирован под .hf-kit
+   hf-theme.css — шрифты, размеры контролов, сетка, оверрайды компонентов
+   Собираются из nexus/_dev: npm run build *}
+{assetExists file="hf-kit.css"}
+<link href="{$__assetPath__}?v={$versionHash}" rel="stylesheet">
+{/assetExists}
+{assetExists file="hf-theme.css"}
+<link href="{$__assetPath__}?v={$versionHash}" rel="stylesheet">
+{/assetExists}
+<script src="{assetPath file='hf-kit.js'}?v={$versionHash}" defer></script>
+
 <script>
     var csrfToken = '{$token}',
         markdownGuide = '{lang|addslashes key="markdown.title"}',

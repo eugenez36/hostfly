@@ -1,0 +1,21 @@
+{
+  "name": "hostfly-nexus-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Брендовый слой Hostfly поверх стоковой темы nexus (WHMCS 9.0)",
+  "scripts": {
+    "build": "sass --no-source-map --style=expanded scss/hf-kit.scss:../css/hf-kit.css scss/hf-theme.scss:../css/hf-theme.css && postcss ../css/hf-kit.css ../css/hf-theme.css --replace --no-map",
+    "watch": "sass --watch --no-source-map --style=expanded scss/hf-kit.scss:../css/hf-kit.css scss/hf-theme.scss:../css/hf-theme.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.83.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

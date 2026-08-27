@@ -118,6 +118,8 @@
   --h-search-sm: 52px;
   --h-tabs: 42px;
   --h-tabs-mobile: 36px;
+  --h-tabs-l: 74px; /* лист Tabs, вариант Additional */
+  --h-tabs-pill: 40px; /* лист Tabs, вариант Blog */
   --h-badge: 24px;
   --h-check: 24px;
   /* --- Прочее ----------------------------------------------------------- */
@@ -904,8 +906,7 @@
   transition: background var(--transition), color var(--transition);
 }
 .hf-kit .tabs__item:hover {
-  background: rgba(255, 255, 255, 0.6);
-  color: var(--c-body);
+  color: var(--c-primary);
 }
 .hf-kit .tabs__item.is-active {
   background: var(--c-white);
@@ -916,6 +917,91 @@
 .hf-kit .tabs__item[disabled] {
   color: var(--c-divider);
   pointer-events: none;
+}
+.hf-kit .tabs__item[disabled].is-active {
+  background: var(--c-bg-dark);
+  color: var(--c-element);
+  box-shadow: none;
+}
+.hf-kit {
+  /* --- Additional: крупный сегментный переключатель (лист Tabs, 74) --------
+     Отличается от базового не только размером: активный сегмент здесь
+     сплошной чёрный с белым текстом, а не белая пилюля с синим.             */
+}
+.hf-kit .tabs--solid {
+  height: var(--h-tabs-l);
+  padding: 0;
+  gap: 0;
+  background: transparent;
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.hf-kit .tabs--solid .tabs__item {
+  height: 100%;
+  padding: 0 28px;
+  border-radius: 0;
+  background: var(--c-highlighter);
+  color: var(--c-text);
+  font-size: var(--fs-h6);
+  font-weight: 700;
+}
+.hf-kit .tabs--solid .tabs__item:hover {
+  background: var(--c-bg-dark);
+  color: var(--c-text);
+}
+.hf-kit .tabs--solid .tabs__item.is-active {
+  background: var(--c-button);
+  color: var(--c-white);
+  box-shadow: none;
+}
+.hf-kit .tabs--solid .tabs__item[disabled] {
+  background: var(--c-bg);
+  color: var(--c-divider);
+}
+.hf-kit .tabs--solid .tabs__item[disabled].is-active {
+  background: var(--c-bg-dark);
+  color: var(--c-element);
+}
+.hf-kit {
+  /* --- Blog: отдельные пилюли (лист Tabs, 40) -----------------------------
+     Не сегментный контрол: элементы стоят порознь, у неактивных своя рамка. */
+}
+.hf-kit .tabs--pill {
+  height: auto;
+  padding: 0;
+  gap: 8px;
+  background: transparent;
+  flex-wrap: wrap;
+}
+.hf-kit .tabs--pill .tabs__item {
+  height: var(--h-tabs-pill);
+  padding: 0 18px;
+  border: 1px solid var(--c-divider);
+  border-radius: var(--r-md);
+  background: var(--c-white);
+  color: var(--c-text);
+  font-weight: 500;
+}
+.hf-kit .tabs--pill .tabs__item:hover {
+  background: var(--c-highlighter);
+  border-color: var(--c-highlighter);
+  color: var(--c-text);
+}
+.hf-kit .tabs--pill .tabs__item.is-active {
+  background: var(--c-button);
+  border-color: var(--c-button);
+  color: var(--c-white);
+  box-shadow: none;
+}
+.hf-kit .tabs--pill .tabs__item[disabled] {
+  background: var(--c-white);
+  border-color: var(--c-highlighter);
+  color: var(--c-divider);
+}
+.hf-kit .tabs--pill .tabs__item[disabled].is-active {
+  background: var(--c-bg-dark);
+  border-color: var(--c-bg-dark);
+  color: var(--c-element);
 }
 .hf-kit .tabs-line {
   display: flex;

@@ -22,6 +22,10 @@ creds.md
 /ftp/public/templates/*
 !/ftp/public/templates/nexus/
 
+# Прокси к API ЕГР: лежит в вебруте, потому что это самостоятельный эндпоинт,
+# а не часть темы. Версионируем — иначе он теряется при любом обновлении WHMCS.
+!/ftp/public/egr-proxy.php
+
 # Внутри темы
 /ftp/public/templates/nexus/_dev/temp/
 /ftp/public/templates/nexus/**/node_modules/

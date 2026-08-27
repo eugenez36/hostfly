@@ -7,6 +7,14 @@
 
 <script src="{$BASE_PATH_JS}/StatesDropdown.js"></script>
 <script src="{$BASE_PATH_JS}/PasswordStrength.js"></script>
+
+{* Автозаполнение реквизитов по УНП из ЕГР (HOS-15).
+   Скрипт лежит в теме, а не в /assets/js, чтобы версионироваться вместе с ней.
+   Серверная часть — /egr-proxy.php в вебруте: она обходит CORS и скрывает
+   от браузера обращения к egr.gov.by.
+   Грузим после StatesDropdown.js: тот на ready переименовывает input[name=state]
+   в #stateinput, и автозаполнение области опирается на этот id. *}
+<script src="{assetPath file='egr.js'}?v={$versionHash}" defer></script>
 <script>
     window.langPasswordStrength = "{lang key='pwstrength'}";
     window.langPasswordWeak = "{lang key='pwstrengthweak'}";

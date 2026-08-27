@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UI-кит Hostfly в теме ais</title>
+
+<!-- Собранный кит. Пересобрать: cd _dev && npx gulp styles -->
+<link rel="stylesheet" href="../css/ui-kit.css">
+
+<style>
+  /* Служебные стили самой демо-страницы, в кит не входят */
+  body { margin: 0; }
+  .kit-note {
+    padding: 16px 24px; background: #FFF1A1; color: #333;
+    font: 14px/22px Arial, sans-serif;
+  }
+  .kit-note code { background: rgba(0,0,0,.07); padding: 1px 5px; border-radius: 4px; }
+  .kit-section { padding: 64px 0; border-top: 1px solid var(--c-highlighter); }
+  .kit-grid { display: grid; gap: 32px 40px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); align-items: start; }
+  .kit-label { color: var(--c-element); font-size: var(--fs-m); margin-bottom: 12px; }
+  .swatch { border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--c-highlighter); }
+  .swatch__chip { height: 96px; display: grid; place-items: center; font-size: var(--fs-m); font-weight: 500; }
+  .swatch__meta { padding: 10px 12px; font-size: var(--fs-s); line-height: 1.5; }
+  .kit-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+  .kit-col { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+</style>
+</head>
+<body>
+
+<div class="kit-note">
+  Демо UI-кита внутри темы <code>ais</code>. Всё ниже обёрнуто в
+  <code>&lt;div class="hf-kit"&gt;</code> — вне обёртки стили и скрипт кита не
+  действуют, поэтому существующие страницы кабинета не затронуты.
+  Аккордеон, табы и слайдер интерактивны.
+</div>
+
+<div class="hf-kit">
+<main class="container">
+  <section style="padding:64px 0 0">
+    <h1 style="font-size:64px">UI-кит</h1>
+    <p class="body-l text-body" style="max-width:720px;margin-top:24px">
+      Компоненты и состояния, снятые с Figma-выгрузки в <code>app/new-design/ui-kit/</code>.
+      Все значения вынесены в CSS-переменные — см. <code>css/tokens.css</code>.
+    </p>
+  </section>
+
+  <!-- ==================================================== ЦВЕТА ======== -->
+  <section class="kit-section">
+    <h2 style="margin-bottom:32px">Цвета</h2>
+
+    <div class="kit-label">Neutral — текст и основные блоки</div>
+    <div class="kit-grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr));margin-bottom:40px">
+      <div class="swatch"><div class="swatch__chip" style="background:#000;color:#fff">#000000</div><div class="swatch__meta">Button</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#333;color:#fff">#333333</div><div class="swatch__meta">Text</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#666;color:#fff">#666666</div><div class="swatch__meta">Body</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#999;color:#fff">#999999</div><div class="swatch__meta">Element</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#D3D3D3">#D3D3D3</div><div class="swatch__meta">Divider</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#DEDEDE">#DEDEDE</div><div class="swatch__meta">Dark background</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#EDEDED">#EDEDED</div><div class="swatch__meta">Highlighter</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#F7F7F7">#F7F7F7</div><div class="swatch__meta">Background</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#FFF">#FFFFFF</div><div class="swatch__meta">White</div></div>
+    </div>
+
+    <div class="kit-label">Brand — акценты и CTA</div>
+    <div class="kit-grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr));margin-bottom:40px">
+      <div class="swatch"><div class="swatch__chip" style="background:#0027EA;color:#fff">#0027EA</div><div class="swatch__meta">Primary</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#F2F7FD">#F2F7FD</div><div class="swatch__meta">Secondary</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#181344;color:#fff">#181344</div><div class="swatch__meta">Логотип</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:linear-gradient(180deg,#8C31E8,#A86DF3);color:#fff">#8C31E8 → #A86DF3</div><div class="swatch__meta">Акцент логотипа</div></div>
+    </div>
+
+    <div class="kit-label">Additional — уведомления, валидация, теги</div>
+    <div class="kit-grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">
+      <div class="swatch"><div class="swatch__chip" style="background:#DB3032;color:#fff">#DB3032</div><div class="swatch__meta">Error / Label</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#FFF1A1">#FFF1A1</div><div class="swatch__meta">Warning / Label</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#117A24;color:#fff">#117A24</div><div class="swatch__meta">Green</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#00946A;color:#fff">#00946A</div><div class="swatch__meta">Mint</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#C530E7;color:#fff">#C530E7</div><div class="swatch__meta">Violet</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#FDF2F2">#FDF2F2</div><div class="swatch__meta">Red Light</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#FFF2E7">#FFF2E7</div><div class="swatch__meta">Orange Light</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#FAF6DE">#FAF6DE</div><div class="swatch__meta">Yellow Light</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#E7F2E9">#E7F2E9</div><div class="swatch__meta">Green Light</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#DEFBE6">#DEFBE6</div><div class="swatch__meta">Mint Light</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#DEEAFB">#DEEAFB</div><div class="swatch__meta">Blue Light</div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#E9DEFB">#E9DEFB</div><div class="swatch__meta">Violet Light</div></div>
+    </div>
+  </section>
+
+  <!-- =============================================== ТИПОГРАФИКА ======= -->
+  <section class="kit-section">
+    <h2 style="margin-bottom:32px">Типографика</h2>
+    <p class="body-m text-body" style="margin-bottom:32px">
+      В макете: <b>NT Somic</b> для заголовков и <b>Inter</b> для текста. Файлов шрифтов в выгрузке нет,
+      поэтому в превью подключён системный фолбэк — начертания отличаются от Figma, метрики (размер,
+      интерлиньяж, трекинг) соответствуют.
+    </p>
+    <div class="stack" style="gap:28px">
+      <div><div class="kit-label">H1 — 86 / 84 / Medium / 0%</div><div class="h1">Съешь же ещё этих мягких ф…</div></div>
+      <div><div class="kit-label">H2 — 40 / 48 / Medium / −3%</div><div class="h2">Съешь же ещё этих мягких французских булок, да выпей чаю</div></div>
+      <div><div class="kit-label">H3 — 32 / 38 / Medium · Regular / −2%</div><div class="h3">Съешь же ещё этих мягких французских булок, да выпей чаю</div><div class="h3 fw-400">Съешь же ещё этих мягких французских булок, да выпей чаю</div></div>
+      <div><div class="kit-label">H4 — 24 / 32 / Medium / −2%</div><div class="h4">Съешь же ещё этих мягких французских булок, да выпей чаю</div></div>
+      <div><div class="kit-label">H5 — 20 / 28 / Bold · Regular / −3%</div><div class="h5">Съешь же ещё этих мягких французских булок, да выпей чаю</div><div class="h5 fw-400">Съешь же ещё этих мягких французских булок, да выпей чаю</div></div>
+      <div><div class="kit-label">H6 — 16 / 24 / Bold · Medium / 0%</div><div class="h6">Съешь же ещё этих мягких французских булок, да выпей чаю</div><div class="h6 fw-500">Съешь же ещё этих мягких французских булок, да выпей чаю</div></div>
+      <div><div class="kit-label">Body L — 16 / 24 / Regular</div><div class="body-l">Съешь же ещё этих мягких французских булок, да выпей чаю</div></div>
+      <div><div class="kit-label">Body M — 14 / 22 / Regular · Light / −3%</div><div class="body-m">Съешь же ещё этих мягких французских булок, да выпей чаю</div></div>
+    </div>
+  </section>
+
+  <!-- =================================================== КНОПКИ ======== -->
+  <section class="kit-section">
+    <h2 style="margin-bottom:32px">Кнопки</h2>
+    <div class="kit-grid">
+      <div>
+        <div class="kit-label">L — 74, primary</div>
+        <div class="kit-col">
+          <a class="btn btn--l" href="#">Подобрать хостинг</a>
+          <span class="btn btn--l" style="background:var(--c-body)">Подобрать хостинг</span>
+          <span class="btn btn--l is-disabled">Подобрать хостинг</span>
+        </div>
+      </div>
+      <div>
+        <div class="kit-label">L — 74, secondary</div>
+        <div class="kit-col">
+          <a class="btn btn--l btn--secondary" href="#">Получить консультацию</a>
+          <span class="btn btn--l" style="background:var(--c-button)">Получить консультацию</span>
+          <span class="btn btn--l btn--secondary is-disabled">Получить консультацию</span>
+        </div>
+      </div>
+      <div>
+        <div class="kit-label">M — 56</div>
+        <div class="kit-col">
+          <a class="btn" href="#">Перезвонить мне</a>
+          <a class="btn btn--secondary" href="#">Получить консультацию</a>
+          <a class="btn btn--accent" href="#">Заказать</a>
+          <span class="btn btn--accent is-disabled">Заказать</span>
+        </div>
+      </div>
+      <div>
+        <div class="kit-label">S — 36 / XS — 32</div>
+        <div class="kit-col">
+          <button class="btn btn--s btn--soft" type="button">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.8"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Искать
+          </button>
+          <button class="btn btn--xs" type="button">Войти</button>
+          <button class="btn btn--xs btn--secondary" type="button">Стать клиентом</button>
+          <span class="btn btn--xs is-disabled">Войти</span>
+        </div>
+      </div>
+      <div>
+        <div class="kit-label">Icon M — 48 / Icon S — 32</div>
+        <div class="kit-row">
+          <button class="btn-icon" type="button" aria-label="Вперёд"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h11m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="btn-icon btn-icon--outline" type="button" aria-label="Вперёд"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h11m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="btn-icon btn-icon--s" type="button" aria-label="Назад"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M11 4l-5 5 5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="btn-cart" type="button" aria-label="В корзину"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h2l2 9h9l2-6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/><circle cx="15" cy="16" r="1.2" fill="currentColor"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================== ПОЛЯ ========= -->
+  <section class="kit-section">
+    <h2 style="margin-bottom:32px">Поля ввода</h2>
+    <div class="kit-grid">
+      <div class="field"><span class="field__label">Название вашей компании</span><input class="input" type="text" placeholder="email@email.com"></div>
+      <div class="field"><span class="field__label">Название вашей компании</span><input class="input" type="text" value="email@email.com"></div>
+      <div class="field"><span class="field__label">Название вашей компании</span><input class="input" type="text" placeholder="email@email.com" disabled></div>
+      <div class="field is-error"><span class="field__label"><span class="req">*</span> Название вашей компании</span><input class="input" type="text" value="email@email.com"><span class="field__error">Ошибка валидации</span></div>
+      <div class="field"><span class="field__label">Комментарий</span><textarea class="textarea" placeholder="Что будем обсуждать?"></textarea></div>
+      <div class="field">
+        <span class="field__label">Ваш номер телефона</span>
+        <div class="input-phone">
+          <span class="input-phone__country"><span class="input-phone__flag"></span>+375
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <input type="tel" placeholder="(00) 000-00-00" aria-label="Номер телефона">
+        </div>
+      </div>
+    </div>
+
+    <div class="kit-label" style="margin:40px 0 12px">Desktop Search — 82</div>
+    <form class="search" onsubmit="return false">
+      <input class="search__input" type="text" placeholder="Введите домен или ключевую фразу" aria-label="Домен">
+      <button class="btn btn--soft" type="submit">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Проверить домен
+      </button>
+    </form>
+
+    <div class="kit-label" style="margin:32px 0 12px">Additional Search — 52</div>
+    <form class="search search--sm" onsubmit="return false">
+      <input class="search__input" type="text" placeholder="Введите вопрос и найдите решение" aria-label="Вопрос">
+      <button class="btn btn--soft btn--s" type="submit">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.8"/><path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        Искать
+      </button>
+    </form>
+  </section>
+
+  <!-- ======================================= ЧЕКБОКСЫ / ТАБЫ / ПРОЧЕЕ == -->
+  <section class="kit-section">
+    <h2 style="margin-bottom:32px">Контролы</h2>
+    <div class="kit-grid">
+      <div>
+        <div class="kit-label">Checkbox — 24</div>
+        <div class="kit-col">
+          <label class="check"><input type="checkbox"><span class="check__box"></span><span class="check__text">Корпоративная почта</span></label>
+          <label class="check"><input type="checkbox" checked><span class="check__box"></span><span class="check__text">Другое</span></label>
+          <label class="check"><input type="checkbox" checked disabled><span class="check__box"></span><span class="check__text">Другое</span></label>
+        </div>
+      </div>
+      <div>
+        <div class="kit-label">Radio — 24</div>
+        <div class="kit-col">
+          <label class="check radio"><input type="radio" name="kit-r"><span class="check__box"></span><span class="check__text">Корпоративный сайт</span></label>
+          <label class="check radio"><input type="radio" name="kit-r" checked><span class="check__box"></span><span class="check__text">Корпоративный сайт</span></label>
+          <label class="check radio"><input type="radio" name="kit-r2" disabled><span class="check__box"></span><span class="check__text">Корпоративный сайт</span></label>
+        </div>
+      </div>
+      <div>
+        <div class="kit-label">Switch</div>
+        <div class="kit-col">
+          <label class="switch"><input type="checkbox"><span class="switch__track"></span><span class="body-m">Показывать занятые</span></label>
+          <label class="switch"><input type="checkbox" checked><span class="switch__track"></span><span class="body-m">Показывать занятые</span></label>
+        </div>
+      </div>
+      <div>
+        <div class="kit-label">Tooltip — 20</div>
+        <div class="kit-row">
+          <span class="tip"><button class="tip__trigger" type="button">?</button>
+            <span class="tip__body body-m">Соответствие стандарту PCI DSS подтверждает возможность дата-центра предоставлять услуги торгово-сервисным предприятиям, банкам-эквайерам и эмитентам.</span>
+          </span>
+          <span class="body-m text-body">— наведите курсор</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kit-label" style="margin:40px 0 12px">Tabs — desktop 42</div>
+    <div class="tabs">
+      <button class="tabs__item" type="button">1 мес</button>
+      <button class="tabs__item" type="button">3 мес</button>
+      <button class="tabs__item" type="button">6 мес</button>
+      <button class="tabs__item is-active" type="button">1 год</button>
+      <button class="tabs__item" type="button">2 года</button>
+      <button class="tabs__item" type="button" disabled>3 года</button>
+    </div>
+
+    <div class="kit-label" style="margin:32px 0 12px">Tabs — подчёркнутые</div>
+    <div class="tabs-line">
+      <button class="tabs-line__item is-active" type="button">Тестовый период</button>
+      <button class="tabs-line__item" type="button">Резервное копирование</button>
+      <button class="tabs-line__item" type="button">Увеличение мощности</button>
+      <button class="tabs-line__item" type="button">Бесплатный SSL</button>
+    </div>
+  </section>
+
+  <!-- ============================================ БЕЙДЖИ / ЧИПЫ ======== -->
+  <section class="kit-section">
+    <h2 style="margin-bottom:32px">Бейджи, чипы, ссылки</h2>
+
+    <div class="kit-label">Badges — 24</div>
+    <div class="kit-row" style="margin-bottom:32px">
+      <span class="badge badge--red">Рекомендуем</span>
+      <span class="badge badge--orange">Рекомендуем</span>
+      <span class="badge badge--yellow">Рекомендуем</span>
+      <span class="badge badge--green">Рекомендуем</span>
+      <span class="badge badge--blue">Рекомендуем</span>
+      <span class="badge badge--violet">Рекомендуем</span>
+      <span class="badge">Рекомендуем</span>
+      <span class="badge badge--error">Домен занят</span>
+      <span class="badge badge--ok">Домен свободен</span>
+    </div>
+
+    <div class="kit-label">Chips — 24</div>
+    <div class="kit-row" style="margin-bottom:32px">
+      <span class="chip">.BY <button type="button" aria-label="Убрать">✕</button></span>
+      <span class="chip">.RU <button type="button" aria-label="Убрать">✕</button></span>
+      <span class="chip">.COM <button type="button" aria-label="Убрать">✕</button></span>
+      <span class="chip">.SITE <button type="button" aria-label="Убрать">✕</button></span>
+      <span class="chip">.XYZ <button type="button" aria-label="Убрать">✕</button></span>
+      <a class="link-primary" href="#">Еще (5) ›</a>
+    </div>
+
+    <div class="kit-grid">
+      <div>
+        <div class="kit-label">Links — Main 22</div>
+        <div class="kit-col">
+          <a class="link" href="#">Попробовать бесплатно</a>
+          <span class="link is-disabled">Попробовать бесплатно</span>
+        </div>
+      </div>
+      <div>
+        <div class="kit-label">Links — Additional 22</div>
+        <div class="kit-col"><a class="link-add" href="#">Конструктор сайтов</a></div>
+      </div>
+      <div>
+        <div class="kit-label">Links — Primary</div>
+        <div class="kit-col">
+          <a class="link-primary" href="#">Все новости
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h11m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="link-primary is-underline" href="#">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8m0 0V6m0 7H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Перенос сайта
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ ПАГИНАЦИЯ ======== -->
+  <section class="kit-section">
+    <h2 style="margin-bottom:32px">Пагинация</h2>
+    <div class="pagination">
+      <span class="pagination__count">1-20 из 68</span>
+      <div class="pagination__pages">
+        <button class="pagination__nav" type="button" aria-label="Назад"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4l-5 5 5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <a class="pagination__item is-active" href="#">1</a>
+        <a class="pagination__item" href="#">2</a>
+        <a class="pagination__item" href="#">3</a>
+        <a class="pagination__item" href="#">4</a>
+        <span class="pagination__gap">...</span>
+        <a class="pagination__item" href="#">20</a>
+        <button class="pagination__nav" type="button" aria-label="Вперёд"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+      <label class="pagination__per">Показывать <select><option>20</option><option>50</option></select></label>
+    </div>
+  </section>
+
+  <!-- ================================================== КАРТОЧКИ ======= -->
+  <section class="kit-section">
+    <h2 style="margin-bottom:32px">Карточки и блоки</h2>
+    <div class="grid grid-3" style="margin-bottom:40px">
+      <article class="product-card product-card--blue" style="min-height:0">
+        <h3>Cloud хостинг</h3>
+        <p class="text-body">Хостинг сайтов в облаке под любые задачи.</p>
+        <div class="product-card__specs"><span class="pill">1 сайт</span><span class="pill">MySQL - неограничено</span></div>
+        <div class="product-card__foot"><div class="product-card__price">от <b>5,99</b> BYN/мес.</div><a class="btn btn--block" href="store/hosting.html">Посмотреть тарифы</a></div>
+      </article>
+      <article class="product-card product-card--violet" style="min-height:0">
+        <h3>Cloud VPS</h3>
+        <p class="text-body">Хостинг виртуальных серверов в облаке.</p>
+        <div class="product-card__specs"><span class="pill">1 vCPU</span><span class="pill">RAM 2Gb</span></div>
+        <div class="product-card__foot"><div class="product-card__price">от <b>27,99</b> BYN/мес.</div><a class="btn btn--block" href="store/hosting.html">Посмотреть тарифы</a></div>
+      </article>
+      <article class="product-card product-card--grey" style="min-height:0">
+        <h3>Dedicated</h3>
+        <p class="text-body">Аренда физического сервера.</p>
+        <div class="product-card__specs"><span class="pill">1 vCPU</span><span class="pill">SSD 40Gb</span></div>
+        <div class="product-card__foot"><div class="product-card__price">от <b>399,99</b> BYN/мес.</div><a class="btn btn--block" href="store/hosting.html">Посмотреть тарифы</a></div>
+      </article>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="domain-suggest">
+        <div class="domain-suggest__head"><span class="domain-suggest__name">вхале.бел</span><span class="badge badge--yellow">Мы рекомендуем</span></div>
+        <span class="domain-suggest__price"><b>16,00</b><span>BYN</span></span>
+        <button class="btn-cart" type="button" aria-label="В корзину"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h2l2 9h9l2-6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/><circle cx="15" cy="16" r="1.2" fill="currentColor"/></svg></button>
+      </div>
+      <aside class="order-box" style="position:static">
+        <h3>Ваш заказ</h3>
+        <div class="order-box__items"><div class="order-box__item"><span>whale.trade</span><span>37,00 BYN</span></div></div>
+        <div class="order-box__total"><span class="body-l">Итого</span><span><b>74,00</b> <span class="body-m">BYN</span></span></div>
+        <a class="btn btn--block" href="#">Перейти в заказ</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================================================= АККОРДЕОН ======= -->
+  <section class="kit-section">
+    <h2 style="margin-bottom:32px">Аккордеон</h2>
+    <div class="accordion">
+      <div class="acc">
+        <button class="acc__btn" type="button" aria-expanded="false">Предоставляется ли бесплатный SSL-сертификат для VPS?
+          <svg class="acc__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14m0 0l6-6m-6 6l-6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="acc__body"><p class="body-m">Закрытое состояние — белая карточка с границей.</p></div>
+      </div>
+      <div class="acc is-open">
+        <button class="acc__btn" type="button" aria-expanded="true">Предоставляется ли бесплатный SSL-сертификат для VPS?
+          <svg class="acc__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14m0 0l6-6m-6 6l-6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="acc__body">
+          <p class="body-m">Открытое состояние — подложка Secondary, стрелка развёрнута.</p>
+          <div class="acc__also">
+            <div class="acc__also-title">Смотрите так же</div>
+            <a class="link-primary is-underline" href="#"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8m0 0V6m0 7H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Продление хостинга</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="kit-section">
+    <h2 style="margin-bottom:32px">Зоны и списки доменов</h2>
+    <div class="kit-label">tld-row — плитки зон</div>
+      <div class="tld-row">
+        <div class="tld">
+          <div class="tld__head">
+            <label class="check"><input type="checkbox" checked><span class="check__box"></span></label>
+            <span class="tld__name">.бел</span><span class="badge badge--violet">хит</span>
+          </div>
+          <div class="tld__price">38,50 BYN</div>
+        </div>
+        <div class="tld">
+          <div class="tld__head">
+            <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+            <span class="tld__name">.com</span><span class="badge badge--violet">хит</span>
+          </div>
+          <div class="tld__price">38,50 BYN</div>
+        </div>
+        <div class="tld">
+          <div class="tld__head">
+            <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+            <span class="badge badge--blue">%</span><span class="tld__name">.net</span>
+          </div>
+          <div class="tld__price">38,50 BYN<s>38,50 BYN</s></div>
+        </div>
+        <div class="tld">
+          <div class="tld__head">
+            <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+            <span class="tld__name">.org</span><span class="badge badge--violet">хит</span>
+          </div>
+          <div class="tld__price">38,50 BYN</div>
+        </div>
+        <div class="tld">
+          <div class="tld__head">
+            <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+            <span class="tld__name">.biz</span>
+          </div>
+          <div class="tld__price">38,50 BYN</div>
+        </div>
+        <div class="tld">
+          <div class="tld__head">
+            <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+            <span class="tld__name">.info</span>
+          </div>
+          <div class="tld__price">38,50 BYN</div>
+        </div>
+        <div class="tld">
+          <div class="tld__head">
+            <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+            <span class="tld__name">.pro</span>
+          </div>
+          <div class="tld__price">38,50 BYN</div>
+        </div>
+        <div class="tld">
+          <div class="tld__head">
+            <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+            <span class="tld__name">.ru</span>
+          </div>
+          <div class="tld__price">38,50 BYN</div>
+        </div>
+        <div class="tld">
+          <div class="tld__head">
+            <label class="check"><input type="checkbox"><span class="check__box"></span></label>
+            <span class="tld__name">.top</span>
+          </div>
+          <div class="tld__price">38,50 BYN</div>
+        </div>
+      </div>
+    <div class="kit-label" style="margin-top:40px">domain-list — результаты подбора, включая занятый домен</div>
+        <div class="domain-list" data-domain-list>
+          <div class="domain-row is-taken">
+            <span class="domain-row__name">whale.by</span>
+            <span><span class="badge badge--error">Домен занят</span></span>
+            <span class="domain-row__price"></span>
+            <a class="link-primary" href="#">WHOIS</a>
+          </div>
+          <div class="domain-row">
+            <span class="domain-row__name">whale.бел</span>
+            <span><span class="badge badge--ok">Домен свободен</span></span>
+            <span class="domain-row__price"><b>37,00</b><span>BYN</span></span>
+            <button class="btn-cart" type="button" data-add-domain="whale.бел" data-price="37" aria-label="Добавить в заказ">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h2l2 9h9l2-6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/><circle cx="15" cy="16" r="1.2" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div class="domain-row">
+            <span class="domain-row__name">whale2.by</span>
+            <span><span class="badge badge--ok">Домен свободен</span></span>
+            <span class="domain-row__price"><b>37,00</b><span>BYN</span></span>
+            <button class="btn-cart" type="button" data-add-domain="whale2.by" data-price="37" aria-label="Добавить в заказ">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h2l2 9h9l2-6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/><circle cx="15" cy="16" r="1.2" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <div class="domain-row">
+            <span class="domain-row__name">whale3.by</span>
+            <span><span class="badge badge--ok">Домен свободен</span></span>
+            <span class="domain-row__price"><b>37,00</b><span>BYN</span></span>
+            <button class="btn-cart is-added" type="button" aria-label="Добавлено">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="domain-row" style="background:var(--c-bg)">
+            <span class="domain-row__name">whale4.бел</span>
+            <span><span class="badge badge--ok">Домен свободен</span></span>
+            <span class="domain-row__price"><b>37,00</b><span>BYN</span></span>
+            <button class="btn-cart" type="button" data-add-domain="whale4.бел" data-price="37"
+                    style="background:var(--c-primary);color:#fff" aria-label="Добавить в заказ">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h2l2 9h9l2-6H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/><circle cx="15" cy="16" r="1.2" fill="currentColor"/></svg>
+            </button>
+          </div>
+        </div>
+  </section>
+
+  <section class="kit-section">
+    <h2 style="margin-bottom:32px">Слайдер</h2>
+    <div class="kit-label">Стрелки и точки работают — ../js/ui-kit.js</div>
+      <div class="slider" data-slider>
+        <div class="section__head">
+          <h2>Что говорят клиенты о Hostfly</h2>
+          <div class="slider__nav">
+            <button class="btn-icon" type="button" data-slider-prev aria-label="Назад">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4l-5 5 5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="btn-icon" type="button" data-slider-next aria-label="Вперёд">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="slider__viewport">
+          <div class="slider__track">
+            <div class="slider__slide"><div class="card review">
+              <div class="review__head"><div class="review__logo">W</div><div><div class="fw-500">whale.by</div><div class="body-m text-mute">Студия разработки полного цикла</div></div></div>
+              <div class="review__quote">“</div>
+              <p class="body-m">Порядок перехода прав индивидуального предпринимателя на администрирование доменного имени, зарегистрированного.</p>
+              <div class="review__foot"><span class="fw-500">5.0</span><span class="review__stars">★★★★★</span><a class="link-primary" href="#" style="margin-left:auto">Смотреть</a></div>
+            </div></div>
+            <div class="slider__slide"><div class="card review">
+              <div class="review__head"><div class="review__logo">W</div><div><div class="fw-500">whale.by</div><div class="body-m text-mute">Студия разработки полного цикла</div></div></div>
+              <div class="review__quote">“</div>
+              <p class="body-m">Порядок перехода прав индивидуального предпринимателя на администрирование доменного имени, зарегистрированного в Национальной доменной зоне, к созданной им коммерческой организации</p>
+              <div class="review__foot"><span class="fw-500">5.0</span><span class="review__stars">★★★★★</span><a class="link-primary" href="#" style="margin-left:auto">Смотреть</a></div>
+            </div></div>
+            <div class="slider__slide"><div class="card review">
+              <div class="review__head"><div class="review__logo">W</div><div><div class="fw-500">whale.by</div><div class="body-m text-mute">Студия разработки полного цикла</div></div></div>
+              <div class="review__quote">“</div>
+              <p class="body-m">Порядок перехода прав индивидуального предпринимателя на администрирование доменного имени, зарегистрированного в Национальной доменной зоне, к созданной им коммерческой организации</p>
+              <div class="review__foot"><span class="fw-500">5.0</span><span class="review__stars">★★★★★</span><a class="link-primary" href="#" style="margin-left:auto">Смотреть</a></div>
+            </div></div>
+            <div class="slider__slide"><div class="card review">
+              <div class="review__head"><div class="review__logo">W</div><div><div class="fw-500">whale.by</div><div class="body-m text-mute">Студия разработки полного цикла</div></div></div>
+              <div class="review__quote">“</div>
+              <p class="body-m">Порядок перехода прав индивидуального предпринимателя на администрирование доменного имени, зарегистрированного в Национальной доменной зоне, к созданной им коммерческой организации</p>
+              <div class="review__foot"><span class="fw-500">5.0</span><span class="review__stars">★★★★★</span><a class="link-primary" href="#" style="margin-left:auto">Смотреть</a></div>
+            </div></div>
+            <div class="slider__slide"><div class="card review">
+              <div class="review__head"><div class="review__logo">W</div><div><div class="fw-500">whale.by</div><div class="body-m text-mute">Студия разработки полного цикла</div></div></div>
+              <div class="review__quote">“</div>
+              <p class="body-m">Сервис на связи круглосуточно: обращение в чат решается за минуты, миграция прошла без простоя.</p>
+              <div class="review__foot"><span class="fw-500">5.0</span><span class="review__stars">★★★★★</span><a class="link-primary" href="#" style="margin-left:auto">Смотреть</a></div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="kit-section">
+    <h2 style="margin-bottom:32px">Логотипы</h2>
+      <div class="logo-wall" style="padding-top:48px">
+        <div class="logo-wall__item">bepaid</div>
+        <div class="logo-wall__item">Green</div>
+        <div class="logo-wall__item">ТРАЙПЛ</div>
+        <div class="logo-wall__item">МТБанк</div>
+        <div class="logo-wall__item">mak.by</div>
+        <div class="logo-wall__item">bepaid</div>
+        <div class="logo-wall__item">Green</div>
+        <div class="logo-wall__item">ТРАЙПЛ</div>
+        <div class="logo-wall__item">МТБанк</div>
+        <div class="logo-wall__item">mak.by</div>
+        <div class="logo-wall__item">bepaid</div>
+        <div class="logo-wall__item">Green</div>
+      </div>
+  </section>
+
+</main>
+</div>
+
+<script src="../js/ui-kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Списки доменов / таблицы
+   ========================================================================== */
+.hf-kit {
+  /* Карточка подобранного домена: верхняя строка — имя и бейдж,
+     нижняя — цена слева, кнопка «в корзину» справа. */
+  .domain-suggest {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 18px;
+    column-gap: 16px;
+    align-items: center;
+    padding: 24px 28px;
+    border-radius: var(--r-lg);
+    background: var(--c-bg);
+  }
+  .domain-suggest__head {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+  .domain-suggest__name {
+    font-family: var(--font-display);
+    font-size: var(--fs-h5);
+    font-weight: 500;
+    overflow-wrap: anywhere;
+  }
+  .domain-suggest__price { display: flex; align-items: baseline; gap: 6px; min-width: 0; }
+  .domain-suggest__price b { font-family: var(--font-display); font-size: var(--fs-h3); font-weight: 500; }
+  .domain-suggest__price span { font-size: var(--fs-m); color: var(--c-body); }
+  .domain-suggest .btn-cart { justify-self: end; }
+
+  .domain-list { display: flex; flex-direction: column; }
+  .domain-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 180px 160px 48px;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 24px;
+    border-bottom: 1px solid var(--c-highlighter);
+    border-radius: var(--r-md);
+    transition: background var(--transition);
+  }
+  .domain-row:hover { background: var(--c-bg); }
+  .domain-row__name { font-size: var(--fs-h6); font-weight: 500; }
+  .domain-row__price { text-align: right; display: flex; align-items: baseline; justify-content: flex-end; gap: 6px; }
+  .domain-row__price b { font-family: var(--font-display); font-size: var(--fs-h4); font-weight: 500; }
+  .domain-row__price span { font-size: var(--fs-m); color: var(--c-body); }
+  .domain-row.is-taken .domain-row__price { visibility: hidden; }
+  @media (max-width: 900px) {
+    .domain-row { grid-template-columns: minmax(0, 1fr) auto; row-gap: 10px; }
+    .domain-row__price { justify-content: flex-start; }
+  }
+
+  /* Корзина «Ваш заказ» */
+  .order-box {
+    padding: 32px;
+    border-radius: var(--r-xl);
+    background: var(--c-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: sticky;
+    top: 24px;
+  }
+  .order-box__items { display: flex; flex-direction: column; }
+  .order-box__item {
+    display: flex; justify-content: space-between; gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--c-bg-dark);
+    color: var(--c-body);
+    font-size: var(--fs-l);
+  }
+  .order-box__total { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  .order-box__total b { font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 500; }
+
+  /* Строка TLD с чекбоксами и ценами */
+  .tld-row {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    gap: 16px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--c-highlighter);
+  }
+  .tld { display: flex; flex-direction: column; gap: 4px; }
+  .tld__head { display: flex; align-items: center; gap: 8px; }
+  .tld__name { font-size: var(--fs-h6); font-weight: 700; }
+  .tld__price { font-size: var(--fs-s); color: var(--c-body); padding-left: 36px; }
+  .tld__price s { display: block; color: var(--c-divider); }
+  @media (max-width: 1200px) { .tld-row { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+  @media (max-width: 720px)  { .tld-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+}

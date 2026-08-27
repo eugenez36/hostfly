@@ -1,0 +1,45 @@
+/*!
+ * ==========================================================================
+ * Hostfly — UI-кит нового дизайна
+ * ==========================================================================
+ *
+ * Источник: app/new-design/ui-kit/ (14 листов Figma) → app/preview-new-site/css/
+ * Собирается существующей задачей gulp `styles` в ../css/ui-kit.css,
+ * отдельным файлом от all.min.css — стили кабинета не затрагиваются.
+ *
+ * ИЗОЛЯЦИЯ. Все правила, кроме токенов, лежат под классом `.hf-kit`.
+ * Тема ais построена на Bootstrap, где уже заняты `.btn`, `.badge`,
+ * `.pagination`, `.tabs`, `.input` и другие имена из кита. Без обёртки
+ * кит переопределил бы их на всех страницах кабинета.
+ *
+ * Применение: любой блок, которому нужен новый дизайн, оборачивается в
+ *   <div class="hf-kit"> … </div>
+ * и внутри работает разметка из превью без изменений: `btn btn--accent`,
+ * `field`, `tabs`, `badge badge--ok` и т. д.
+ *
+ * Токены объявлены в :root глобально — это только CSS-переменные,
+ * сами по себе они ничего не стилизуют.
+ *
+ * Демо всех компонентов: _dev/ui-kit-preview.html
+ * Поведение (аккордеон, табы, слайдер): ../js/ui-kit.js
+ */
+
+@import "ui-kit/tokens";
+@import "ui-kit/base";
+
+@import "ui-kit/buttons";
+@import "ui-kit/forms";
+@import "ui-kit/controls";
+@import "ui-kit/tabs";
+@import "ui-kit/badges";
+@import "ui-kit/tooltip";
+@import "ui-kit/pagination";
+
+/* Составные блоки с листов final-theme */
+@import "ui-kit/cards";
+@import "ui-kit/accordion";
+@import "ui-kit/domain-list";
+@import "ui-kit/slider";
+@import "ui-kit/logo-wall";
+
+@import "ui-kit/responsive";

@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Тултип
+   ========================================================================== */
+.hf-kit {
+  .tip { position: relative; display: inline-flex; vertical-align: middle; }
+  .tip__trigger {
+    width: 20px; height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--c-highlighter);
+    color: var(--c-body);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 0;
+    text-align: center;
+  }
+  .tip__trigger:hover { background: var(--c-bg-dark); color: var(--c-text); }
+  .tip__body {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 340px;
+    padding: 16px 20px;
+    border-radius: var(--r-lg);
+    background: var(--c-button);
+    color: var(--c-white);
+    font-size: var(--fs-l);
+    line-height: var(--lh-l);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), visibility var(--transition);
+    z-index: 20;
+  }
+  .tip__body::after {
+    content: "";
+    position: absolute;
+    top: 100%; left: 50%;
+    transform: translateX(-50%);
+    border: 7px solid transparent;
+    border-top-color: var(--c-button);
+  }
+  .tip:hover .tip__body, .tip:focus-within .tip__body { opacity: 1; visibility: visible; }
+}

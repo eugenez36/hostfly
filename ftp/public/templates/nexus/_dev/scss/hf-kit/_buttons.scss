@@ -34,10 +34,10 @@
   .btn--secondary {
     background: var(--c-white);
     border-color: var(--c-button);
-    color: var(--c-text);
+    color: var(--c-button);
   }
   .btn--secondary:hover  { background: var(--c-button); color: var(--c-white); }
-  .btn--secondary:active { background: var(--c-body); color: var(--c-white); }
+  .btn--secondary:active { background: var(--c-body); border-color: var(--c-body); color: var(--c-white); }
   .btn--secondary[disabled], .btn--secondary.is-disabled {
     background: var(--c-white);
     border-color: var(--c-highlighter);
@@ -61,14 +61,15 @@
   /* Soft — светло-синяя подложка (кнопка поиска, «Искать») */
   .btn--soft {
     background: var(--c-blue-light);
-    color: var(--c-text);
+    color: var(--c-button);
   }
   .btn--soft:hover  { background: var(--c-button); color: var(--c-white); }
-  .btn--soft:active { background: var(--c-blue-light); color: var(--c-text); }
+  .btn--soft:active { background: var(--c-blue-light); color: var(--c-button); }
 
   /* Размеры */
   .btn--l  { height: var(--h-btn-l);  padding: 0 36px; }
-  .btn--s  { height: var(--h-btn-s);  padding: 0 16px; font-size: var(--fs-s); }
+  .btn--s  { height: var(--h-btn-s);  padding: 0 16px; font-size: var(--fs-s);
+             text-transform: uppercase; letter-spacing: .02em; }
   .btn--xs { height: var(--h-btn-xs); padding: 0 14px; font-size: var(--fs-s);
              text-transform: uppercase; letter-spacing: .02em; border-radius: var(--r-sm); }
   .btn--block { width: 100%; }
@@ -84,17 +85,25 @@
     border: 1px solid transparent;
     border-radius: var(--r-pill);
     background: var(--c-highlighter);
-    color: var(--c-text);
+    color: var(--c-button);
     transition: background var(--transition), color var(--transition),
                 border-color var(--transition);
   }
-  .btn-icon:hover  { background: var(--c-element); color: var(--c-white); }
+  .btn-icon:hover  { background: var(--c-divider); color: var(--c-button); }
   .btn-icon--outline {
     background: var(--c-white);
     border-color: var(--c-button);
   }
   .btn-icon--outline:hover { background: var(--c-button); color: var(--c-white); }
-  .btn-icon--s { width: var(--h-icon-s); height: var(--h-icon-s); }
+  /* Icon S на листе — иконка без подложки: вокруг неё чистый фон, рамки нет.
+     Поэтому не просто уменьшенный .btn-icon, а сброс заливки.               */
+  .btn-icon--s {
+    width: var(--h-icon-s);
+    height: var(--h-icon-s);
+    background: transparent;
+    border-color: transparent;
+  }
+  .btn-icon--s:hover { background: transparent; color: var(--c-element); }
 
   /* Квадратная кнопка «в корзину» из списка доменов */
   .btn-cart {

@@ -43,7 +43,7 @@
   p:last-child { margin-bottom: 0; }
 
   /* --- Текстовые утилиты --------------------------------------------------- */
-  .body-l    { font-size: var(--fs-l); line-height: var(--lh-l); }
+  .body-l    { font-size: var(--fs-l); line-height: var(--lh-l); letter-spacing: 0; }
   .body-m    { font-size: var(--fs-m); line-height: var(--lh-m); letter-spacing: var(--ls-m); }
   .body-s    { font-size: var(--fs-s); line-height: var(--lh-s); }
   .text-body { color: var(--c-body); }
@@ -54,6 +54,7 @@
   .text-right   { text-align: right; }
   .nowrap       { white-space: nowrap; }
   .strike       { text-decoration: line-through; color: var(--c-element); }
+  .fw-300 { font-weight: 300; }
   .fw-400 { font-weight: 400; }
   .fw-500 { font-weight: 500; }
   .fw-700 { font-weight: 700; }
@@ -66,41 +67,53 @@
   }
 
   /* --- Ссылки -------------------------------------------------------------
-     Main: подчёркнутая, серая → чёрная на hover.
+     Значения сверены с листом ui-kit/materials/Links.png.
+     Main: подчёркнутая, светло-серая → тёмная на hover.
      Additional: жирная без подчёркивания, чёрная → серая на hover.
-     Primary: синяя, для «Все новости», «Показать ещё», WHOIS и т.п.        */
+     Primary: синяя с иконкой; на hover меняет ОТТЕНОК на фиолетовый,
+     а не гасится прозрачностью — это заметная разница с прежним переносом. */
   a { color: inherit; }
 
   .link {
-    color: var(--c-body);
+    color: var(--c-element);
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
     transition: color var(--transition);
   }
   .link:hover  { color: var(--c-text); }
-  .link:active { color: var(--c-button); }
+  .link:active { color: var(--c-text); }
   .link.is-disabled { color: var(--c-divider); pointer-events: none; }
 
   .link-add {
     font-weight: 700;
     text-decoration: none;
-    color: var(--c-text);
+    color: var(--c-button);
     transition: color var(--transition);
   }
   .link-add:hover { color: var(--c-body); }
+  .link-add.is-disabled { color: var(--c-divider); pointer-events: none; }
 
   .link-primary {
     color: var(--c-primary);
     text-decoration: none;
-    font-weight: 500;
+    font-size: var(--fs-m);
+    font-weight: 700;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    transition: opacity var(--transition);
+    gap: 12px;
+    transition: color var(--transition);
   }
-  .link-primary:hover { opacity: .7; }
-  .link-primary.is-underline { text-decoration: underline; text-underline-offset: 3px; }
+  .link-primary:hover { color: var(--c-violet); }
+  .link-primary.is-disabled { color: var(--c-divider); pointer-events: none; }
+  /* Подчёркнутый вариант на листе набран обычным весом и кеглем Body L */
+  .link-primary.is-underline {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    font-size: var(--fs-l);
+    font-weight: 400;
+  }
 
   /* --- Сетка --------------------------------------------------------------- */
   .container {

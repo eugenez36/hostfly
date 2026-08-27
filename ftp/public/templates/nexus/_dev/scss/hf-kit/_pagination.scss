@@ -1,17 +1,22 @@
 /* ==========================================================================
    Пагинация
+   --------------------------------------------------------------------------
+   Значения сверены с листом ui-kit/materials/Pagination.png.
+   Три системные поправки против прежнего переноса: скругление 4, а не 6;
+   рамки и серые оттенки на ступень темнее (--c-divider вместо --c-bg-dark,
+   --c-body вместо --c-element); подписи и счётчик — 12px чёрным.
    ========================================================================== */
 .hf-kit {
   .pagination { display: flex; align-items: center; justify-content: space-between; gap: var(--gutter); flex-wrap: wrap; }
-  .pagination__count { color: var(--c-body); font-size: var(--fs-m); }
-  .pagination__pages { display: flex; align-items: center; gap: 8px; }
+  .pagination__count { color: var(--c-button); font-size: var(--fs-s); }
+  .pagination__pages { display: flex; align-items: center; gap: 16px; }
   .pagination__item {
     min-width: 32px; height: 32px;
     padding: 0 6px;
-    border: 1px solid var(--c-bg-dark);
-    border-radius: var(--r-sm);
-    background: var(--c-white);
-    color: var(--c-text);
+    border: 1px solid var(--c-divider);
+    border-radius: var(--r-xs);
+    background: transparent;
+    color: var(--c-body);
     font-size: var(--fs-m);
     line-height: 1;
     display: inline-flex; align-items: center; justify-content: center;
@@ -23,22 +28,42 @@
     background: var(--c-button);
     border-color: var(--c-button);
     color: var(--c-white);
-    font-weight: 700;
+    font-weight: 500;
   }
-  .pagination__gap { color: var(--c-element); padding: 0 2px; }
+  .pagination__gap { color: var(--c-body); padding: 0 2px; }
   .pagination__nav {
-    width: 32px; height: 32px;
+    width: 24px; height: 24px;
     border: 0; background: transparent;
-    color: var(--c-element);
+    color: var(--c-body);
     display: inline-flex; align-items: center; justify-content: center;
   }
-  .pagination__nav:hover { color: var(--c-text); }
-  .pagination__per { display: flex; align-items: center; gap: 12px; color: var(--c-body); font-size: var(--fs-m); }
+  .pagination__nav:hover { color: var(--c-button); }
+  .pagination__per { display: flex; align-items: center; gap: 12px; color: var(--c-button); font-size: var(--fs-s); }
   .pagination__per select {
     height: 32px; padding: 0 8px;
-    border: 1px solid var(--c-bg-dark);
-    border-radius: var(--r-sm);
-    background: var(--c-white);
-    font-size: var(--fs-m);
+    border: 1px solid var(--c-divider);
+    border-radius: var(--r-xs);
+    background: transparent;
+    color: var(--c-button);
+    font-size: var(--fs-s);
+  }
+
+  /* Мобильный вариант с листа: ни рамок, ни подложек — только цифры.
+     Текущая страница чёрная, остальные серые.                              */
+  @media (max-width: 720px) {
+    .pagination__pages { gap: 0; }
+    .pagination__item {
+      min-width: 25px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--c-body);
+    }
+    .pagination__item:hover { background: transparent; color: var(--c-button); }
+    .pagination__item.is-active {
+      background: transparent;
+      color: var(--c-button);
+      font-weight: 500;
+    }
   }
 }

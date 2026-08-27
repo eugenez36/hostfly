@@ -1,0 +1,45 @@
+/*!
+ * ==========================================================================
+ * Hostfly — UI-кит нового дизайна
+ * ==========================================================================
+ *
+ * Источник: ui-kit/ в корне репозитория (снятие с выгрузки Figma, 14 листов).
+ * Собирается dart-sass в ../css/hf-kit.css: npm run build в nexus/_dev.
+ * Отдельный файл от стоковых theme.min.css / all.min.css — сток не трогаем.
+ *
+ * ИЗОЛЯЦИЯ. Все правила, кроме токенов, лежат под классом `.hf-kit`.
+ * Тема nexus построена на Bootstrap 4.5.3, где уже заняты `.btn`, `.badge`,
+ * `.pagination`, `.tabs`, `.input` и другие имена из кита. Без обёртки
+ * кит переопределил бы их на всех страницах кабинета.
+ *
+ * Применение: блок, которому нужен новый дизайн целиком, оборачивается в
+ *   <div class="hf-kit"> … </div>
+ * и внутри работает разметка из превью без изменений: `btn btn--accent`,
+ * `field`, `tabs`, `badge badge--ok` и т. д.
+ *
+ * Перекраска стоковых компонентов кабинета — это не сюда, а в
+ * css/custom.css (палитра nexus) и scss/hf-theme.scss (всё остальное).
+ *
+ * Демо всех компонентов: _dev/hf-kit-preview.html
+ * Поведение (аккордеон, табы, слайдер): ../js/hf-kit.js
+ */
+
+@import "hf-kit/tokens";
+@import "hf-kit/base";
+
+@import "hf-kit/buttons";
+@import "hf-kit/forms";
+@import "hf-kit/controls";
+@import "hf-kit/tabs";
+@import "hf-kit/badges";
+@import "hf-kit/tooltip";
+@import "hf-kit/pagination";
+
+/* Составные блоки с листов final-theme */
+@import "hf-kit/cards";
+@import "hf-kit/accordion";
+@import "hf-kit/domain-list";
+@import "hf-kit/slider";
+@import "hf-kit/logo-wall";
+
+@import "hf-kit/responsive";

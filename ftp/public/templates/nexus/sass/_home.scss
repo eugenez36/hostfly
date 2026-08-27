@@ -1,0 +1,140 @@
+.home-domain-search {
+    h2 {
+        margin: 0;
+    }
+
+    .tld-logos {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 1.4em;
+        color: #888;
+        font-weight: 300;
+
+        li {
+            float: left;
+            padding: 0 25px 0 0;
+        }
+        img {
+            width: 60px;
+        }
+    }
+
+    .input-group-wrapper {
+        margin: 15px 0;
+        padding: 6px;
+        background-color: #fff;
+        border: 1px solid #ced4da;
+        border-radius: var(--rounding-sm);
+
+        .form-control {
+            border: 0;
+            color: var(--text-accented);
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .btn {
+            margin: 0 2px !important;
+            border-radius: var(--rounding-sm) !important;
+        }
+    }
+}
+
+.card-columns.home {
+  @include media-breakpoint-only(sm) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 3;
+  }
+}
+
+.action-icon-btns {
+    a {
+        margin: 0 0 10px 0;
+        padding: 10px 0 15px;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+        color: #666;
+        text-decoration: none;
+        background-color: #fff;
+        border-radius: var(--rounding-sm);
+
+        .ico-container {
+            margin: 10px auto;
+            line-height: 55px;
+            font-size: 2.6em;
+            text-align: center;
+            transition: all 0.3s ease;
+
+            i {
+                color: #c3cfd8;
+            }
+        }
+
+        &:hover {
+            color: #444;
+
+            .ico-container {
+                font-size: 3.4em;
+            }
+        }
+    }
+}
+
+// Home
+body #frmDomainHomepage {
+    .input-group-wrapper {
+        border-radius: var(--rounding-md);
+    }
+
+    .btn {
+        border-radius: var(--rounding-md) !important;
+        &:hover, &:focus, &:active {
+            background: var(--grayscale-lifted);
+            border-color: var(--grayscale-lifted);
+        }
+    }
+
+    #btnTransfer {
+        background: var(--bg-inverted);
+        border-color: var(--grayscale);
+
+        &:hover, &:focus, &:active {
+            background: var(--grayscale-lifted);
+            border-color: var(--grayscale-lifted);
+        }
+
+        &:focus{
+            box-shadow: 0 0 0 0.2rem rgba(51, 102, 153, 0.25);
+        }
+    }
+}
+
+body #main-body {
+    .btn-outline-primary {
+        color: var(--text);
+        border-radius: var(--rounding-md);
+        border: 1px solid var(--grayscale);
+
+        &:hover,  {
+            background-color: var(--bg-inverted);
+            color: white;
+        }
+
+    }
+
+    .action-icon-btns a {
+        border-radius: var(--rounding-md);
+        border: none;
+    }
+}

@@ -1,7 +1,0 @@
-# WHMCS Six Theme Configuration File - clone
-
-name: "WHMCS AIS Theme"
-description: "clone of SIX theme"
-author: "WHMCS Limited"
-properties:
-  serverSidePagination: false # Defines client side will handle pagination

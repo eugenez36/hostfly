@@ -1,0 +1,75 @@
+.iradio_square-blue {
+    margin-right: 6px;
+}
+
+.cc-payment-form {
+    .control-label {
+        text-align: right;
+    }
+}
+
+// Checkbox
+body .iradio_square-blue.checked, body .icheckbox_square-blue.checked {
+    filter: grayscale(100%) brightness(70%) contrast(2);
+}
+
+body .iradio_square-blue.hover, body .icheckbox_square-blue.hover {
+    filter: grayscale(100%) brightness(70%) contrast(2);
+}
+
+body #frmConfigureProduct .icheckbox_square-blue {
+    border-radius: var(--rounding-sm);
+    border: 1px solid var(--border-muted);
+    background-position: 0.4% 20%;
+
+    &.checked {
+        background-position: 22.4% 35%;;
+        filter: grayscale(100%) brightness(70%) contrast(2);
+        border: 2px solid var(--grayscale);
+    }
+
+    &.hover {
+        filter: grayscale(100%) brightness(70%) contrast(2);
+        border: 2px solid var(--grayscale);
+    }
+}
+
+// phone number > dropdown
+.selected-flag {
+    border-radius: var(--rounding-md) 0 0 var(--rounding-md);
+}
+
+// Login form
+body .login-form .form-control:focus {
+    border-color: var(--border-lifted);
+
+}
+
+body .login-form #inputPassword:focus {
+    border-right: none;
+}
+
+// Registartion form {
+body #registration .field, body #registration .form-control {
+    border-radius: var(--rounding-md);
+}
+
+
+
+// Open ticket form
+
+body .primary-content .md-editor {
+    border-radius: var(--rounding-md);
+
+    .md-header {
+        border-radius: var(--rounding-md) var(--rounding-md) 0 0;
+    }
+
+    .md-footer {
+        border-radius: 0 0 var(--rounding-md) var(--rounding-md);
+    }
+}
+
+body .custom-file-label {
+    border-radius: var(--rounding-md) 0 0 var(--rounding-md);
+}

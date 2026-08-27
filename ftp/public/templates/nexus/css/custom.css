@@ -1,0 +1,161 @@
+/* *****************************************************
+
+    ** Custom Stylesheet **
+
+    Брендовая палитра Hostfly поверх стоковой темы Nexus.
+
+    Файл штатный: includes/head.tpl подключает его через
+    {assetExists file="custom.css"} последним, после theme.min.css,
+    и сток прямо предлагает переопределять здесь палитру
+    («define own pallet with brand colors»). Поэтому перекраска
+    кабинета живёт тут, а не в отдельном файле оверрайдов.
+
+    Значения взяты из UI-кита: ui-kit/tokens.css в корне репозитория.
+    Всё, что палитрой не выражается (шрифты, высоты контролов, сетка,
+    тени, компоненты), лежит в css/hf-theme.css.
+
+    Структура и имена переменных стоковые — менялись только значения,
+    чтобы файл оставался сверяемым со стоком построчно.
+
+***************************************************** */
+
+:root {
+    --white: #fff;
+
+    /* Neutral shades */
+    /* Серая шкала кита: bg, highlighter, bg-dark, divider, element, body, text, button */
+    --neutral-50: #f7f7f7;
+    --neutral-100: #ededed;
+    --neutral-200: #dedede;
+    --neutral-300: #d3d3d3;
+    --neutral-400: #999999;
+    --neutral-500: #7f7f7f;
+    --neutral-600: #666666;
+    --neutral-700: #4d4d4d;
+    --neutral-800: #333333;
+    --neutral-900: #1a1a1a;
+    --neutral-950: #000000;
+
+    /* Brand shades */
+    /* Шкала построена от #0027ea (--c-primary кита), бренд — на ступени 600 */
+    --primary-50: #f2f7fd;
+    --primary-100: #deeafb;
+    --primary-200: #bfd3f7;
+    --primary-300: #8faaf2;
+    --primary-400: #4f72ef;
+    --primary-500: #2642ed;
+    --primary-600: #0027ea;
+    --primary-700: #0021c7;
+    --primary-800: #001ba4;
+    --primary-900: #001581;
+    --primary-950: #00105e;
+
+    /* Primary colors */
+    /* Ссылки, активные состояния, акценты. Основная кнопка кабинета по киту
+       чёрная, а не синяя, — это правило живёт в hf-theme.css. */
+    --primary: var(--primary-600);
+    --primary-lifted: var(--primary-700);
+    --primary-accented: var(--primary-800);
+
+    /* Secondary colors */
+    --secondary: var(--neutral-600);
+    --secondary-lifted: var(--neutral-700);
+    --secondary-accented: var(--neutral-800);
+
+    /* Success colors */
+    /* --c-green кита */
+    --success: #117a24;
+    --success-lifted: #0e661e;
+    --success-accented: #0b5218;
+
+    /* Info colors */
+    --info: var(--primary-600);
+    --info-lifted: var(--primary-700);
+    --info-accented: var(--primary-800);
+
+    /* Notice colors */
+    /* --c-violet кита */
+    --notice: #c530e7;
+    --notice-lifted: #a626c4;
+    --notice-accented: #871ea0;
+
+    /* Warning colors */
+    /* В ките нет сплошного жёлтого: --c-warning #fff1a1 — это подложка бейджа,
+       белый текст на ней нечитаем. Здесь тёмный янтарь того же семейства,
+       а светлые подложки (#fff1a1, #fff2e7) применяются в компонентах. */
+    --warning: #a8710a;
+    --warning-lifted: #8c5d08;
+    --warning-accented: #6f4906;
+
+    /* Error colors */
+    /* --c-error кита */
+    --error: #db3032;
+    --error-lifted: #c11f21;
+    --error-accented: #9f1719;
+
+    /* Grayscale colors */
+    --grayscale: var(--neutral-900);
+    --grayscale-lifted: var(--neutral-800);
+    --grayscale-accented: var(--neutral-700);
+
+    /* Neutral colors */
+    --neutral: var(--neutral-500);
+    --neutral-lifted: var(--neutral-600);
+    --neutral-accented: var(--neutral-700);
+
+    /* Text neutral colors */
+    /* text #333, body #666, element #999 — прямо из кита */
+    --text-inverted: var(--white);
+    --text-muted: var(--neutral-400);
+    --text-lifted: var(--neutral-500);
+    --text-accented: var(--neutral-600);
+    --text: var(--neutral-800);
+
+    /* Border neutral colors */
+    /* divider #d3d3d3, bg-dark #dedede */
+    --border-muted: var(--neutral-200);
+    --border: var(--neutral-300);
+    --border-lifted: var(--neutral-400);
+    --border-accented: var(--neutral-600);
+
+    /* Background neutral colors */
+    /* bg #f7f7f7, highlighter #ededed */
+    --bg: var(--white);
+    --bg-muted: var(--neutral-50);
+    --bg-lifted: var(--neutral-100);
+    --bg-accented: var(--neutral-200);
+    --bg-inverted: var(--neutral-900);
+
+    /* Additional colors */
+    /* Светлые подложки статусов и тегов из кита */
+    --yellow-200: #faf6de;
+    --yellow-300: #fff1a1;
+    --teal-300: #defbe6;
+    --teal-400: #00946a;
+    --emerald-300: #e7f2e9;
+    --pink-400: #e9defb;
+
+    /* Additional custom properties */
+    /* Font sizes */
+    /* Шкала стоковая. В ките 12/14/16, у стока 10/12/14/16 — сдвиг поедет по
+       всему кабинету сразу, поэтому размеры разбираются вместе с компонентами. */
+    --text-xs: 0.625rem;
+    --text-sm: 0.75rem;
+    --text-md: 0.875rem;
+    --text-lg: 1rem;
+
+    /* Spacing */
+    --outline-sm: 1px;
+    --outline-md: 2px;
+    --outline-lg: 3px;
+
+    /* Rounding */
+    /* --r-sm/md/lg кита: 6/8/12px */
+    --rounding-sm: 0.375rem;
+    --rounding-md: 0.5rem;
+    --rounding-lg: 0.75rem;
+
+    /* Other */
+    --letter-spacing: 0em;
+    --disabled-opacity: 25%;
+}

@@ -1,0 +1,47 @@
+.twofa-setup .modal-body {
+  min-height: 100px;
+}
+.twofa-setup .activation-msg {
+  margin: 25px 0;
+  padding: 15px;
+  border: 1px dashed #ddd;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.twofa-setup .backup-code {
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #efefef;
+  color: #444;
+  text-align: center;
+}
+
+.twofa-module {
+  margin: 10px 0;
+  padding: 14px 20px;
+  border: 1px solid #ccc;
+  border-radius: var(--rounding-sm);
+  cursor: pointer;
+}
+.twofa-module .col-radio {
+  float: left;
+  width: 35px;
+  margin-top: 12px;
+}
+.twofa-module .col-logo {
+  float: left;
+  width: 80px;
+  line-height: 40px;
+  text-align: center;
+}
+.twofa-module .col-description {
+  margin-left: 136px;
+}
+.twofa-module img {
+  max-width: 100%;
+  max-height: 40px;
+}
+.twofa-module.active {
+  border-color: #337ab7;
+}

@@ -1,0 +1,66 @@
+/**
+ * -------------------------
+ * @section Client Notifications
+ * -------------------------
+ */
+
+.popover-user-notifications {
+  border-radius: 0;
+  padding: 5px 10px;
+  border-color: #ddd;
+  min-width: 310px;
+  font-family: 'Open Sans', sans-serif;
+}
+.popover-user-notifications .popover-body {
+  padding: 0;
+}
+.popover-user-notifications ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.popover-user-notifications ul li {
+  padding: 5px 0;
+  min-height: 66px;
+  border-bottom: 1px solid #ddd;
+}
+.popover-user-notifications ul li:last-child {
+  border: 0;
+}
+.popover-user-notifications ul li a {
+  display: block;
+  padding: 10px 15px 10px 12px;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95em;
+}
+.popover-user-notifications ul li a:hover {
+  background-color: #f6f6f6;
+}
+.popover-user-notifications ul li i.fas,
+.popover-user-notifications ul li i.far {
+  float: left;
+  padding-top: 6px;
+  font-size: 21px;
+}
+.popover-user-notifications ul li i.fas.fa-check-circle,
+.popover-user-notifications ul li i.far.fa-check-circle{
+  color: #5cb85c;
+}
+.popover-user-notifications ul li i.fas.fa-warning,
+.popover-user-notifications ul li i.far.fa-warning {
+  color: #ecc317;
+}
+.popover-user-notifications ul li i.fas.fa-exclamation-circle,
+.popover-user-notifications ul li i.far.fa-exclamation-circle{
+  color: #ec2d45;
+}
+.popover-user-notifications ul li .message {
+  margin-left: 40px;
+}
+.popover-user-notifications ul li.none {
+  padding: 12px 0;
+  min-height: auto;
+  text-align: center;
+  font-weight: bold;
+}

@@ -1,0 +1,100 @@
+/**
+ * -------------------------
+ * Markdown Editor
+ * -------------------------
+ */
+
+.md-editor {
+  border: 1px solid #ddd;
+  border-radius: var(--rounding-sm);
+}
+.md-editor > .btn-toolbar {
+  background-color: #fff !important;
+}
+.md-editor > .btn-toolbar .hidden {
+  display: none !important;
+}
+.md-editor > textarea.markdown-editor,
+.md-editor > .md-preview {
+  padding: 15px !important;
+  border-top: 1px solid #ddd !important;
+  border-bottom: 1px solid #ddd !important;
+  background-color: #fff !important;
+}
+div.md-editor.active {
+  display: block;
+  border: 1px solid #ddd;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.markdown-editor-status {
+  padding: 2px 10px;
+  font-size: 9pt;
+  color: #959694;
+  text-align: right;
+
+}
+
+.small-font {
+  font-size: 0.9em;
+}
+
+/**
+ * -------------------------
+ * Markdown Content Formatting
+ * -------------------------
+ */
+
+.md-preview h1, .markdown-content h1 {
+  font-size: 1.6em;
+  color: #333;
+}
+.md-preview h2, .markdown-content h2 {
+  font-size: 1.4em;
+  color: #333;
+}
+.md-preview h3, .markdown-content h3 {
+  font-size: 1.2em;
+  color: #333;
+}
+.md-preview h4, .markdown-content h4 {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.md-preview pre, .markdown-content pre {
+  padding: 15px;
+  background-color: #444;
+  color: #f8f8f8;
+  border: 0;
+}
+.md-preview pre code, .markdown-content pre code {
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
+}
+
+.md-preview blockquote, .markdown-content blockquote {
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eeeeee;
+}
+
+.md-preview table, .markdown-content table {
+  margin: 10px 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.md-preview table > thead > tr > th, .markdown-content table > thead > tr > th {
+  padding: 4px 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  font-weight: bold;
+  text-align: center;
+}
+.md-preview table > tbody > tr > td, .markdown-content table > tbody > tr > td {
+  padding: 3px 8px;
+  border: 1px solid #ddd;
+}

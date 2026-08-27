@@ -1,0 +1,55 @@
+body #order-standard_cart .products .product {
+  padding: 1px 0 10px 0;
+  margin: 0 0 20px 0;
+  background: white;
+  border-radius: var(--rounding-lg);
+  border: 1px solid var(--border-muted);
+
+  header {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .qty {
+        float: right;
+        font-size: 0.9em;
+        font-style: normal;
+        color: var(--text-accented);
+    }
+  }
+
+  footer {
+    width: 100%;
+    margin: 12px 0;
+    float: none;
+    text-align: start;
+    padding: 12px 20px;
+
+    .product-pricing {
+      margin-bottom: 24px;
+      br:last-of-type {
+        display: none;
+      }
+    }
+
+    .btn-order-now {
+      background: var(--bg-inverted);
+      border-color: var(--grayscale);
+      padding: 8px 20px;
+      border-radius: var(--rounding-md);
+    }
+  }
+
+  div.product-desc {
+    font-size: 0.9em;
+    width: 100%;
+    color: var(--text-accented);
+    padding: 12px 20px;
+  }
+
+  .fas {
+    display: none;
+  }
+}

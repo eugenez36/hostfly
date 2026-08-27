@@ -1,0 +1,240 @@
+.announcements {
+    .announcement {
+        margin-bottom: 4rem;
+
+        h1 {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        article {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--bg-lifted);
+            border-left: 4px solid var(--border-lifted);
+
+            p {
+                margin: 0;
+            }
+        }
+      .btn-sm {
+        padding: 0.375rem 0.75rem;
+      }
+    }
+}
+
+.kb-category {
+    a {
+        text-decoration: none;
+
+        &:hover {
+            background-color: var(--bg-lifted);
+        }
+    }
+}
+
+.kb-article-item {
+    &:hover {
+        background-color: var(--bg-lifted);
+        text-decoration: none;
+    }
+
+    small {
+        display: block;
+        padding-left: 25px;
+        color: var(--bg-lifted);
+    }
+}
+
+/**
+ * -------------------------
+ * @section Support Tickets
+ * -------------------------
+ */
+
+.ticket-subject.unread {
+  font-weight: bold;
+}
+
+.ticket-reply .rating,
+.ticket-reply .rating-done {
+  float: right;
+  padding: 5px 10px;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 24px;
+}
+.ticket-reply .rating span.star,
+.ticket-reply .rating-done span.star {
+  font-family: "Font Awesome 6 Pro";
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+}
+.ticket-reply .rating-done .rated {
+  display: inline-block;
+  font-size: 12px;
+}
+.ticket-reply .rating span.star:hover {
+  cursor: pointer;
+}
+.ticket-reply .rating span.star:before,
+.ticket-reply .rating-done span.star:before {
+  content: "\f005";
+  padding-right: 0;
+  color: #999;
+}
+.ticket-reply .rating span.star:hover:before,
+.ticket-reply .rating span.star:hover ~ span.star:before,
+.ticket-reply .rating-done span.star.active:before  {
+  content: "\f005";
+  color: #F2DE88;
+}
+
+.md-editor {
+  .btn-toolbar {
+    .btn-group {
+      margin-right: 6px;
+    }
+  }
+}
+
+.view-ticket {
+    .card-body {
+        padding: 0;
+        border-bottom: 1px solid #ddd;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .posted-by {
+        color: #888;
+        font-size: 0.9rem;
+        background-color: #f6f6f6;
+        padding: 0.5rem 1rem;
+
+        .posted-by-name {
+            font-weight: bold;
+        }
+    }
+
+    .requestor-badge {
+        font-size: 85%;
+        padding: 5px 10px;
+    }
+
+    .message {
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .attachments {
+        border-top: 1px dashed #ddd;
+        font-size: 80%;
+    }
+
+    .attachment-list {
+        list-style: none;
+        margin: 10px 0 -10px 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            width: 190px;
+            vertical-align: top;
+
+            span {
+                display: block;
+                padding: 5px 5px 10px 5px;
+                margin-bottom: 10px;
+                border: 1px solid #ddd;
+                border-radius: var(--rounding-sm);
+            }
+
+            figure {
+                margin: 0 0 5px 0;
+                background-color: #f6f6f6;
+                line-height: 100px;
+                text-align: center;
+                font-size: 4em;
+            }
+        }
+    }
+}
+
+/**
+ * -------------------------
+ * @section Support Ticket Feedback
+ * -------------------------
+ */
+
+.ticketfeedbackstaffcont {
+  margin: 10px auto;
+  padding: 15px;
+  width: 90%;
+  background-color: #efefef;
+  -moz-border-radius: var(--rounding-sm);
+  -webkit-border-radius: var(--rounding-sm);
+  -o-border-radius: var(--rounding-sm);
+  border-radius: var(--rounding-sm);
+}
+
+.ticketfeedbackrating {
+  padding: 0 100px;
+}
+
+.ticketfeedbackrating .rate {
+  float: left;
+  padding: 0 10px;
+  min-width: 30px;
+  text-align: center;
+}
+
+@media (min-width: 380px) {
+  .btn-input-padded-responsive {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 500px) {
+  .btn-input-padded-responsive {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+/**
+ * -------------------------
+ * @section Downloads
+ * -------------------------
+ */
+
+.kb-search {
+  &.margin-bottom {
+    margin-bottom: 20px;
+  }
+}
+
+
+/**
+ * -------------------------
+ * @section Knowledgebase
+ * -------------------------
+ */
+
+
+.card-body {
+  border-radius: var(--rounding-lg);
+}
+
+.list-group-flush>.list-group-item.kb-article-item:last-child {
+  border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
+}
+
+.list-group small {
+  margin: 12px;
+}

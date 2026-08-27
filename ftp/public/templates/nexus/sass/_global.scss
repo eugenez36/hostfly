@@ -1,0 +1,394 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html,body {
+  height: 100%;
+  background-color: var(--bg-inverted);
+  letter-spacing: var(--letter-spacing);
+}
+
+[disabled] {
+  opacity: var(--disabled-opacity);
+}
+
+section#main-body {
+  margin: 0;
+  padding: 20px 0;
+  background-color: var(--bg-lifted);
+  /* screen - header height - breadcrumbs height - footer height */
+  min-height: calc(100vh - 146px - 40px - 140px);
+}
+
+section#main-content {
+  margin-bottom: 60px;
+}
+
+.main-content {
+  margin-bottom: 60px;
+  min-height: 300px;
+}
+
+a {
+  color: var(--text);
+
+  &:hover {
+    color: var(--text-accented);
+  }
+}
+
+/**
+ * -------------------------
+ * Password Strength Meter
+ * -------------------------
+ */
+
+.password-strength-meter .progress {
+  margin-bottom: 5px;
+}
+.password-strength-meter p {
+  margin-bottom: 15px;
+}
+
+
+/**
+ * -------------------------
+ * @section Popups
+ * -------------------------
+ */
+#popup-backdrop {
+  background-color: #2E363F;
+  padding: 15px;
+  height: 100%;
+}
+
+.popup-header-padding {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/**
+ * Helper Alerts
+ */
+.alert .fas.pull-left {
+  margin: -3px 0 0 -3px;
+}
+.alert .alert-text {
+  margin-left: 56px;
+}
+.card-sidebar .alert {
+  padding: 10px 15px;
+  margin-bottom: 5px;
+}
+
+.alert {
+  border-radius: var(--rounding-md);
+
+  // Contacts
+  &:has(form) {
+    background-color: white;
+    border: 1px solid var(--border-muted);
+    color: var(--text);
+  }
+
+  // Change password
+  &:has(small) {
+    background-color: var(--bg-lifted);
+    border: 1px solid var(--border-muted);
+    color: var(--text);
+  }
+}
+
+.sidebar.sidebar-secondary {
+  clear: left;
+}
+
+/**
+ * JsonForm
+ */
+
+form[data-role="json-form"] .has-error input.form-control,
+form[data-role="json-form"] .has-error textarea.form-control,
+form[data-role="json-form"] .has-error select.form-control {
+  background-color: #fff0f0;
+  transition: 0.2s;
+}
+
+form[data-role="json-form"] .has-error .tooltip-inner {
+  background-color: #9d2a0b;
+}
+
+form[data-role="json-form"] .has-error .tooltip.top .tooltip-arrow {
+  border-top-color: #9d2a0b;
+}
+
+/**
+ * Usage Billing
+ */
+
+.modal-metric-pricing .modal-header,
+.modal-metric-pricing .modal-body,
+.modal-metric-pricing .modal-footer {
+  text-align: center !important;
+  border: 0;
+}
+
+/**
+ * Select Account
+ */
+
+.select-account {
+  margin: 20px auto;
+  padding: 0;
+  border-top: 1px solid #ddd;
+}
+.select-account a {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+}
+.select-account a.disabled {
+  opacity: 0.5;
+}
+.select-account a:hover {
+  background-color: #f6f6f6;
+}
+
+.continue-container {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f6f6f6;
+  border: 1px solid #eee;
+  max-width: 500px;
+}
+
+/**
+ * Invites
+ */
+
+.invite-box {
+  margin: 20px 0;
+  padding: 20px;
+  background-color:#f6f6f6;
+  border:1px solid #eee;
+}
+
+/**
+ * -------------------------
+ * @section Main Menu
+ * -------------------------
+ */
+
+section#main-menu {
+  //background-color: #006687;
+}
+
+/**
+ * -------------------------
+ * Printing
+ * -------------------------
+ */
+
+@media print {
+  .sidebar,
+  #main-menu,
+  #top-nav,
+  .header-lined {
+    display: none;
+  }
+  a[href]:after {
+    content:"" !important;
+  }
+}
+
+/**
+ * -------------------------
+ * Admin Masquerade Notice
+ * -------------------------
+ */
+
+.admin-masquerade-notice {
+  margin: 25px 0 0 auto;
+  padding: 4px 10px;
+  max-width: 240px;
+  font-family: Tahoma;
+  font-size: 0.7em;
+  text-align: right;
+}
+.admin-masquerade-notice a {
+  text-decoration: underline;
+}
+
+a.admin-inline-edit {
+  margin-left: 6px;
+  font-weight: 400;
+  color: #888;
+}
+a.admin-inline-edit:hover {
+  color: #444;
+  text-decoration: none;
+}
+
+/**
+ * -------------------------
+ * Licensing Addon
+ * -------------------------
+ */
+
+.licensing-addon-latest-download h3 {
+  margin-top: 0;
+}
+
+
+/**
+ * -------------------------
+ * @section Form Classes
+ * -------------------------
+ */
+
+.input-inline {
+  display: inline-block;
+}
+
+.input-inline-100 {
+  width: 100px;
+}
+
+.select-inline {
+  display: inline-block;
+  width: auto;
+}
+
+.form-group .field-error-msg {
+  display: none;
+  font-size: 0.85em;
+  color: #cc0000;
+}
+
+.form-group.has-error .field-error-msg {
+  display: block;
+}
+
+#fullpage-overlay {
+  display: table;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+#fullpage-overlay .outer-wrapper {
+  position: relative;
+  height: 100%;
+}
+#fullpage-overlay .inner-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 30%;
+  width: 50%;
+  margin: -3% 0 0 -25%;
+  text-align: center;
+}
+#fullpage-overlay .msg {
+  display: inline-block;
+  padding: 20px;
+  max-width: 400px;
+}
+
+/*
+ * We use a larger font-size than the bootstrap default, which requires an increase
+ * in the top offset to maintain correct alignment in form control feedback.
+ */
+.has-feedback label ~ .form-control-feedback {
+  top: 27px !important;
+}
+
+.has-error button {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+/*
+ * Language strings which are too long to fit into buttons should be "chopped off" inside the div
+ * of that button, instead of "overflowing" outside of the button.  CORE-9272
+ */
+.btn {
+  overflow: hidden;
+}
+
+.label {
+  max-width: 100%;
+  margin-bottom: 5px;
+  border-radius: var(--rounding-sm);
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+/**
+ * Custom Validation Warning
+ */
+.is-warning ~ .warning-feedback,
+.is-warning ~ .warning-tooltip {
+  display:block
+}
+
+.form-control.is-warning {
+  border-color: var(--warning);
+  padding-right: calc(1.5em + .75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='1.0625em' height='1em' viewBox='0 0 17 16'%3e%3cpath fill='%23ffc107' d='M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z'/%3e%3cpath d='M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(.375em + .1875rem) center;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.form-control.is-warning:focus {
+  border-color: var(--warning);
+  box-shadow:0 0 0 .2rem rgba(255, 193, 7, 0.25)
+}
+
+.w-text-09 {
+  font-size: 0.9em;
+}
+
+.width-fixed-20 {
+  width: 20px;
+}
+
+.width-fixed-60 {
+  width: 60px;
+}
+
+.w-hidden {
+  display: none;
+}
+
+span.caret {
+  display: none;
+}
+
+.card .bootstrap-switch {
+  word-wrap: initial;
+}
+
+.line-height-reduced {
+  line-height: 0.8;
+}
+
+#personalInformation {
+  overflow: inherit;
+}

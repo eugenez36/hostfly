@@ -1,0 +1,217 @@
+/**
+ * -------------------------
+ * @section Credit Cards
+ * -------------------------
+ */
+
+div.credit-card {
+  margin: 0 auto 30px;
+  max-width: 400px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: var(--rounding-md);
+}
+
+div.credit-card div.card-type {
+  float: right;
+  padding: 10px 20px;
+  font-size: 1.2em;
+}
+div.credit-card div.card-icon {
+  float: left;
+  padding: 7px 7px;
+  font-size: 1.2em;
+}
+
+div.credit-card div.card-number {
+  padding: 10px;
+  background-color: #ccc;
+  font-size: 1.6em;
+  text-align: center;
+  clear: both;
+}
+
+div.credit-card div.card-start {
+  float: left;
+  padding: 20px 0 50px 50px;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+div.credit-card div.card-expiry {
+  float: right;
+  padding: 20px 50px 50px 0;
+  height: 120px;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+div.credit-card div.end {
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  div.credit-card {
+    max-width: 250px;
+  }
+  div.credit-card div.card-type {
+    font-size: 1.0em;
+  }
+  div.credit-card div.card-icon {
+    font-size: 1.0em;
+  }
+  div.credit-card div.card-number {
+    padding: 6px 10px;
+    font-size: 1.2em;
+  }
+  div.credit-card div.card-start {
+    padding: 20px 0 30px 50px;
+    font-size: 0.9em;
+  }
+  div.credit-card div.card-expiry {
+    padding: 20px 50px 30px 0;
+    height: 80px;
+    font-size: 0.9em;
+  }
+}
+
+.auth3d-area {
+  border: 1px solid #fff;
+}
+
+.submit-3d {
+  width: 80%;
+  border: 1px solid #fff;
+}
+
+.invoice-summary-table {
+  margin: 20px 0;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.invoice-summary-table td {
+  font-size: 0.8em;
+}
+
+.invoice-summary-table td.total-row {
+  background-color: #efefef;
+  font-weight: bold;
+}
+
+/* Card colors colorpicked from website logos */
+div.credit-card .logo-visa {
+  color: #1a1f71;
+}
+
+div.credit-card .logo-amex {
+  color: #43abdf;
+}
+
+div.credit-card .logo-mastercard {
+  color: #ed0b00;
+}
+
+div.credit-card .logo-discover {
+  color: #000000;
+}
+
+div.two-column-grid,
+div.three-column-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(3, auto) minmax(10em, 30em) auto;
+  font-weight: 300;
+  font-size: 13px;
+}
+div.two-column-grid {
+  grid-template-columns: repeat(2, auto) minmax(10em, 30em) auto;
+}
+div.two-column-grid > div,
+div.three-column-grid > div {
+  margin: 5px 0;
+  padding-right: 5px;
+}
+div.two-column-grid > div > label,
+div.three-column-grid > div > label {
+  font-weight: normal;
+}
+#frmPayment .paymethod-info {
+  margin: 5px 0;
+  cursor: pointer;
+}
+#frmPayment .paymethod-info label {
+  font-weight: normal;
+  cursor: pointer;
+}
+
+#payMethodList tr {
+  font-size: smaller;
+}
+#payMethodList tr td:nth-child(2),
+#payMethodList tr td:nth-child(3) {
+  max-width: 15em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.iframe-input-container {
+  height: 34px;
+}
+
+/**
+ * Credit Card Input
+ */
+
+.cc-number-field {
+  background-image: url(../../../assets/img/payment/unknown.png);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+.cc-number-field.visa {
+  background-image: url(../../../assets/img/payment/visa.png);
+}
+.cc-number-field.mastercard {
+  background-image: url(../../../assets/img/payment/mastercard.png);
+}
+.cc-number-field.amex {
+  background-image: url(../../../assets/img/payment/amex.png);
+}
+.cc-number-field.dinersclub {
+  background-image: url(../../../assets/img/payment/dinersclub.png);
+}
+.cc-number-field.discover {
+  background-image: url(../../../assets/img/payment/discover.png);
+}
+.cc-number-field.unionpay {
+  background-image: url(../../../assets/img/payment/unionpay.png);
+}
+.cc-number-field.jcb {
+  background-image: url(../../../assets/img/payment/jcb.png);
+}
+.cc-number-field.maestro {
+  background-image: url(../../../assets/img/payment/maestro.png);
+}
+.cc-number-field.forbrugsforeningen {
+  background-image: url(../../../assets/img/payment/forbrugsforeningen.png);
+}
+.cc-number-field.dankort {
+  background-image: url(../../../assets/img/payment/dankort.png);
+}
+.cc-number-field.troy {
+  background-image: url(../../../assets/img/payment/troy.png);
+}
+
+/**
+ * -------------------------
+ * Mass Pay
+ * -------------------------
+ */
+
+tr.masspay-invoice-detail td {
+  font-size: 0.8em;
+}
+tr.masspay-total td {
+  background-color: #efefef;
+  font-weight: bold;
+}

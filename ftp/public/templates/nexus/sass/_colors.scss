@@ -1,0 +1,235 @@
+/**
+ * -------------------------
+ * Colors
+ * -------------------------
+ */
+
+.card-accent-gold {
+  border-top: 3px solid var(--yellow-300);
+}
+.card-accent-green {
+  border-top: 3px solid var(--success-accented);
+}
+.card-accent-red {
+  border-top: 3px solid var(--error);
+}
+.card-accent-blue {
+  border-top: 3px solid var(--info);
+}
+.card-accent-orange {
+  border-top: 3px solid var(--warning);
+}
+.card-accent-pink {
+  border-top: 3px solid var(--notice);
+}
+.card-accent-purple {
+  border-top: 3px solid var(--notice-lifted);
+}
+.card-accent-lime {
+  border-top: 3px solid var(--success);
+}
+.card-accent-magenta {
+  border-top: 3px solid var(--pink-400);
+}
+.card-accent-teal {
+  border-top: 3px solid var(--teal-300);
+}
+.card-accent-turquoise {
+  border-top: 3px solid var(--teal-400);
+}
+.card-accent-emerald {
+  border-top: 3px solid var(--emerald-300);
+}
+.card-accent-amethyst {
+  border-top: 3px solid var(--notice);
+}
+.card-accent-wet-asphalt {
+  border-top: 3px solid var(--success-accented);
+}
+.card-accent-midnight-blue {
+  border-top: 3px solid var(--grayscale-lifted);
+}
+.card-accent-sun-flower {
+  border-top: 3px solid var(--yellow-200);
+}
+.card-accent-pomegranate {
+  border-top: 3px solid var(--warning-accented);
+}
+.card-accent-silver {
+  border-top: 3px solid var(--border-lifted);
+}
+.card-accent-asbestos {
+  border-top: 3px solid var(--border-accented);
+}
+.card-accent-brand-cpanel-orange {
+  border-top: 3px solid var(--warning);
+}
+.card-accent-brand-xovinow-blue {
+  border-top: 3px solid var(--info-accented);
+}
+
+.bg-color-gold {
+  background-color: var(--yellow-300);
+}
+.bg-color-green {
+  background-color: var(--success);
+}
+.bg-color-red {
+  background-color: var(--error);
+}
+.bg-color-blue {
+  background-color: var(--info);
+}
+.bg-color-orange {
+  background-color: var(--warning);
+}
+.bg-color-pink {
+  background-color: var(--pink-400);
+}
+.bg-color-purple {
+  background-color: var(--notice);
+}
+.bg-color-lime {
+  background-color: var(--success);
+}
+.bg-color-magenta {
+  background-color: var(--pink-400);
+}
+.bg-color-teal {
+  background-color: var(--teal-300);
+}
+.bg-color-turquoise {
+  background-color: var(--teal-300);
+}
+.bg-color-emerald {
+  background-color: var(--success);
+}
+.bg-color-amethyst {
+  background-color: var(--notice);
+}
+.bg-color-wet-asphalt {
+  background-color: var(--grayscale);
+}
+.bg-color-midnight-blue {
+  background-color: var(--grayscale-accented);
+}
+.bg-color-sun-flower {
+  background-color: var(--yellow-200);
+}
+.bg-color-pomegranate {
+  background-color: var(--error-lifted);
+}
+.bg-color-silver {
+  background-color: var(--bg-lifted);
+}
+.bg-color-asbestos {
+  background-color: var(--bg-accented);
+}
+
+.label-default {
+  background-color: var(--neutral);
+}
+.label-success {
+  background-color: var(--success);
+}
+.label-info {
+  background-color: var(--info);
+}
+.label-warning {
+  background-color: var(--yellow-300);
+}
+.label-danger {
+  background-color: var(--error);
+}
+
+.status-pending {
+  background-color: var(--warning);
+}
+.status-pending-transfer {
+  background-color: var(--yellow-300);
+}
+.status-active,
+.status-open,
+.status-completed {
+  background-color: var(--success);
+}
+.status-suspended {
+  background-color: var(--yellow-300);
+}
+.status-customer-reply {
+  background-color: var(--warning);
+}
+.status-fraud {
+  background-color: var(--bg-inverted);
+}
+.status-answered {
+  background-color: var(--notice);
+}
+.status-expired,
+.status-transferred-away {
+  background-color: var(--grayscale);
+}
+.status-pending-registration,
+.status-redemption,
+.status-grace {
+  background-color: var(--warning);
+}
+.status-terminated {
+  background-color: var(--neutral);
+}
+.status-onhold {
+  background-color: var(--info);
+}
+.status-inprogress {
+  background-color: var(--warning);
+}
+.status-closed {
+  background-color: var(--neutral);
+}
+.status-paid {
+  background-color: var(--success);
+}
+.status-unpaid {
+  background-color: var(--error);
+}
+.status-cancelled {
+  background-color: var(--secondary);
+}
+.status-collections {
+  background-color: var(--neutral-accented);
+}
+.status-refunded {
+  background-color: var(--yellow-300);
+}
+.status-payment-pending {
+  background-color: var(--bg-inverted);
+}
+.status-delivered {
+  background-color: var(--bg-inverted);
+}
+.status-accepted {
+  background-color: var(--success);
+}
+.status-lost,
+.status-dead {
+  background-color: var(--bg-inverted);
+}
+
+.requestor-type-operator {
+  background-color: var(--info);
+}
+.requestor-type-owner {
+  background-color: var(--success);
+}
+.requestor-type-authorizeduser {
+  background-color: var(--neutral-lifted);
+}
+.requestor-type-registereduser {
+  background-color: var(--yellow-300);
+}
+.requestor-type-subaccount {
+  background-color: var(--neutral-lifted);
+}
+.requestor-type-guest {
+  background-color: var(--neutral);
+}

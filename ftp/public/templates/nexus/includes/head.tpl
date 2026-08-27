@@ -1,3 +1,14 @@
+{* Inter — гарнитура текста из UI-кита, лежит в теме (fonts/, лицензия OFL).
+   Преднагружаем два субсета, которые в русскоязычном кабинете нужны всегда:
+   латиница и кириллица. Остальные субсеты браузер возьмёт сам по unicode-range.
+   Preload идёт до стилей осознанно: шрифт должен приехать раньше, чем сработает
+   autoCollapse('#nav', 30) в js/whmcs.js — тот меряет высоту меню один раз на
+   document.ready и после подмены шрифта пересчёта не делает.
+   crossorigin обязателен даже для своего домена: шрифты грузятся в CORS-режиме,
+   без атрибута preload не засчитается и файл скачается дважды. *}
+<link rel="preload" href="{$WEB_ROOT}/templates/{$template}/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{$WEB_ROOT}/templates/{$template}/fonts/inter-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+
 <!-- Styling -->
 {\WHMCS\View\Asset::fontCssInclude('open-sans-family.css')}
 <link href="{assetPath file='all.min.css'}?v={$versionHash}" rel="stylesheet">

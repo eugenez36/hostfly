@@ -21,6 +21,7 @@
  * сами по себе они ничего не стилизуют.
  *
  * Демо всех компонентов: _dev/ui-kit-preview.html
+ * Поведение (аккордеон, табы, слайдер): ../js/ui-kit.js
  */
 
 @import "ui-kit/tokens";
@@ -33,5 +34,12 @@
 @import "ui-kit/badges";
 @import "ui-kit/tooltip";
 @import "ui-kit/pagination";
+
+/* Составные блоки с листов final-theme */
+@import "ui-kit/cards";
+@import "ui-kit/accordion";
+@import "ui-kit/domain-list";
+@import "ui-kit/slider";
+@import "ui-kit/logo-wall";
 
 @import "ui-kit/responsive";

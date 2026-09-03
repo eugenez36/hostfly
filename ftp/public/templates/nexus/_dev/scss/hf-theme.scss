@@ -1209,3 +1209,191 @@ input[type="radio"] {
     font-size: var(--text-md);
   }
 }
+
+/* ==========================================================================
+   Корзина: слой совместимости Bootstrap 3 -> Bootstrap 4.5.3
+   --------------------------------------------------------------------------
+   Активный order form — templates/orderforms/ais_standard, вёрстка эпохи темы
+   AIS под Bootstrap 3. Тема Nexus работает на Bootstrap 4.5.3, где часть
+   хелперов удалена: они не падают с ошибкой, а молча ничего не делают.
+   Инвентаризация по 20 шаблонам корзины: pull-left 22, pull-right 21,
+   hidden-xs 14, hidden-sm 13, visible-xs 3, col-xs-* 7, label-* 16,
+   input-group-addon 3, control-label 5, center-block 2.
+
+   Всё ниже ограничено #order-standard_cart — это контейнер order form.
+   За его пределами кабинет чисто бутстраповский, и глобальные правила там
+   были бы лишним риском.
+
+   ВРЕМЕННЫЙ СЛОЙ. Удалить целиком, когда HOS-12 переведёт заказ на nexus_cart:
+   та корзина — отдельное JS-приложение со своей сборкой, эти классы ей не нужны.
+   Брейкпоинты здесь бутстрап-третьи (768 / 992 / 1200), а не четвёртые, иначе
+   блоки прятались бы не на тех ширинах.
+   ========================================================================== */
+
+/* --- Утилиты видимости ---------------------------------------------------- */
+#order-standard_cart .visible-xs,
+#order-standard_cart .visible-sm,
+#order-standard_cart .visible-md,
+#order-standard_cart .visible-lg {
+  display: none !important;
+}
+@media (max-width: 767.98px) {
+  #order-standard_cart .hidden-xs { display: none !important; }
+  #order-standard_cart .visible-xs { display: block !important; }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #order-standard_cart .hidden-sm { display: none !important; }
+  #order-standard_cart .visible-sm { display: block !important; }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #order-standard_cart .hidden-md { display: none !important; }
+  #order-standard_cart .visible-md { display: block !important; }
+}
+@media (min-width: 1200px) {
+  #order-standard_cart .hidden-lg { display: none !important; }
+  #order-standard_cart .visible-lg { display: block !important; }
+}
+
+/* --- Класс .hidden. В Bootstrap 3 он прятал элемент, в четвёртом удалён,
+       а в теме определён только внутри .md-editor (theme.css:11519).
+       Из-за этого на страницах корзины видны служебные заглушки, которые
+       должен показывать JS: «Проверка доступности…», «:domain недоступен»,
+       «Этот домен можно перенести», скрытые кнопки и цены.
+       Скрипты корзины снимают этот класс, когда блок пора показать. */
+#order-standard_cart .hidden { display: none !important; }
+
+/* --- Флоаты. Из-за них разъезжались строки сводки «К оплате»: «Итого» и
+       сумма вместо краёв панели вставали вплотную слева ------------------- */
+#order-standard_cart .pull-left { float: left !important; }
+#order-standard_cart .pull-right { float: right !important; }
+
+/* --- Сетка col-xs-*. В Bootstrap 4 префикса xs нет вовсе ------------------ */
+#order-standard_cart [class*="col-xs-"] {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+#order-standard_cart .col-xs-1  { flex: 0 0 8.333333%;  max-width: 8.333333%; }
+#order-standard_cart .col-xs-2  { flex: 0 0 16.666667%; max-width: 16.666667%; }
+#order-standard_cart .col-xs-3  { flex: 0 0 25%;        max-width: 25%; }
+#order-standard_cart .col-xs-4  { flex: 0 0 33.333333%; max-width: 33.333333%; }
+#order-standard_cart .col-xs-5  { flex: 0 0 41.666667%; max-width: 41.666667%; }
+#order-standard_cart .col-xs-6  { flex: 0 0 50%;        max-width: 50%; }
+#order-standard_cart .col-xs-7  { flex: 0 0 58.333333%; max-width: 58.333333%; }
+#order-standard_cart .col-xs-8  { flex: 0 0 66.666667%; max-width: 66.666667%; }
+#order-standard_cart .col-xs-9  { flex: 0 0 75%;        max-width: 75%; }
+#order-standard_cart .col-xs-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+#order-standard_cart .col-xs-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+#order-standard_cart .col-xs-12 { flex: 0 0 100%;       max-width: 100%; }
+
+/* --- Внешний ряд: сайдбар слева, шапка и контент справа -------------------
+   В шаблоне один .row содержит col-md-9 (шапка) + col-md-3 (сайдбар) +
+   col-md-9 (контент) — 21 колонка. Вёрстка писалась под флоат-сетку, где
+   pull-md-left/right (синтаксис Bootstrap 4 alpha) разводили блоки по
+   сторонам. В Bootstrap 4.5 .row — флексбокс, pull-md-* не существует,
+   и третий блок переносится на вторую флекс-линию, под сайдбар. Отсюда
+   пустота в 764px между заголовком и таблицей корзины.
+
+   Раскладываем этот ряд гридом: сайдбар занимает левую колонку на обе
+   строки, шапка и контент встают в правую друг под другом. Так же во всех
+   12 шаблонах корзины — разметка ряда у них одинаковая. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Сайдбар здесь скрыт (hidden-sm), поэтому колонки занимают всю ширину */
+  #order-standard_cart > .row > .col-md-9 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  #order-standard_cart > .row {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: start;
+  }
+  #order-standard_cart > .row > .sidebar {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  #order-standard_cart > .row > .col-md-9:not(.main-content__right) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #order-standard_cart > .row > .main-content__right {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #order-standard_cart > .row > .sidebar,
+  #order-standard_cart > .row > .col-md-9 {
+    max-width: 100%;
+    flex: none;
+  }
+}
+
+/* --- Бейджи. В Bootstrap 3 это .label, в четвёртом — .badge --------------- */
+#order-standard_cart .label {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--hf-r-pill);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.33;
+}
+#order-standard_cart .label-default,
+#order-standard_cart .label-grey { background-color: var(--bg-lifted); color: var(--text-accented); }
+#order-standard_cart .label-primary,
+#order-standard_cart .label-info { background-color: var(--hf-tint-blue); color: var(--primary-accented); }
+#order-standard_cart .label-success { background-color: var(--hf-tint-green); color: var(--success-accented); }
+#order-standard_cart .label-warning { background-color: var(--hf-tint-yellow); color: var(--warning-accented); }
+#order-standard_cart .label-danger { background-color: var(--hf-tint-red); color: var(--error-accented); }
+
+/* --- Прочие переименованные классы ---------------------------------------- */
+#order-standard_cart .input-group-addon {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border: 1px solid var(--bg-lifted);
+  border-radius: var(--rounding-md);
+  background-color: var(--bg-muted);
+  color: var(--text-accented);
+  white-space: nowrap;
+}
+#order-standard_cart .center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+#order-standard_cart .control-label {
+  margin-bottom: 0;
+  padding-top: calc(0.375rem + 1px);
+}
+
+/* --- Зелёные кнопки. В шаблонах корзины btn-success стоит на трёх обычных
+       CTA — «Оформить заказ», «Заказать» и сабмите; к бренду зелёный цвет
+       отношения не имеет. Индикаторы статуса домена красятся своими классами
+       (.available / .unavailable), их не трогаем. --------------------------- */
+#order-standard_cart .btn-success,
+#order-standard_cart .btn-checkout {
+  background-color: var(--neutral-950);
+  border-color: var(--neutral-950);
+  color: var(--text-inverted);
+  font-weight: 700;
+}
+#order-standard_cart .btn-success:hover,
+#order-standard_cart .btn-success:focus,
+#order-standard_cart .btn-checkout:hover,
+#order-standard_cart .btn-checkout:focus {
+  background-color: var(--text-accented);
+  border-color: var(--text-accented);
+  color: var(--text-inverted);
+}
+#order-standard_cart .btn-success.disabled,
+#order-standard_cart .btn-success:disabled,
+#order-standard_cart .btn-checkout.disabled,
+#order-standard_cart .btn-checkout:disabled {
+  background-color: var(--bg-lifted);
+  border-color: var(--bg-lifted);
+  color: var(--border);
+  opacity: 1;
+}
